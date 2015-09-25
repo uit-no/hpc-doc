@@ -32,11 +32,8 @@ General information
 Events
 ======
 
-* :doc:`System status and activity </news/index>`
+* :doc:`News and notifications </news/index>`
 * :doc:`Training and seminars </courses/index>`
-* :doc:`Changes in hardware, system software or configuration </news/index>`
-* :doc:`Changes in applications software </news/index>`
-* :doc:`Planned and unplanned downtime </news/index>`
 
 
 Guides
