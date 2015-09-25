@@ -12,8 +12,7 @@ General information
 * :doc:`Getting an account </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
 * :doc:`Graphical login </guides/user/gui>`
-* :doc:`Working with the Linux command line </guides/user/linux>`
-  (10 most important commands)
+* :doc:`FAQs </faqs/index>`
 
 .. toctree::
    :maxdepth: 2
@@ -34,8 +33,9 @@ News and Events
 Users
 -----
 
+* :doc:`Working with the Linux command line </guides/user/linux>`
+  (10 most important commands)
 * :doc:`User guides </guides/user/index>`
-* :doc:`FAQs </faqs/index>`
 * :doc:`Technical information </guides/user/stallo>`
 * :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
 * :doc:`Working on stallo </guides/user/storage>`
