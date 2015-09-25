@@ -15,17 +15,10 @@ General information
 * :doc:`Working with the Linux command line </guides/user/linux>`
   (10 most important commands)
 
+.. toctree::
+   :maxdepth: 2
 
-General information
--------------------
-
-* :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
-* :doc:`Working on stallo </guides/user/storage>`
-  (services, modules, file systems, topology, backups)
-* :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
-* :doc:`Applying for quota </guides/user/account>`
-* :doc:`Accessing files on stallo </guides/user/files>`
-* :doc:`Do's and don'ts </howtos/dosndonts>`
+   general/dos_and_donts.rst
 
 
 News and Events
@@ -38,13 +31,24 @@ News and Events
    courses/index.rst
 
 
-Guides
-------
+Users
+-----
 
 * :doc:`User guides </guides/user/index>`
-* :doc:`Developer guides </guides/developer/index>`
 * :doc:`FAQs </faqs/index>`
 * :doc:`Technical information </guides/user/stallo>`
+* :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
+* :doc:`Working on stallo </guides/user/storage>`
+  (services, modules, file systems, topology, backups)
+* :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
+* :doc:`Applying for quota </guides/user/account>`
+* :doc:`Accessing files on stallo </guides/user/files>`
+
+
+Developers
+----------
+
+* :doc:`Developer guides </guides/developer/index>`
 
 
 Applications
