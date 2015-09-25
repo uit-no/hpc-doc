@@ -8,7 +8,7 @@ General information
 -------------------
 
 * :doc:`General info </general_info>`
-* :doc:`Getting  started </guides/user/quick_start>`
+* :doc:`Getting started </guides/user/quick_start>`
 * :doc:`Getting an account </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
 * :doc:`Graphical login </guides/user/gui>`
@@ -44,7 +44,6 @@ Guides
 * :doc:`User guides </guides/user/index>`
 * :doc:`Developer guides </guides/developer/index>`
 * :doc:`FAQs </faqs/index>`
-* :doc:`Courses and workshops </courses/index>`
 * :doc:`Technical information </guides/user/stallo>`
 
 
