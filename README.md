@@ -26,3 +26,8 @@ sphinx-build . _build
 ```
 
 Then point your browser to `_build/index.html`.
+
+## Getting started with RST and Sphinx
+
+- http://sphinx-doc.org/rest.html
+- http://sphinx-doc.org/markup/inline.html#cross-referencing-arbitrary-locations
