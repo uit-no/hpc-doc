@@ -1,0 +1,79 @@
+---
+title: Gaussian 03
+...
+
+`Back to Gaussian top page<Gaussian>`_
+
+Gaussian 03 is the previous major release of the Gaussian Program System, and is no longer officially developed and maintained.  Manual pages are still available from the gaussian web page (www.gaussian.com) but only as downloadable zipped files.  
+
+* For information about Gaussian 03 input: `g03_input<g03_input>`_
+* For inputfile-example to download: `water.inp<water_input>`_
+* For information on Gaussview for Gaussian 03: `g03_gaussview<g03_gv>`_
+
+
+GAUSSIAN 03 on STALLO
+=====================
+ 
+To run Gaussian 03 on Stallo, the module has to be loaded::
+
+  $ module load gaussian/03.e01
+
+If you download a run script (see below), this will be taken care of by the script. Two run scripts are available (serial and parallel jobs respectively). Download one of the scripts to your home/$USER/bin and use it as described. 
+
+**Scriptfile-examples:** 
+
+   * `Gaussian 03 serial script<g03serial_run>`_
+   * `Gaussian 03 parallel script<g03para_run>`_
+
+(These scripts are also available on Stallo under /global/apps/gaussian/usage.)
+
+Manually change account name and mail adress in your personal copy of the run scripts.
+ 
+Job submission guidelines
+--------------------------
+
+The following guidelines are for submitting jobs using one of the available wrappers-scripts. If doing elsewise, please extract the relevant information (choice of scratch dir, output printing scheme, resource allocation for jobs) and apply to your job submission setup.
+
+For the serial script, the number of cores is set to 1, thus you only set name of input file and walltime on the command line::
+
+ $ g03serial.pbs water 2:00
+
+That means running the job water.inp on a single core for 2 hours and 00 minutes. Command line argument 1 ($1) is name of input file without its extension (which is expected to be .inp) and command line argument 2 ($2) is walltime on the form hours:minutes.
+
+For parallel jobs you need to add the number of cpus, preferably on the form nodes and number of cores/node also on the command line, giving a total of four inputs from the command line to enter the script. Command line argument $1 is unchanged, but $2 will now be number of nodes and $3 will be number of cores/node, with $4 as walltime on the same form as for the serial script::
+
+ $ g03parallel.pbs water 2 6 2:00
+
+meaning job water.inp running on 2 nodes with 6 cores on each, a total of 12 cores, for 2 hours 00 minutes - having a total cpu-time count of 24 hours.
+
+**NOTE:** Running Gaussian 03 jobs in parallel requires the additional keywords *%NProcshared* and *%NProcLinda* in the Link 0 part of the input file. This is further discussed in here: `g03_input<g03_input>`_ If you run Gaussian 03-jobs using the scripts discussed above, this is taken care of automatically. If not, you need to put this information in your input file manually.
+
+If you plan to run on >1 node (using %NProcLinda), make a new file in your $HOME directory::
+
+    .tsnet.config  
+
+containing only the line:: 
+
+    Tsnet.Node.lindarsharg: ssh  
+
+**NOTE:** If you run >1 node (using %NProcLinda), you have to use >1 processor per node.
+
+Best practice for running Gaussian 03 jobs
+-------------------------------------------
+
+- For geometry optimizations using DFT methods, we recommends using hybrid functionals. For pure functionals (no HF exchange), the parallel benefit of G03 is limited - so unless you have tested it and know it works - we recommend to run Gaussian 03 only on single nodes, using up to 6 cores/node. 
+- If your molecule is >60 atoms, Gaussian uses FMM by default (which is not parallelized), so do not run parallel in this case, unless you turn off FMM (NoFMM keyword).
+
+**Recommended run-environment setup**
+ 
+- Run jobs with /global/work/$USER/$PBS_JOBID as the default temporary work dir.
+- Have the primary result files (.out and .chk) written to $HOME upon job completion (and not during running).
+- As a standard setup in the scripts, temporary directories are removed upon job completion. If jobs abort prematurely, temporary directories need to be removed manually.
+- To submit a .chk file along with an .inp file and/or retrieve a .chk upon job completion, make sure the .chk has the same name as the input file (e.g. filenames waterdimer.inp and waterdimer.chk, with keyword added to $jobname.inp: %chk=waterdimer).
+
+**RESTART OF JOBS:** Retrieve the .chk file from the temporary directory and add the restart command to the input (opt=restart or scf=restart, depending on job). Make sure that the *.chk* and and the *.inp* files have the same firstname. Submit as usual.
+
+LINKS
+=====
+
+Online Manual: http://www.inc.bme.hu/common/g03_man/g_ur/g03mantop.htm (nb: not the official gaussian web-site)
