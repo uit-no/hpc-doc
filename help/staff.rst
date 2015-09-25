@@ -1,17 +1,8 @@
 
 
-====================
-The HPC group at UiT
-====================
-
-
-Getting help
-============
-
-If you need help, please file a support request via support-uit@notur.no, and
-our local team of experts will try to assist you as soon as possible.
-
-.. image:: rtfm.png
+=============
+Support staff
+=============
 
 
 Our vision
@@ -62,8 +53,8 @@ strategic collaboration between UiT and the Norwegian Polar Institute within
 HPC has been ongoing since 1998.
 
 
-The support team
-================
+Our team
+========
 
 * `Giacomo Tartari <https://uit.no/om/enhet/ansatte/person?p_document_id=197816&p_dimension_id=88139>`_
 * `Roy Dragseth <https://uit.no/om/enhet/ansatte/person?p_document_id=42529&p_dimension_id=88223>`_

@@ -1,6 +1,6 @@
----
-toc: no
-title: Training, workshops and seminars
-...
+
+
+Training and seminars
+=====================
 
 * :doc:`Python workshop <python-tutorials/index>`

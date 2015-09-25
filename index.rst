@@ -1,12 +1,11 @@
 
 
-========================
-Notur User Documentation
-========================
+HPC-UiT Notur User Documentation
+================================
 
 
 General information
-===================
+-------------------
 
 * :doc:`General info </general_info>`
 * :doc:`Getting  started </guides/user/quick_start>`
@@ -18,7 +17,7 @@ General information
 
 
 General information
-===================
+-------------------
 
 * :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
 * :doc:`Working on stallo </guides/user/storage>`
@@ -29,15 +28,18 @@ General information
 * :doc:`Do's and don'ts </howtos/dosndonts>`
 
 
-Events
-======
+News and Events
+---------------
 
-* :doc:`News and notifications </news/index>`
-* :doc:`Training and seminars </courses/index>`
+.. toctree::
+   :maxdepth: 2
+
+   news/news.rst
+   courses/index.rst
 
 
 Guides
-======
+------
 
 * :doc:`User guides </guides/user/index>`
 * :doc:`Developer guides </guides/developer/index>`
@@ -49,14 +51,17 @@ Guides
 
 
 Applications
-============
+------------
 
 * :doc:`Application guides <applications/index>`
 * :doc:`Application list <applications/software>`
 
 
 Getting help
-============
+------------
 
-* Contact: support-uit@notur.no
-* :doc:`Support staff </staff/index>`
+.. toctree::
+   :maxdepth: 2
+
+   help/contact.rst
+   help/staff.rst
