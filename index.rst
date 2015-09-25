@@ -44,7 +44,6 @@ Guides
 * :doc:`User guides </guides/user/index>`
 * :doc:`Developer guides </guides/developer/index>`
 * :doc:`FAQs </faqs/index>`
-* :doc:`HOWTOs </howtos/index>`
 * :doc:`Courses and workshops </courses/index>`
 * :doc:`Technical information </guides/user/stallo>`
 
