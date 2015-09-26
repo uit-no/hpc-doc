@@ -3,8 +3,9 @@ title: Stallo quick start guide
 ...
 .. index:: getting started, quickstart guide
 
+
 The really quick and dirty startup guide for the pathologically impatient
-================================================================================================
+=========================================================================
 
 First of all you need to have a :doc:`CPU-quota and a login account <./account>`, and then you can :doc:`log onto the system <./login>`.
 
@@ -19,14 +20,15 @@ Once you have passed the initial hurdles you can start computing, but before you
 
 Keep this guidelines in the back of your head and try to start running jobs on the system.  :doc:`Here <./firstjob>` is a quick run-through on how to get your first job running on the system.
 
-Further reading.
-=========================
+
+Further reading
+===============
 
 We have a wealth of documentation for you, here are some places with more information on how to use our system.
 
-* :doc:`Batch system <./jobs>`.
-* :doc:`Develop and compile your own apps <../developer/index>`.
-* :doc:`Use preinstalled applications <../applications/index>`.
+- :doc:`Batch system <./jobs>`.
+- :ref:`application-development`
+- :doc:`Use preinstalled applications <../applications/index>`.
 
 
 **Happy hacking!**

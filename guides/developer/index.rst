@@ -1,10 +1,8 @@
----
-toc: yes
-title: Developer's guide
-...
+
+.. _application-development:
 
 Application development on stallo
-===================================
+=================================
 
 A rich set of compilers, tools, debuggers and libraries are installed on
 stallo. By default the Intel compiler suite is loaded upon login,
