@@ -45,10 +45,15 @@ Users
 * :doc:`Accessing files on stallo </guides/user/files>`
 
 
-Developers
-----------
+Application development on Stallo
+---------------------------------
 
 * :doc:`Developer guides </guides/developer/index>`
+
+.. toctree::
+   :maxdepth: 2
+
+   development/environment.rst
 
 
 Applications
