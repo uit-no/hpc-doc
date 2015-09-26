@@ -54,6 +54,9 @@ Application development on Stallo
    :maxdepth: 2
 
    development/environment.rst
+   development/scripting.rst
+   development/tools.rst
+   development/valgrind.rst
 
 
 Applications

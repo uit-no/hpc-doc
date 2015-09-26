@@ -57,22 +57,3 @@ run efficiently in parallel, even when substantial amounts of communication is
 required.
 
 *For more information, see the :doc:`parallel programming page <parallel>`.*
-
-:doc:`Useful tools and software <tools>`
-----------------------------------------
-
-To efficiently manage, build and develop software on stallo some excellent
-tools and services are available. Source code management using ``git``,
-including private hosting and project management tools, are available to
-users. Building programs using ``CMake`` is easy and painless, and takes care
-of all system dependencies.
-
-*For more information, see the :doc:`tools page <tools>`.*
-
-:doc:`Scripting <scripting>`
-----------------------------
-
-A rich set of scripting tools and languages are available on stallo, including
-Python, Bash, Lua, R, Perl, Ruby.
-
-*For more information, see the :doc:`scripting page <scripting>`.*
