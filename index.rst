@@ -56,6 +56,7 @@ Application development on Stallo
    development/environment.rst
    development/scripting.rst
    development/tools.rst
+   development/debugging.rst
    development/valgrind.rst
 
 

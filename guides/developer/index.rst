@@ -22,14 +22,6 @@ Studio XE.  In general users are advised to use the `Intel compilers
 
 *For more information, see the :doc:`compiler page <compilers>`.*
 
-:doc:`Debugging <debugging>`
----------------------------
-
-TotalView is the primary debugger on stallo. It has a graphical interface,
-and excellent capabilities for debugging parallel programs.
-
-*For more information, see the :doc:`debugging page <debugging>`.*
-
 :doc:`Performance analysis and optimization <optimization>`.
 --------------------------------------------------------
 A large number of tools for analyzing both single- and multi-core, as well as
