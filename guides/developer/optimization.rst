@@ -14,29 +14,6 @@ software and libraries
 for available and recommended libraries.
 
 
-Performance monitoring
-----------------------
-
- Some simple performance monitoring tools:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* :doc:`top <../../files-uit/performance-tools/testing>`  
- Find the use of memory, CPU time and other information about all running tasks
-*    :doc:`the time command <../files-uit/performance-tools/the-time-command>` 
-    time spent, memory and page faults
-
-*    :doc:`lsof <../files-uit/performance-tools/lsof>` 
-
-Monitor file access
-
-*    :doc:`strace <../files-uit/performance-tools/strace>`  trace system calls and signals
-*    :doc:`valgrind cache profiler <../files-uit/performance-tools/valgrind-cache-profiler>` 
-
-Simple tool to quantify cache misses
-
-*    :doc:`Compiler optimization report (intel) <../files-uit/performance-tools/compiler-optimization-report-intel>`
-
-Compiler option for optimization report
 
 Document Actions
 ''''''''''''''''
@@ -75,10 +52,6 @@ set, but using just a few iterations for the time stepping.
     The simplest case is to compile/run/recompile in the same catalog or
     else you need to use the ``-prof _dir`` flag, see the manual for
     details.
-
-To get started with more advanced optimization you can take a look at
-this pdf file from Intel.
-`intel-qref-222300 _222300.pdf <http://docs.notur.no/uit/files-uit/intel-qref-222300_222300.pdf>`_
 
  
 

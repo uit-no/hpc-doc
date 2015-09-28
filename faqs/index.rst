@@ -536,10 +536,6 @@ next:
     done
     wait
 
-Complete examples with descriptive comments can be found here:
-:doc:`partasks.sh </uit/files-uit/partasks.sh/view>`,
-:doc:`dowork.sh </uit/files-uit/dowork.sh/view>`.
-
 
 How can I submit many jobs in one command?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -601,10 +597,6 @@ next:
       done
     done
     wait
-
-Complete examples with descriptive comments can be found here:
-:doc:`partasks.sh </uit/files-uit/partasks.sh/view>`,
-:doc:`dowork.sh </uit/files-uit/dowork.sh/view>`.
 
 
 My ssh connections are dying / freezing.
@@ -813,15 +805,3 @@ means that the program will run with 8 threads by default. You can
 choose the number of threads with (for 4 threads):
 
 ***export OMP\_NUM\_THREADS=4***
-
- 
-
- 
-
-Please consult the `MKL
-documentation <../../files-uit/math-lib-stuff/the-intel-math-kernel-library-mkl-10.x>`_
-for more details.
-
- 
-
-.. vim:ft=rst

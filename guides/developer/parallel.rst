@@ -217,16 +217,6 @@ btl _sm _eager _limit.
 
  
 
-Appendix
-.........................
-
- :doc:`Here <../../files-uit/EagerTest.f90>` is a simple fortran program
-used to test eager send limits.
-
- 
-
- 
-
 Intel MPI
 .........................
 
