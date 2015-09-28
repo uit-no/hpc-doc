@@ -29,15 +29,3 @@ Software and applications
 * :doc:`Using programs on stallo </applications/index>`
 * :doc:`Biology </applications/biology>`
 * :doc:`Chemistry </applications/chemistry/index>`
-
-FAQ / trouble shooting
-=======================
-
-* See our general :doc:`FAQ </guides/faqs/index>`.
-
-Development
-============
-
-* :doc:`Developers guide </guides/developer/index>`
-
-.. vim:ft=rst
