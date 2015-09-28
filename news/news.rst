@@ -8,7 +8,7 @@ System status and activity
 --------------------------
 
 You can get a quick overview of the system load on Stallo
-`here <http://www.notur.no/hardware/status/>`_.
+`here <http://www.notur.no/hardware/status/>`_. More information on the system load, queued jobs, and node states can be found `here <http://stallo-login1.uit.no/jobbrowser/>`_.  
 
 
 Changes in system hardware, software or configuration
