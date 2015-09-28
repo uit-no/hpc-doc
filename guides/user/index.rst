@@ -1,16 +1,7 @@
----
-toc: yes
-title: Stallo User Guide
-...
-
-Welcome to the User Guide for Stallo. Use the navigation menu or the
-links to the right to navigate around in it. (We apologize for the
-stupid extra numbering in the headers, we're having problems with the
-sorting engine right now)
 
 
 Basic information
-========================
+=================
 
 * :doc:`Help desk <helpdesk>`
 * :doc:`Acconts and allocations <account>`
@@ -23,8 +14,9 @@ Basic information
 * :doc:`Graphics and GUIs <gui>`
 * :doc:`Guidelines <guidelines>`
 
+
 Software and applications
-==========================
+=========================
 
 * :doc:`Using programs on stallo </applications/index>`
 * :doc:`Biology </applications/biology>`
