@@ -27,7 +27,6 @@ News and Events
    :maxdepth: 2
 
    news/news.rst
-   courses/index.rst
 
 
 Users
