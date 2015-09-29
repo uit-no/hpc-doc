@@ -7,7 +7,6 @@ HPC-UiT Notur User Documentation
 General information
 -------------------
 
-* :doc:`General info </general_info>`
 * :doc:`Getting started </guides/user/quick_start>`
 * :doc:`Getting an account </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
