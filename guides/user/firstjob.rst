@@ -1,12 +1,13 @@
----
-title: Example: First jobscript.
-...
+
+
+Example: First jobscript.
+=========================
 .. index:: first jobscript
 
 .. FIXME: inline job script example
 
 Setting up your first job-script.
-==========================================
+---------------------------------
 
 A job script is just a regular shell-script with some comments that are directives telling the batch system which resources this script needs when running.  
 
@@ -45,7 +46,7 @@ Here you see that your job is submitted with the queue with the job identity ``1
 
 
 Further reading.
-=====================
+----------------
 
 * :doc:`Batch system <./jobs>`.
 

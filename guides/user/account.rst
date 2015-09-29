@@ -1,9 +1,10 @@
----
-title: Accounts and quotas
-...
+
+===================
+Accounts and quotas
+===================
 
 Getting started on the machine (account, quota, password)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================================================
 
 Before you start using Stallo, please read the :doc:`University of Tromsø's guidelines <guidelines>`.
 
@@ -11,7 +12,7 @@ A general introduction to Notur can be found at
 `http://www.notur.no/quotas/rules/ <http://www.notur.no/quotas/rules/>`_
                                   
 How to get an account and a CPU quota on Stallo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================
 
 To be able to work on Stallo you must have an account and you must have
 been granted CPU time on the system. There are two ways to achieve this:
@@ -38,7 +39,7 @@ Before you start using Stallo, please read the `University of
 Tromsø's guidelines <guidelines>`_.
 
 Information about how to log in on Stallo with ssh, and how to learn more about ssh.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================================================================
 
 An SSH client (Secure SHell) is the required tool to connect to
 Stallo. To learn more about this, check out the `Metasenter page on SSH 
@@ -47,13 +48,13 @@ Stallo. To learn more about this, check out the `Metasenter page on SSH
 .. FIXME: fix link to docs.notur.no 
 
 Obtain a new password
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 When you have been granted an account on stallo.uit.no, your username and password is sent to you separat. 
 the username by email and the password by SMS.  The password you receive by SMS is temporally and only valid for 7 days.  
 
 The passwd command does not seem to work. My password is reset back to the old one after a while. Why is this happening?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------------
 
 The Stallo system is using a centralised database for user management.
 This will override the password changes done locally on Stallo.

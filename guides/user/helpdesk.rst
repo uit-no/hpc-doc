@@ -1,10 +1,11 @@
----
-title: Helpdesk
-...
+
+
+Helpdesk
+========
 
 
 Information regarding help-desk support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 How to get user support.
 
@@ -22,12 +23,12 @@ send an email to :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`.
 From the web page you can also track your requests.
 
  Please remember to consult the :doc:`Stallo User Guide <.>` and the
-:doc:`FAQ <../faq>` for information that you are looking for.
+:ref:`faq` for information that you are looking for.
 
  
 
 About support requests
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 * Requests will be handled as soon as possible by the support staff.
 * Please be as detailed as possible about your problem when submitting

@@ -1,7 +1,7 @@
----
-toc: no
-title: Guides
-...
+
+
+Guides
+======
 
 * :doc:`User guides <user/index>`
 * :doc:`Application guides </applications/index>`

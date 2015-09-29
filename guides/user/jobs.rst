@@ -1,11 +1,12 @@
----
-toc: yes
-title: Jobs, scripts and queues
-...
+
+========================
+Jobs, scripts and queues
+========================
+
 .. index:: batch system, jobscripts, job management
 
 Batch system
-~~~~~~~~~~~~~~~~~~~~~~~~~
+============
 
 The Stallo system is a resource that is shared between a lot of users 
 so to ensure fair use everyone must do their computations by submitting jobs 
@@ -20,11 +21,11 @@ Torque keeps track of the state of the system while Maui decides when
 and where to run the jobs.
 
 Batch job submission
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================
 
 
 Create a job 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+============
 
 To run a job on the system one needs to create a job script. A job
 script is a regular shell script (bash or csh) with some directives
@@ -34,7 +35,7 @@ a quick feel for how to create and run batch jobs.  A more complete example
 can be found :doc:`here <./job-script-example>`.
 
 Manage a job 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+============
 
 A job's lifecycle can be managed with as little as three different
 commands
@@ -45,10 +46,10 @@ commands
 #. (optional) Delete the job with ``qdel jobid``.
 
 List of useful commands
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 Managing jobs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------
 
 See the man page for each command for details.
 
@@ -60,7 +61,7 @@ qdel:
     Delete a job. Use ``qdel all`` to terminate all your jobs immediately.
 
 Getting job info 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------
 
 For details run the command with the -h option.
 
@@ -73,16 +74,16 @@ checkjob:
     Show details about a specific job.
 
 Useful job script parameters 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================
 
 See the :doc:`jobscript example <./job-script-example>` for a list of relevant parameters.
 
 
 Recommended job parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================
 
 Walltime
-^^^^^^^^
+--------
 
 We recommend you to be as precise as you can when specifying the
 parameters as they will inflict on how fast your jobs will start to run
@@ -92,7 +93,7 @@ we generally have these two rules for prioritizing jobs:
 #. Short jobs take precedence over long jobs.
 
 Cpucount
-^^^^^^^^
+--------
 
 We strongly advice all users to ask for all cpus on a node when running 
 multinode
@@ -106,7 +107,7 @@ system scheduler to fill up the compute nodes completely.
 A warning will be issued if these recommendations are not followed.
 
 Scalability
-^^^^^^^^^^^^^^^^
+-----------
 
 You should run a few tests to see what is the best fit between
 minimizing runtime and maximizing your allocated cpu-quota. That is you
@@ -121,7 +122,7 @@ recommendations on the most used applications
 
 
 Queues
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======
 
 In general it is not neccessary to specify a specific queue for your
 job, the batch system will route your job to the right queue
@@ -155,7 +156,7 @@ Again, it is not neccessary to ask for any specific queue unless you
 want to use ``express`` or ``highmem``.
 
 Use of large memory nodes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================
 
 Large memory nodes
 ---------------------
@@ -185,7 +186,7 @@ if you submit requiring more than 2gb memory per process:
     qsub -lnodes=2:ppn=16,pmem=4gb,walltime=12:00:00 .........
 
 Interactive job submission
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================
 
 You can run an interactive jobs by using the ``-I`` flag to qsub:
 
@@ -199,7 +200,7 @@ Interactive jobs has the same policies as normal batch jobs, there are
 no extra restrictions.
 
 General job limitations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 The following limits are the default per user in the batch system. Users
 can ask for increased limits by sending a request to
@@ -222,10 +223,10 @@ on stallo we only give a weeks warning on system maintenance. Jobs with
 more than 7 days walltime, will be terminated and restarted if possible.
 
 Scheduling policy on the machine
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================
 
 Priority
-----------------
+--------
 
 The scheduler is set up to
 
@@ -237,7 +238,7 @@ The scheduler is set up to
    decreased priority compared to other users.
 
 Resource Limits
-----------------------
+---------------
 
 No user will be allowed to have more than 168 000 cpu-hours allocated
 for running jobs at any time. This means that a user at most can
@@ -254,7 +255,7 @@ support-uit@notur.no.
 
 
 The stallo archictecture
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 Before we dive into the details we need to say a few things about the
 stallo architecture.
@@ -277,7 +278,7 @@ is done automatically by the scheduler.
 See :doc:`here <./key-numbers-about-stallo/>` for more details.
 
 Job to node mapping
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The basic philosophy for the job to node mapping is to run the job on the nodes best
 suited for the task.
@@ -291,7 +292,7 @@ suited for the task.
 
 
 Examples.
-^^^^^^^^^
+---------
 
 Short jobs:
 
@@ -325,7 +326,7 @@ process.
 
 
 Express queue for testing job scripts and interactive jobs.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
 
 
 By submitting a job to the express queue you can get higher throughput
@@ -346,7 +347,7 @@ This will give you a faster access if you have special needs during
 development, testing of job script logic or interactive use.
 
 Priority and limitations
------------------------------
+========================
 
 Jobs in the express queue will get higher priority than any other jobs
 in the system and will thus have a shorter queue delay than regular

@@ -1,6 +1,7 @@
----
-title: Basic Information
-...
+
+
+Basic Information
+=================
 
 - Something about accounting, cpu quota on top of what is in the quick-start guide?
 

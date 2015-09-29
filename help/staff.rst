@@ -56,10 +56,10 @@ HPC has been ongoing since 1998.
 Our team
 ========
 
-* `Giacomo Tartari <https://uit.no/om/enhet/ansatte/person?p_document_id=197816&p_dimension_id=88139>`_
+* `Radovan Bast <http://bast.fr>`_
 * `Roy Dragseth <https://uit.no/om/enhet/ansatte/person?p_document_id=42529&p_dimension_id=88223>`_
 * `Steinar Henden <https://uit.no/om/enhet/ansatte/person?p_document_id=43772&p_dimension_id=88223>`_
 * `Dan Jonsson <https://uit.no/om/enhet/ansatte/person?p_document_id=44087&p_dimension_id=88223>`_
 * `Elena Malkin <https://uit.no/om/enhet/ansatte/person?p_document_id=335339&p_dimension_id=88223>`_
 * `Espen Tangen <https://uit.no/om/enhet/ansatte/person?p_document_id=43808&p_dimension_id=88223>`_
-* `Radovan Bast <http://bast.fr>`_
+* `Giacomo Tartari <https://uit.no/om/enhet/ansatte/person?p_document_id=197816&p_dimension_id=88139>`_

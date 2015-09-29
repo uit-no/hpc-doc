@@ -1,15 +1,12 @@
----
-title: Guidelines
-...
 
 Guidelines
-------------
+==========
 
 Guidelines for use of computer equipment at the University of Tromso
 
 
 Definitions
-~~~~~~~~~~~~~~~
+-----------
 
  Explanation of words and expressions used in these guidelines.
 
@@ -48,7 +45,7 @@ resources:
     equipment.
 
 Purpose
-~~~~~~~~~~~
+-------
 
  The purpose of these guidelines is to contribute towards the
 development of a computer environment in which the potential provided by
@@ -58,7 +55,7 @@ research and to disseminate knowledge about scientific methods and
 results.
 
 Application
-~~~~~~~~~~~~~~~
+-----------
 
  These guidelines apply to the use of the University's computer
 equipment and apply to all users who are granted access to the computer
@@ -68,7 +65,7 @@ The use of the computer equipment also requires that the user knows any
 possible supplementary regulations.
 
 Good Faith
-~~~~~~~~~~~~~~
+----------
 
  Never leave any doubt as to your identity and give your full name in
 addition to explaining your connection to the University. A user is
@@ -86,7 +83,7 @@ responsibility to ensure that copies of data owned or used by the
 University are secured on behalf of the University.
 
 Data Safety
-~~~~~~~~~~~~~~~
+-----------
 
  Users are obliged to take the necessity measures to prevent the loss of
 data etc. by taking back-up copies, careful storage of media, etc. This
@@ -103,7 +100,7 @@ the equipment to the closest superior or to the person who is
 responsible for data safety.
 
 Respect for Other Users Privacy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
  Users may not try to find out another persons password, etc., nor try
 to obtain unauthorized access to another persons data. This is true
@@ -122,7 +119,7 @@ definition in section 13 second section of the Administration Law,
 (forvaltningslovens section 13 annet ledd).
 
 Proper Use
-~~~~~~~~~~~~~~
+----------
 
  The computer equipment of the University may not be used to advance
 slander or discriminating remarks, nor to distribute pornography or
@@ -134,14 +131,14 @@ The computer equipment is to be used in accordance with the aims of the
 University. This excludes direct commercial use.
 
 Awareness of the Purposes for Use of Resources
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
  The computer equipment of the University is to strengthen and support
 professional activity, administration, research and teaching. Users have
 a co-responsibility in making the best possible use of the resources.
 
 Rights
-~~~~~~~~~~
+------
 
  Data is usually linked to rights which make their use dependent on
 agreements with the holder of the rights. Users commit themselves to
@@ -150,7 +147,7 @@ makes data accessible. The copying of programs in violation of the
 rights of use and/or license agreement is not permitted.
 
 Liability
-~~~~~~~~~~~~~~
+---------
 
  Users themselves are responsible for the use of data which is made
 accessible via the computer equipment. The University disclaims all
@@ -162,7 +159,7 @@ responsible for damage or loss suffered by users as a consequence of
 insufficient protection of their own data.
 
 Surveillance
-~~~~~~~~~~~~~~~~~
+------------
 
  The systems manager has the right to seek access to the individual
 user's reserved areas on the equipment for the purpose of ensuring the
@@ -182,7 +179,7 @@ circumstances which could represent a violation of these guidelines may
 be reported to superior authorities.
 
 Sanctions
-~~~~~~~~~~~~~~
+---------
 
  Breach of these guidelines can lead to the user being denied access to
 the University's data services, in addition to which there are sanctions
@@ -196,7 +193,7 @@ University. Disciplinary measures against students are passed by the
 University Council, ref. section 47 of the University law.
 
 Complaints
-~~~~~~~~~~~~~~~
+----------
 
  Complaints about sanctions are to be directed to the person(s) who
 order sanctions. If the complaint is not complied with, it is sent on to
