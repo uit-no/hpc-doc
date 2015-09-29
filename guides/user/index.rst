@@ -19,5 +19,4 @@ Software and applications
 =========================
 
 * :doc:`Using programs on stallo </applications/index>`
-* :doc:`Biology </applications/biology>`
 * :doc:`Chemistry </applications/chemistry/index>`
