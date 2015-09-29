@@ -1,9 +1,10 @@
----
-title: Logging in and running your first job (on Stallo).
-...
+.. _first_job:
+
+Logging in and running your first job (on Stallo).
+==================================================
 
 Install an ssh client.
-============================
+----------------------
 
 Linux and Mac users should already have an ssh client installed.  Windows users can use 
 `Putty <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_.  
@@ -12,7 +13,7 @@ Linux and Mac users should already have an ssh client installed.  Windows users 
 `Putty ssh intor on google <http://lmgtfy.com/?q=putty+ssh+intro>`_.
 
 Logging in.
-============================
+-----------
 
 First you connect from your computer with ssh.  Lets assume your username is marve::
 

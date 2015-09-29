@@ -1,10 +1,7 @@
----
-toc: no
-title: Applications
-...
+.. _sw_list:
 
-By category
-~~~~~~~~~~~~~~
+Applications by category
+========================
 
 * `Development packages <http://hpc.uit.no/software/development.html>`_
 * `Full package list <http://hpc.uit.no/software>`_

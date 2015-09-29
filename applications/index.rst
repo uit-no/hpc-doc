@@ -1,7 +1,4 @@
----
-toc: no
-title: Applications
-...
+.. _chem_prog_packages:
 
 Chemistry program packages 
 -----------------------------

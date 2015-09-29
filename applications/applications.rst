@@ -1,7 +1,7 @@
----
-toc: no
-title: Applications
-...
+.. _applications:
+
+Applications
+============
 
 Overview over SW installed on Stallo
 --------------------------------------
@@ -9,7 +9,7 @@ Overview over SW installed on Stallo
 For a complete list of applications see the :doc:`software page <software>`.
 
 Missing / new SW?
-...................
+-----------------
 
 If there is any SW missing on this list that you would like to have
 installed on Stallo, or you need help to install your own SW, please
@@ -17,7 +17,7 @@ feel free to contact the support personal about this:
 :doc:`support-uit@notur.no <support-uit@notur.no>`
 
 Changes in application software
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 New and updated software will be announced on `UiT
 News <http://docs.notur.no/uit/uit-news>`_.
@@ -33,7 +33,7 @@ List all version of a specific software::
     module avail software-name
 
 Modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------
 
 Software installations on the clusters span many applications, and many
 different version numbers of the same application. It is not possible
@@ -44,7 +44,7 @@ specific session, there is a system for loading and unloading 'modules'
 which activate and deactivate the relevant parts of your user session.
 
 The modules command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------
 
 An introduction to the Modules Command; a way to navigate between
 various settings, libraries and SW versions
@@ -63,7 +63,7 @@ page about link about Modules
 
 
 Which modules are loaded?
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 To see the modules currently active in your session, use the
 command  
@@ -75,7 +75,7 @@ command
  
 
 Which modules are available?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 In order to see a complete list of available modules, issue the
 command 
@@ -93,7 +93,7 @@ pattern:
 *  (default) if default version
 
 How are modules loaded?
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 In order to enable to make available, for instance, the netcdf library,
 issue the command  
@@ -114,7 +114,7 @@ just include the version:
  
 
 How are modules unloaded?
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Keeping with the above example, use the following command to unload the
 GLView module again:  
@@ -124,7 +124,7 @@ GLView module again:
     module unload netcdf
 
 Which version of a module is the default?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 In order to see, for instance, which version of netcdf is loaded by the
 module, use:
@@ -138,7 +138,7 @@ This will show the version and path of the module.
  
 
 How do I switch to a different version of a module?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------
 
 Switching to another version is similar to loading a specific version.
 As an example, if you want to switch from the default (current) Intel
@@ -149,7 +149,7 @@ compilers version to version 8.0, type
     module switch intelcomp intelcomp/8.0
 
 How do I switch to a different version of a module?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------
 
 Say you want to switch from the intel compilers  version 11.1 to, e.g.
 version 11.0, use  

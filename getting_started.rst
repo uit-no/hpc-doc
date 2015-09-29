@@ -1,10 +1,12 @@
----
-title: Getting started.
-...
-
 .. contents:: Table of contents.
 
 .. index:: getting started, quickstart guide
+
+.. _getting_started:
+
+===============
+Getting started
+===============
 
 The really quick and dirty startup guide for the pathologically impatient
 ================================================================================================
