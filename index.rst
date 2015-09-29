@@ -11,12 +11,12 @@ General information
 * :doc:`Getting started </guides/user/quick_start>`
 * :doc:`Getting an account </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
-* :doc:`Graphical login </guides/user/gui>`
 * :doc:`FAQs </faqs/index>`
 
 .. toctree::
    :maxdepth: 2
 
+   general/gui.rst
    general/dos_and_donts.rst
 
 
