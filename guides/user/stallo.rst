@@ -1,10 +1,10 @@
----
-title: About stallo
-...
+
+About stallo
+============
 
 
 Resource description
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Key numbers about the Stallo cluster: compute nodes, node interconnect,
 operating system, and storage configuration.
@@ -51,14 +51,14 @@ QDR Infiniband.
  
 
 Stallo - a Linux cluster 
-~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 A quick and brief introduction to the general features of Linux
 Clusters / Stallo is available on the `Metasenter page about Linux
 Clusters <../../../metacenter/metacenter-documentation/metacenter_user_guide/general-about-linux-cluster>`_.
 
 Linux operation system (Rocks): `<http://www.rocksclusters.org/>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------
 
 Since 2003, the HPC-group at has been one of five international
 development sites for the Linux operation system Rocks. Together with
@@ -69,7 +69,7 @@ Rocks is a de-facto standard for cluster-managment in Norwegian
 supercomputing.
 
 Stallo - Norse mythology
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 In the folklore of the Sami, a Stallo (also Stallu or Stalo)is a sami wizard.
 "The Sami traditions up North differ a bit from other parts of Norwegian

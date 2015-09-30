@@ -1,11 +1,7 @@
 
-
-
-
+=======
 Storage 
---------
-
- 
+=======
 
 Stallo has a "three folded" file system:
 
@@ -13,8 +9,9 @@ Stallo has a "three folded" file system:
 * global accessible work / scratch area: /global/work  (1000 TB)
 * local accessible work / scratch area on each node: /local/work  (~450 GB)  
 
+
 Home area
------------
+=========
 
 There is a 64 TB global accessible home area on the cluster, which is
 accessible from both the login nodes and all the compute nodes. The
@@ -29,8 +26,9 @@ use it for temporary storage during production runs.
 Jobs using the home area for scratch files while running may be killed
 without any warning.
 
+
 Work / scratch areas
--------------------------
+====================
 
 There are two different work / scratch areas available on Stallo:
 
@@ -57,8 +55,9 @@ If you need permanent storage of large amounts of data, please
 contact the system administrators:
 :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
 
+
 Backup
---------
+======
 
 Backup is taken of all files stored on  /home. A full dump backup is
 made every week and stored for 3 months.
@@ -68,82 +67,9 @@ If you need permanent storage of large amounts of data, please
 contact the system administrators:
 :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
 
-Storage and File system
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Basic information about the disk systems on Stallo.
-
-Overview
-~~~~~~~~
-
-Stallo has a "three folded" file system:
-
-*  a global accessible home area: /home  (32 TB)
-*  a global accessible work / scratch area:  /global/work  (95 TB)  
-*  a local accessible work / scratch area on each node:
-   /local/work  (~90 GB)  
-   
-
- 
-
-Home area
-~~~~~~~~~
-
-There is a 32 TB global accessible home area on the cluster, which is
-accessible from both the login nodes and all the compute nodes. The
-default size of the home directory's for each user are 50 GB. If more
-space is needed for permanent storage users have to apply for it. Please
-contact the system administrators,
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`, for more
-information about this.
-
-The home area is for "permanent" storage only, so please do not
-use it for temporary storage during production runs.
-Jobs using the home area for scratch files while running may be killed
-without any warning.
-
-Work / scratch areas
-~~~~~~~~~~~~~~~~~~~~
-
-There are two different work / scratch areas available on Stallo:
-
-*  There are an 95 TB global accessible work area on the cluster. This
-   is accessible from both the login nodes and all the compute nodes as
-   /global/work. This is the recommended work area, both because of
-   size and performance!
-*  In addition, each compute node has a small work area of approximately
-   90 GB, only locally accessible on each node. This area is accessible
-   as /local/work on each compute node. In general we do
-   not  recommend to use /local/work, both because of (the lack of)
-   size and performance, however for some users this may be the best
-   alternative.
-
-These work areas should be used for all jobs running on Stallo.
-
-After a job has finished old files should be deleted, this is to
-ensure that there are plenty of available space for new jobs. Files left
-on the work areas after a job has finished may be removed without any
-warning.
-
-There are no backup of files stored on the work areas.
-If you need permanent storage of large amounts of data, please
-contact the system administrators:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
-
- 
-Backup
-~~~~~~
-
-Backup is taken of all files stored on  /home. A full dump backup is
-made every week and stored for 3 months.
-
-There are no backup of files stored on the work areas.
-If you need permanent storage of large amounts of data, please
-contact the system administrators:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
- 
 Transferring data to/from stallo using ftp.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================
 
 The ssh protocol (or rather the openssh implementation) has some
 limitations that becomes noticeable on long haul data transfers on
@@ -152,8 +78,9 @@ The ftp protocol does not have these limitations and gives superior
 performance (10X over scp/sftp) when moving data to/from stallo from the
 other sites in Norway.
 
+
 The basics
-~~~~~~~~~~
+----------
 
 You need a ftp client that supports encrypted authentication.
 
@@ -183,7 +110,7 @@ system, that is, the one you get when you use the command ``ftp``,
 ``ncftp`` also seems to have problems.
 
 How to connect
-~~~~~~~~~~~~~~
+--------------
 
 The hostname of the ftp server is ``stallo-wgw.uit.no`` (this will
 change to stallo-ftp.uit.no soon).
@@ -199,7 +126,7 @@ Example using lftp on linux:
     84291584 bytes transferred in 3 seconds (28.98M/s)
 
 Problems
-~~~~~~~~
+--------
 
 We seem to have some problems with the openssl library that takes care
 of the encryption, newer versions seems to work better but we cannot
@@ -218,8 +145,9 @@ using lftp:
 
 As one sees, just retrying fixes the problem(??).
 
+
 Transferring files to/from Stallo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 About file transfer to/from Stallo
 

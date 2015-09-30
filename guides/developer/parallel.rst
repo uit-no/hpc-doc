@@ -1,11 +1,12 @@
 
+=====================
 Parallel applications
-~~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 MPI, OpenMP and Hybrid codes
 
 MPI based Fortran, C or C++ codes
--------------------------------------
+=================================
 
 The compilation of Fortran,  C or C++ codes parallelized with
 MPI,  the form is quite similar:
@@ -17,7 +18,7 @@ MPI,  the form is quite similar:
     mpiCC [options] file1 [file2 ...]          - For C++ when using OpenMPI
 
   mpif90, mpicc and mpiCC are using the Intel compilers, they are
-just wrappers that invokes all the necessary MPI stuff automatically
+just wrappers that invoke all the necessary MPI stuff automatically
 for you. Therefore, everything else is the same for compiling MPI
 codes as for compiling plain Fortran/C/C++ codes. Please check also the
 :doc:`section about MPI Libraries <../mpi-libraries>` for more
@@ -44,7 +45,7 @@ To start the MPI application:
  
 
 OpenMP based codes
-----------------------
+==================
 
 You only have to select the necessary compiler options for OpenMP. For
 intel compilers:
@@ -63,8 +64,9 @@ and for hybrid MPI/OpenMP:
     mpif90 -openmp MyApplication.f90
     mpicc -openmp MyApplication.c
 
- Launch hybrid MPI/OpenMP applications:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Launch hybrid MPI/OpenMP applications:
+======================================
 
 For example 12 MPI processes with 8 threads each (i.e. uses 96 cores):
 
@@ -86,7 +88,7 @@ this application:
  
 
 Checkpoint and restart of applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================
 
 In normal conditions your job will not be suspended and resumed on
 Stallo. Once your job is started it will run until it is finished or the
@@ -97,10 +99,12 @@ limit), jobs may be interrupted. It is the users responsibility to
 ensure that the necessary data is stored and provide the necessary
 environment if the job is supposed to be restarted. 
 
+
 Notes on MPI
-~~~~~~~~~~~~~~~~~~~~~~
+============
 
 RDMA capabilities using OpenMPI
+-------------------------------
 
 This section will present notes about different tests performed to
 investigate the possibilities of RDMA (Remote Direct Memory Access) and
@@ -109,7 +113,7 @@ one sided communication using MPI on Stallo.
  
 
 OpenMPI
-
+^^^^^^^
 A lot of info can be found at
 `http://www.open-mpi.org <http://www.open-mpi.org>`_ , but here we will
 fokus on an end user point of view.
@@ -172,8 +176,8 @@ for example:
 
  
 
- Important limitations
-.........................
+Important limitations
+^^^^^^^^^^^^^^^^^^^^^
 
  OpenMPI will reserve about 600 times more memory than the value from
 mca btl _openib _eager _limit. That means that for sending 10 MB eagerly
@@ -189,7 +193,7 @@ mca btl _openib _eager _limit x 2 is reserved.
  
 
 Non-blocking send
-.........................
+^^^^^^^^^^^^^^^^^
 
 In the case of non-blocking send (MPI _Isend), the data will not
 necessarily be sent before the next MPI call is reached in the caller
@@ -205,7 +209,7 @@ without special memory penalty.
  
 
 Conclusion
-.........................
+^^^^^^^^^^
 
 The best way to take advantage of RDMA is to use non-blocking send
 (MPI _Isend) in conjunction with sufficiently high value of
@@ -214,7 +218,7 @@ btl _sm _eager _limit.
  
 
 Intel MPI
-.........................
+---------
 
 The Intel MPI library has different rules. The default limit for eager
 send is 64kB. This can be increased with an important limitation, see
@@ -240,14 +244,14 @@ in OpenMPI
 
 
 MPI libraries
-~~~~~~~~~~~~~~~~~~~~~~~
+=============
 
 Information about the MPI libraries installed on Stallo.
 
  
 
 OpenMPI
-~~~~~~~
+-------
 
 On stallo the default mpi-library is
 `OpenMPI <http://www.open-mpi.org/>`_. You compile with mpicc/mpif90,

@@ -1,4 +1,7 @@
 
+Logging in
+==========
+
 An SSH client (Secure SHell) is the required tool to connect to Stallo. To
 learn more about this, check out the `Metasenter page on SSH. <http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/log-in-with-ssh>`_. 
 
@@ -15,7 +18,7 @@ The password can be changed `here <https://www.metacenter.no/user/password/>`_ ,
 .. FIXME: **Something about keys here?**
 
 Logging on the compute nodes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Information on how to log in on a compute node.
 
@@ -58,8 +61,7 @@ Below is an example on how you can do this:
 
 This example assumes that you are running an X-server on your local
 desktop, which should be available for most users running Linux, Unix
-and Mac Os X. If you are using Windows you must install some `X-server
-on your local
-PC <../../../../metacenter/metacenter-documentation/metacenter_user_guide/x-server-for-windows>`_.
+and Mac Os X. If you are using Windows you must install some X-server
+on your local PC.
 
 .. vim:ft=rst

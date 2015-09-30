@@ -1,15 +1,15 @@
----
-title: Working with the Linux command line
-...
+
+Working with the Linux command line
+===================================
 
 New on Linux systems?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Tips on how to get started using the Snowstorm cluster on UiT if you are
 not too familiar with Linux / Unix.
 
 Getting started
-~~~~~~~~~~~~~~~
+---------------
 
 This page contains some tips on how to get started using the Snowstorm
 cluster on UiT. The information is intended for both users that are new
@@ -151,7 +151,7 @@ behaviour. You can check the contents of the PATH variable by typing
     printenv PATHecho $PATH
 
 More advanced usage .....
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 git is a version control system, which allows you to keep old
 versions of files (usually source code), keep a log of who, when, and
