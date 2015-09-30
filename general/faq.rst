@@ -173,7 +173,7 @@ Where can I find an example of job script?
 
 You can find an example with comments
 :doc:`here <../user_guide/job-script-example>`
- 
+
 Relevant examples (also for beginning users) that are
 application specific can be found on the documentation for the
 specific :doc:`applications </application-support>`.
@@ -202,9 +202,9 @@ How can I see the queing situation?
 How can I see how my jobs are doing in the queue, if my jobs are idle,
 blocked, running?
 
-On the webpage 
+On the webpage
 http://stallo-login1.uit.no/jobbrowser/
-you can find information about the current load on stallo, some information about the nodes, and the information you would get from the showq command, which is described below. You can also find information about your job and if you the job is running, you can find graphs about its usage of the CPUs, memory and so on. 
+you can find information about the current load on stallo, some information about the nodes, and the information you would get from the showq command, which is described below. You can also find information about your job and if you the job is running, you can find graphs about its usage of the CPUs, memory and so on.
 
 If you prefer to use the command line, to see the jobqueue use the command 'showq':
 
@@ -357,9 +357,9 @@ How can I get more information about my job?
 How can I see when my qued job will start, when it will finish, why it
 is blocked and so on?
 
-On the webpage 
+On the webpage
 http://stallo-login1.uit.no/jobbrowser/showq
-you can find a list of running jobs, idle jobs and blocked jobs (the same information you would get from the *showq* command). Each line in the list gives you the jobid, which user is running the job, number of cpus it`s using, time remaining and start time of the job. The list is sorted by remaining time for the jobs. If you find your job there and click on the id number, you can also find more information about your job. And if you the job is running, you can find graphs about its usage of the CPUs, memory and so on. 
+you can find a list of running jobs, idle jobs and blocked jobs (the same information you would get from the *showq* command). Each line in the list gives you the jobid, which user is running the job, number of cpus it`s using, time remaining and start time of the job. The list is sorted by remaining time for the jobs. If you find your job there and click on the id number, you can also find more information about your job. And if you the job is running, you can find graphs about its usage of the CPUs, memory and so on.
 
 If you prefer the command line, you should use this command:
 
@@ -449,7 +449,7 @@ cluster, use the following command:
 
 However, the list is rather long... :-)
 
-You can also have a look at 
+You can also have a look at
 http://stallo-login1.uit.no/jobbrowser/nodes
 
 
