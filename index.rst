@@ -1,7 +1,7 @@
 
 
-HPC-UiT Notur User Documentation
-================================
+HPC-UiT Services User Documentation
+===================================
 
 
 General information

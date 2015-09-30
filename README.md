@@ -1,6 +1,6 @@
 
 
-# HPC-group user documentation
+# HPC-services user documentation
 
 Served via http://hpc-uit.readthedocs.org.
 
