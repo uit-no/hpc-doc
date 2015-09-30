@@ -51,6 +51,7 @@ Application development on Stallo
 .. toctree::
    :maxdepth: 2
 
+   development/compilers.rst
    development/environment.rst
    development/scripting.rst
    development/tools.rst

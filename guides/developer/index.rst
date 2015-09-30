@@ -12,16 +12,6 @@ For a complete list of development software installed on stallo, consult the
 `software directory <http://hpc.uit.no/software>`_. If you find some
 important program or library missing, please contact support-uit@notur.no.
 
-:doc:`Compilers <compilers>`
----------------------------
-
-The default development environment on stallo is provided by Intel Cluster
-Studio XE.  In general users are advised to use the `Intel compilers
-<compilers#intel-compilers>`_ and `performance libraries
-<libraries#intel-mkl>`_, since they usually give the best performance.
-
-*For more information, see the :doc:`compiler page <compilers>`.*
-
 :doc:`Performance analysis and optimization <optimization>`.
 --------------------------------------------------------
 A large number of tools for analyzing both single- and multi-core, as well as
