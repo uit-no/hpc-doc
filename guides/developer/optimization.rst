@@ -1,7 +1,3 @@
----
-toc: no
-title: Application optimization
-...
 
 top, time command, lsof, starce, valgrind cache profiler, Compiler
 flags, IPM, Vtune

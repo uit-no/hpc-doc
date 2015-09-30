@@ -1,7 +1,3 @@
----
-title: Files, filesystems and backup
-toc: yes
-...
 
 
 

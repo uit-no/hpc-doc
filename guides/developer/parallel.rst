@@ -1,7 +1,3 @@
----
-toc: no
-title: Parallelization
-...
 
 Parallel applications
 ~~~~~~~~~~~~~~~~~~~~~~

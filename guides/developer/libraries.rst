@@ -1,7 +1,3 @@
----
-toc: no
-title: Development libraries
-...
 
 General about using libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
