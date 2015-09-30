@@ -19,15 +19,6 @@ MPI parallel performance are available.
 
 *For more information, see the :doc:`optimization page <optimization>`.*
 
-:doc:`Libraries <libraries>`
------------------------------
-
-The :doc:`Intel Math Kernel Library <libraries#intel-mkl>` (MKL) contains a large
-collection of highly optimized math routines for high-performance computing.
-It has both single- and multi-threaded versions of most routines, and users
-are encouraged to use MKL for optimal performance on stallo.
-
-*For more information, see the :doc:`libraries page <libraries>`.*
 
 :doc:`Parallel programming <parallel>`
 --------------------------------------
