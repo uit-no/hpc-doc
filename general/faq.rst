@@ -54,7 +54,7 @@ you can use the following command:
 
     quota -s
 
-Its only the home and project disks that have quota.
+Its only the *$HOME* and *$PROJECT* disks that have quota.
 
 
 
