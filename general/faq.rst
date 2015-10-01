@@ -29,7 +29,7 @@ If you are receiving a lot of e-mails looking someting like this:
 PBS Job Id: 52237.stallo.uit.no
 Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
 job deleted
-Job deleted at request of maui@snowstorm.uit.no
+Job deleted at request of maui@stallo.uit.no
 MOAB\_INFO:  job exceeded wallclock limit
 
 You can stop the job by running the command:
@@ -48,14 +48,14 @@ How can I check my disk quota and disk usage?
 How large is my disk quota, and how much of it have I used?
 
 To check how large your disk quota is, and how much of it you have used,
-you can use the following *Lustre*\ :sup:`1` command:
+you can use the following command:
 
 ::
 
-    lfs quota <your user name> /global/home/
+    quota -s
 
-1) `*Lustre* <http://wiki.lustre.org/>`_\ is the file system used on
-Stallo
+Its only the home and project disks that have quota.
+
 
 
 How can I get information about my account?
@@ -229,7 +229,7 @@ You can also use the command
 
     qstat
 
-which gives you a list of jobs on Snowstorm, sorted by jobid. This
+which gives you a list of jobs on Stallo, sorted by jobid. This
 command also has man-pages:
 
 ::
