@@ -15,18 +15,18 @@ News and Events
 General information
 -------------------
 
-* :doc:`About stallo </guides/user/stallo>`
-* :doc:`Getting started </guides/user/quick_start>`
-* :doc:`Getting an account </guides/user/account>`
-* :doc:`CPU-hour quota and accounting </guides/user/accounting>`
-* :doc:`Logging in for the first time </guides/user/login>`
-* :doc:`Graphics and GUIs </guides/user/gui>`
+* :doc:`About stallo                        </guides/user/stallo>`
+* :doc:`Getting started                     </guides/user/quick_start>`
+* :doc:`Getting an account                  </guides/user/account>`
+* :doc:`CPU-hour quota and accounting       </guides/user/accounting>`
+* :doc:`Logging in for the first time       </guides/user/login>`
+* :doc:`Graphics and GUIs                   </guides/user/gui>`
 * :doc:`Working with the Linux command line </guides/user/linux>`
   (10 most important commands)
-* :doc:`Working on stallo </guides/user/storage>`
+* :doc:`Working on stallo                   </guides/user/storage>`
   (services, modules, file systems, topology, backups)
-* :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
-* :doc:`Guidelines </guides/user/guidelines>`
+* :doc:`Creating and submitting jobs        </guides/user/jobs>` (job scripts, job status)
+* :doc:`Guidelines                          </guides/user/guidelines>`
 
 
 Application development on Stallo
@@ -49,8 +49,8 @@ Applications
 ------------
 
 * :doc:`Application guides <applications/index>`
-* :doc:`Application list <applications/software>`
-* :doc:`Chemistry </applications/chemistry/index>`
+* :doc:`Application list   <applications/software>`
+* :doc:`Chemistry          <applications/chemistry/index>`
 
 
 FAQs
