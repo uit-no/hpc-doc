@@ -18,15 +18,17 @@ General information
 * :doc:`About stallo </guides/user/stallo>`
 * :doc:`Getting started </guides/user/quick_start>`
 * :doc:`Getting an account </guides/user/account>`
+* :doc:`CPU-hour quota and accounting </guides/user/accounting>`
+* :doc:`Applying for quota </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
+* :doc:`Graphics and GUIs </guides/user/gui>`
 * :doc:`Working with the Linux command line </guides/user/linux>`
   (10 most important commands)
-* :doc:`User guides </guides/user/index>`
 * :doc:`Working on stallo </guides/user/storage>`
   (services, modules, file systems, topology, backups)
 * :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
-* :doc:`Applying for quota </guides/user/account>`
 * :doc:`Accessing files on stallo </guides/user/files>`
+* :doc:`Guidelines </guides/user/guidelines>`
 
 
 Application development on Stallo
@@ -50,6 +52,7 @@ Applications
 
 * :doc:`Application guides <applications/index>`
 * :doc:`Application list <applications/software>`
+* :doc:`Chemistry </applications/chemistry/index>`
 
 
 FAQs
@@ -65,6 +68,7 @@ FAQs
 
 Getting help
 ------------
+* :doc:`Help desk </guides/user/helpdesk>`
 
 .. toctree::
    :maxdepth: 2
