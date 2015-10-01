@@ -48,9 +48,9 @@ Application development on Stallo
 Applications
 ------------
 
+* :doc:`Using Applications on stallo <applications/applications>`
 * :doc:`Application guides <applications/index>`
 * :doc:`Application list   <applications/software>`
-* :doc:`Chemistry          <applications/chemistry/index>`
 
 
 FAQs
