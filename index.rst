@@ -19,7 +19,6 @@ General information
 * :doc:`Getting started </guides/user/quick_start>`
 * :doc:`Getting an account </guides/user/account>`
 * :doc:`CPU-hour quota and accounting </guides/user/accounting>`
-* :doc:`Applying for quota </guides/user/account>`
 * :doc:`Logging in for the first time </guides/user/login>`
 * :doc:`Graphics and GUIs </guides/user/gui>`
 * :doc:`Working with the Linux command line </guides/user/linux>`
@@ -27,7 +26,6 @@ General information
 * :doc:`Working on stallo </guides/user/storage>`
   (services, modules, file systems, topology, backups)
 * :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
-* :doc:`Accessing files on stallo </guides/user/files>`
 * :doc:`Guidelines </guides/user/guidelines>`
 
 
