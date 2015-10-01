@@ -15,28 +15,28 @@ News and Events
 General information
 -------------------
 
-* :doc:`About stallo                        </guides/user/stallo>`
-* :doc:`Getting started                     </guides/user/quick_start>`
-* :doc:`Getting an account                  </guides/user/account>`
-* :doc:`CPU-hour quota and accounting       </guides/user/accounting>`
-* :doc:`Logging in for the first time       </guides/user/login>`
-* :doc:`Graphics and GUIs                   </guides/user/gui>`
-* :doc:`Working with the Linux command line </guides/user/linux>`
-  (10 most important commands)
-* :doc:`Working on stallo                   </guides/user/storage>`
-  (services, modules, file systems, topology, backups)
-* :doc:`Creating and submitting jobs        </guides/user/jobs>` (job scripts, job status)
-* :doc:`Guidelines                          </guides/user/guidelines>`
+.. toctree::
+   :maxdepth: 2
+
+   guides/user/stallo.rst
+   guides/user/quick_start.rst
+   guides/user/account.rst
+   guides/user/accounting.rst
+   guides/user/login.rst
+   guides/user/gui.rst
+   guides/user/linux.rst
+   guides/user/storage.rst
+   guides/user/jobs.rst
+   guides/user/guidelines.rst
 
 
 Application development on Stallo
 ---------------------------------
 
-* :doc:`Developer guides </guides/developer/index>`
-
 .. toctree::
    :maxdepth: 2
 
+   guides/developer/index.rst
    development/compilers.rst
    development/environment.rst
    development/scripting.rst
@@ -48,9 +48,12 @@ Application development on Stallo
 Applications
 ------------
 
-* :doc:`Using Applications on stallo <applications/applications>`
-* :doc:`Application guides <applications/index>`
-* :doc:`Application list   <applications/software>`
+.. toctree::
+   :maxdepth: 2
+
+   applications/applications.rst
+   applications/index.rst
+   applications/software.rst
 
 
 FAQs
@@ -66,10 +69,10 @@ FAQs
 
 Getting help
 ------------
-* :doc:`Help desk </guides/user/helpdesk>`
 
 .. toctree::
    :maxdepth: 2
 
+   guides/user/helpdesk.rst
    help/contact.rst
    help/staff.rst

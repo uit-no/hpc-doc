@@ -1,7 +1,7 @@
 
-=======
-Storage 
-=======
+=======================================================
+Working on stallo (storage, back-ups, file systems,...) 
+=======================================================
 
 Stallo has a "three folded" file system:
 

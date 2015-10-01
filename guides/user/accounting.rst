@@ -1,6 +1,6 @@
 
-Accounting
-==========
+CPU-hour quota and accounting
+=============================
 
 CPU quota.
 ----------
@@ -84,7 +84,7 @@ CPU quota.
 ----------
 
 To use the batch system you have to have a cpu quota, either local or
-natinoal. For every job you submit we check that you have sufficient
+national. For every job you submit we check that you have sufficient
 quota to run it and you will get a warning if you do not have sufficient
 cpu-hours to run the job. The job will be submitted to queue, but will
 not start until you have enough cpu-hours to run it.

@@ -1,6 +1,6 @@
-==========
-Logging in
-==========
+=============================
+Logging in for the first time
+=============================
 
 An SSH client (Secure SHell) is the required tool to connect to Stallo. To
 learn more about this, check out the `Metasenter page on SSH. <http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/log-in-with-ssh>`_. 

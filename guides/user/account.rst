@@ -1,7 +1,7 @@
 
-===================
-Accounts and quotas
-===================
+==================
+Getting an account
+==================
 
 Getting started on the machine (account, quota, password)
 =========================================================
