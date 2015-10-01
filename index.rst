@@ -22,7 +22,6 @@ General information
 * :doc:`Working with the Linux command line </guides/user/linux>`
   (10 most important commands)
 * :doc:`User guides </guides/user/index>`
-* :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
 * :doc:`Working on stallo </guides/user/storage>`
   (services, modules, file systems, topology, backups)
 * :doc:`Creating and submitting jobs </guides/user/jobs>` (job scripts, job status)
