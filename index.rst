@@ -45,12 +45,12 @@ Application development on Stallo
    development/valgrind.rst
 
 
-Available Applications
-----------------------
+Applications
+------------
 
-* :doc:`Using Applications on stallo <applications/applications.rst>`
-* :doc:`Application guides           <applications/index>`
-* :doc:`Application list             <applications/software>`
+* :doc:`Application guides <applications/index>`
+* :doc:`Application list   <applications/software>`
+* :doc:`Chemistry          <applications/chemistry/index>`
 
 
 FAQs
