@@ -82,7 +82,7 @@ other sites in Norway.
 The basics
 ----------
 
-You need a ftp client that supports encrypted authentication.
+You need an ftp client that supports encrypted authentication.
 
 Please note that it is only the authentication that is encrypted, the
 data you copy will flow unencrypted over the network so do not copy any
@@ -147,7 +147,7 @@ As one sees, just retrying fixes the problem(??).
 
 
 Transferring files to/from Stallo
----------------------------------
+=================================
 
 About file transfer to/from Stallo
 
@@ -192,11 +192,11 @@ Work area (temporary data):
     This is the scratch area of stallo. You should run all jobs in this area.
     This area is mounted on all nodes on stallo (including the login nodes).
     Users can stripe files them self as this file system is a Lustre file system.
-    Files older than 14 days. are subject for deletion without future notice.
+    Files older than 14 days are subject for deletion without future notice.
     There is no backup of files in this area.
 /local/work/: 
     on each compute node there are a small disk. On this disk a local scratch area of 69 GB exists.
-    if you have special needs and not to big amount of data you could use this area.
+    If you have special needs and not to big amount of data you could use this area.
 
 What area to use for what data
 .................................
