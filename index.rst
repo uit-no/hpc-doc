@@ -3,22 +3,6 @@
 HPC-UiT Services User Documentation
 ===================================
 
-
-General information
--------------------
-
-* :doc:`Getting started </guides/user/quick_start>`
-* :doc:`Getting an account </guides/user/account>`
-* :doc:`Logging in for the first time </guides/user/login>`
-
-.. toctree::
-   :maxdepth: 2
-
-   general/faq.rst
-   general/gui.rst
-   general/dos_and_donts.rst
-
-
 News and Events
 ---------------
 
@@ -28,13 +12,16 @@ News and Events
    news/news.rst
 
 
-Users
------
+General information
+-------------------
 
+* :doc:`About stallo </guides/user/stallo>`
+* :doc:`Getting started </guides/user/quick_start>`
+* :doc:`Getting an account </guides/user/account>`
+* :doc:`Logging in for the first time </guides/user/login>`
 * :doc:`Working with the Linux command line </guides/user/linux>`
   (10 most important commands)
 * :doc:`User guides </guides/user/index>`
-* :doc:`Technical information </guides/user/stallo>`
 * :doc:`Basic information </guides/user/basics>` (login, password, ssh, ...)
 * :doc:`Working on stallo </guides/user/storage>`
   (services, modules, file systems, topology, backups)
@@ -64,6 +51,17 @@ Applications
 
 * :doc:`Application guides <applications/index>`
 * :doc:`Application list <applications/software>`
+
+
+FAQs
+----
+
+.. toctree::
+   :maxdepth: 2
+
+   general/faq.rst
+   general/gui.rst
+   general/dos_and_donts.rst
 
 
 Getting help
