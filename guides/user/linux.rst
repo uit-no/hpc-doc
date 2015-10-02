@@ -1,15 +1,15 @@
-
+===================================
 Working with the Linux command line
 ===================================
 
 New on Linux systems?
----------------------
+=====================
 
 Tips on how to get started using the Snowstorm cluster on UiT if you are
 not too familiar with Linux / Unix.
 
 Getting started
----------------
+===============
 
 This page contains some tips on how to get started using the Snowstorm
 cluster on UiT. The information is intended for both users that are new
@@ -36,31 +36,41 @@ section <.#hw-information>`_  about the storage and file systems for
 more information about the file systems on the machines and your disk
 quota.
 
-ssh. The only way to connect to Snowstorm is by using ssh. Check
+ssh
+---
+The only way to connect to Snowstorm is by using ssh. Check
 the :doc:`ssh  section <log-in-with-ssh>` in the User Guide to learn
 more about ssh.
 
-scp/sftp.  The machines are stand-alone systems. The machines do
+scp/sftp
+--------
+The machines are stand-alone systems. The machines do
 not (NFS-)mount remote disks. Therefore you must explicitly transfer any
 files you wish to use to the machine by
 :doc:`scp/sftp <transfering-files-to-from-snowstorm>`.
 
-chsh. You may want to change the shell that you get by default
+chsh
+----
+You may want to change the shell that you get by default
 (bash). Use the command 'echo $SHELL' to check your current
 shell-type and 'chsh' to modify this (if needed). To list all
 available shells on Snowstorm use the command 'chsh --list-shells'.
 The C shell 'tcsh', the Korn shell 'ksh', and the Bourne-Again shell
 'bash' are popular ones.
 
-Running jobs on the machine. You must execute your jobs by
-submitting them to the batch system. There is a `dedicated
-section <../user_guide#job-execution>`_  in our user guide that
+Running jobs on the machine
+---------------------------
+You must execute your jobs by
+submitting them to the batch system. There is a dedicated
+section :ref:`jobs` in our user guide that
 explain how to use the batch system. The pages explains how to write job
 scripts, and how to submit, manage, and monitor jobs. It is not
 allowed to run long or large memory jobs interactively (i.e., directly
 from the command line).
 
-Manual pages. If you know the UNIX-command that you would like to
+Manual pages
+------------
+If you know the UNIX-command that you would like to
 use but not the exact syntax, consult the manual pages on the system to
 get a brief overview. Use 'man [command]' for this. For example, to
 get the right options to display the contents of a directory, use 'man
