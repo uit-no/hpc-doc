@@ -84,4 +84,4 @@ You can also start Totalview with::
   $ mpirun -tv a.out
 
 The users guide for Totalview can be found
-`here <http://www.totalviewtech.com/Documentation/latest/pdf/user_guide.pdf>`_.
+`here <http://www.roguewave.com/help-support/documentation/totalview>`_ and the quick start guide `here <http://docs.roguewave.com/totalview/8.15.7/pdfs/TotalView_Quick_View.pdf>`_.
