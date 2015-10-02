@@ -142,20 +142,11 @@ How do I switch to a different version of a module?
 
 Switching to another version is similar to loading a specific version.
 As an example, if you want to switch from the default (current) Intel
-compilers version to version 8.0, type
+compilers version to version 14.0, type
 
 ::
 
-    module switch intelcomp intelcomp/8.0
+    module switch intel intel/14.0
 
-How do I switch to a different version of a module?
----------------------------------------------------
-
-Say you want to switch from the intel compilers  version 11.1 to, e.g.
-version 11.0, use  
-
-::
-
-    module switch intel-compiler/11.1 intel-compiler/11.0
 
 .. :vim:ft=rst
