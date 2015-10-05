@@ -60,8 +60,8 @@ Backup
 ======
 
 There is no real backup of the data on stallo. However we do keep daily snapshots of
-/home and /project for the last 7 days. The /home snapshots are kept at 
-/global/hds/.snapshot/ 
+/home and /project for the last 7 days. The /home snapshots are kept at
+/global/hds/.snapshot/
 
 
 There are no backup of files stored on the /work areas.
