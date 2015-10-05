@@ -6,7 +6,7 @@ Getting an account
 Getting started on the machine (account, quota, password)
 =========================================================
 
-Before you start using Stallo, please read the :doc:`University of Tromsø's guidelines <guidelines>`.
+Before you start using Stallo, please read the :doc:`UiT The Arctic University of Norway's guidelines <guidelines>`.
 
 A general introduction to Notur can be found at
 `https://www.notur.no/use-notur-resources <https://www.notur.no/use-notur-resources>`_
@@ -35,6 +35,6 @@ Please note that most users who are allowed to apply for a UiT quota
 also are allowed to apply for a quota from the Research Council –
 at the same time!
 
-Before you start using Stallo, please read the `University of Tromsø's guidelines <guidelines>`_.
+Before you start using Stallo, please read the `UiT The Arctic University of Norway's guidelines <guidelines>`_.
 
 .. vim:ft=rst

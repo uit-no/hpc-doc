@@ -23,7 +23,7 @@ Planned/unplanned downtime
 --------------------------
 
 Planned/unplanned downtime will be announced on
-`UiTNews <http://docs.notur.no/uit/uit-news>`_.
+`UiT News <http://docs.notur.no/uit/uit-news>`_.
 In the case of a planned downtime, a reservation will be made in the queuing system, so new jobs, that would not finish until the downtime, won't start. Running jobs will be restarted, if possible, if the system goes down. We apologize for any inconveniences this may cause.
 
 Systems events log
