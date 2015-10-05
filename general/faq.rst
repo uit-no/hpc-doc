@@ -759,9 +759,9 @@ Symptoms:
 
 If your application has both of the following symptoms:
 
-#. works on a low number of nodes, but hangs on startup on higher node
+#. It works on a low number of nodes, but hangs on startup on higher node
    counts
-#. works with ethernet (by setting ``--mca btl ^openib`` on the mpirun
+#. It works with ethernet (by setting ``--mca btl ^openib`` on the mpirun
    command), but not with infiniband
 
 Then try to revert back to OpenMPI 1.2.4 by setting this before
@@ -777,55 +777,4 @@ Please tell us if this helps for you application. We try to get an idea
 of the extent of this problem. Send a report to
 :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`.
 
-
-Programming
-===========
-
-How to link and use mkl library (BLAS,LAPACK...)
-------------------------------------------------
-
-Basic example of use of Intel's MKL library
-
-Simple examples of  linking:
-
-***
-ifort   myprog.f90  -shared-intel -Wl,--start-group
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_intel\_lp64.a
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_sequential.a
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_core.a
--Wl,--end-group -lpthread ***
-
-static linking of code myprog.f90 with Intel MKL sequential library.
-
- 
-
-***ifort   myprog.f90 -shared-intel -Wl,--start-group
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_intel\_lp64.a
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_intel\_thread.a 
-/global/apps/intel/mkl/10.2.0.013/lib/em64t/libmkl\_core.a  
--Wl,--end-group  -lguide -lpthread***
-
-static linking of code myprog.f90 with Intel MKL parallel (threaded)
-library.
-
- 
-
-***ifort   -shared-intel
--Wl,-rpath,/global/apps/intel/mkl/10.2.0.013/lib/em64t
--L/global/apps/intel/mkl/10.2.0.013/lib/em64t  -lmkl\_intel\_lp64
--lmkl\_intel\_thread -lmkl\_core -lguide -lpthread myprog.f90***
-
-dynamic linking of code myprog.f90 with Intel MKL parallel (threaded)
-library.
-
- 
-
-***
-***
-
-In case you have linked to a parallel library, the library routines will
-by default use as many threads as available; on a compute node this
-means that the program will run with 8 threads by default. You can
-choose the number of threads with (for 4 threads):
-
-***export OMP\_NUM\_THREADS=4***
+.. :vim:ft=rst
