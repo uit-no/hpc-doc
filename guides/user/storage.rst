@@ -156,23 +156,10 @@ About file transfer to/from Stallo
 All Notur systems are stand-alone systems, and in general we do not
 (NFS-)mount remote disks on them. Therefore you must either explicitly
 transfer any files you wish to use by using either sftp  or scp, or
-you can `mount your home
-directory('s) <../../../metacenter/metacenter-documentation/metacenter_user_guide/mounting_disks_on_notur_systems>`_
-on the Notur systems on you own computer.
-  To learn more about file transfer, check out the `Metasenter page
-on file
-transfer <../../../metacenter/metacenter-documentation/metacenter_user_guide/transfering-files-to-from-snowstorm>`_.
+you can `mount your home directory('s) 
+<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/mounting_disks_on_notur_systems>`_ on the Notur systems on you own computer. To learn more about file transfer, check out the `Metasenter page on file transfer 
+<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/transfering-files-to-from-snowstorm>`_ .
 
-UiT Application Form for Accounts and CPU quota
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please note that this form should only be used if you are researcher or
-student at University of Tromsø. If you want to apply for a national
-quota you should rather apply to `NOTUR <http://www.notur.no/quotas/>`_.
-
-&amp;amp;amp;amp;lt;a
-href="http://www.hpc.uit.no/quotaform-websim.htm"&amp;amp;amp;amp;gt;UiT
-quotaform&amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;gt;
 
 Data
 ----

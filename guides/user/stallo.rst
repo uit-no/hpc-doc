@@ -55,7 +55,7 @@ Stallo - a Linux cluster 
 
 A quick and brief introduction to the general features of Linux
 Clusters / Stallo is available on the `Metasenter page about Linux
-Clusters <../../../metacenter/metacenter-documentation/metacenter_user_guide/general-about-linux-cluster>`_.
+Clusters <http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/general-about-linux-cluster>`_.
 
 Linux operation system (Rocks): `<http://www.rocksclusters.org/>`_
 ------------------------------------------------------------------

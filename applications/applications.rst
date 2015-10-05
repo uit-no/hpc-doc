@@ -59,7 +59,7 @@ which activate and deactivate the relevant parts of your user session.
 
 To learn about Modules, please follow this link to the `Metasenter
 page about link about Modules 
-<../../../metacenter/metacenter-documentation/metacenter_user_guide/the-modules-command>`_.
+<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/the-modules-command>`_.
 
 
 Which modules are loaded?
