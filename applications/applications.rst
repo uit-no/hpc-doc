@@ -1,10 +1,11 @@
 .. _applications:
 
+============
 Applications
 ============
 
-Overview over SW installed on Stallo
---------------------------------------
+Software installed on Stallo
+============================
 
 For a complete list of applications see the :doc:`software page <software>`.
 
@@ -33,7 +34,7 @@ List all version of a specific software::
     module avail software-name
 
 Modules
--------
+=======
 
 Software installations on the clusters span many applications, and many
 different version numbers of the same application. It is not possible
@@ -43,27 +44,17 @@ to simplify the control of which application versions are available in a
 specific session, there is a system for loading and unloading 'modules'
 which activate and deactivate the relevant parts of your user session.
 
-The modules command
--------------------
+The main command for using this system is the *module* command. You can find a list of all its options by typing
 
-An introduction to the Modules Command; a way to navigate between
-various settings, libraries and SW versions
+::
 
-Software installations on the clusters span many applications, and many
-different version numbers of the same application. It is not possible
-(nor desirable) to use them all at the same time, since different
-versions of the same application may conflict with each other. In order
-to simplify the control of which application versions are available in a
-specific session, there is a system for loading and unloading 'modules'
-which activate and deactivate the relevant parts of your user session.
+    module --help
 
-To learn about Modules, please follow this link to the `Metasenter
-page about link about Modules 
-<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/the-modules-command>`_.
+Below we listed the most commonly used options.
 
 
-Which modules are loaded?
--------------------------
+Which modules are currently loaded?
+-----------------------------------
 
 To see the modules currently active in your session, use the
 command  
@@ -73,7 +64,6 @@ command
     module list
 
  
-
 Which modules are available?
 ----------------------------
 
@@ -92,11 +82,11 @@ pattern:
 *  version
 *  (default) if default version
 
-How are modules loaded?
------------------------
 
-In order to enable to make available, for instance, the netcdf library,
-issue the command  
+How to load a module
+--------------------
+
+In order to make, for instance, the NetCDF library available issue the command  
 
 ::
 
@@ -104,8 +94,8 @@ issue the command
 
  
 
-This will load the default netcdf version. To load a specific version,
-just include the version:
+This will load the default NetCDF version. To load a specific version,
+just include the version after a slash:
 
 ::
 
@@ -113,15 +103,16 @@ just include the version:
 
  
 
-How are modules unloaded?
--------------------------
+How to unload a module
+----------------------
 
 Keeping with the above example, use the following command to unload the
-GLView module again:  
+NetCDF module again:  
 
 ::
 
     module unload netcdf
+
 
 Which version of a module is the default?
 -----------------------------------------
