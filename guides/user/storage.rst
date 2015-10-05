@@ -15,7 +15,7 @@ Home area
 
 There is a 64 TB global accessible home area on the cluster, which is
 accessible from both the login nodes and all the compute nodes. The
-default size of the home directory's for each user are 50 GB. If more
+default size of the home directory's for each user is 300 GB. If more
 space is needed for permanent storage users have to apply for it. Please
 contact the system administrators,
 :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`, for more
@@ -59,10 +59,12 @@ contact the system administrators:
 Backup
 ======
 
-Backup is taken of all files stored on  /home. A full dump backup is
-made every week and stored for 3 months.
+There is no real backup of the data on stallo. However we do keep daily snapshots of
+/home and /project for the last 7 days. The /home snapshots are kept at 
+/global/hds/.snapshot/ 
 
-There are no backup of files stored on the work areas.
+
+There are no backup of files stored on the /work areas.
 If you need permanent storage of large amounts of data, please
 contact the system administrators:
 :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
