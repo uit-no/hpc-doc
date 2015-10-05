@@ -353,7 +353,7 @@ using 4 CPUs. You can then log in to this node (with the command '*ssh
 How can I get more information about my job?
 --------------------------------------------
 
-How can I see when my qued job will start, when it will finish, why it
+How can I see when my queued job will start, when it will finish, why it
 is blocked and so on?
 
 On the webpage
@@ -376,7 +376,7 @@ You can also get more info about your job parameters using this command:
 How can I kill my job?
 ----------------------
 
-How can I delete my job from the queing system?
+How can I delete my job from the queueing system?
 
 To terminate one of your jobs use *qdel*, for instance:
 
@@ -384,7 +384,7 @@ To terminate one of your jobs use *qdel*, for instance:
 
     qdel 58
 
-This will delete job number 58 in the queing list that you get when
+This will delete job number 58 in the queueing list that you get when
 using the command *showq*.
 
 
@@ -399,7 +399,7 @@ Use a little shell trickery:
 
     qselect -u $USER | xargs qdel
 
-``qselect`` prints out a job list based on specific criterions,
+``qselect`` prints out a job list based on specific criteria,
 ``xargs`` takes multi line input and run the command you give to it
 repeatedly until it has consumed the input list.
 

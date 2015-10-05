@@ -265,7 +265,7 @@ At the moment in NOTUR the only Big endian machine is njord.hpc.ntnu.no
 so Fortran sequential unformatted files create on njord cannot be read
 on stallo.
 
-The best work around for this is to save yout file in a portable file
+The best work around for this is to save your file in a portable file
 format like `netCDF <http://www.unidata.ucar.edu/software/netcdf/>`_ or
 `HDF5 <http://www.hdfgroup.org/>`_.
 

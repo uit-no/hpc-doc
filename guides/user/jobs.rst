@@ -125,7 +125,7 @@ recommendations on the most used applications
 Queues
 ======
 
-In general it is not neccessary to specify a specific queue for your
+In general it is not necessary to specify a specific queue for your
 job, the batch system will route your job to the right queue
 automatically based on your job parameters. There are two exceptions to
 this, the express and the highmem queue
@@ -153,7 +153,7 @@ singlenode:
 multinode:
     Contains jobs that span multiple nodes.
 
-Again, it is not neccessary to ask for any specific queue unless you
+Again, it is not necessary to ask for any specific queue unless you
 want to use ``express`` or ``highmem``.
 
 Use of large memory nodes

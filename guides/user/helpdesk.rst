@@ -35,9 +35,9 @@ About support requests
   a support request, as this will help the support personal to solve
   your problem faster.
 * Please do not send support requests directly to staff members. 
-  Response time is shorter, and your resquest does not risk getting
+  Response time is shorter, and your request does not risk getting
   lost in a huge mailbox. 
-* Working hours for the support personel are Monday-Friday
+* Working hours for the support staff are Monday-Friday
   08:00-16:00, except holidays. 
 
 .. vim:ft=rst

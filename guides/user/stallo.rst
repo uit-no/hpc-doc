@@ -40,7 +40,7 @@ operating system, and storage configuration.
 +-------------------------------------+-----------------------+
 | Dimensions                          | 15 m x 1,3 m x 2 m    |
 +-------------------------------------+-----------------------+
-| Weigha                              | 16 tons               |
+| Weight                              | 16 tons               |
 +-------------------------------------+-----------------------+
 
  
@@ -65,7 +65,7 @@ development sites for the Linux operation system Rocks. Together with
 people in Singapore, Thailand, Korea and USA, we have developed a tool
 that has won international recognition, such as the price for "Most
 important software innovation  " both in 2004 and 2005 in HPCWire. Now
-Rocks is a de-facto standard for cluster-managment in Norwegian
+Rocks is a de-facto standard for cluster-management in Norwegian
 supercomputing.
 
 Stallo - Norse mythology

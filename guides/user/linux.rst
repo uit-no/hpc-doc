@@ -120,7 +120,7 @@ command 'ls -laF  | more', you can put the line
     alias ll 'ls -laF | more'
 
 in your ~/.cshrc file. You must run 'source ~/.cshrc' to update your
-environment and to make the alias effective. or log out and in :-). From
+environment and to make the alias effective, or log out and in :-). From
 then on, the command 'll' is equivalent to 'ls -laF  | more'.
 Make sure that the chosen abbreviation is not already an existing
 command, otherwise you may get unexpected (and unwanted) behavior. You
