@@ -1,8 +1,8 @@
 .. _faq:
 
-==========================
-Frequently asked questions
-==========================
+=================================
+FAQs (Frequently asked questions)
+=================================
 
 
 General
@@ -119,9 +119,8 @@ Below is an example on how you can do this:
 
 This example assumes that you are running an X-server on your local
 desktop, which should be available for most users running Linux, Unix
-and Mac Os X. If you are using Windows you must install some **`X-server
-on your local
-PC <../../../metacenter/metacenter-documentation/metacenter_user_guide/x-server-for-windows>`_**.
+and Mac Os X. If you are using Windows you must install some X-server
+on your local PC.
 
 How can I access a compute node from the login node?
 ----------------------------------------------------
