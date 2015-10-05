@@ -12,16 +12,16 @@ For a complete list of development software installed on stallo, consult the
 `software directory <http://hpc.uit.no/software>`_. If you find some
 important program or library missing, please contact support-uit@notur.no.
 
-:doc:`Performance analysis and optimization <optimization>`.
---------------------------------------------------------
+Performance analysis and optimization 
+-------------------------------------
 A large number of tools for analyzing both single- and multi-core, as well as
 MPI parallel performance are available.
 
-*For more information, see the :doc:`optimization page <optimization>`.*
+For more information, see the :ref:`optimization` page.
 
 
-:doc:`Parallel programming <parallel>`
---------------------------------------
+Parallel programming
+--------------------
 
 To leverage the computing power of stallo programs must be run in
 parallel. The compute nodes on stallo are equipped with fast system buses,
@@ -29,4 +29,4 @@ and are interconnected with an Infiniband network. This makes it feasible to
 run efficiently in parallel, even when substantial amounts of communication is
 required.
 
-*For more information, see the :doc:`parallel programming page <parallel>`.*
+For more information, see the :ref:`parallel` page.

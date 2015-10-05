@@ -1,6 +1,6 @@
 
-Stallo quick start guide
-========================
+Getting started
+===============
 .. index:: getting started, quickstart guide
 
 

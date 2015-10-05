@@ -1,3 +1,8 @@
+.. _optimization:
+
+============
+Optimization
+============
 
 top, time command, lsof, starce, valgrind cache profiler, Compiler
 flags, IPM, Vtune
@@ -10,12 +15,8 @@ software and libraries
 for available and recommended libraries.
 
 
-
-Document Actions
-''''''''''''''''
-
 Performance tuning by Compiler flags.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=====================================
 
 Quick n'dirty.
 --------------
@@ -30,6 +31,7 @@ this or report a compiler bug to INTEL.  If you need to use ``-O2``
 or ``-O1`` instead of ``-O3`` please remember to add the
 ``-ftz`` too, this will flush small values to zero.  Doing this can
 have a huge impact on the performance of your application.
+
 
 Profile based optimization
 ------------------------------------
@@ -49,14 +51,9 @@ set, but using just a few iterations for the time stepping.
     else you need to use the ``-prof _dir`` flag, see the manual for
     details.
 
- 
-
- 
 
 IPM: MPI performance profiling
 ------------------------------
-
- 
 
 IPM is a tool which gives rapidly an overview over the time spent in the
 different MPI calls. It is very simple to use and can also give a html
@@ -140,11 +137,11 @@ For more details refer to:
  
 
 Vtune
------
+=====
  
 
 Basic use of vtune
-~~~~~~~~~~~~~~~~~~
+------------------
 
 ::
 
@@ -167,10 +164,10 @@ like:
 
 
 Compilers, libraries and tools
-------------------------------
+==============================
 
 HPCToolkit
-~~~~~~~~~~~~~~~~~~~~
+==========
 
 HPCToolkit is a measurement tool for profiling application using
 statistical sampling of the system timer or hardware performance
@@ -182,7 +179,7 @@ HPCToolkit is installed on Stallo, see
  
 
 Example of basic use
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 On the compute-node:
 
@@ -271,18 +268,13 @@ Compile with
 ::
 
     ifort -I/usr/include -L/usr/lib64  -lpapi papi.f90
-
- 
-
- 
-
  
 
 Using google-perftools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Overview  
------------------------------------------------------------------------------------------------
+--------
 
 Perf Tools is a collection of a high-performance multi-threaded malloc()
 implementation, plus some pretty nifty performance analysis tools.
@@ -291,7 +283,7 @@ For more information
 visit   `http://code.google.com/p/google-perftools/wiki/GooglePerformanceTools <http://code.google.com/p/google-perftools/wiki/GooglePerformanceTools>`_
 
 Example  
----------------------------------------------------------------------------------------------
+-------
 
 Note: this is by no means complete documentation, but simply gives you
 an idea of what the API is like.

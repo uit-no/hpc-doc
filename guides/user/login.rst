@@ -1,6 +1,6 @@
-
-Logging in
-==========
+=============================
+Logging in for the first time
+=============================
 
 An SSH client (Secure SHell) is the required tool to connect to Stallo. To
 learn more about this, check out the `Metasenter page on SSH. <http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/log-in-with-ssh>`_. 
@@ -8,17 +8,25 @@ learn more about this, check out the `Metasenter page on SSH. <http://docs.notur
 .. FIXME: fix link to docs.notur.no 
 
 Obtain a new password
-----------------------
+=====================
+When you have been granted an account on stallo.uit.no, your username and password is sent to you separately.
+The username by email and the password by SMS. The password you receive by SMS is temporally and only valid for 7 days. 
 
-When you have been granted an account on stallo.uit.no, your username and
-password will be sent to you.
 
-The password can be changed `here <https://www.metacenter.no/user/password/>`_ , log in using your username on stallo and the NOTUR domain.
+The passwd command does not seem to work. My password is reset back to the old one after a while. Why is this happening?
+------------------------------------------------------------------------------------------------------------------------
+
+The Stallo system is using a centralised database for user management.
+This will override the password changes done locally on Stallo.
+
+The password can be changed `here <https://www.metacenter.no/user/password/>`_, log in using your
+username on stallo and the NOTUR domain.
 
 .. FIXME: **Something about keys here?**
 
+
 Logging on the compute nodes
-----------------------------
+============================
 
 Information on how to log in on a compute node.
 

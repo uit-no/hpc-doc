@@ -1,3 +1,4 @@
+.. _jobs:
 
 ========================
 Jobs, scripts and queues
