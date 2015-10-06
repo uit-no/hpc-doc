@@ -24,16 +24,14 @@ Planned/unplanned downtime
 
 Planned/unplanned downtime will be announced on
 `UiT News <http://docs.notur.no/uit/uit-news>`_.
-In the case of a planned downtime, a reservation will be made in the queuing system, so new jobs, that would not finish until the downtime, won't start. Running jobs will be restarted, if possible, if the system goes down. We apologize for any inconveniences this may cause.
+In the case of a planned downtime, a reservation will be made in the queuing system, so new jobs, that would not finish until the downtime, won't start. If the system goes down, running jobs will be restarted, if possible. We apologize for any inconveniences this may cause.
 
-Systems events log
-------------------
+.. Systems events log
+.. ------------------
 
-A `systems event log <http://stallo-adm.uit.no/wordpress/>`_ is
-available (unless Stallo is down), from which you can keep track of
-messages about such things as
+.. A `systems event log <http://stallo-adm.uit.no/wordpress/>`_ is available (unless Stallo is down), from which you can keep track of messages about such things as
 
-* upcoming maintenance work
-* causes for unexpected down time
-* known problems
-* software upgrades
+.. * upcoming maintenance work
+.. causes for unexpected down time
+.. known problems
+.. software upgrades
