@@ -64,7 +64,6 @@ FAQs
    :maxdepth: 2
 
    general/faq.rst
-   general/gui.rst
    general/dos_and_donts.rst
 
 

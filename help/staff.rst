@@ -47,7 +47,7 @@ before.
 Regional resource site
 ----------------------
 
-The HPC group at UiT also have a role to play as a regional resource site
+The HPC group at UiT also has a role to play as a regional resource site
 within HPC, offering HPC services to other institutions in Northern Norway. A
 strategic collaboration between UiT and the Norwegian Polar Institute within
 HPC has been ongoing since 1998.

@@ -55,9 +55,9 @@ Common commands
 ---------------
 
 pwd 
-  ( **p** rint **w** orking **d** irectory) provides the full pathname of the directory you are currently in
+  ( **p**\rint **w**\orking **d**\irectory) provides the full pathname of the directory you are currently in
 cd
-  (**c** hange **d** irectory) change the current working directory
+  (**c**\hange **d**\irectory) change the current working directory
 ls
   lists the files and directories, which are located in the directory you are currently in
 find

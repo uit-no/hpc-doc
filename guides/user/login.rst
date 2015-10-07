@@ -110,4 +110,12 @@ desktop, which should be available for most users running Linux, Unix
 and Mac Os X. If you are using Windows you must install some X-server
 on your local PC.
 
+
+Graphical logon to Stallo
+=========================
+
+If you want to run applications with graphical user interfaces we recommend you to use the
+`remote desktop service <http://stallo-gui.uit.no/vnc/>`_
+on Stallo.
+
 .. vim:ft=rst
