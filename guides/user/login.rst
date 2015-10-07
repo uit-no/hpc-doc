@@ -2,10 +2,48 @@
 Logging in for the first time
 =============================
 
-An SSH client (Secure SHell) is the required tool to connect to Stallo. To
-learn more about this, check out the `Metasenter page on SSH. <http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/log-in-with-ssh>`_. 
 
-.. FIXME: fix link to docs.notur.no 
+Log in with SSH
+===============
+An *SSH* client (Secure SHell) is the required tool to connect to Stallo. An *SSH* client provides secure encrypted communications between two hosts over an insecure network.
+
+If you already have *ssh* installed on your UNIX-like system, have a user account and password on a Notur system, login may be as easy as typing
+
+::
+
+ ssh <machine name>         (for instance: ssh njord.hpc.ntnu.no)
+
+into a terminal window.
+
+If your user name on the machine differs from your user name on the local machine, use the -l option to specify the user name on the machine to which you connect. For example:
+
+::
+
+ ssh <machine name> -l [user name]
+
+And if you need X-forwarding (for instance, if you like to run Emacs in it's own window) you must log in like this:
+
+::
+
+ ssh -X -Y <machine name>
+
+Log in with an ssh-key
+----------------------
+
+.. FIXME: short explanation about using ssh keys
+
+SSH clients for Windows and Mac
+-------------------------------
+At the `OpenSSH page <http://www.openssh.com>`_ you will find several *SSH* alternatives for both Windows and Mac.
+
+Please note that Mac OS X comes with its own implementation of *OpenSSH*, so you don't need to install any third-party software to take advantage of the extra security *SSH* offers. Just open a terminal window and jump in.
+
+
+Learning more about SSH
+-----------------------
+To learn more about using SSH, please also consult the `OpenSSH page <http://www.openssh.com>`_ page and take a look at the manual page on your system (*man ssh*).
+
+
 
 Obtain a new password
 =====================
@@ -22,8 +60,6 @@ This will override the password changes done locally on Stallo.
 The password can be changed `here <https://www.metacenter.no/user/password/>`_, log in using your
 username on stallo and the NOTUR domain.
 
-.. FIXME: **Something about keys here?**
-
 
 Logging on the compute nodes
 ============================
@@ -37,13 +73,13 @@ compute-x-y the following way:
 
 ::
 
-    $ ssh -Y compute-x-y     (for instance: ssh compute-5-8)
+    ssh -Y compute-x-y     (for instance: ssh compute-5-8)
 
 or short
 
 ::
 
-    $ ssh -Y cx-y        (for instance: ssh c5-8)
+    ssh -Y cx-y        (for instance: ssh c5-8)
 
 If you don't need display forwarding you can omit the "-Y" option
 above.
