@@ -1,9 +1,10 @@
 
+=============================
 CPU-hour quota and accounting
 =============================
 
 CPU quota.
-----------
+==========
 
 To use the batch system you have to have a cpu quota, either local or
 national. For every job you submit we check that you have sufficient
@@ -12,8 +13,9 @@ cpu-hours to run the job. The job will be submitted to queue, but will
 not start until you have enough cpu-hours to run it.
 
 Resource charging.
-------------------
+==================
 
+We charge for used resources, both cpu and memory.
 The accounting system charges for used processor equivalents (PE)
 times used walltime so if you ask for more than 2GB of memory per cpu
 you will get charged for more than the actual cpus you use.
@@ -33,7 +35,7 @@ node with 8 cpu-cores and 16 GB memory (as most nodes on stallo are):
     if you ask for 16GB memory then PE=8 as you only can run one cpu per compute node.
 
 Inspecting your quota.
-----------------------
+======================
 
 You can use the cost command to check how much cpu-hours are left on
 your allocation:
@@ -75,20 +77,13 @@ for more detail see:
     gstatement --man
 
 Live status information
------------------------
+=======================
 
 From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
 *  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
-
-
-Job accounting.
----------------
-
-We charge for used resources, both cpu and memory.
-
 
  
 .. vim:ft=rst
