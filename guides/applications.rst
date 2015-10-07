@@ -4,6 +4,9 @@
 Using Software installed on Stallo
 ==================================
 
+More information and guides to a few of the installed applications can be found in :ref:`sw_guides`. A list of software that is installed on stallo can be found in :ref:`sw_list`.
+
+
 Which software is installed on Stallo
 =====================================
 

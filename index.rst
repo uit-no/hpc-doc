@@ -28,6 +28,7 @@ General information
    guides/storage.rst
    guides/file_transfer.rst
    guides/jobs.rst
+   guides/applications.rst
    guides/guidelines.rst
 
 
@@ -52,9 +53,8 @@ Applications
 .. toctree::
    :maxdepth: 2
 
-   applications/applications.rst
-   applications/chemistry.rst
-   applications/software.rst
+   applications/sw_list.rst
+   applications/sw_guides.rst
 
 
 FAQs
