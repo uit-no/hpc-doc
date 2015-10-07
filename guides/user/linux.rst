@@ -1,6 +1,8 @@
-===================================
-Working with the Linux command line
-===================================
+.. _linux:
+
+==================
+Linux command line
+==================
 
 New on Linux systems?
 =====================
@@ -48,8 +50,67 @@ scripts, and how to submit, manage, and monitor jobs. It is not
 allowed to run long or large memory jobs interactively (i.e., directly
 from the command line).
 
-Manual pages
-------------
+
+Common commands
+---------------
+
+pwd 
+  ( **p** rint **w** orking **d** irectory) provides the full pathname of the directory you are currently in
+cd
+  (**c** hange **d** irectory) change the current working directory
+ls
+  lists the files and directories, which are located in the directory you are currently in
+find
+  searches through one or more directory trees of a file system, locates files based on some user-specified 
+  criteria and applies a user-specified action on each matched file. F.e.
+   ::
+
+     find . -name 'my*'-type f
+  searches in the current directory (.) and below it, for files and directories with names starting with my. 
+  "-type f" limits the results of the above search to only regular files, therefore excluding directories, 
+  special files, pipes, symbolic links, etc. my* is enclosed in single quotes (apostrophes) as otherwise the
+  shell would replace it with the list of files in the current directory starting with "my".
+grep
+  find a certain expression in one or more files. Usage:
+  ::
+
+    grep apple fruitlist.txt
+
+  this prints all lines that contain the word "apple" in the file "fruitlist.txt". A bit more complicated:
+  ::
+
+   grep -ri ^a.ple *
+ 
+  looks recursively in all sub-directories and files (the *-r* flag), ignores the case of the word
+  (*-i* flag) for words that begin with the letter *a*, followed by any one character, followed by the letter 
+  sequence *ple* (^a.ple). It looks in all files and directories, which are located in the current directory (*). 
+  It is possible to search this way for numbers and regular expressions in general.
+mkdir
+  make directory (create new directory)
+rm
+  remove (delete) file. Use with caution.
+rmdir
+  remove (delete) directory. Use with caution.
+mv
+  move or rename file.
+vi/vim or emacs
+  editing text files, see below.
+less
+  view (but not change) the contents of a text file one screen at a time, or, when combined with other commands (see below)
+  view the result of the command one screen at a time. Useful f.e. if a command prints several screens of information on 
+  your screen so quickly, that you don't manage to read the first lines before they are gone.
+\|
+  called "pipe" or "vertical bar" in English. Group 2 or more commands together. F.e.
+  ::
+
+    ls -l | grep key | less
+
+  will list files in the current directory (ls), retain only the lines of *ls* output containing the string "key" (grep), 
+  and view the result in a scrolling page (less).
+    
+
+More info on manual pages
+-------------------------
 If you know the UNIX-command that you would like to
 use but not the exact syntax, consult the manual pages on the system to
 get a brief overview. Use 'man [command]' for this. For example, to
@@ -57,7 +118,10 @@ get the right options to display the contents of a directory, use 'man
 ls'. To choose the desired options for showing the current status of
 processes, use 'man ps'.
 
-Text editing. Popular tools for editing files on Linux/UNIX-based
+
+Text editing
+------------
+Popular tools for editing files on Linux/UNIX-based
 systems are 'vi' and 'emacs'. Unfortunately the commands within both
 editors are quite cryptic for beginners. It is probably wise to spend
 some time understanding the basic editing commands before starting to
@@ -71,8 +135,10 @@ emacs:
     menu 'Help->manuals->browse-manuals-with-info' for help. 'Control-h
     t' gives a tutorial for beginners.
 
-Environment variables. The following variables are automatically
-available after you log in:
+
+Environment variables
+---------------------
+The following variables are automatically available after you log in:
 
 ::
 
@@ -89,7 +155,10 @@ You can define (and redefine) your own variables by typing
 
     setenv [VARIABLE] [VALUE]    (csh/tcsh shellexport [VARIABLE]=[VALUE]    (ksh shell)
 
-Aliases (for csh/tcsh users). If you frequently use a command that
+
+Aliases (for csh/tcsh users)
+----------------------------
+If you frequently use a command that
 is long and has for example many options to it, you can put an alias
 (abbreviation) for it in your ~/.cshrc file. For example, if you
 normally prefer a long listing of the contents of a directory with the
@@ -109,9 +178,11 @@ typing
 
 ::
 
-    which [command]whereis [command]
+    which [command] whereis [command]
 
-~/bin (for csh/tcsh users). If you frequently use a self-made or
+~/bin (for csh/tcsh users)
+--------------------------
+If you frequently use a self-made or
 self-installed program or script that you use in many different
 directories, you can create a directory ~/bin in which you put this
 program/script. If that directory does not already exist, you can do the
@@ -140,12 +211,12 @@ behaviour. You can check the contents of the PATH variable by typing
 
     printenv PATHecho $PATH
 
+
 More advanced usage .....
 -------------------------
-
-git is a version control system, which allows you to keep old
+*git* is a version control system, which allows you to keep old
 versions of files (usually source code), keep a log of who, when, and
-why changes occurred, etc. git helps to manage releases and to control
+why changes occurred, etc. *git* helps to manage releases and to control
 the concurrent editing of source files among multiple authors. 
 
 
