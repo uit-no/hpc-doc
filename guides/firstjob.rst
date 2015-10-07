@@ -1,4 +1,4 @@
-
+.. _first_job:
 
 Example: First jobscript.
 =========================

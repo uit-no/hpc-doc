@@ -1,13 +1,16 @@
----
-title: Example: A complete jobscript.
-...
+.. _jobscript:
+
+=============================
+Example: A complete jobscript
+=============================
+
 .. index:: complete jobscript
 
 .. FIXME: inline job script example
 
------------------------------
+
 A complete job script
------------------------------
+=====================
 
 .. FIXME inline
 

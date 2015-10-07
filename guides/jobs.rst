@@ -16,8 +16,8 @@ batch system that will execute the applications on the available
 resources. 
 
 The batch system on Stallo consists of a resource manager,
-`Torque <http://www.clusterresources.com/products/torque>`_, and a
-scheduler, `Maui <http://www.clusterresources.com/products/maui>`_.
+`Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_, and a
+scheduler, `Maui <http://www.adaptivecomputing.com/products/open-source/maui>`_.
 Torque keeps track of the state of the system while Maui decides when
 and where to run the jobs.
 
@@ -31,9 +31,9 @@ Create a job
 To run a job on the system one needs to create a job script. A job
 script is a regular shell script (bash or csh) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
-batch system upon submission. See the :doc:`firstjob example <./firstjob>` to get 
+batch system upon submission. See the :ref:`first_job` to get 
 a quick feel for how to create and run batch jobs.  A more complete example 
-can be found :doc:`here <./job-script-example>`.
+can be found in :ref:`jobscript`.
 
 Manage a job 
 ============
@@ -43,8 +43,9 @@ commands
 
 #. Submit the job with ``qsub jobscript.sh``.
 #. Check the job status with ``showq``. (to limit the display to only
-   your jobs use ``showq -u username``.)
-#. (optional) Delete the job with ``qdel jobid``.
+   your jobs use ``showq -u <user_name>``.)
+#. (optional) Delete the job with ``qdel <job_id>``.
+
 
 List of useful commands
 =======================
@@ -70,14 +71,17 @@ qstat:
     Show jobs in the queue. Jobs will be sorted by submit order.
 showq:
     List jobs in the queue. Jobs will be sorted by time to completion. To
-    only see jobs for a specific user use ``showq -u username``.
-checkjob:
+    only see jobs for a specific user use ``showq -u <user_name>``.
+checkjob <job_id>:
     Show details about a specific job.
+showstart <job_id>:
+    Show guess of when a job could start.
+
 
 Useful job script parameters 
 ============================
 
-See the :doc:`jobscript example <./job-script-example>` for a list of relevant parameters.
+See the :ref:`jobscript` for a list of relevant parameters.
 
 
 Recommended job parameters
