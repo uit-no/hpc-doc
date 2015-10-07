@@ -5,49 +5,29 @@ Working with the Linux command line
 New on Linux systems?
 =====================
 
-Tips on how to get started using the Snowstorm cluster on UiT if you are
-not too familiar with Linux / Unix.
-
-Getting started
-===============
-
-This page contains some tips on how to get started using the Snowstorm
-cluster on UiT. The information is intended for both users that are new
+This page contains some tips on how to get started using the Snowstorm cluster on UiT if you are
+not too familiar with Linux / Unix. The information is intended for both users that are new
 to Snowstorm and for users that are new to Linux/UNIX-like operating
 systems. Please consult the rest of the user guide for information that
 is not covered in this chapter.
 
-Snowstorm is a
-`Linux <http://en.wikipedia.org/wiki/Linux>`_    `Cluster <http://en.wikipedia.org/wiki/Cluster_computing>`_
-that consists of 100 computational nodes, each with 4
-`Itanium2 <http://en.wikipedia.org/wiki/Itanium_2>`_ processors
-(CPUs) and 4/8/16 Gigabyte of memory. You can only connect to the
-cluster through the interactive node snykov.uit.no (recommended!) or
-the front-end node snowstorm.uit.no.  The nodes are interconnected
-with Infiniband and Gigabit Ethernet, but a small subset of the nodes
-also has an SCI interconnect. The computational nodes has both local and
-common (global) disks. The operating system is
-`CentOS <http://www.centos.org/>`_ (Linux), a Redhat Enterprise
-clone. The HW and it's physical set up, is described in more detail in
-the :doc:`HW section <.#hw-information>`  of this user guide.
+For details about the hardware and the operating system of stallo, and basic explanation
+of linux clusters please see the :ref:`about_stallo` part of this documentation.
 
-Your directories. See a separate page in the `HW
-section <.#hw-information>`_  about the storage and file systems for
-more information about the file systems on the machines and your disk
-quota.
+To find out more about the storage and file systems on the machines, your disk
+quota, how to manage data, and how to transfer file to/from stallo, 
+please read the :ref:`storage` section.
 
 ssh
 ---
-The only way to connect to Snowstorm is by using ssh. Check
-the :doc:`ssh  section <log-in-with-ssh>` in the User Guide to learn
-more about ssh.
+The only way to connect to Stallo is by using ssh. Check
+the :ref:`login` in this documentation to learn more about ssh.
 
 scp/sftp
 --------
 The machines are stand-alone systems. The machines do
 not (NFS-)mount remote disks. Therefore you must explicitly transfer any
-files you wish to use to the machine by
-:doc:`scp/sftp <transfering-files-to-from-snowstorm>`.
+files you wish to use to the machine by ftp. For more info, see :ref:`file_transfer`.
 
 chsh
 ----

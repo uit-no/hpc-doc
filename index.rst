@@ -26,6 +26,7 @@ General information
    guides/user/gui.rst
    guides/user/linux.rst
    guides/user/storage.rst
+   guides/user/file_transfer.rst
    guides/user/jobs.rst
    guides/user/guidelines.rst
 

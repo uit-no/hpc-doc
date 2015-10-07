@@ -1,3 +1,4 @@
+.. _about_stallo:
 
 ============
 About stallo
