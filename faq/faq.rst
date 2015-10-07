@@ -170,12 +170,11 @@ Queue system and running jobs
 Where can I find an example of job script?
 ------------------------------------------
 
-You can find an example with comments
-:doc:`here <../user_guide/job-script-example>`
+You can find an example with comments in
+:ref:`jobscript`
 
-Relevant examples (also for beginning users) that are
-application specific can be found on the documentation for the
-specific :doc:`applications </application-support>`.
+Relevant application specific examples (also for beginning users) for a few applications can be found in
+:ref:`sw_guides`.
 
 
 When will my job start?
