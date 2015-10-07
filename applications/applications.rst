@@ -1,11 +1,11 @@
 .. _applications:
 
-============
-Applications
-============
+==================================
+Using Software installed on Stallo
+==================================
 
-Software installed on Stallo
-============================
+Which software is installed on Stallo
+=====================================
 
 For a complete list of applications see the :doc:`software page <software>`.
 

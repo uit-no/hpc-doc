@@ -26,9 +26,9 @@ Further reading
 
 We have a wealth of documentation for you, here are some places with more information on how to use our system.
 
-- :doc:`Batch system <./jobs>`.
+- :doc:`Batch system <./jobs>`
 - :ref:`application-development`
-- :doc:`Use preinstalled applications <../applications/index>`.
+- :ref:`applications`
 
 
 **Happy hacking!**
