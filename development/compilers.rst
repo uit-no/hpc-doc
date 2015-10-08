@@ -4,7 +4,7 @@ Compilers
 =========
 
 The default development environment on Stallo is provided by Intel Cluster
-Studio XE. In general users are advised to use the Intel compilers
+Studio XE. In general users are advised to use the Intel compilers and
 MKL performance libraries, since they usually give the best performance.
 
 
@@ -39,19 +39,17 @@ similar::
 
   $ mpif90 [options] file1 [file2 ...]
 
-The wrapper mpif90 is using the Intel ifort compiler, it is just a wrapper
-that invokes all the necessary MPI stuff automatically for you.
-Therefore, everything else is the same for compiling MPI codes as for
-compiling plain Fortran codes.
+The wrapper mpif90 is using the Intel ifort compiler and invokes all the
+necessary MPI machinery automatically for you.  Therefore, everything else is
+the same for compiling MPI codes as for compiling plain Fortran codes.
 
 
 C and C++ compilers
 -------------------
 
-The recommended C and C++ compilers are the Intel Compilers; icc (C)
-and icpc (C++).
-The gcc and g++ compilers are also installed, but we do not recommend them for
-general usage due to performance issues.
+The recommended C and C++ compilers are the Intel Compilers; icc (C) and icpc
+(C++). The gcc and g++ compilers are also installed, but we do not recommend
+them for general usage due to performance issues.
 
 
 Usage of the Intel C/C++ compilers
@@ -79,7 +77,7 @@ similar::
   $ mpicc [options] file1 [file2 ...]  # for C when using OpenMPI
   $ mpiCC [options] file1 [file2 ...]  # For C++ when using OpenMPI
 
-Both mpicc mpiCC are using the the Intel compilers, they are just
-wrappers that invokes all the necessary MPI stuff automatically for
+Both mpicc and mpiCC are using the Intel compilers, they are just
+wrappers that invoke all the necessary MPI machinery automatically for
 you. Therefore, everything else is the same for compiling MPI codes as
 for compiling plain C/C++ codes.

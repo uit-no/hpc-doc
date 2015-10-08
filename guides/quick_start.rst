@@ -17,21 +17,4 @@ Once you have passed the initial hurdles you can start computing, but before you
 #. Your home catalog is for things you write and cannot recompute (we take REALLY good care of that stuff), the project area is for things you want to share with others on stallo (we take good care of that too), the work area is for big data results coming from your computations (we do not take backup of these data).
 #. Stallo do not have a GUI, or, at least not a good one.
 
-
 Keep this guidelines in the back of your head and try to start running jobs on the system.  :doc:`Here <./firstjob>` is a quick run-through on how to get your first job running on the system.
-
-
-Further reading
----------------
-
-We have a wealth of documentation for you, here are some places with more information on how to use our system.
-
-- :doc:`Batch system <./jobs>`
-- :ref:`application-development`
-- :ref:`applications`
-
-
-**Happy hacking!**
-
-The HPC-Team <support-uit@notur.no>
-

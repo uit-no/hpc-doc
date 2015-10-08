@@ -1,23 +1,13 @@
 
 
-Debugging tools
-===============
+Debugging with TotalView
+========================
 
-TotalView is the primary debugger on stallo. It has a graphical interface,
-and excellent capabilities for debugging parallel programs.
-
-See also `Valgrind
-<http://docs.notur.no/uit/stallo_documentation/user_guide/using-valgrind-to-debug-verify-and-optimize-your-code>`_
-or Intel flags for debugging alternatives.
-
-
-Totalview
----------
-
-TotalView is a graphical, source-level, multiprocess debugger. When
-using this debugger you need to turn on X-forwarding, which is done when
-you login via ssh. This is done by adding the -Y on newer ssh version,
-and -X on older::
+TotalView is a graphical, source-level, multiprocess debugger.  It is the
+primary debugger on Stallo and has excellent capabilities for debugging
+parallel programs.  When using this debugger you need to turn on X-forwarding,
+which is done when you login via ssh. This is done by adding the -Y on newer
+ssh version, and -X on older::
 
   $ ssh -Y username@stallo.uit.no
 
@@ -77,11 +67,12 @@ Replace [#procs] with the core-count for the job.
 A window with name "New Program" should pop up. Under "Program" write
 the name of the executable. Under "Parallel" choose "Open MPI" and
 "Tasks" is the number of cores you are using ([#procs]).
- 
 
 You can also start Totalview with::
 
   $ mpirun -tv a.out
 
-The users guide for Totalview can be found
-`here <http://www.roguewave.com/help-support/documentation/totalview>`_ and the quick start guide `here <http://docs.roguewave.com/totalview/8.15.7/pdfs/TotalView_Quick_View.pdf>`_.
+The users guide for Totalview can be found `here
+<http://www.roguewave.com/help-support/documentation/totalview>`_ and the quick
+start guide `here
+<http://docs.roguewave.com/totalview/8.15.7/pdfs/TotalView_Quick_View.pdf>`_.
