@@ -1,7 +1,7 @@
 .. _about_stallo:
 
 ============
-About stallo
+About Stallo
 ============
 
 
