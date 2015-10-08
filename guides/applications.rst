@@ -10,7 +10,7 @@ More information and guides to a few of the installed applications can be found 
 Which software is installed on Stallo
 =====================================
 
-For a complete list of applications see the :doc:`software page <software>`.
+For a complete list of applications see the `Full package list <http://hpc.uit.no/software>`_.
 
 Missing / new SW?
 -----------------
