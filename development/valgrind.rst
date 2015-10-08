@@ -1,8 +1,7 @@
 
 
-Valgrind
-========
-
+Debugging with Valgrind
+=======================
 
 What is Valgrind?
 -----------------
