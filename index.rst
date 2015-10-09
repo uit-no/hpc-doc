@@ -52,7 +52,7 @@ Development of applications on Stallo
 
    development/compilers.rst
    development/environment.rst
-   development/optimiziation.rst
+   development/optimization.rst
    development/parallel.rst
    development/scripting.rst
    development/tools.rst
