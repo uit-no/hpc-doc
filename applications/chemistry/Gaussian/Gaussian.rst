@@ -1,8 +1,7 @@
----
-title: The GAUSSIAN program system
-...
 
-`Back to Applications top page<../index>`_
+===========================
+The GAUSSIAN program system
+===========================
 
 Gaussian is a computational chemistry software program system initially released in 1970. The name comes from, then groundbreaking, the use of gaussian type basis functions – which later more or less has become the “trade standard”. Gaussian has a rather low user threshold and a tidy user setup, which, together with a broad range of possibilities and a graphical user interface (gaussview), might explain its popularity in academic institutions. 
 
@@ -20,8 +19,6 @@ Content in the .tsnet.config file.
 Content in the g09parallel.job script.
 Advised number of nodes and cpus in parallel runs.
 Please do read these sections carefully. 
-
-For distribution in the NOTUR system, see `the NOTUR software pages<http://www.notur.no/software/chemistry/>`_.
 
 For more information on:
 

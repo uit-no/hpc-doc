@@ -4,14 +4,11 @@
 Transferring files to/from Stallo
 =================================
 
-About file transfer to/from Stallo
-
 All Notur systems are stand-alone systems, and in general we do not
 (NFS-)mount remote disks on them. Therefore you must either explicitly
 transfer any files you wish to use by using either sftp  or scp, or
 you can `mount your home directory('s) 
-<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/mounting_disks_on_notur_systems>`_ on the Notur systems on you own computer. To learn more about file transfer, check out the `Metasenter page on file transfer 
-<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/transfering-files-to-from-snowstorm>`_ .
+<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/mounting_disks_on_notur_systems>`_ on the Notur systems *on your own computer*. 
 
 
 Transferring data to/from the system

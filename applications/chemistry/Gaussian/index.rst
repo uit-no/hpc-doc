@@ -1,8 +1,7 @@
----
-title: The GAUSSIAN program system
-...
 
-`Back to Applications<../index>`_
+===========================
+The GAUSSIAN program system
+===========================
 
 Gaussian is a computational chemistry software program system initially released in 1970. The name comes from, then groundbreaking, the use of gaussian type basis functions – which later more or less has become the “trade standard”. Gaussian has a rather low user threshold and a tidy user setup, which, together with a broad range of possibilities and a graphical user interface (gaussview), might explain its popularity in academic institutions. 
 
@@ -14,8 +13,6 @@ GAUSSIAN on NOTUR installations
 ================================
  
 Currently there are two available main release versions in the NOTUR system; Gaussian 03 and Gaussian 09. Gaussian 09 is the latest in the Gaussian series of programs and Gaussian 03 is its predecessor. For differences between the two, please check the gaussian web page http://www.gaussian.com/g_tech/g_ur/a_gdiffs09.htm.
-
-For distribution in the NOTUR system, see `the NOTUR software pages<http://www.notur.no/software/chemistry/>`_.
 
 For more information on:
 
