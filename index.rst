@@ -54,8 +54,9 @@ Applications
 .. toctree::
    :maxdepth: 2
 
-   applications/sw_list.rst
    applications/sw_guides.rst
+.. applications/sw_list.rst
+  
 
 
 FAQs

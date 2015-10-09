@@ -1,4 +1,4 @@
-
+.. _news:
 
 News and notifications
 ======================
