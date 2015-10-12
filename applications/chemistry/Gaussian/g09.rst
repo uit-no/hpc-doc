@@ -4,10 +4,9 @@
 Gaussian 09
 ===========
 
-
-`Back to Gaussian top page<Gaussian>`_
-
-Gaussian 09 is the current major release of the Gaussian Program System for computational chemistry. For online manual, see here: http://www.gaussian.com/g_tech/g_ur/g09help.htm.
+Gaussian 09 is the current major release of the Gaussian Program System
+for computational chemistry. For online manual, see here: 
+http://www.gaussian.com/g_tech/g_ur/g09help.htm.
 
 **Before you do start using Gaussian 09, we encourage you to take a look at these pages at the Gaussian web site:** 
 
@@ -24,12 +23,12 @@ Please do read these sections carefully.
 
 **Information related to inputs and output:**
 
-* For information about Gaussian input: :ref: `gaussian_input`
+* For information about Gaussian input: :ref:`gaussian_input`
 * For input-example to download: :ref:`gaussian_water_input`
 * For information on Gaussview for Gaussian: :ref:`gaussview`
 
 
-GAUSSIAN 09 on STALLO
+Gaussian 09 on Stallo
 ======================
 
 To run Gaussian 09 on Stallo, the module containing all relevant environment settings for Gaussian has to be loaded::
@@ -92,8 +91,9 @@ Best practice for running Gaussian 09 jobs
 
 HF, CIS=Direct, and DFT calculations on molecules are Linda parallel, including energies, optimizations and frequencies. TDDFT energies and gradients and MP2 energies and gradients are also Linda parallel. Portions of MP2 frequency and CCSD calculations are Linda parallel, but others are only SMP-parallel, so they see some speedup from using a few nodes but no further improvement from larger numbers of nodes.
 
-**Recommended run-environment setup**
- 
+Recommended run-environment setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 - Run jobs with /global/work/$USER/$PBS_JOBID as the default temporary work dir.
 - Have the primary result files (.out and .chk) written to $HOME upon job completion (and not during running).
 - As a standard setup in the scripts, temporary directories are removed upon job completion. If jobs abort prematurely, temporary directories need to be removed manually.
@@ -106,13 +106,17 @@ It is always best to use SMP-parallelism within nodes and Linda only between nod
 
 rather than using more than one Linda worker per node. (Do not run more than one thread/cpu. It works very poorly on Stallo!) For the SMP-parallel jobs, you are advised to typically fill or almost fill the node (for Stallo we would at the moment advise to utilize full node, meaning 16 cores/node, for gaussian jobs unless there the memory demands says differently).
 
-**Restart of jobs:** Retrieve the .chk file from the temporary directory and add the restart command to the input (opt=restart or scf=restart, depending on job). Make sure that the *.chk* and and the *.inp* files have the same firstname. Submit as usual.
+Restart of jobs
+^^^^^^^^^^^^^^^
+Retrieve the .chk file from the temporary directory and add the restart command to the input (opt=restart or scf=restart, depending on job). Make sure that the *.chk* and and the *.inp* files have the same firstname. Submit as usual.
 
-**Restart from g03 checkpoint file\:** To do this, you need to convert the g03 .chk file to g09 .chk file using a script called c8609 in the g09 folder. Using global reference, it would look like this on Stallo::
+Restart from g03 checkpoint file\
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To do this, you need to convert the g03 .chk file to g09 .chk file using a script called c8609 in the g09 folder. Using global reference, it would look like this on Stallo::
 
  $ /global/apps/gaussian/g09.b01/g09/c8609 water.chk.
 
-LINKS
+Links
 =====
 
 General info on running Gaussian 09: http://www.gaussian.com/g_tech/g_ur/m_running.htm

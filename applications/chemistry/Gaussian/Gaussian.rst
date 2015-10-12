@@ -1,3 +1,4 @@
+.. _gaussian:
 
 ===========================
 The GAUSSIAN program system
@@ -14,22 +15,24 @@ GAUSSIAN on NOTUR installations
  
 Currently there are two available main release versions in the NOTUR system; Gaussian 03 and Gaussian 09. Gaussian 09 is the latest in the Gaussian series of programs and Gaussian 03 is its predecessor. For differences between the two, please check the gaussian web page http://www.gaussian.com/g_tech/g_ur/a_gdiffs09.htm.
 
-Headings in inputfiles for parallel runs.
-Content in the .tsnet.config file.
-Content in the g09parallel.job script.
-Advised number of nodes and cpus in parallel runs.
-Please do read these sections carefully. 
-
-For more information on:
-
-- Gaussian 03 - go to :ref:`g03`
-- Gaussian 09 - go to :ref:`g09`
-
 Generally, we advice users to run the latest version of the software. This rule has some important exceptions: 
 
 #. As a rule of thumb you should always complete a project using the same software as you started with. 
 #. If you by experience know that your kind of problem behaves better (runs faster, uses less memory or scales better) on older versions of the program we of course encourage you to run your jobs the more efficient way.
+
+
+For more information on using Gaussian, please look at the following:
  
+.. toctree::
+   :maxdepth: 1
+
+   g03.rst
+   g09.rst
+   gaussview.rst
+   input.rst
+   water_input.rst
+   serial_run.rst
+   para_run.rst
 
 
 LINKS

@@ -4,19 +4,14 @@
 Gaussian Input
 ==============
 
-`Back to Gaussian 03 top page<g03>`_
-
-
-
-Guidelines for GAUSSIAN 03 input files:
-======================================== 
 
 - Gaussian input files usually have the extension .inp.
 - The input is case-INsensitive.
 - For correct reading of the input, several blank lines are required (see below).
  
 
-**A typical input file can be divided in different sections:**
+A typical input file can be divided in different sections
+=========================================================
 
 Link 0 Commands: 
   Name/location of scratch directories, naming of checkpoint and read-write-files, memory specifications, run-type pattern specifications.
@@ -30,8 +25,8 @@ Additional input section:
  Modredundant information, Keywords for solvent calculations (eps, cavity model).   
  
 
-Example Input:
----------------
+Example Input
+=============
 
 ::
 
@@ -56,8 +51,6 @@ Parallel calculations require additional keywords in the input file::
 
 This is put on top of the file, in the Link 0 part. The file above would then look like this:
 
-----
- 
 ::
 
  %NProcshared=6                                                 Link 0 section
@@ -74,14 +67,15 @@ This is put on top of the file, in the Link 0 part. The file above would then lo
  H         0.000000    0.813054    0.619662
                                                                 Blank line!
 
-----
 
 In case of nested runs, the NProcShared and NProcLinda keywords also have to be repeated in all Link 1 sections.
 
-Comments:
-..............  
 
-**The Link 0 section:**
+Comments
+========
+
+The Link 0 section
+------------------
 During gaussian execution, several scratch files are written, whose naming/location can be controlled from the Link 0 section. Checkpoint files (.chk) contain information on output, wavefunction, molecular orbitals, etc. They are required for restarts. To keep the .chk, specify a name: %chk=water   
 Normally, give the same name as the input file – this ensures the .chk is submitted/retrieved along with the .inp and .out upon job start and -end.
 
@@ -95,18 +89,20 @@ Keywords for parallel calculations are also given in the Link 0 section. They in
 
 For further commands see: http://www.inc.bme.hu/common/g03_man/g_ur/m_link0.htm
 
-**Route section:**
+Route section
+-------------
 # is required at the beginning of the line and *p* relates to the amount of output printed. *opt* refers to an optimization. Other job types: *sp* (single point), *freq* (frequency). 
 Additional typical keywords in this section (added on the same line) include *scf* (to control scf cycles), *scrf* (for solvent calculations), *guess* (for reading/manipulation of wavefunction guess). See links below for all keywords and available methods/ basis sets.
 
-**Coordinate section:**
+Coordinate section
+------------------
 This section starts with a line giving the overall molecular charge and multiplicity, directly followed by the coordinates. Give charge and multiplicy separated by at least one space, e.g.: +1 1. If the multiplicity is >1, the calculation automatically runs unrestricted. Both cartesian and z-matrix type coordinates are accepted as coordinate input, and atoms can be written as symbols (H,C,O) or atomic numbers (1,6,8).
 
 The coordinate section has to be followed by a blank line.
  
 
-LINKS:
-======
+Links
+=====
 
 More information on inputfiles: http://www.inc.bme.hu/common/g03_man/g_ur/m_input.htm
 

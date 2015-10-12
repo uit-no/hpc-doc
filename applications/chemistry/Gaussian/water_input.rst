@@ -4,8 +4,6 @@
 Example input file for Gaussian
 ===============================
 
-`Back to Gaussian 03 top page<g03>`_
-
 ----
 
 ::

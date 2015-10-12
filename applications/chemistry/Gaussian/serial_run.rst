@@ -4,10 +4,6 @@
 Wrapper-script for submitting Gaussian serial jobs
 ==================================================
 
-`Back to Gaussian 03 top page<g03>`_
-
-`Gaussian 03 parallel script<g03para_run>`_
-
 Link to download the wrapper-script: `g03serial.run<g03serial.run>`_ (this file is also available in /global/apps/gaussian/usage).
 
 Content of g03serial.run:
