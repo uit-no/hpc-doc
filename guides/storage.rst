@@ -147,16 +147,21 @@ have a lot "cryptic" combinations of options (`click here for a more in
 depth explanation <http://en.wikipedia.org/wiki/Chmod>`_ ). the most
 commonly used is:
 
-*  only user can read her home directory::
-       chmod 700 /home/$USER
-*  User and its group can read and execute files on the home
-   directory::
-       chmod 750 /home/$USER
-*  User and all others including the group can read and exeute the
-   files::
-       chmod 755 /home/$USER
-*  everybody can read execute and WRITE to directory::
-       chmod 777 /home/$USER
+*  only user can read their home directory::
+
+      chmod 700 /home/$USER
+
+*  User and their group can read and execute files on the home directory::
+
+      chmod 750 /home/$USER
+
+*  User and all others including the group can read and execute the files::
+
+      chmod 755 /home/$USER
+
+*  everybody can read, execute, and WRITE to directory::
+
+      chmod 777 /home/$USER
 
 
 Management of data
