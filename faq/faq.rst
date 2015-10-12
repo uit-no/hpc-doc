@@ -774,7 +774,6 @@ recompiling and in your job script:
     module load intel-compiler
 
 Please tell us if this helps for you application. We try to get an idea
-of the extent of this problem. Send a report to
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`.
+of the extent of this problem. Send a report to support-uit@notur.no .
 
 .. :vim:ft=rst

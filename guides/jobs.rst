@@ -142,8 +142,8 @@ express:
 highmem:
     Jobs will get access to the nodes with large memory (32GB). Submit with
     ``qsub -q highmem ....`` 
-    **Limits:** Restricted access, send a request to
-    :doc:`support <mailto:support-uit@uit.no>` to get access to this queue. Jobs will be restricted to the 32 nodes with 128GB memory.
+    **Limits:** Restricted access, send a request to support-uit@uit.no 
+    to get access to this queue. Jobs will be restricted to the 32 nodes with 128GB memory.
 
 Other queues
 
