@@ -21,9 +21,6 @@ scheduler, `Maui <http://www.adaptivecomputing.com/products/open-source/maui>`_.
 Torque keeps track of the state of the system while Maui decides when
 and where to run the jobs.
 
-Batch job submission
-====================
-
 
 Create a job 
 ============
@@ -31,9 +28,16 @@ Create a job
 To run a job on the system one needs to create a job script. A job
 script is a regular shell script (bash or csh) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
-batch system upon submission. See the :ref:`first_job` to get 
-a quick feel for how to create and run batch jobs.  A more complete example 
-can be found in :ref:`jobscript`.
+batch system upon submission. 
+
+For a quick feel for how to create and run batch jobs and for a more complete example see
+
+.. toctree::
+   :maxdepth: 1
+
+   firstjob.rst 
+   job-script-example.rst
+
 
 Manage a job 
 ============
@@ -258,7 +262,6 @@ Users can apply for exceptions to these rules by contacting
 support-uit@notur.no.
 
 
-
 The stallo archictecture
 ------------------------
 
@@ -277,10 +280,7 @@ is done automatically by the scheduler.
 
 .. _network: http://en.wikipedia.org/wiki/InfiniBand
 
-
-.. FIXME
-
-See :doc:`here <./key-numbers-about-stallo/>` for more details.
+See here :ref:`stallo` for more details.
 
 Job to node mapping
 -------------------
@@ -325,9 +325,6 @@ Highmem jobs:
 This job will run on the highmem nodes if the user is granted access by
 the administrators. Otherwise it will never start. **pmem** is memory per 
 process.
-
-
-
 
 
 Express queue for testing job scripts and interactive jobs.
