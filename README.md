@@ -16,12 +16,6 @@ Steinar Traedal-Henden,
 UiT The Arctic University of Norway.
 
 
-## Status
-
-This currently inofficial documentation will soon
-replace the official http://hpc.uit.no/docs/.
-
-
 ## Locally building the HTML for testing
 
 ```
