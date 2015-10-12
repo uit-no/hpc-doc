@@ -11,9 +11,9 @@ Gaussian 03 is an older  major release of the Gaussian Program System,
 are still available from the gaussian web page (www.gaussian.com) but
  only as downloadable zipped files.  
 
-* For information about Gaussian input: :ref:`<gaussian_input>`
+* For information about Gaussian input: :ref:`gaussian_input`
 * For inputfile-example to download: :ref:`gaussian_water_input`
-* For information on Gaussview for Gaussian: `gaussview`
+* For information on Gaussview for Gaussian: :ref:`gaussview`
 
 
 GAUSSIAN 03 on STALLO
@@ -25,15 +25,16 @@ To run Gaussian 03 on Stallo, the module has to be loaded::
 
 If you download a run script (see below), this will be taken care of by the script. Two run scripts are available (serial and parallel jobs respectively). Download one of the scripts to your home/$USER/bin and use it as described. 
 
-**Scriptfile-examples:** 
 
-   * `Gaussian 03 serial script<g03serial_run>`_
-   * `Gaussian 03 parallel script<g03para_run>`_
+Scriptfile-examples
+-------------------
+- :ref:`gaussian_serial_run`
+- :ref:`gaussian_para_run`
 
 (These scripts are also available on Stallo under /global/apps/gaussian/usage.)
-
 Manually change account name and mail adress in your personal copy of the run scripts.
  
+
 Job submission guidelines
 --------------------------
 
@@ -51,7 +52,7 @@ For parallel jobs you need to add the number of cpus, preferably on the form nod
 
 meaning job water.inp running on 2 nodes with 6 cores on each, a total of 12 cores, for 2 hours 00 minutes - having a total cpu-time count of 24 hours.
 
-**NOTE:** Running Gaussian 03 jobs in parallel requires the additional keywords *%NProcshared* and *%NProcLinda* in the Link 0 part of the input file. This is further discussed in here: `g03_input<g03_input>`_ If you run Gaussian 03-jobs using the scripts discussed above, this is taken care of automatically. If not, you need to put this information in your input file manually.
+**NOTE:** Running Gaussian 03 jobs in parallel requires the additional keywords *%NProcshared* and *%NProcLinda* in the Link 0 part of the input file. This is further discussed in here: :ref:`gaussian_input` If you run Gaussian 03-jobs using the scripts discussed above, this is taken care of automatically. If not, you need to put this information in your input file manually.
 
 If you plan to run on >1 node (using %NProcLinda), make a new file in your $HOME directory::
 

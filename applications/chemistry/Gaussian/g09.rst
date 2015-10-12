@@ -24,9 +24,9 @@ Please do read these sections carefully.
 
 **Information related to inputs and output:**
 
-* For information about Gaussian 09 input: `g09_input<g09_input>`_
-* For input-example to download: `water.inp<water.inp>`_
-* For information on Gaussview for Gaussian 09: `g09_gaussview<g09_gv>`_
+* For information about Gaussian input: :ref: `gaussian_input`
+* For input-example to download: :ref:`gaussian_water_input`
+* For information on Gaussview for Gaussian: :ref:`gaussview`
 
 
 GAUSSIAN 09 on STALLO
@@ -42,10 +42,11 @@ Currently, both the minor revision b.01 and c.01 are available on Stallo, the de
 
 If you download a run script (see below), this will be taken care of by the script (though you have to change to your preferred flavor of the Gaussian 09 code). Two run scripts are available (for running in serial and parallel, respectively). Download one of the scripts to your home/$USER/bin and use it as described. 
 
-**Scriptfile-examples:**
+Scriptfile-examples
+-------------------
 
-- `Gaussian 09 serial script<g09serial_run>`_
-- `Gaussian 09 parallel script<g09para_run>`_
+- :ref:`gaussian_serial_run`
+- :ref:`gaussian_para_run`
 
 (These scripts are also available on Stallo under /global/apps/gaussian/usage).
 
@@ -67,7 +68,11 @@ For parallel jobs you need to add the number of cpus, preferably on the form nod
 
 meaning job water.inp running on 2 nodes with 16 cores on each, a total of 32 cores, for 2 hours 00 minutes - having a total cpu-time count of 64 hours. See also http://www.gaussian.com/g_tech/g_ur/m_linda.htm for info on parallel running of Gaussian 09.
 
-**NOTE:** Running Gaussian 09 jobs in parallel requires the additional keywords *%LindaWorkers* and *%NProcshared* in the Link 0 part of the input file. This is further discussed here: `g09_input<g09_input>`_ If you run Gaussian 09-jobs using the scripts discussed above, this is taken care of automatically. If not, you need to put this information in your input file manually.
+**NOTE:** Running Gaussian 09 jobs in parallel requires the additional 
+keywords *%LindaWorkers* and *%NProcshared* in the Link 0 part of the 
+input file. This is further discussed here: `gaussian_input`. If you 
+run Gaussian 09-jobs using the scripts discussed above, this is taken 
+care of automatically. If not, you need to put this information in your input file manually.
 
 If you plan to run on >1 node (using %NProcLinda), make a new file in your $HOME directory::
 
