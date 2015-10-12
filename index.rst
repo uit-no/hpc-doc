@@ -35,7 +35,6 @@ General information
    guides/account.rst
    guides/accounting.rst
    guides/login.rst
-   guides/gui.rst
    guides/linux.rst
    guides/storage.rst
    guides/file_transfer.rst
