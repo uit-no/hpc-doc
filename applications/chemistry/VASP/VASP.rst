@@ -1,3 +1,4 @@
+.. _vasp:
 
 ==========================================
 VASP (Vienna Ab initio Simulation Package)
