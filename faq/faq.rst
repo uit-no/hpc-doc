@@ -184,7 +184,9 @@ How can I find out when my job will start?
 
 To find out approximately when the job scheduler thinks your job will
 start, use the command::
- showstart <job_id>
+
+  showstart <job_id>
+
 This command will give you information about how many CPUs your job
 requires, for how long, as well as when approximately it will start and
 complete.
@@ -388,7 +390,7 @@ using the command *showq*.
 
 
 How can I kill **all** my jobs?
----------------------------
+-------------------------------
 
 I want to get rid of all my jobs in a hurry.
 
@@ -431,8 +433,7 @@ If you want to kill a job, and the normal way of doing it, *qdel
     qsig -sNULL <job_id>
 
 This should always work. However if it doesn't work you have to contact
-the support personal:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
+the support personal: support-uit@notur.no
 
 
 Which nodes are busy, and which are idle?
@@ -693,7 +694,7 @@ It is recommended to experiment with this to obtain optimal values, as
 setting it too low will decrease performance.
 
 For more information about openmpi tunables see
-`here <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`_.
+`here <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`__.
 
 
 My mpi job crashes with a retry limit exceeded error.
