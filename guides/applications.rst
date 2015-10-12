@@ -25,8 +25,7 @@ Missing / new SW?
 
 If there is any SW missing on this list that you would like to have
 installed on Stallo, or you need help to install your own SW, please
-feel free to contact the support personal about this:
-:doc:`support-uit@notur.no <support-uit@notur.no>`
+feel free to contact the support personal about this: support-uit@notur.no.
 
 Changes in application software
 -------------------------------
@@ -41,9 +40,11 @@ the  ``module`` command.
 List all software available::
 
     module avail
+
 List all version of a specific software::
 
     module avail software-name
+
 
 Modules
 =======

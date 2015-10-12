@@ -121,9 +121,10 @@ Links
 
 General info on running Gaussian 09: http://www.gaussian.com/g_tech/g_ur/m_running.htm
 
-What is new in g09:http://www.gaussian.com/g_prod/g09new.htm
+What is new in Gaussian 09: http://www.gaussian.com/g_prod/g09new.htm
 
 Information on program limits for Gaussian 09: http://www.gaussian.com/g_tech/g_ur/b_proglimits.htm
 
-Information on efficiency considerations for Gaussian 09:http://www.gaussian.com/g_tech/g_ur/m_eff.htm
+Information on efficiency considerations for Gaussian 09: http://www.gaussian.com/g_tech/g_ur/m_eff.htm
 
+.. :vim:ft=rst

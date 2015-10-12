@@ -4,8 +4,6 @@
 Example input file for Gaussian
 ===============================
 
-----
-
 ::
 
  %chk=H2O                                    
@@ -19,7 +17,6 @@ Example input file for Gaussian
  H         0.000000   -0.813054    0.619662
  H         0.000000    0.813054    0.619662   
 
------
 
 If you want to run in parallel, you need to add the tags *%NProcShared* and *%NProcLinda* in this fashion::
 
@@ -33,3 +30,5 @@ If you use the provided wrapperscripts, this is automatically taken care of.
 
 
 Link to download this file: `water.inp<water.inp>`_ (this file is also found in /global/apps/gaussian/usage)
+
+.. :vim:ft=rst

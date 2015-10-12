@@ -41,7 +41,6 @@ Example Input
  H         0.000000   -0.813054    0.619662
  H         0.000000    0.813054    0.619662
                                                                 Blank line!
-----
 
 Parallel calculations require additional keywords in the input file::
 
@@ -85,7 +84,9 @@ Memory specifications should also be done in the Link 0 section. For example, so
 
  %mem=800mb
 
-Keywords for parallel calculations are also given in the Link 0 section. They include *%NprocShared*= (number of processors per node) and *%NprocLinda*= (number of nodes). See also general Gaussian 03 info page.
+Keywords for parallel calculations are also given in the Link 0 section. 
+They include *%NprocShared* = (number of processors per node) and 
+*%NprocLinda* = (number of nodes). See also general Gaussian 03 info page.
 
 For further commands see: http://www.inc.bme.hu/common/g03_man/g_ur/m_link0.htm
 
@@ -111,3 +112,5 @@ Possible input keywords: http://www.inc.bme.hu/common/g03_man/g_ur/keywords.htm
 Available basis sets: http://www.inc.bme.hu/common/g03_man/g_ur/m_basis_sets.htm
 
 Available DFT functionals: http://www.inc.bme.hu/common/g03_man/g_ur/k_dft.htm
+
+.. :vim:ft=rst

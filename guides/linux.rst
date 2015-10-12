@@ -63,9 +63,10 @@ ls
 find
   searches through one or more directory trees of a file system, locates files based on some user-specified 
   criteria and applies a user-specified action on each matched file. F.e.
-   ::
+  ::
 
      find . -name 'my*'-type f
+
   searches in the current directory (.) and below it, for files and directories with names starting with my. 
   "-type f" limits the results of the above search to only regular files, therefore excluding directories, 
   special files, pipes, symbolic links, etc. my* is enclosed in single quotes (apostrophes) as otherwise the

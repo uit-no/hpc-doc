@@ -116,11 +116,13 @@ Content of g03serial.run:
  date
  echo "###############  GAUSSIAN 09 JOB ENDED  #####################"  
 
-qstat -f \$PBS_JOBID | grep resources_used >> \$1.log
-
-exit 0
-EOF
-
-qsub $1.job
+ qstat -f \$PBS_JOBID | grep resources_used >> \$1.log
+ 
+ exit 0
+ EOF
+ 
+ qsub $1.job
 
 ----
+
+.. :vim:ft=rst

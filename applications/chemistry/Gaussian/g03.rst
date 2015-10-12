@@ -81,3 +81,5 @@ Links
 =====
 
 Online Manual: http://www.inc.bme.hu/common/g03_man/g_ur/g03mantop.htm (warning: not the official gaussian web-site)
+
+.. :vim:ft=rst
