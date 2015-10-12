@@ -61,14 +61,25 @@ Job-name is here input.inp, number of nodes is 2 with 8 processors per node and 
 
 Note
 ----
-* Generated output and TAPE21 files are named based on input file. Example: input.inp gives input-a12.out and input-a12.t21 outputs if using the adf2012.run script. 
-* ADF jobs are run in /global/work/$LOGNAME/$PBS_JOBID (one 'kid' directory per requested node). This is a measure to ease support efforts from our side. Temporary directories are removed upon job completion. If job aborted prematurely, temporary directories need to be removed manually. Remember to move the TAPE21 file before deleting the temporary kid0 folder.
-* The output file is continuously updated to the $HOME directory (from where the job was submitted).
-* Since ADF is a very complex code, able to solve a vast range of chemistry problems - giving unified 
-advice regarding scaling is difficult. For a standard geometry optimization, it seems to scale well 
-in the region of 4-6 full nodes (64-96 cores) at least. For linear transit we would currently stay at 
-no more than 4 full nodes or less. Unless having tests indicating otherwise, users who want to run 
-large jobs should allocate no more than the prescribed numbers of processors.
+* Generated output and TAPE21 files are named based on input file. 
+  Example: input.inp gives input-a12.out and input-a12.t21 outputs if 
+  using the adf2012.run script. 
+* ADF jobs are run in /global/work/$LOGNAME/$PBS_JOBID (one 'kid' 
+  directory per requested node). This is a measure to ease support 
+  efforts from our side. Temporary directories are removed upon job 
+  completion. If job aborted prematurely, temporary directories need 
+  to be removed manually. Remember to move the TAPE21 file before 
+  deleting the temporary kid0 folder.
+* The output file is continuously updated to the $HOME directory (from 
+  where the job was submitted).
+* Since ADF is a very complex code, able to solve a vast range of 
+  chemistry problems - giving unified advice regarding scaling is 
+  difficult. For a standard geometry optimization, it seems to scale 
+  well in the region of 4-6 full nodes (64-96 cores) at least. For 
+  linear transit we would currently stay at no more than 4 full nodes 
+  or less. Unless having tests indicating otherwise, users who want 
+  to run large jobs should allocate no more than the prescribed numbers 
+  of processors.
  
 Further information:
 ====================
