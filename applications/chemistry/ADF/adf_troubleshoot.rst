@@ -1,7 +1,12 @@
-Troubleshooting ADF calculations
-by Kathrin Helen Hopmann — last modified Jun 30, 2010 03:09 PM
-Collection of some error messages and possible solutions
+.. _adf_troubleshoot:
 
+================================
+Troubleshooting ADF calculations
+================================
+by Kathrin Helen Hopmann — last modified Jun 30, 2010 03:09 PM
+
+
+Collection of some error messages and possible solutions
  
 
 Errors in .out file: 

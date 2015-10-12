@@ -1,14 +1,19 @@
----
-title: Gaussian 03
-...
+.. _g03:
+
+===========
+Gaussian 03
+===========
 
 `Back to Gaussian top page<Gaussian>`_
 
-Gaussian 03 is the previous major release of the Gaussian Program System, and is no longer officially developed and maintained.  Manual pages are still available from the gaussian web page (www.gaussian.com) but only as downloadable zipped files.  
+Gaussian 03 is an older  major release of the Gaussian Program System,
+ and is no longer officially developed and maintained.  Manual pages 
+are still available from the gaussian web page (www.gaussian.com) but
+ only as downloadable zipped files.  
 
-* For information about Gaussian 03 input: `g03_input<g03_input>`_
-* For inputfile-example to download: `water.inp<water_input>`_
-* For information on Gaussview for Gaussian 03: `g03_gaussview<g03_gv>`_
+* For information about Gaussian input: :ref:`<gaussian_input>`
+* For inputfile-example to download: :ref:`gaussian_water_input`
+* For information on Gaussview for Gaussian: `gaussview`
 
 
 GAUSSIAN 03 on STALLO

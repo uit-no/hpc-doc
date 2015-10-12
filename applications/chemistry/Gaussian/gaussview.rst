@@ -1,6 +1,8 @@
----
-title: GaussView for Gaussian 03
-...
+.. _gaussview:
+
+======================
+GaussView for Gaussian
+======================
 
 `Back to Gaussian 03 top page<g03>`_
 

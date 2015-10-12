@@ -1,6 +1,8 @@
----
-title: How to run ADF using fragments
-...
+.. _adf_fragments:
+
+==============================
+How to run ADF using fragments
+==============================
 
 This is a brief introduction to how to create fragments necessary for among other things, BSSE calculations and proper broken symmetry calculations.
 

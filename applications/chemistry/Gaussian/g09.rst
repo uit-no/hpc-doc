@@ -1,8 +1,8 @@
----
-title: Gaussian 09
-...
+.. _g09:
 
-.. author: Espen Tangen, HPC@UiT
+===========
+Gaussian 09
+===========
 
 
 `Back to Gaussian top page<Gaussian>`_

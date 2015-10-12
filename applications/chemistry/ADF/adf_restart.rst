@@ -1,9 +1,9 @@
----
-title: How to restart an ADF job
-...
+.. _adf_restart:
 
-**Restarting a job:**
-    
+=========================
+How to restart an ADF job
+=========================
+
 #. In the directory where you started your job, rename or copy the job-output t21 file into $SCM_TMPDIR/TAPE21.
 
 #. In job.inp file, put RESTART TAPE21 just under the comment line.
