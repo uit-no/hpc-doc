@@ -45,11 +45,11 @@ set, but using just a few iterations for the time stepping.
 
 #. Compile with ``-prof _gen``.
 #. Run the app (might take a long time as optimization is turned off in
-    this stage).
+   this stage).
 #. Recompile with ``-prof _use``.
-    The simplest case is to compile/run/recompile in the same catalog or
-    else you need to use the ``-prof _dir`` flag, see the manual for
-    details.
+   The simplest case is to compile/run/recompile in the same catalog or
+   else you need to use the ``-prof _dir`` flag, see the manual for
+   details.
 
 
 IPM: MPI performance profiling
@@ -115,7 +115,7 @@ not a compute-node):
 
     ipm_parse -html MyName.1272624855.201741.0
 
-Which produce a new directory with html files that you can visualize in
+Which produces a new directory with html files that you can visualize in
 your browser:
 
 ::
@@ -124,7 +124,7 @@ your browser:
 
  
 
-Note that the use of hardware performance counter are not implemeted yet
+Note that the use of a hardware performance counter is not implemented yet
 on Stallo. Therefore IPM cannot give information about floating point
 operations, cache use etc.
 

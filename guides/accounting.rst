@@ -17,7 +17,7 @@ Resource charging.
 
 We charge for used resources, both cpu and memory.
 The accounting system charges for used processor equivalents (PE)
-times used walltime so if you ask for more than 2GB of memory per cpu
+times used walltime, so if you ask for more than 2GB of memory per cpu
 you will get charged for more than the actual cpus you use.
 
 Processor equivalents.

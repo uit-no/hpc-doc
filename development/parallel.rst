@@ -116,7 +116,7 @@ OpenMPI
 ^^^^^^^
 A lot of info can be found at
 `http://www.open-mpi.org <http://www.open-mpi.org>`_ , but here we will
-fokus on an end user point of view.
+focus on an end user point of view.
 
  
 
@@ -239,7 +239,7 @@ The "eager send" does not work as long as the receiving process is not
 in a MPI call (not necessarily the corresponding receiving call). 
 
 Increasing the threshold, does not have an important memory penalty as
-in OpenMPI
+in OpenMPI.
 
 
 

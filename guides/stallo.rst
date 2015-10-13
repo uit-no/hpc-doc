@@ -87,7 +87,7 @@ supercomputing.
 Stallo - Norse mythology
 ========================
 
-In the folklore of the Sami, a Stallo (also Stallu or Stalo)is a sami wizard.
+In the folklore of the Sami, a Stallo (also Stallu or Stalo) is a sami wizard.
 "The Sami traditions up North differ a bit from other parts of Norwegian
 traditions. You will find troll and draug and some other creatures as well,
 but the Stallo is purely Sami. He can change into all kinds of beings,;
@@ -97,6 +97,6 @@ familiar surroundings.  Stallo is very rich and smart, he owns silver and
 reindeers galore, but he always wants more. To get what he wants he tries to
 trick the Samis into traps, and the most popular Sami stories tell how people
 manage to fool Stallo." NB! Don’t mix Stallo with the noaide! He is a real
-wizard who people still believe in.
+wizard whom people still believe in.
 
 .. vim:ft=rst
