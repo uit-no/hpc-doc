@@ -26,7 +26,6 @@ For more information on using Gaussian, please look at the following:
 .. toctree::
    :maxdepth: 1
 
-   g03.rst
    g09.rst
    gaussview.rst
    input.rst

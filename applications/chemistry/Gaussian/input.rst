@@ -86,7 +86,7 @@ Memory specifications should also be done in the Link 0 section. For example, so
 
 Keywords for parallel calculations are also given in the Link 0 section. 
 They include *%NprocShared* = (number of processors per node) and 
-*%NprocLinda* = (number of nodes). See also general Gaussian 03 info page.
+*%NprocLinda* = (number of nodes). See also general Gaussian 09 info page.
 
 For further commands see: http://www.inc.bme.hu/common/g03_man/g_ur/m_link0.htm
 
