@@ -7,9 +7,9 @@ Linux command line
 New on Linux systems?
 =====================
 
-This page contains some tips on how to get started using the Snowstorm cluster on UiT if you are
+This page contains some tips on how to get started using the Stallo cluster on UiT if you are
 not too familiar with Linux / Unix. The information is intended for both users that are new
-to Snowstorm and for users that are new to Linux/UNIX-like operating
+to Stallo and for users that are new to Linux/UNIX-like operating
 systems. Please consult the rest of the user guide for information that
 is not covered in this chapter.
 
@@ -36,7 +36,7 @@ chsh
 You may want to change the shell that you get by default
 (bash). Use the command 'echo $SHELL' to check your current
 shell-type and 'chsh' to modify this (if needed). To list all
-available shells on Snowstorm use the command 'chsh --list-shells'.
+available shells on Stallo use the command 'chsh --list-shells'.
 The C shell 'tcsh', the Korn shell 'ksh', and the Bourne-Again shell
 'bash' are popular ones.
 
