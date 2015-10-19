@@ -4,37 +4,47 @@
 Using Software installed on Stallo
 ==================================
 
-More information and guides to a few of the installed applications can be found in :ref:`sw_guides`. A list of software that is installed on stallo can be found in :ref:`sw_list`.
+More information and guides to a few of the installed applications can be found in :ref:`sw_guides`. 
+
+.. A list of software that is installed on stallo can be found in :ref:`sw_list`.
 
 
 Which software is installed on Stallo
 =====================================
 
-For a complete list of applications see the `Full package list <http://hpc.uit.no/software>`_.
+To find out what software packages are available to you, type
+
+::
+
+    module avail
+
+.. For a complete list of applications see the `sw_list`_.
 
 Missing / new SW?
 -----------------
 
 If there is any SW missing on this list that you would like to have
 installed on Stallo, or you need help to install your own SW, please
-feel free to contact the support personal about this:
-:doc:`support-uit@notur.no <support-uit@notur.no>`
+feel free to contact the support personal about this: support-uit@notur.no.
 
 Changes in application software
 -------------------------------
 
-New and updated software will be announced on `UiT
-News <http://docs.notur.no/uit/uit-news>`_.
-Headlines from the above news page will also be displayed on the login
-screen.
+News about planned/unplanned downtime, changes in hardware, and important
+changes in software will be published on the HPC UiT twitter account
+`<https://twitter.com/hpc_uit>`_ and on the login screen of stallo.
+For more information on the different situations see `news`.
+
 The easiest way to check which software and versions available is to use
 the  ``module`` command.
 List all software available::
 
     module avail
+
 List all version of a specific software::
 
     module avail software-name
+
 
 Modules
 =======

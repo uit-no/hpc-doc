@@ -94,8 +94,8 @@ the old one after a while. Why is this happening?
 The stallo system is using a centralised database for user management.
 This will override the password changes done locally on stallo.
 
-The password can be changed
-`here <https://www.metacenter.no/public/password/>`_, log in using your
+The password can be changed on the
+`passwrod metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
 username on stallo and the NOTUR domain.
 
 
@@ -159,8 +159,8 @@ not on stallo)
 The above config is for `OpenSSH <http://www.openssh.org>`_, if you're
 using
 `PUTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html>`_
-you can take a look
-`here <http://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter4.html#config-keepalive>`_
+you can take a look at this page explaining
+`keepalives <http://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter4.html#config-keepalive>`_
 for a similar solution.
 
 
@@ -184,7 +184,9 @@ How can I find out when my job will start?
 
 To find out approximately when the job scheduler thinks your job will
 start, use the command::
- showstart <job_id>
+
+  showstart <job_id>
+
 This command will give you information about how many CPUs your job
 requires, for how long, as well as when approximately it will start and
 complete.
@@ -238,9 +240,7 @@ Example of the 'qstat' output:
 
 +---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
 | *Job id*      |     | *Name*        |     | *User*   |     | *Time Use*   |     | *S*   |     | *Queue*    |
-+---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
-| ------        |     | ------        |     | ----     |     | -------      |     | -     |     | -----      |
-+---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
++===============+=====+===============+=====+==========+=====+==============+=====+=======+=====+============+
 | *58.mangas*   |     | *rc5des.sh*   |     | *royd*   |     | *00:07:46*   |     | *R*   |     | *normal*   |
 +---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
 | *59.mangas*   |     | *rc5des.sh*   |     | *royd*   |     | *00:07:46*   |     | *R*   |     | *normal*   |
@@ -264,11 +264,13 @@ Use the \`\`qpeek\`\` command.
 The \`\`qpeek\`\` command can list your job output while it is running.
 It behaves much like the \`\`tail\`\` command so using \`\`-f\`\` will
 display the output as it is written::
+
  $qpeek -f <job_id>
  1.0
  2.0
  3.0
  4.0
+
 See \`\`qpeek -h\`\` for more info.
 You can also submit your job with the \`\`-k oe\`\` flag, then the
 standard error and standard output of your job will be put in your home
@@ -388,7 +390,7 @@ using the command *showq*.
 
 
 How can I kill **all** my jobs?
----------------------------
+-------------------------------
 
 I want to get rid of all my jobs in a hurry.
 
@@ -431,8 +433,7 @@ If you want to kill a job, and the normal way of doing it, *qdel
     qsig -sNULL <job_id>
 
 This should always work. However if it doesn't work you have to contact
-the support personal:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
+the support personal: support-uit@notur.no
 
 
 Which nodes are busy, and which are idle?
@@ -463,6 +464,7 @@ Example; to apply for  nodes c2-1 and c2-2:
 
     qsub -lnodes=c2-1:ppn=8+c2-2:ppn=8
 
+.. _exclude-a-node-from-running-a-job:
 
 How do I exclude a node from running a job?
 -------------------------------------------
@@ -692,8 +694,8 @@ the command line:
 It is recommended to experiment with this to obtain optimal values, as
 setting it too low will decrease performance.
 
-For more information about openmpi tunables see
-`here <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`_.
+For more information about openmpi tunables see the 
+`open-mpi page <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`__.
 
 
 My mpi job crashes with a retry limit exceeded error.
@@ -716,7 +718,7 @@ To work around this problem you can try to avoid the problematic
 node(s), in the error message above it seems to be the receiver, c13-3,
 that is causing the problem so in this case I would run a dummy job on
 that node and try to resubmit the failing job. See
-:doc:`here <./how-do-i-exclude-a-node-from-running-a-job>` how to run a
+:ref:`exclude-a-node-from-running-a-job` to find out how to run a
 dummy job on a specific node.
 
 If this does not help, send us a problem report.
@@ -773,7 +775,6 @@ recompiling and in your job script:
     module load intel-compiler
 
 Please tell us if this helps for you application. We try to get an idea
-of the extent of this problem. Send a report to
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`.
+of the extent of this problem. Send a report to support-uit@notur.no .
 
 .. :vim:ft=rst

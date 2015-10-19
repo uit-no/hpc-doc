@@ -23,8 +23,7 @@ The file system for user home directories on stallo. It is a 64 TB global file s
 accessible from both the login nodes and all the compute nodes. The
 default size of the home directory's for each user is 300 GB. If more
 space is needed for permanent storage users have to apply for it. Please
-contact the system administrators,
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`, for more
+contact the system administrators, support-uit@notur.no, for more
 information about this.
 
 The home area is for "permanent" storage only, so please do not
@@ -58,21 +57,18 @@ warning.
 
 There are no backup of files stored on the work areas.
 If you need permanent storage of large amounts of data, please
-contact the system administrators:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
+contact the system administrators: support-uit@notur.no
 
 Disk quota and accounting
 -------------------------
 
 Each user has the default size of the home directory 300 GB. If more
 space is needed for permanent storage, users have to apply for it. Please
-contact the system administrators,
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`, for more
-information about this.
+contact the system administrators, support-uit@notur.no, for more information about this.
 Disk quota is not supported on work/scratch areas. Please use common courtesy and
 keep your work /scratch partitions clean. Move all files you do not need on stallo
-elsewhere or delete them. Since overfilled work/scratch partitions can cause problems, files older than 14 days are subject for
-deletion without any notice.
+elsewhere or delete them. Since overfilled work/scratch partitions can 
+cause problems, files older than 14 days are subject for deletion without any notice.
 
 What area to use for what data
 ------------------------------
@@ -107,8 +103,7 @@ There is no real backup of the data on stallo. However we do keep daily snapshot
 
 There are no backup of files stored on the /work areas.
 If you need permanent storage of large amounts of data, or if you need to restore some lost data, please
-contact the system administrators:
-:doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
+contact the system administrators: support-uit@notur.no
 
 Archiving data
 --------------
@@ -152,16 +147,21 @@ have a lot "cryptic" combinations of options (`click here for a more in
 depth explanation <http://en.wikipedia.org/wiki/Chmod>`_ ). the most
 commonly used is:
 
-*  only user can read her home directory::
-       chmod 700 /home/$USER
-*  User and its group can read and execute files on the home
-   directory::
-       chmod 750 /home/$USER
-*  User and all others including the group can read and exeute the
-   files::
-       chmod 755 /home/$USER
-*  everybody can read execute and WRITE to directory::
-       chmod 777 /home/$USER
+*  only user can read their home directory::
+
+      chmod 700 /home/$USER
+
+*  User and their group can read and execute files on the home directory::
+
+      chmod 750 /home/$USER
+
+*  User and all others including the group can read and execute the files::
+
+      chmod 755 /home/$USER
+
+*  everybody can read, execute, and WRITE to directory::
+
+      chmod 777 /home/$USER
 
 
 Management of data

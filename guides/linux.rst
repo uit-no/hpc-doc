@@ -59,13 +59,14 @@ pwd
 cd
   (**c**\hange **d**\irectory) change the current working directory
 ls
-  lists the files and directories, which are located in the directory you are currently in
+  **l**\i\ **s**\ts the files and directories, which are located in the directory you are currently in
 find
   searches through one or more directory trees of a file system, locates files based on some user-specified 
   criteria and applies a user-specified action on each matched file. F.e.
-   ::
+  ::
 
      find . -name 'my*'-type f
+
   searches in the current directory (.) and below it, for files and directories with names starting with my. 
   "-type f" limits the results of the above search to only regular files, therefore excluding directories, 
   special files, pipes, symbolic links, etc. my* is enclosed in single quotes (apostrophes) as otherwise the
@@ -86,17 +87,17 @@ grep
   sequence *ple* (^a.ple). It looks in all files and directories, which are located in the current directory (*). 
   It is possible to search this way for numbers and regular expressions in general.
 mkdir
-  make directory (create new directory)
+  **m**\a\ **k**\e **dir**\ectory (create new directory)
 rm
-  remove (delete) file. Use with caution.
+  **r**\e\ **m**\ove (delete) file. Use with caution.
 rmdir
-  remove (delete) directory. Use with caution.
+  **r**\e\ **m**\ove (delete) **dir**\ectory. Use with caution.
 mv
-  move or rename file.
+  **m**\o\ **v**\e or rename file.
 vi/vim or emacs
   editing text files, see below.
-less
-  view (but not change) the contents of a text file one screen at a time, or, when combined with other commands (see below)
+less/ more
+  view (but do not change) the contents of a text file one screen at a time, or, when combined with other commands (see below)
   view the result of the command one screen at a time. Useful f.e. if a command prints several screens of information on 
   your screen so quickly, that you don't manage to read the first lines before they are gone.
 \|

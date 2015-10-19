@@ -21,9 +21,6 @@ scheduler, `Maui <http://www.adaptivecomputing.com/products/open-source/maui>`_.
 Torque keeps track of the state of the system while Maui decides when
 and where to run the jobs.
 
-Batch job submission
-====================
-
 
 Create a job 
 ============
@@ -31,9 +28,16 @@ Create a job
 To run a job on the system one needs to create a job script. A job
 script is a regular shell script (bash or csh) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
-batch system upon submission. See the :ref:`first_job` to get 
-a quick feel for how to create and run batch jobs.  A more complete example 
-can be found in :ref:`jobscript`.
+batch system upon submission. 
+
+For a quick feel for how to create and run batch jobs and for a more complete example see
+
+.. toctree::
+   :maxdepth: 1
+
+   firstjob.rst 
+   job-script-example.rst
+
 
 Manage a job 
 ============
@@ -101,13 +105,10 @@ Cpucount
 --------
 
 We strongly advice all users to ask for all cpus on a node when running 
-multinode
-jobs, that is, submit the job with ``-lnodes=X:ppn=16``.  This will make the 
-best use
-of the resources and give the most predictable execution times. For single node 
-jobs,
- e.g. jobs that ask for less than 16 cpus, we recommend to use 
-``-lnodes=1:ppn={1,2,4,8 or 16}``, this will make it possible for the batch 
+multinode jobs, that is, submit the job with ``-lnodes=X:ppn=16``. 
+This will make the best use of the resources and give the most predictable 
+execution times. For single node jobs, e.g. jobs that ask for less 
+than 16 cpus, we recommend to use ``-lnodes=1:ppn={1,2,4,8 or 16}``, this will make it possible for the batch 
 system scheduler to fill up the compute nodes completely.
 A warning will be issued if these recommendations are not followed.
 
@@ -120,9 +121,8 @@ should not ask for more cpus for a job than you really can utilize
 efficiently. Try to run your job on 1,2,4,8,16 cpus and so on to see
 when the runtime for your job starts tailing off. When you start to see
 less than 30% improvement in runtime when doubling the cpu-counts you
-should probably not go any further. We have started to make some
-recommendations on the most used applications
-:doc:`here </application-support>`.
+should probably not go any further. Recommendations to a few of the 
+most used applications can be found in :ref:`sw_guides`.
 
 
 
@@ -138,12 +138,12 @@ express:
     Jobs will get higher priority than jobs in other queues. Submit with
     qsub -q express .... **Limits:** Max walltime is 8 hours, no other resource
     limits, but there are very strict limits on the number of jobs running
-    etc. (:doc:`Details <./expressqueue>`)
+    etc. 
 highmem:
     Jobs will get access to the nodes with large memory (32GB). Submit with
     ``qsub -q highmem ....`` 
-    **Limits:** Restricted access, send a request to
-    :doc:`support <mailto:support-uit@uit.no>` to get access to this queue. Jobs will be restricted to the 32 nodes with 128GB memory.
+    **Limits:** Restricted access, send a request to support-uit@uit.no 
+    to get access to this queue. Jobs will be restricted to the 32 nodes with 128GB memory.
 
 Other queues
 
@@ -258,7 +258,6 @@ Users can apply for exceptions to these rules by contacting
 support-uit@notur.no.
 
 
-
 The stallo archictecture
 ------------------------
 
@@ -270,17 +269,14 @@ stallo architecture.
 -  The Stallo cluster has two different memory configurations, 272 nodes
    have 32GB memory and 32 nodes have 128GB memory.
 -  The Stallo cluster has all nodes connected with a high speed network_ which 
-gives very high throughput and low latency.  The network is split into *islands* 
-with 128 nodes/2048 cpus each and jobs will run within one single island. This 
-is done automatically by the scheduler.
+   gives very high throughput and low latency.  The network is split into *islands* 
+   with 128 nodes/2048 cpus each and jobs will run within one single island. This 
+   is done automatically by the scheduler.
 
 
 .. _network: http://en.wikipedia.org/wiki/InfiniBand
 
-
-.. FIXME
-
-See :doc:`here <./key-numbers-about-stallo/>` for more details.
+See :ref:`about_stallo` chapter of the documentation for more details.
 
 Job to node mapping
 -------------------
@@ -325,9 +321,6 @@ Highmem jobs:
 This job will run on the highmem nodes if the user is granted access by
 the administrators. Otherwise it will never start. **pmem** is memory per 
 process.
-
-
-
 
 
 Express queue for testing job scripts and interactive jobs.

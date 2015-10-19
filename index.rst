@@ -3,6 +3,18 @@
 HPC-UiT Services User Documentation
 ===================================
 
+
+.. raw:: html
+
+    <a class="twitter-timeline"
+       data-widget-id="652480665875808257"
+       href="https://twitter.com/hpc_uit"
+       data-chrome="nofooter noborders transparent">
+       Tweets by @hpc_uit
+    </a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
 News and Events
 ---------------
 
@@ -23,7 +35,6 @@ General information
    guides/account.rst
    guides/accounting.rst
    guides/login.rst
-   guides/gui.rst
    guides/linux.rst
    guides/storage.rst
    guides/file_transfer.rst
@@ -40,7 +51,7 @@ Development of applications on Stallo
 
    development/compilers.rst
    development/environment.rst
-   development/optimiziation.rst
+   development/optimization.rst
    development/parallel.rst
    development/scripting.rst
    development/tools.rst
@@ -54,8 +65,9 @@ Applications
 .. toctree::
    :maxdepth: 2
 
-   applications/sw_list.rst
    applications/sw_guides.rst
+.. applications/sw_list.rst
+  
 
 
 FAQs

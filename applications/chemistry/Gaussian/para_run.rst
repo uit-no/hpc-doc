@@ -1,11 +1,9 @@
----
-title: Wrapper-script for submitting Gaussian 03 parallel jobs
-...
+.. _gaussian_para_run:
 
+====================================================
+Wrapper-script for submitting Gaussian parallel jobs
+====================================================
 
-`Back to Gaussian 03 top page<g03>`_
-
-`Gaussian 03 serial script<g03serial_run>`_
 
 Link to download the wrapper-script: `g03parallel.run<g03parallel.run>`_ (this file is also available in /global/apps/gaussian/usage).
 
@@ -276,3 +274,5 @@ Content of g03parallel.run:
  qsub $1.job
 
 ----
+
+.. :vim:ft=rst

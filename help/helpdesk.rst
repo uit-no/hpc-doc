@@ -11,19 +11,18 @@ How to get user support.
 
 There are two standard ways to achieve user support:
 
-Email: :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`
+Email: support-uit@notur.no
 
-Web:
-`http://support.notur.no/ <http://support.notur.no/>`_
+Web: `http://support.notur.no/ <http://support.notur.no/>`_
 
 Which method you choose does not matter, since all messages ends up in
 the same system. However, using the web page requires a user name and a
 password, which are automatically generated the first time you
-send an email to :doc:`support-uit@notur.no <mailto:support-uit@notur.no>`.
+send an email to support-uit@notur.no .
 From the web page you can also track your requests.
 
-Please remember to consult the :doc:`Stallo User Guide <.>` and the
-:ref:`faq` for information that you are looking for.
+Please remember to consult this documentation and the :ref:`faq` for 
+information that you are looking for.
 
  
 

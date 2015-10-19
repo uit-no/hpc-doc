@@ -22,8 +22,7 @@ MPI,  the form is quite similar:
 just wrappers that invoke all the necessary MPI stuff automatically
 for you. Therefore, everything else is the same for compiling MPI
 codes as for compiling plain Fortran/C/C++ codes. Please check also the
-:doc:`section about MPI Libraries <../mpi-libraries>` for more
-information about using MPI.
+section about :ref:`mpi_libraries` for more information about using MPI.
 
 To see exactly what the wrappers do, you can use the "--showme" option,
 for example:
@@ -117,7 +116,7 @@ OpenMPI
 ^^^^^^^
 A lot of info can be found at
 `http://www.open-mpi.org <http://www.open-mpi.org>`_ , but here we will
-fokus on an end user point of view.
+focus on an end user point of view.
 
  
 
@@ -183,7 +182,7 @@ Important limitations
  OpenMPI will reserve about 600 times more memory than the value from
 mca btl _openib _eager _limit. That means that for sending 10 MB eagerly
 between nodes, about 6GB must be reserved exclusively for OpenMPI
-buffers. (this doeshowever not seem to increase proportionnaly with the
+buffers. (this does however not seem to increase proportionally with the
 number of nodes).
 
 btl _openib _free _list _max must be large (>260) and this number times
@@ -240,29 +239,26 @@ The "eager send" does not work as long as the receiving process is not
 in a MPI call (not necessarily the corresponding receiving call). 
 
 Increasing the threshold, does not have an important memory penalty as
-in OpenMPI
+in OpenMPI.
 
 
+
+.. _mpi_libraries:
 
 MPI libraries
 =============
 
 Information about the MPI libraries installed on Stallo.
 
- 
 
 OpenMPI
 -------
 
 On stallo the default mpi-library is
 `OpenMPI <http://www.open-mpi.org/>`_. You compile with mpicc/mpif90,
-which will use the Intel compilers (`more
-info <.#compilers-libraries-and-tools>`_
-
-) for building the application. You can start your application with
-mpirun like this
-
- 
+which will use the Intel compilers (`more info 
+<.#compilers-libraries-and-tools>`_) for building the application. 
+You can start your application with mpirun like this
 
 ::
 
@@ -270,24 +266,18 @@ mpirun like this
 
 No need for extra flags, mpirun will find out the right nodes to run on
 directly from the queueing system, see the `example
-runscript <job-script-example>`_
+runscript <job-script-example>`_ for a starting point.
 
-for a starting point.
-
- 
 
 More information about MPI
-
+--------------------------
 To find information and download various material, like courses, the
 standard, program examples, and free implementations of MPICH for
 Windows and most flavours of Unix, go to
 
--  `MPI on Netlib
-    <http://www.netlib.org/mpi/>`_
--  `MPI Forum
-    <http://www.mpi-forum.org/>`_
--  `Open MPI <http://www.open-mpi.org/>`_
--  `MPI on Wikipedia
-    <http://en.wikipedia.org/wiki/Message_Passing_Interface>`_
+-  `MPI on Netlib    <http://www.netlib.org/mpi/>`_
+-  `MPI Forum        <http://www.mpi-forum.org/>`_
+-  `Open MPI         <http://www.open-mpi.org/>`_
+-  `MPI on Wikipedia <http://en.wikipedia.org/wiki/Message_Passing_Interface>`_
 
 .. vim:ft=rst

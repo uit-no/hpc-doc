@@ -22,14 +22,15 @@ Research Council Quota
 
 National users (including users from UiT) may apply for an account and
 a CPU quota from the Research Councils share of Stallo. If you want to
-apply for such a quota please use this `form.  <https://www.metacenter.no/mas/application/project/>`_
+apply for such a quota please use this `National quota form.  
+<https://www.metacenter.no/mas/application/project/>`_
 
 UiT Quota
 -----------
 
 “Local users” (i.e. users from UiT and users affiliated with UiT in some way) can apply for an account and
 a quota from UiT’s share of Stallo. If you wan to apply for such a quota
-please use this `form. <http://uit.no/ansatte/organisasjon/artikkel?p_document_id=299809&p_dimension_id=88223&p_menu=49281>`_
+please use this `UiT quota form. <http://uit.no/ansatte/organisasjon/artikkel?p_document_id=299809&p_dimension_id=88223&p_menu=49281>`_
 
 Please note that most users who are allowed to apply for a UiT quota
 also are allowed to apply for a quota from the Research Council –

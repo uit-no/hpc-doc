@@ -1,8 +1,8 @@
----
-title: GaussView for Gaussian 03
-...
+.. _gaussview:
 
-`Back to Gaussian 03 top page<g03>`_
+======================
+GaussView for Gaussian
+======================
 
 Gaussview is a visualization program that can be used to open Gaussian output files and checkpoint files (.chk) to display structures, molecular orbitals, normal modes, etc. You can also set up jobs and submit them directly. 
  
@@ -23,3 +23,5 @@ Links
 ------
 
 General : http://www.gaussian.com/g_brochures/gv.htm 
+
+.. :vim:ft=rst
