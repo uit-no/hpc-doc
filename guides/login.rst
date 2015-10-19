@@ -118,4 +118,13 @@ If you want to run applications with graphical user interfaces we recommend you 
 `remote desktop service <http://stallo-gui.uit.no/vnc/>`_
 on Stallo.
 
+Important: 
+If you are connecting from outside the networks of UNINETT and partners you need to log into 
+stallo-gui.uit.no with ssh to verify that you have a valid username and password on the Stallo system.
+After a successful login the service will automatically allow you to connect from the ip-address 
+your client currently has. The connection will be open for at least 5 minutes after you log in. 
+There is no need to keep the ssh-connection open after you have connected to the remote desktop, 
+in fact you will be automatically logged off after 5 seconds.
+
+
 .. vim:ft=rst
