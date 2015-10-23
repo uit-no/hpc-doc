@@ -38,15 +38,18 @@ Then point your browser to `_build/index.html`.
 
 ## Branches and versions
 
-At the time of writing we have 3 branches: `master`, `slurm`, and `easybuild`.
-`master` renders to http://hpc-uit.readthedocs.org/en/latest/ (which is behind http://hpc.uit.no),
-`slurm` renders to http://hpc-uit.readthedocs.org/en/slurm/,
-and `easybuild` renders to http://hpc-uit.readthedocs.org/en/easybuild/.
+We currently have 3 branches:
 
-We can have as many branches and versions as we want but we need to activate
-new branches on ReadTheDocs.
+| branch        | renders to                                   |
+| ------------- | -------------------------------------------- |
+| master        | http://hpc-uit.readthedocs.org/en/latest/    |
+| slurm         | http://hpc-uit.readthedocs.org/en/slurm/     |
+| easybuild     | http://hpc-uit.readthedocs.org/en/easybuild/ |
 
-Note that all three versions are public.
+Note that http://hpc-uit.readthedocs.org/en/latest/ is behind
+http://hpc.uit.no/ and all three versions are public.  We can have as many
+branches and versions as we want but we need to activate new branches on
+ReadTheDocs.
 
 You can locally switch between branches like this:
 ```
