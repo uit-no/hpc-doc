@@ -585,27 +585,6 @@ Creating dependencies between jobs
 See the description of the ``-Wdepend`` option in the qsub manpage.
 
 
-How do I run many tasks within a single job?
---------------------------------------------
-
-By using some shell trickery one can spawn and load-balance multiple
-independent task running in parallel within one node, just background
-the tasks and poll to see when some task is finished until you spawn the
-next:
-
-::
-
-    for t in $tasks; do
-      ./dowork.sh $t &
-      activetasks=$(jobs | wc -l)
-      while [ $activetasks -ge $maxpartasks ]; do
-        sleep 1
-        activetasks=$(jobs | wc -l)
-      done
-    done
-    wait
-
-
 How can I submit many jobs in one command?
 ------------------------------------------
 
@@ -623,8 +602,8 @@ the value of the environmental variable 
     $PBS_ARRAYID
 
 
-Running many short tasks.
-=========================
+Running many short tasks
+========================
 
 Recommendations on how to run a lot of short tasks on the system. The
 overhead in the job start and cleanup makes it unpractical to run
@@ -655,18 +634,15 @@ independent task running in parallel within one node, just background
 the tasks and poll to see when some task is finished until you spawn the
 next:
 
-::
+.. literalinclude:: files/multiple.sh
+   :language: bash
+   :linenos:
 
-    for t in $tasks; do
-      ./dowork.sh $t &
-      activetasks=$(jobs | wc -l)
-      while [ $activetasks -ge $maxpartasks ]; do
-        sleep 1
-        activetasks=$(jobs | wc -l)
-      done
-    done
-    wait
+And here is the ``dowork.sh`` script:
 
+.. literalinclude:: files/dowork.sh
+   :language: bash
+   :linenos:
 
 
 MPI
