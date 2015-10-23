@@ -50,9 +50,9 @@ Note that all three versions are public.
 
 You can locally switch between branches like this:
 ```
-$ git checkout slurm  # switch to slurm branch
+$ git checkout slurm   # switch to slurm branch
 
-$ git branch  # figure out on which branch we are
+$ git branch           # figure out on which branch we are
 
   easybuild
   master
@@ -60,7 +60,7 @@ $ git branch  # figure out on which branch we are
 
 $ git checkout master  # back to master
 
-$ git branch  # figure out on which branch we are
+$ git branch           # figure out on which branch we are
 
   easybuild
 * master
@@ -84,13 +84,13 @@ $ git checkout master
 $ git commit              # commit the fix to master
 $ git push origin master  # push changes to master branch on github
 $ git checkout slurm      # switch to slurm branch
-$ git merge master        # merge the master branch into the slurm branch
+$ git merge master        # merge the master branch into the current branch (slurm)
 
                           # continue working on slurm branch ...
 
 $ git push origin slurm   # push changes to slurm branch on github
 ```
 
-It is always safe to merge `master` into `slurm` or `easybuild`.
-Merging the other way means publishing changes into the official version
-so be careful with that.
+It is always safe to merge `master` into `slurm` or `easybuild` as shown above.
+Merging the other way means publishing changes into the official version so be
+careful with that.
