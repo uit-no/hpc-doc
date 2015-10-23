@@ -1,17 +1,9 @@
 .. _jobscript:
 
-=============================
-Example: A complete jobscript
-=============================
+==================
+Example job script
+==================
 
-.. index:: complete jobscript
-
-.. FIXME: inline job script example
-
-
-A complete job script
-=====================
-
-.. FIXME inline
-
-see :doc:`jobscript <jobscript.sh>`
+.. literalinclude:: files/example.sh
+   :language: bash
+   :linenos:
