@@ -40,14 +40,13 @@ Then point your browser to `_build/index.html`.
 
 We currently have 3 branches:
 
-| branch        | renders to                                   |
-| ------------- | -------------------------------------------- |
-| master        | http://hpc-uit.readthedocs.org/en/latest/    |
-| slurm         | http://hpc-uit.readthedocs.org/en/slurm/     |
-| easybuild     | http://hpc-uit.readthedocs.org/en/easybuild/ |
+| branch        | renders to                      |
+| ------------- | ------------------------------- |
+| master        | http://hpc.uit.no/en/latest/    |
+| slurm         | http://hpc.uit.no/en/slurm/     |
+| easybuild     | http://hpc.uit.no/en/easybuild/ |
 
-Note that http://hpc-uit.readthedocs.org/en/latest/ is behind
-http://hpc.uit.no/ and all three versions are public.  We can have as many
+Note that all three versions are public. We can have as many
 branches and versions as we want but we need to activate new branches on
 ReadTheDocs.
 
