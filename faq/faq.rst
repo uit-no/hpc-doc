@@ -493,41 +493,40 @@ How can I run in parallel without using MPI
 -------------------------------------------
 
 If you have many independent jobs which you wish to run simultaneously,
-you can use pbsdsh
+you can use ``pbsdsh``.
 
-You can run many independent jobscripts in parallel by submitting one
-single job script to the queue, using pbsdsh.
-
-Here is a simple concrete example of how to use one parallel job to
+Here is a example of how to use one parallel job to
 launch 4 sequential jobs (job0, job1, job2, job3).
-The "Masterjob" launches "SingleJobCaller" which runs "jobN".
+The "MasterJob.sh" launches "SingleJobCaller.sh" which runs "jobN".
 
-Masterjob:
+MasterJob.sh::
 
-::
+  #!/bin/bash
 
-    #!/bin/bash#PBS -lnodes=4#PBS -lwalltime=01:00:00pbsdsh $HOME/test/SingleJobCaller
+  #PBS -lnodes=4
+  #PBS -lwalltime=00:05:00
 
-SingleJobCaller ($PBS\_VNODENUM is an environment variable which returns
-the rank of the job):
+  pbsdsh $HOME/test/SingleJobCaller.sh
 
-::
+The executable script SingleJobCaller.sh (``$PBS\_VNODENUM`` is an environment variable which returns
+the rank of the job)::
 
-    #!/bin/bash$HOME/test/job$PBS_VNODENUM
+  #!/bin/bash
+  $HOME/test/job${PBS_VNODENUM}.sh
 
-job0 (and similar for job1, job2 job3):
+The executable script job0.sh (and similar for job1.sh, job2.sh, and job3.sh)::
 
-::
+  #!/bin/bash
+  echo I am job 0
 
-    #!/bin/bashecho I am job 0
+The output of Masterjob would be like::
 
-The output of Masterjob would be like:
+  I am job 0
+  I am job 1
+  I am job 2
+  I am job 3
 
-::
-
-    I am job 0I am job 1I am job 3I am job 2
-
-The four jobs have been run in parallel (simultaneously)
+The four jobs have been run in parallel (simultaneously).
 
 
 How can I see the processes belonging to my job?
@@ -694,7 +693,7 @@ the command line:
 It is recommended to experiment with this to obtain optimal values, as
 setting it too low will decrease performance.
 
-For more information about openmpi tunables see the 
+For more information about openmpi tunables see the
 `open-mpi page <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`__.
 
 
