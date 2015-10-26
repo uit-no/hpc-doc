@@ -16,7 +16,7 @@ operating system, and storage configuration.
 +-------------------------+----------------------------------------------+---------------------------------------------+
 |                         | Aggregated                                   | Per node                                    |
 +=========================+==============================================+=============================================+
-| Peak performance        | 104 Teraflop/s                               | 332 Gigaflop/s                              |
+| Peak performance        | 516 Teraflop/s                               | 332 Gigaflop/s / 448 Gigaflops/s            |
 +-------------------------+----------------------------------------------+---------------------------------------------+
 |  |                      |  | 304 x  HP BL460 gen8 blade servers        |  | 1 x    HP BL460 gen8 blade servers       |
 |  |  # Nodes             |  | 376 x HP SL230 gen8 servers               |  | 1 x.   HP SL230 gen8 servers             |
