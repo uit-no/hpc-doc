@@ -67,7 +67,6 @@ Applications
    :maxdepth: 2
 
    applications/sw_guides.rst
-.. applications/sw_list.rst
   
 
 
