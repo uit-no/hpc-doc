@@ -23,5 +23,3 @@ Links
 ------
 
 General : http://www.gaussian.com/g_brochures/gv.htm 
-
-.. :vim:ft=rst

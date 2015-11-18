@@ -37,5 +37,3 @@ also are allowed to apply for a quota from the Research Council –
 at the same time!
 
 Before you start using Stallo, please read the UiT The Arctic University of Norway's :ref:`guidelines`.
-
-.. vim:ft=rst

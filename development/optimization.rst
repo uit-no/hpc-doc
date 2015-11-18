@@ -313,5 +313,3 @@ Cpu Profiler:
 ::
 
     gcc [...] -o myprogram -lprofilerCPUPROFILE=/tmp/profile ./myprogram
-
-.. vim:ft=rst

@@ -151,6 +151,3 @@ compilers version to version 14.0, type
 ::
 
     module switch intel intel/14.0
-
-
-.. :vim:ft=rst

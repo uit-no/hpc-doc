@@ -751,5 +751,3 @@ recompiling and in your job script:
 
 Please tell us if this helps for you application. We try to get an idea
 of the extent of this problem. Send a report to support-uit@notur.no .
-
-.. :vim:ft=rst

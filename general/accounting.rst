@@ -84,6 +84,3 @@ on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
 *  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
-
- 
-.. vim:ft=rst

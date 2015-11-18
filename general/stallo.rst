@@ -100,5 +100,3 @@ reindeers galore, but he always wants more. To get what he wants he tries to
 trick the Samis into traps, and the most popular Sami stories tell how people
 manage to fool Stallo." NB! Don’t mix Stallo with the noaide! He is a real
 wizard whom people still believe in.
-
-.. vim:ft=rst

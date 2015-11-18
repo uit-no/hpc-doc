@@ -274,5 +274,3 @@ Content of g03parallel.run:
  qsub $1.job
 
 ----
-
-.. :vim:ft=rst

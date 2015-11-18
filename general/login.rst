@@ -126,6 +126,3 @@ After a successful login the service will automatically allow you to connect fro
 your client currently has. The connection will be open for at least 5 minutes after you log in. 
 There is no need to keep the ssh-connection open after you have connected to the remote desktop, 
 in fact you will be automatically logged off after 5 seconds.
-
-
-.. vim:ft=rst

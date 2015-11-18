@@ -366,8 +366,3 @@ a large amount of jobs to the express queue will most probably decrease
 the overall throughput of your jobs. Also remark that large jobs get
 prioritized anyway so they will most probably not benefit anything from
 using the express queue.
-
-
-
-
-.. vim:ft=rst

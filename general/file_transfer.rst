@@ -115,5 +115,3 @@ or:
 Subversion and rsync
 --------------------
 The tools subversion and rsync is also available for transferring files.
-
-.. vim:ft=rst

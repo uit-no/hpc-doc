@@ -279,5 +279,3 @@ Windows and most flavours of Unix, go to
 -  `MPI Forum        <http://www.mpi-forum.org/>`_
 -  `Open MPI         <http://www.open-mpi.org/>`_
 -  `MPI on Wikipedia <http://en.wikipedia.org/wiki/Message_Passing_Interface>`_
-
-.. vim:ft=rst
