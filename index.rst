@@ -46,7 +46,6 @@ General information
    general/stallo.rst
    general/account.rst
    general/login.rst
-   general/quick_start.rst
    general/accounting.rst
    general/linux.rst
    general/storage.rst
