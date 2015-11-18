@@ -19,7 +19,7 @@ News and Events
 ---------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    news/news.rst
    news/slurm.rst

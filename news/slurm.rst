@@ -1,7 +1,7 @@
 
 
-Status of migration to SLURM
-============================
+Status of migration to the SLURM resource manager
+=================================================
 
 Our plan is to replace the current resource management system by `SLURM
 <http://slurm.schedmd.com/>`_ during this fall. This is the same system that is
