@@ -32,7 +32,6 @@ Getting help
    :maxdepth: 1
 
    help/faq.rst
-   help/dos_and_donts.rst
    help/contact.rst
    help/staff.rst
    help/visit.rst
@@ -44,17 +43,18 @@ General information
 .. toctree::
    :maxdepth: 2
 
-   guides/stallo.rst
-   guides/quick_start.rst
-   guides/account.rst
-   guides/accounting.rst
-   guides/login.rst
-   guides/linux.rst
-   guides/storage.rst
-   guides/file_transfer.rst
-   guides/jobs.rst
-   guides/applications.rst
-   guides/guidelines.rst
+   general/stallo.rst
+   general/quick_start.rst
+   general/account.rst
+   general/accounting.rst
+   general/login.rst
+   general/linux.rst
+   general/storage.rst
+   general/file_transfer.rst
+   general/jobs.rst
+   general/applications.rst
+   general/guidelines.rst
+   general/dos_and_donts.rst
 
 
 Development of applications on Stallo
