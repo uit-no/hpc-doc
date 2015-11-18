@@ -1,9 +1,8 @@
 .. _guidelines:
 
-Guidelines
-==========
 
-Guidelines for use of computer equipment at the UiT The Arctic University of Norway.
+Guidelines for use of computer equipment at the UiT The Arctic University of Norway
+===================================================================================
 
 
 Definitions
@@ -106,5 +105,3 @@ Complaints
 ----------
 
 Complaints about sanctions are to be directed to the person(s) who order sanctions. If the complaint is not complied with, it is sent on to the University Council for final decision. Complaints about surveillance have the same procedure as for sanctions. The procedure for complaints about dismissal or resignation of employees are the usual rules for the University, and rules otherwise valid in Norwegian society. Decisions about disciplinary measures against students cannot be complained about, See § 47 of the University law.
-
-.. vim:ft=rst
