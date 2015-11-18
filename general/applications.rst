@@ -1,7 +1,7 @@
 .. _applications:
 
 ==================================
-Using Software installed on Stallo
+Using software installed on Stallo
 ==================================
 
 More information and guides to a few of the installed applications can be found in :ref:`sw_guides`. 
