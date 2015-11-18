@@ -31,6 +31,8 @@ Getting help
 .. toctree::
    :maxdepth: 1
 
+   help/faq.rst
+   help/dos_and_donts.rst
    help/contact.rst
    help/staff.rst
    help/visit.rst
@@ -78,14 +80,3 @@ Applications
    :maxdepth: 2
 
    applications/sw_guides.rst
-  
-
-
-FAQs
-----
-
-.. toctree::
-   :maxdepth: 2
-
-   faq/faq.rst
-   faq/dos_and_donts.rst
