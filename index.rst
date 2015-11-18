@@ -67,9 +67,7 @@ Development of applications on Stallo
    development/optimization.rst
    development/parallel.rst
    development/scripting.rst
-   development/tools.rst
-   development/totalview.rst
-   development/valgrind.rst
+   development/debugging.rst
 
 
 Applications
