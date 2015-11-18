@@ -1,4 +1,4 @@
-.. _storage:
+
 
 =======================================================
 Working on stallo (storage, back-ups, file systems,...) 
@@ -278,12 +278,3 @@ to use them:
     module load netcdf
     or
     module load hdf5
-
-
-Transferring files to/from Stallo
-=================================
-
-To learn more about how you can transfer file to/from stallo, please read the :ref:`file_transfer` section of this documentation.
-
-
-.. vim:ft=rst
