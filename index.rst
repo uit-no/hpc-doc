@@ -60,7 +60,7 @@ Development of applications on Stallo
 -------------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    development/compilers.rst
    development/environment.rst
