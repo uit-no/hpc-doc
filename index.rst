@@ -25,6 +25,17 @@ News and Events
    news/slurm.rst
 
 
+Getting help
+------------
+
+.. toctree::
+   :maxdepth: 1
+
+   help/contact.rst
+   help/staff.rst
+   help/visit.rst
+
+
 General information
 -------------------
 
@@ -78,14 +89,3 @@ FAQs
 
    faq/faq.rst
    faq/dos_and_donts.rst
-
-
-Getting help
-------------
-
-.. toctree::
-   :maxdepth: 2
-
-   help/helpdesk.rst
-   help/contact.rst
-   help/staff.rst
