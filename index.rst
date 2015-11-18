@@ -41,13 +41,13 @@ General information
 -------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    general/stallo.rst
-   general/quick_start.rst
    general/account.rst
-   general/accounting.rst
    general/login.rst
+   general/quick_start.rst
+   general/accounting.rst
    general/linux.rst
    general/storage.rst
    general/file_transfer.rst
