@@ -15,18 +15,16 @@ through a
 batch system that will execute the applications on the available
 resources. 
 
-The batch system on Stallo consists of a resource manager,
-`Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_, and a
-scheduler, `Maui <http://www.adaptivecomputing.com/products/open-source/maui>`_.
-Torque keeps track of the state of the system while Maui decides when
-and where to run the jobs.
+The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`
+(Simple Linux Utility for Resource Management.)
+
 
 
 Create a job 
 ============
 
 To run a job on the system one needs to create a job script. A job
-script is a regular shell script (bash or csh) with some directives
+script is a regular shell script (bash) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
 batch system upon submission. 
 
@@ -45,10 +43,10 @@ Manage a job
 A job's lifecycle can be managed with as little as three different
 commands
 
-#. Submit the job with ``qsub jobscript.sh``.
-#. Check the job status with ``showq``. (to limit the display to only
-   your jobs use ``showq -u <user_name>``.)
-#. (optional) Delete the job with ``qdel <job_id>``.
+#. Submit the job with ``sbatch jobscript.sh``.
+#. Check the job status with ``squeue``. (to limit the display to only
+   your jobs use ``squeue -u <user_name>``.)
+#. (optional) Delete the job with ``scancel <job_id>``.
 
 
 List of useful commands
