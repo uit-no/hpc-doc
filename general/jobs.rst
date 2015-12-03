@@ -35,7 +35,6 @@ For a quick feel for how to create and run batch jobs and for a more complete ex
 .. toctree::
    :maxdepth: 1
 
-   firstjob.rst 
    job-script-example.rst
 
 
