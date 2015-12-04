@@ -41,5 +41,3 @@ Software home-page: http://www.gaussian.com/
 Technical support from software vendor: http://www.gaussian.com/g_email/em_help.htm 
 
 Technical support for Stallo: support-uit@notur.no
-
-.. :vim:ft=rst

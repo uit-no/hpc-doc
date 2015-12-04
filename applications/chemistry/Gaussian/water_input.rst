@@ -30,5 +30,3 @@ If you use the provided wrapperscripts, this is automatically taken care of.
 
 
 Link to download this file: `water.inp<water.inp>`_ (this file is also found in /global/apps/gaussian/usage)
-
-.. :vim:ft=rst

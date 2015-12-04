@@ -14,6 +14,3 @@ the module system, and information about changes in application software see :re
    chemistry/Gaussian/Gaussian
    chemistry/VASP/VASP
    chemistry/ADF/ADF
-
-
-.. :vim:ft=rst

@@ -19,44 +19,55 @@ News and Events
 ---------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    news/news.rst
+   news/slurm.rst
+
+
+Getting help
+------------
+
+.. toctree::
+   :maxdepth: 1
+
+   help/faq.rst
+   help/contact.rst
+   help/staff.rst
+   help/visit.rst
 
 
 General information
 -------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   guides/stallo.rst
-   guides/quick_start.rst
-   guides/account.rst
-   guides/accounting.rst
-   guides/login.rst
-   guides/linux.rst
-   guides/storage.rst
-   guides/file_transfer.rst
-   guides/jobs.rst
-   guides/applications.rst
-   guides/guidelines.rst
+   general/stallo.rst
+   general/account.rst
+   general/login.rst
+   general/accounting.rst
+   general/linux.rst
+   general/storage.rst
+   general/file_transfer.rst
+   general/jobs.rst
+   general/applications.rst
+   general/guidelines.rst
+   general/dos_and_donts.rst
 
 
 Development of applications on Stallo
 -------------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    development/compilers.rst
    development/environment.rst
    development/optimization.rst
    development/parallel.rst
    development/scripting.rst
-   development/tools.rst
-   development/totalview.rst
-   development/valgrind.rst
+   development/debugging.rst
 
 
 Applications
@@ -66,26 +77,3 @@ Applications
    :maxdepth: 2
 
    applications/sw_guides.rst
-.. applications/sw_list.rst
-  
-
-
-FAQs
-----
-
-.. toctree::
-   :maxdepth: 2
-
-   faq/faq.rst
-   faq/dos_and_donts.rst
-
-
-Getting help
-------------
-
-.. toctree::
-   :maxdepth: 2
-
-   help/helpdesk.rst
-   help/contact.rst
-   help/staff.rst

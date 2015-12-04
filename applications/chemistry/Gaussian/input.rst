@@ -112,5 +112,3 @@ Possible input keywords: http://www.inc.bme.hu/common/g03_man/g_ur/keywords.htm
 Available basis sets: http://www.inc.bme.hu/common/g03_man/g_ur/m_basis_sets.htm
 
 Available DFT functionals: http://www.inc.bme.hu/common/g03_man/g_ur/k_dft.htm
-
-.. :vim:ft=rst

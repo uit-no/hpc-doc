@@ -6,102 +6,103 @@ A description of the quantum chemistry and material science package ADF/BAND
 
 General Information:
 ====================
-The Amsterdam Density Functional (ADF) software is used for electronic structure calculations. As the name implies, only DFT calculations can be run. In ADF, basis sets are of Slater-type (instead of Gaussian-type), giving improved performance and good convergence results for especially metal compounds. Note that also naming of basis sets is somewhat different from standard gaussian type basis sets, which makes basis set comparison less trivial. All-electron basis sets are available for the entire periodic table. See: http://www.scm.com/Products/Overview/ADFinfo.html.
 
-Functionality
--------------
+The ADF software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
 
-* Single Point calculation, Geometry Optimization and Transition States
-* Frequencies and thermodynamic properties
-* Tracing a Reaction Path
-* Computation of any electronic configuration
-* Excitation energies, oscillator strengths, transition dipole moments, (hyper)polarizabilities, Van der Waals dispersion coefficients, CD spectra, ORD, using Time-Dependent Density Functional Theory (TDDFT)
-* ESR (EPR) g-tensors, A-tensors, NQCCs
-* NMR chemical shifts and spin-spin coupling constants and Various other molecular properties
-* Treatment of large systems and environment by the QM/MM (Quantum Mechanics / Molecular Mechanics) hybrid approach.
-* Implementation of the Noodleman spin-flip method. See the online manual for more information: `http://www.scm.com/Doc/Doc2009.01/ADF/ADFUsersGuide/page85.html#keyscheme%20SPINFLIP <http://www.scm.com/Doc/Doc2009.01/ADF/ADFUsersGuide/page85.html#keyscheme%20SPINFLIP>`_
+Online info from vendor:
+------------------------
+
+Homepage: http://www.scm.com
+Documentation: http://www.scm.com/Doc
+
+The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
+a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
+nding emails to support(either notur or scm) or trying the ADF mailing list (see http://www.scm.com/Support for more info).
+
+Citation
+--------
+When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citat\
+ion(s).
+
+License information:
+--------------------
+The license of ADF/Band is commercial.
+
+NOTUR holds a national license of the ADF program system, making usage of ADF/BAND available for all academic scient\
+ists in Norway.
+
+We have a national license for the following packages:
+
+- ADF & ADFGUI
+- BAND &BANDGUI
+- CRS
+- DFTB & DFTBGUI
+- GUI
+- REAXFF & REAXFFGUI
+- NBO6 (on Stallo only, but machine license available for all users of Stallo).
 
 
-ADF on Stallo:
-==============
+`Please note that this is an academic type license; meaning that research institutes not being part of Norwegian Universities must provide their own l\
+icense to be able to use and publish results obtained with this code on NOTUR installlations.`
 
-You load the application by typing:
+
+
+is software for first-principles electronic structure calculations. The parallel version has been tested for scaling and most problems scale well up to 16 cpus, larger problems scale beyond 64 cpus. Over 100 cpus is normally not recommended due to limited scaling.
+
+(link to general info about license policy notur?)
+
+
+Usage
+======
+
+(Link to general info about scaling of software on notur systems; get feedback from users?)
+
+We generally advise to run ADF on more than one node. The parallel version has been tested for scaling and most problems scale well up to  4 nodes. 
+
+Use
+
+.. code-block:: bash
+
+    $ module avail adf 
+ 
+
+to see which versions of ADF are available. Use
 
 .. code-block:: bash
 
     $ module load adf
 
-This command will give you the default version.
-
-For more information on available versions, type:
+or 
 
 .. code-block:: bash
 
-    $ module avail adf
+ $ module load adf/<version> # i.e 2014.08
 
-If you want to run other versions of ADF, change the <module load> parameter in the script file to the version you want to run, for instance:
-
-.. code-block:: bash
-
- $ module load adf/2013.01
-
-will load the version adf2013.01. For more information on ADF/BAND, see: http://www.scm.com/
-
-JOB SUBMISSION GUIDELINES
-=========================
-
-* Download the run script adf2012.run and move the file to your $HOME/bin directory (if necessary create directory first).
-* Submit job (s) from any directory:
-
-.. code-block::
-
- $ adf2012.run input 2 8 20:30 
-
-Job-name is here input.inp, number of nodes is 2 with 8 processors per node and 20 hrs 30 minutes run time (walltime). If you want to look at a typical input file for geometry optimizations with ADF, look at inputfile for ADF geometry optimization.
-
-Note
-----
-* Generated output and TAPE21 files are named based on input file. 
-  Example: input.inp gives input-a12.out and input-a12.t21 outputs if 
-  using the adf2012.run script. 
-* ADF jobs are run in /global/work/$LOGNAME/$PBS_JOBID (one 'kid' 
-  directory per requested node). This is a measure to ease support 
-  efforts from our side. Temporary directories are removed upon job 
-  completion. If job aborted prematurely, temporary directories need 
-  to be removed manually. Remember to move the TAPE21 file before 
-  deleting the temporary kid0 folder.
-* The output file is continuously updated to the $HOME directory (from 
-  where the job was submitted).
-* Since ADF is a very complex code, able to solve a vast range of 
-  chemistry problems - giving unified advice regarding scaling is 
-  difficult. For a standard geometry optimization, it seems to scale 
-  well in the region of 4-6 full nodes (64-96 cores) at least. For 
-  linear transit we would currently stay at no more than 4 full nodes 
-  or less. Unless having tests indicating otherwise, users who want 
-  to run large jobs should allocate no more than the prescribed numbers 
-  of processors.
- 
-Further information:
-====================
-
-.. toctree::
-   :maxdepth: 2
-
-   adf_restart 
-   adf_fragments
-   adf_troubleshoot
+to get access to ADF.  Note that ADF contains its own MPI implementation, so there is no need to load any openmpi module to use ADF.
 
 
-ADF 2009.01 run script: adf2009.run
+First run of ADF/BAND on Stallo:
+--------------------------------
 
-ADF 2010.01 run script: adf2010.run
+To get download the jobscript example(s), type the following:
 
-LINKS
-=====
-General: http://www.scm.com/
+.. code-block::bash
 
-Online Manual: http://www.scm.com/Doc/Doc2008.01/ADF/ADFUsersGuide/page1.html
+    module load notur
+    cd $APPEX/adf 
 
-Utilities: http://www.scm.com/Doc/Doc2009.01/ADF/Utilities/page1.html
+Copy the contents of this folder to your home directory.
 
-Email Technical Support: support@scm.com (only for ADF specific questions)
+Then, submit the job by typing:
+
+.. code-block::bash
+
+    qsub job_adf_stallo.sh
+
+Compare the energy of adf_example.out with the Bond Energy =  -156.77666698 eV in adf_example_correct_stallo.output. The energy should ideally be identical or close to identical. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. Good luck.
+
+- NB: ADF is on Stallo set up with intel mpi, if not using this script - remember to do module swap openmpi impi before loading the adf module.
+
+- On Stallo, we holds the nbo6 plug in license that allows users of adf to produce files that can be read with the nb06 software.
+
+

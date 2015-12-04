@@ -124,5 +124,3 @@ Content of g03serial.run:
  qsub $1.job
 
 ----
-
-.. :vim:ft=rst
