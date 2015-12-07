@@ -9,6 +9,29 @@ peak, it is necessary to write your algorithms in a form that allows the
 use of scientific library routines, such as BLACS/LAPACK.
 
 
+Allinea Performance Reports
+===========================
+
+`Allinea Performance Reports <http://www.allinea.com/products/allinea-performance-reports>`__
+offers a nice and convenient way to get an overview profile for your run very quickly.
+It will introduce a typically negligible runtime overhead
+and all you need to do is to load the ``perf-reports`` module
+and to launch your "normal" execution using the ``perf-report`` launcher.
+
+Here is an example script:
+
+.. literalinclude:: files/perf-reports.sh
+   :language: bash
+   :linenos:
+
+What we do there is to profile an example binary located in ``$PBS_O_WORKDIR/example.x``.
+
+The profiler generates summary files in html and txt format
+and this is how an example html summary can look (open it in your browser):
+
+.. image:: files/perf-reports.jpg
+
+
 Performance tuning by Compiler flags
 ====================================
 
