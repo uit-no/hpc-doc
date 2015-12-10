@@ -72,8 +72,8 @@ Log in to Stallo using either ssh -Y or through stallo-gui.uit.no.  To get downl
 
 .. code-block::bash
 
-    module load notur
-    cd $APPEX/schrodinger 
+ $ module load notur
+ $ cd $APPEX/schrodinger 
 
 Copy the contents of this folder to your home directory.
 
@@ -87,8 +87,8 @@ Do the following:
 
 .. code-block::bash
 
-   cd example_md
-   maestro -NOSGL
+   $ cd example_md
+   $ maestro -NOSGL
 
 and start a Molecular Dynamics task from the Tasks menu bar. Load model system from file, choose desmond_md_example.cms
 

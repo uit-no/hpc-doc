@@ -49,7 +49,9 @@ Use
     $ module avail schrodinger
  
 
-to see which versions of Schrodinger are available. Use
+to see which versions of Schrodinger are available. 
+
+Use
 
 .. code-block:: bash
 
@@ -81,6 +83,8 @@ Then;
 
 **If you want to test the molecular dynamics package**
 
+Do the following:
+
 .. code-block::bash
 
    cd example_md
@@ -104,8 +108,10 @@ Make sure that only one option is highlighted (only one of the batch-XXX´s). Pr
 
 **If you want to test the docking package**
 
+Do the following:
+
 .. code-block::bash
-   
+
    cd example_docking
    maestro -NOSGL
 
