@@ -70,7 +70,7 @@ First run of schrodinger on Stallo:
 
 Log in to Stallo using either ssh -Y or through stallo-gui.uit.no.  To get download the jobscript example(s), type the following:
 
-.. code-block::bash
+.. code-block:: bash
 
  $ module load notur
  $ cd $APPEX/schrodinger 
@@ -85,7 +85,7 @@ Then;
 
 Do the following:
 
-.. code-block::bash
+.. code-block:: bash
 
    $ cd example_md
    $ maestro -NOSGL
@@ -110,7 +110,7 @@ Make sure that only one option is highlighted (only one of the batch-XXX´s). Pr
 
 Do the following:
 
-.. code-block::bash
+.. code-block:: bash
 
    cd example_docking
    maestro -NOSGL
@@ -123,13 +123,14 @@ Use ligands from file; if you want to run a very short test - choose abl1-kinase
 
 (This test case is provided us by Bjorn Dalhus.)
 
-**If you want to run vsw routines from the command line:**
+If you want to run vsw routines from the command line:
+========================================================
 
 The Schrodinger suite is shipped with scripts that connects the software installation with the system batch resource allocation setup, making it possible to submit glide jobs from the linux command line. 
 
 Examples of valid command line submissions using the vsw-tool on Stallo:
 
-.. code-block::bash
+.. code-block:: bash
    
    vsw *.inp -DRIVERHOST batch-normal -host_glide batch-normal:100 -NJOBS 1 –adjust
 
@@ -148,13 +149,16 @@ Note the following details:
 #. The Schrodinger setup on Stallo writes to the scratch file system by default, potentially making both the -LOCAL and the -SAVE flags uneccesary.
 #. We do not recommend the -REMOTEDRIVER flag due to the risk of loosing jobs related to the admin process running out allocated time.
 
-**Additonal information:**
+Finding available licenses
+===========================
+
+This should in principle be obsolete for users, since we are promised unlimited licenses in the national system. But still, for the curious soles:
 
 If you want to know about avaible licenses; do the following
 
 (after loading the schrodinger module)
 
-.. code-block::bash
+.. code-block:: bash
 
    $SCHRODINGER/licadmin STAT
 
