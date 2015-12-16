@@ -22,6 +22,7 @@ News and Events
    :maxdepth: 1
 
    news/news.rst
+   news/events.rst
    news/slurm.rst
 
 
