@@ -4,9 +4,9 @@ Status of migration to the SLURM resource manager
 =================================================
 
 Our plan is to replace the current resource management system by `SLURM
-<http://slurm.schedmd.com/>`_ during this fall. This is the same system that is
-currently used on `Abel
-<http://www.uio.no/english/services/it/research/hpc/abel/>`_, the UiO
+<http://slurm.schedmd.com/>`_ during this autum.  This is the same system that is
+currently used on 
+`Abel <http://www.uio.no/english/services/it/research/hpc/abel/>`_, the UiO
 supercomputer.
 
 
@@ -24,8 +24,6 @@ Timeframe
 
 The migration process depends on the integration of the
 accounting database with the new SLURM scheduling engine.
-We currently aim for a transition on December 1st.
-
 
 Migration process
 -----------------
