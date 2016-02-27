@@ -192,11 +192,9 @@ if you submit requiring more than 2gb memory per process:
 Interactive job submission
 ==========================
 
-You can run an interactive jobs by using the ``-I`` flag to qsub:
+You can run an interactive jobs by using the ``-I`` flag to qsub, for example::
 
-::
-
-    qsub -I .......
+  $ qsub -q express -I -lwalltime=00:60:00 -A [your account]
 
 The command prompt will appear as soon as the job start. If you also
 want to run a graphical application you must also use ``-X`` flag.
