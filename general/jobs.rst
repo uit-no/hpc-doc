@@ -58,31 +58,39 @@ List of useful commands
 
 Managing jobs
 -------------
-
 See the man page for each command for details.
 
-qsub:
+sbatch <file_name>
     Submit jobs. All job parameters can be specified on the command line or
     in the job script. Command line arguments take precedence over
     directives in the script.
-qdel:
-    Delete a job. Use ``qdel all`` to terminate all your jobs immediately.
+scancel <job_id>
+    Delete a job.
+scontrol hold <job_id>
+    Put a hold on the job. A job on hold will not start or block other jobs from starting until you release the hold.
+scontrol release <job_id>
+    Release the hold on a job. 
 
 Getting job info 
 ----------------
+For details run the command with the `-`-help option.
 
-For details run the command with the -h option.
+squeue
+    List all jobs. This command can show you a lot of information, including expected start-time of a job. See ``squeue --help`` for more information.
+squeue -u <username>
+    List all current jobs for a user.
+scontrol show jobid -dd <jobid>
+    List detailed information for a job (useful for troubleshooting).
+sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
+    To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
 
-qstat:
-    Show jobs in the queue. Jobs will be sorted by submit order.
-showq:
-    List jobs in the queue. Jobs will be sorted by time to completion. To
-    only see jobs for a specific user use ``showq -u <user_name>``.
-checkjob <job_id>:
-    Show details about a specific job.
-showstart <job_id>:
-    Show guess of when a job could start.
-
+Get queue and account info
+--------------------------
+sinfo 
+    List partitions. What in Torque/ Maui was called queues, is now called partitions in Slurm.
+sbank balance statement -u
+    Information on available CPU-hours in your accounts.
+    
 
 Useful job script parameters 
 ============================
