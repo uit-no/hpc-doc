@@ -27,7 +27,7 @@ operating system, and storage configuration.
 |  |                      |  | 288 / 5760                                |  | 2 / 20                                   |
 +-------------------------+----------------------------------------------+---------------------------------------------+
 |  |                      |  | 608 x 2.60 GHz Intel Xeon E5 2670         |  | 2 x 2.60 GHz Intel Xeon E5 2670          |
-|  | Processors           |  | 752 x 2.80 GHz Intel Xeon E5 2680         |  | 2 x 2.80 Ghz Intel Xeon E5 2680          | 
+|  | Processors           |  | 656 x 2.80 GHz Intel Xeon E5 2680         |  | 2 x 2.80 Ghz Intel Xeon E5 2680          | 
 |  |                      |  | 288 x 2.80 GHz Intel Xeon E5 2680         |  | 2 x 2.80 GHz Intel Xeon E5 2680          |
 +-------------------------+----------------------------------------------+---------------------------------------------+
 | Total memory            | 26.2 TB                                      | 32 GB (32 nodes with 128 GB)                |
