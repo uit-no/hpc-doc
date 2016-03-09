@@ -5,42 +5,8 @@ Frequently asked questions
 ==========================
 
 
-General
-=======
-
-CPU v.s. core / processor core.
--------------------------------
-
-How should I interpret the term CPU in this documentation?
-
-In  this documentation we are frequently using the term *CPU*, which in
-most cases are equivalent to the more precise term *processor core* /
-*core*\. The \ *multi core age*\  is here now \ *:-)*
-
-
-I am getting hundreds of e-mails in a few minutes, what do I do?
-----------------------------------------------------------------
-
-Help - I am getting the same e-mail every 30 seconds. Already received
-more that 100 of them!!!
-
-If you are receiving a lot of e-mails looking someting like this:
-
-PBS Job Id: 52237.stallo.uit.no
-Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
-job deleted
-Job deleted at request of maui@stallo.uit.no
-MOAB\_INFO:  job exceeded wallclock limit
-
-You can stop the job by running the command:
-
-::
-
-    qsig -s NULL <job_id>
-
-
-Account usage and login in
-==========================
+Compute and storage quota
+=========================
 
 How can I check my disk quota and disk usage?
 ---------------------------------------------
@@ -48,100 +14,114 @@ How can I check my disk quota and disk usage?
 How large is my disk quota, and how much of it have I used?
 
 To check how large your disk quota is, and how much of it you have used,
-you can use the following command:
+you can use the following command::
 
-::
+  $ quota -s
 
-    quota -s
-
-Its only the *$HOME* and *$PROJECT* disks that have quota.
+Only home and project partitions have quota.
 
 
-
-How can I get information about my account?
--------------------------------------------
+How many CPU hours have I spent?
+--------------------------------
 
 How can I get information on how many CPU hours are used and left on my
 account?
 
-For a simple summary, you can use the command '*cost*\ '.
+For a simple summary, you can use the command ``cost``,
+for more details, you can use::
 
-For more details, you can use the command '*gstatement*\ ' :
+  $ gstatement --hours --summarize -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
 
-::
+For a detailed overview over usage you can use::
 
-    gstatement --hours --summarize -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
+  $ gstatement --hours -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
 
-For a detailed overview over usage you can use:
+For more options see::
 
-::
-
-    gstatement --hours -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
-
-For more options see
-
-::
-
-    gstatement --help
+  $ gstatement --help
 
 
-How do I change my password on stallo?
+General
+=======
+
+CPU v.s. core / processor core
+------------------------------
+
+How should I interpret the term CPU in this documentation?
+
+In this documentation we are frequently using the term *CPU*, which in
+most cases are equivalent to the more precise term *processor core* /
+*core*\. The \ *multi core age*\  is here now \ *:-)*
+
+
+I am getting hundreds of e-mails in a few minutes, what do I do?
+----------------------------------------------------------------
+
+If you are receiving a lot of e-mails looking like this::
+
+  PBS Job Id: 52237.stallo.uit.no
+  Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
+  job deleted
+  Job deleted at request of maui@stallo.uit.no
+  MOAB\_INFO:  job exceeded wallclock limit
+
+You can stop the job by running the command::
+
+  $ qsig -s NULL <job_id>
+
+
+How do I change my password on Stallo?
 --------------------------------------
 
 The passwd command does not seem to work. My password is reset back to
 the old one after a while. Why is this happening?
 
-The stallo system is using a centralised database for user management.
-This will override the password changes done locally on stallo.
+The Stallo system is using a centralised database for user management.
+This will override the password changes done locally on Stallo.
 
 The password can be changed on the
 `passwrod metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
-username on stallo and the NOTUR domain.
+username on Stallo and the NOTUR domain.
 
 
-Exporting the display from a compute node to my desktop?
---------------------------------------------------------
+Connecting via ssh
+==================
 
 How can I export the display from a compute node to my desktop?
+---------------------------------------------------------------
 
 If you needs to export the display from a compute node to your desktop
 you should
 
-#. first login to Stallo with display forwarding,
-#. then you should reserve a node, with display forwarding, trough the
-   queuing system
+#. First login to Stallo with display forwarding.
+#. Then you should reserve a node, with display forwarding, trough the
+   queuing system.
 
-Below is an example on how you can do this:
+Here is an example::
 
-::
-
-    ssh -Y stallo.uit.no                       1) Long in on Stallo with display forwarding.qsub -lnodes=1,walltime=1:0:0 -I -X        2) Reserve and log in on a compute node with display forwarding.
+  $ ssh -Y stallo.uit.no                 # log in with port forwarding
+  $ qsub -lnodes=1,walltime=1:0:0 -I -X  # reserve and log in on a compute node with display forwarding
 
 This example assumes that you are running an X-server on your local
 desktop, which should be available for most users running Linux, Unix
 and Mac Os X. If you are using Windows you must install some X-server
 on your local PC.
 
+
 How can I access a compute node from the login node?
 ----------------------------------------------------
 
-How can I access a compute node in the cluster from the login node?
+Log in to stallo.uit.no and type e.g.::
 
-Log in to *stallo.uit.no* and type e.g.:
+  $ ssh compute-1-3
 
-::
+or use the shorter version::
 
-    ssh compute-1-3
-
-or us the shorter version:
-
-::
-
-    ssh c1-3
+  $ ssh c1-3
 
 
-My ssh connections are dying / freezing.
-----------------------------------------
+My ssh connections are dying / freezing
+---------------------------------------
 
 How to prevent your ssh connections from dying / freezing.
 
@@ -420,10 +400,8 @@ Delete all your queued jobs:
 items.)
 
 
-I am not able to kill my job!!!
--------------------------------
-
-I am not able to kill my job!!!
+I am not able to kill my job!
+-----------------------------
 
 If you want to kill a job, and the normal way of doing it, *qdel
 <job_id>*, does not work you should try the following command:
@@ -465,6 +443,7 @@ Example; to apply for  nodes c2-1 and c2-2:
     qsub -lnodes=c2-1:ppn=8+c2-2:ppn=8
 
 .. _exclude-a-node-from-running-a-job:
+
 
 How do I exclude a node from running a job?
 -------------------------------------------
@@ -626,8 +605,8 @@ described by `Amdahls <http://en.wikipedia.org/wiki/Amdahl's_law>`_ Law.
 Without going into any more details, let's look at the solution.
 
 
-Running tasks in parallel within one job.
------------------------------------------
+Running tasks in parallel within one job
+----------------------------------------
 
 By using some shell trickery one can spawn and load-balance multiple
 independent task running in parallel within one node, just background
@@ -648,8 +627,8 @@ And here is the ``dowork.sh`` script:
 MPI
 ===
 
-My MPI application runs out of memory.
---------------------------------------
+My MPI application runs out of memory
+-------------------------------------
 
 The OpenMPI library sometimes consumes a lot of memory for its
 communication buffers. This seems to happen when an application does a
@@ -673,8 +652,8 @@ For more information about openmpi tunables see the
 `open-mpi page <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`__.
 
 
-My mpi job crashes with a retry limit exceeded error.
------------------------------------------------------
+My mpi job crashes with a retry limit exceeded error
+----------------------------------------------------
 
 Sometimes a mpi job will fail saying that its retry limit is exceeded.
 
@@ -699,8 +678,8 @@ dummy job on a specific node.
 If this does not help, send us a problem report.
 
 
-Tuning OpenMPI performance - non default settings on Stallo.
-------------------------------------------------------------
+Tuning OpenMPI performance - non default settings on Stallo
+-----------------------------------------------------------
 
 We have changed one setting on stallo to limit the memory consumption of
 the OpenMPI library. The following is set as global default:
@@ -724,8 +703,8 @@ to -1 to remove this limit if your application gets into problems.
 Please let us know if this influences your application.
 
 
-My MPI application hangs on startup.
-------------------------------------
+My MPI application hangs on startup
+-----------------------------------
 
 We have discovered that some applications doesn't work well with the
 default OpenMPI version, 1.3.2. Reverting back to v1.2.4 might solve the
@@ -741,13 +720,11 @@ If your application has both of the following symptoms:
    command), but not with infiniband
 
 Then try to revert back to OpenMPI 1.2.4 by setting this before
-recompiling and in your job script:
+recompiling and in your job script::
 
-::
-
-    module unload openmpi
-    module load openmpi/1.2.4
-    module load intel-compiler
+  $ module unload openmpi
+  $ module load openmpi/1.2.4
+  $ module load intel-compiler
 
 Please tell us if this helps for you application. We try to get an idea
-of the extent of this problem. Send a report to support-uit@notur.no .
+of the extent of this problem. Send a report to support-uit@notur.no.
