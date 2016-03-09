@@ -11,8 +11,6 @@ Compute and storage quota
 How can I check my disk quota and disk usage?
 ---------------------------------------------
 
-How large is my disk quota, and how much of it have I used?
-
 To check how large your disk quota is, and how much of it you have used,
 you can use the following command::
 
@@ -23,9 +21,6 @@ Only home and project partitions have quota.
 
 How many CPU hours have I spent?
 --------------------------------
-
-How can I get information on how many CPU hours are used and left on my
-account?
 
 For a simple summary, you can use the command ``cost``,
 for more details, you can use::
