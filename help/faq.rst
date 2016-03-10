@@ -36,33 +36,8 @@ For more options see::
   $ gstatement --help
 
 
-General
-=======
-
-CPU v.s. core / processor core
-------------------------------
-
-How should I interpret the term CPU in this documentation?
-
-In this documentation we are frequently using the term *CPU*, which in
-most cases are equivalent to the more precise term *processor core* /
-*core*\. The \ *multi core age*\  is here now \ *:-)*
-
-
-I am getting hundreds of e-mails in a few minutes, what do I do?
-----------------------------------------------------------------
-
-If you are receiving a lot of e-mails looking like this::
-
-  PBS Job Id: 52237.stallo.uit.no
-  Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
-  job deleted
-  Job deleted at request of maui@stallo.uit.no
-  MOAB\_INFO:  job exceeded wallclock limit
-
-You can stop the job by running the command::
-
-  $ qsig -s NULL <job_id>
+Connecting via ssh
+==================
 
 
 How do I change my password on Stallo?
@@ -78,9 +53,6 @@ The password can be changed on the
 `passwrod metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
 username on Stallo and the NOTUR domain.
 
-
-Connecting via ssh
-==================
 
 How can I export the display from a compute node to my desktop?
 ---------------------------------------------------------------
@@ -139,8 +111,8 @@ you can take a look at this page explaining
 for a similar solution.
 
 
-Queue system and running jobs
-=============================
+Jobs and queue system
+=====================
 
 Where can I find an example of job script?
 ------------------------------------------
@@ -574,6 +546,30 @@ the value of the environmental variable 
 ::
 
     $PBS_ARRAYID
+
+
+CPU v.s. core
+-------------
+
+In this documentation we are frequently using the term *CPU*, which in
+most cases are equivalent to the more precise term *processor core* /
+*core*\. The \ *multi core age*\  is here now \ *:-)*
+
+
+I am getting hundreds of e-mails in a few minutes, what do I do?
+----------------------------------------------------------------
+
+If you are receiving a lot of e-mails looking like this::
+
+  PBS Job Id: 52237.stallo.uit.no
+  Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
+  job deleted
+  Job deleted at request of maui@stallo.uit.no
+  MOAB\_INFO:  job exceeded wallclock limit
+
+You can stop the job by running the command::
+
+  $ qsig -s NULL <job_id>
 
 
 Running many short tasks
