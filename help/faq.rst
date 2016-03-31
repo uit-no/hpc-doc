@@ -12,7 +12,7 @@ Can I install Python software as a normal user without sudo rights?
 -------------------------------------------------------------------
 
 Yes. The recommended way to achieve this is using
-Virtual Environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+virtual environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 Example (as an example we install the Biopython package)::
 
@@ -28,6 +28,13 @@ the virtual environment::
 
 And you do not have to call it "venv". It is no problem to have many
 virtual environments in your home directory.
+
+If you want to inherit system site packages into your virtual
+environment, do this instead::
+
+  $ virtualenv --system-site-packages venv
+  $ source venv/bin/activate
+  $ pip install biopython
 
 
 Compute and storage quota
