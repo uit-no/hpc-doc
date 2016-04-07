@@ -261,26 +261,26 @@ What is the maximum memory limit for a job?
 
 What is the absolute maximum memory I can set for a job on Stallo?
 
-Stallo have 50 nodes with 32 GB memory each, while the rest have 16 GB.
-
-So 32 GB is the maximum memory limit you can ask for in a job running on
-a single node.
+A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can use. 
 
 (You can of course have a job running on multiple nodes, using up to 32
 GB of memory on each node.)
 
-For instance, if you want to use 4 CPUs with 4 GB of memory:
+If you need more memory pr. process you must contact the hpc staff
+to get access to a highmem queue. 
+
+For instance, if you want to use 4 CPUs with 8 GB of memory:
 
 ::
 
-    -lnodes=1:ppn=4,pmem=4gb
+    -lnodes=1:ppn=4,pmem=8gb
 
 If you want to use only one CPU, you can ask for all it\`s memory this
 way:
 
 ::
 
-    -lnodes=1:ppn=1,pmem=16gb
+    -lnodes=1:ppn=1,pmem=32gb
 
 
 How much memory have I reserved, and how much am I using?
