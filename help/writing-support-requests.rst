@@ -22,9 +22,10 @@ Give descriptive subject
 ------------------------
 
 Your subject line should be descriptive. "Problem on Stallo" is not a good
-subject line since it says nothing. The support staff is a team. The subjects
-are the first thing that we see. We would like to be able to classify emails
-according to subjects before even opening the email.
+subject line since it could be valid for basically every support email we get.
+The support staff is a team. The subjects are the first thing that we see. We
+would like to be able to classify emails according to subjects before even
+opening the email.
 
 
 New problem new email
@@ -68,7 +69,7 @@ Tell us also what worked
 
 Rather often we requests of the type "I cannot get X to run on two nodes".  The
 request then does not mention whether it worked on one node or on one core or
-whether it never worked and this is the first attempt.  In order to better
+whether it never worked and that this was the first attempt.  In order to better
 isolate the problem and avoid wasting time with many back and forth emails,
 please tell us what actually worked so far.  Tell us what you have tried to
 isolate the problem.  This requires some effort from you but this is what we
@@ -94,13 +95,11 @@ incomplete description. See also next point.
 Make the example as small and fast as possible
 ----------------------------------------------
 
-You run a calculation which crashes after running for one week.  Before you
-send a support request with this example, first try to reduce it. Possibly and
-probably the crash can be reproduced with a much smaller example (smaller
-system size or grid or basis set).
-
-It is so much easier to schedule and debug a problem which crashes after few
-seconds compared to a run which crashes after hours.
-
-Of course this requires some effort from you but this is what we expect from
-you in order to create a useful support request.
+You run a calculation which crashes after running for one week. You are tempted
+to write to support right away with this example but this is not a good idea.
+Before you send a support request with this example, first try to reduce it.
+Possibly and probably the crash can be reproduced with a much smaller example
+(smaller system size or grid or basis set).  It is so much easier to schedule
+and debug a problem which crashes after few seconds compared to a run which
+crashes after hours.  Of course this requires some effort from you but this is
+what we expect from you in order to create a useful support request.
