@@ -67,7 +67,7 @@ achieve X.
 Tell us also what worked
 ------------------------
 
-Rather often we requests of the type "I cannot get X to run on two nodes".  The
+Rather often we get requests of the type "I cannot get X to run on two nodes".  The
 request then does not mention whether it worked on one node or on one core or
 whether it never worked and that this was the first attempt.  In order to better
 isolate the problem and avoid wasting time with many back and forth emails,
@@ -103,3 +103,5 @@ Possibly and probably the crash can be reproduced with a much smaller example
 and debug a problem which crashes after few seconds compared to a run which
 crashes after hours.  Of course this requires some effort from you but this is
 what we expect from you in order to create a useful support request.
+Often when isolating the problem, the problem and solution crystallize before
+even writing the support request.
