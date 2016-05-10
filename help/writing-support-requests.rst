@@ -91,7 +91,8 @@ Create an example which reproduces the problem
 Create an example that we can ideally just copy paste and run and which
 demonstrates the problem. It is otherwise very time consuming if the support
 team needs to write input files and run scripts based on your possible
-incomplete description. See also next point.
+incomplete description. See also next point.  Make this example available to
+us. We do not search and read read-protected files without your permission.
 
 
 Make the example as small and fast as possible
@@ -107,3 +108,11 @@ crashes after hours.  Of course this requires some effort from you but this is
 what we expect from you in order to create a useful support request.
 Often when isolating the problem, the problem and solution crystallize before
 even writing the support request.
+
+
+Specify your environment
+------------------------
+
+Have you or your colleague compiled the code? Which modules were loaded?
+If you use non-default modules and you do not tell us about it, we will
+waste time when debugging with in a different environment.
