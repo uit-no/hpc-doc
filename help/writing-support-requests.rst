@@ -31,7 +31,7 @@ opening the email.
 New problem new email
 ---------------------
 
-Do send support requests replying to unrelated issues. Every issue gets a
+Do not send support requests by replying to unrelated issues. Every issue gets a
 number and this is the number that you see in the subject line. Replying to
 unrelated issues means that your email gets filed under the wrong thread and
 risks being overlooked.
