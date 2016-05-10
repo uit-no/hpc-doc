@@ -69,7 +69,9 @@ Tell us also what worked
 
 Rather often we get requests of the type "I cannot get X to run on two nodes".  The
 request then does not mention whether it worked on one node or on one core or
-whether it never worked and that this was the first attempt.  In order to better
+whether it never worked and that this was the first attempt.
+Perhaps the problem has even nothing to do with one or two nodes.
+In order to better
 isolate the problem and avoid wasting time with many back and forth emails,
 please tell us what actually worked so far.  Tell us what you have tried to
 isolate the problem.  This requires some effort from you but this is what we
