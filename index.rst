@@ -34,6 +34,7 @@ Getting help
 
    help/faq.rst
    help/contact.rst
+   help/writing-support-requests.rst
    help/staff.rst
    help/visit.rst
 
