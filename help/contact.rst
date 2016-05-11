@@ -14,3 +14,12 @@ Alternatively you can use http://support.notur.no
 to submit and track your requests.
 The necessary user name and password are generated the first time you
 send an email to support-uit@notur.no.
+
+
+Postal address
+--------------
+
+HPC group
+IT-avdelingen Teo2 4. etg.
+UiT Norges Arktiske Universitet
+9037 Tromsø
