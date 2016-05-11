@@ -19,7 +19,9 @@ send an email to support-uit@notur.no.
 Postal address
 --------------
 
-HPC group
-IT-avdelingen Teo2 4. etg.
-UiT Norges Arktiske Universitet
-9037 Tromsø
+::
+
+  HPC group
+  IT-avdelingen Teo2 4. etg.
+  UiT Norges Arktiske Universitet
+  9037 Tromsø
