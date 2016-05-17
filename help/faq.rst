@@ -261,13 +261,13 @@ What is the maximum memory limit for a job?
 
 What is the absolute maximum memory I can set for a job on Stallo?
 
-A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can use. 
+A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can use.
 
 (You can of course have a job running on multiple nodes, using up to 32
 GB of memory on each node.)
 
 If you need more memory pr. process you must contact the hpc staff
-to get access to a highmem queue. 
+to get access to a highmem queue.
 
 For instance, if you want to use 4 CPUs with 8 GB of memory:
 
@@ -566,18 +566,55 @@ See the description of the ``-Wdepend`` option in the qsub manpage.
 How can I submit many jobs in one command?
 ------------------------------------------
 
-use job arrays:
+Use job arrays::
 
-::
+  qsub -t 1-16 myjob
 
-    qsub -t 1-16 Myjob
+will send ``myjob`` 16 times into the queue. They can be distinguished by
+the value of the environmental variable::
 
-will send Myjob 16 times into the queue. They can be distinguished by
-the value of the environmental variable 
+  ${PBS_ARRAYID}
 
-::
 
-    $PBS_ARRAYID
+How can I package many small jobs into one run script?
+------------------------------------------------------
+
+Again the answer are job arrays.
+As an example, let us consider the following script called "myscript":
+
+.. code-block:: bash
+
+  #!/usr/bin/env bash
+
+  echo "hello from myscipt with argument $1"
+
+When you execute it with an argument, it prints the argument::
+
+  $ ./myscript 137
+  hello from myscipt with argument 137
+
+Now consider the following runscript:
+
+.. code-block:: bash
+
+  #!/usr/bin/env bash
+
+  #PBS -l nodes=1:ppn=20
+  #PBS -l walltime=00:05:00
+  #PBS -t 1-20
+
+  SCRATCH_DIRECTORY=/global/work/$USER/$PBS_JOBID
+  mkdir -p $SCRATCH_DIRECTORY
+
+  cd $SCRATCH_DIRECTORY
+  $PBS_O_WORKDIR/myscript ${PBS_ARRAYID}
+
+  cd $PBS_O_WORKDIR
+  rm -rf $SCRATCH_DIRECTORY
+
+This script will run on one node and submit
+``myscript`` 20 times, each of them will print ``${PBS_ARRAYID}``
+which iterates from 1 to 20.
 
 
 CPU v.s. core
