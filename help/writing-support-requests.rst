@@ -90,7 +90,7 @@ Create an example which reproduces the problem
 
 Create an example that we can ideally just copy paste and run and which
 demonstrates the problem. It is otherwise very time consuming if the support
-team needs to write input files and run scripts based on your possible
+team needs to write input files and run scripts based on your possibly
 incomplete description. See also next point.  Make this example available to
 us. We do not search and read read-protected files without your permission.
 
