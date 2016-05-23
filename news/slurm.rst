@@ -24,7 +24,8 @@ Timeframe
 
 The migration process depends on the integration of the
 accounting database with the new SLURM scheduling engine.
-We currently aim for a transition on December 1st.
+
+We are now in the process of migrating users/user groups/communities. First move will be the community of schrodinger users. This is scheduled for May 2016.
 
 
 Migration process
@@ -32,3 +33,4 @@ Migration process
 
 You will find here details of the migration process which we will
 outline well in advance of the planned switch.
+
