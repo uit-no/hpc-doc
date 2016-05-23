@@ -47,24 +47,21 @@ icense to be able to use and publish results obtained with this code on NOTUR in
 
 
 
-is software for first-principles electronic structure calculations. The parallel version has been tested for scaling and most problems scale well up to 16 cpus, larger problems scale beyond 64 cpus. Over 100 cpus is normally not recommended due to limited scaling.
+is software for first-principles electronic structure calculations. The program suite shows good scaling behaviour, and we have tested in the 80-160 core region but not beyond. For statements from vendor related to scaling, please visit their home page as shown on top of this page. 
 
-(link to general info about license policy notur?)
+(link to general info about license policy notur when available; currently contact: www.sigma2.no)
 
 
 Usage
 ======
 
-(Link to general info about scaling of software on notur systems; get feedback from users?)
-
-We generally advise to run ADF on more than one node. The parallel version has been tested for scaling and most problems scale well up to  4 nodes. 
+We generally advise to run ADF on more than one node, unless you do know that your particular problem does not make the code scale well. 
 
 Use
 
 .. code-block:: bash
 
     $ module avail adf 
- 
 
 to see which versions of ADF are available. Use
 
@@ -76,12 +73,12 @@ or
 
 .. code-block:: bash
 
- $ module load adf/<version> # i.e 2014.08
+ $ module load adf/<version> # i.e 2014.10 (default)
 
-to get access to ADF.  Note that ADF contains its own MPI implementation, so there is no need to load any openmpi module to use ADF.
+to get access to ADF.  
 
 
-First run of ADF/BAND on Stallo:
+First run of ADF/BAND:
 --------------------------------
 
 To get download the jobscript example(s), type the following:
@@ -97,12 +94,24 @@ Then, submit the job by typing:
 
 .. code-block::bash
 
-    qsub job_adf_stallo.sh
+    sbatch job_adf.sh
 
-Compare the energy of adf_example.out with the Bond Energy =  -156.77666698 eV in adf_example_correct_stallo.output. The energy should ideally be identical or close to identical. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. Good luck.
+Compare the energy of adf_caffeine.out with the Bond Energy =  -156.75317227 eV in adf_example_correct_stallo.output. The energy should ideally be identical or close to identical. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. Good luck.
 
-- NB: ADF is on Stallo set up with intel mpi, if not using this script - remember to do module swap openmpi impi before loading the adf module.
+- NB: ADF is installed as precompiled binaries, they come with their own mpi (intel MPI). So if you are not using the provided runscript example, please make sure that the default openmpi is swapped with the default intel-MPI module.
+
 
 - On Stallo, we holds the nbo6 plug in license that allows users of adf to produce files that can be read with the nb06 software.
 
+ADF input example:
+--------------------
+
+.. include:: adf.inputex
+   :literal:
+
+ADF runscrip example:
+------------------------
+
+.. include:: adf.jobscriptex
+   :literal:
 
