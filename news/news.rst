@@ -1,3 +1,10 @@
+
+.. figure:: tag.jpg
+   :scale: 57 %
+
+   Found in Via Notari, Pisa; (c) Roberto Di Remigio.
+
+
 .. _news:
 
 News and notifications
