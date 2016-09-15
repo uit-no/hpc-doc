@@ -23,7 +23,7 @@ News and Events
 
    news/news.rst
    news/slurm.rst
-
+   news/new_sw.rst
 
 Getting help
 ------------
