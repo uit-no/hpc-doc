@@ -5,6 +5,30 @@ Frequently asked questions
 ==========================
 
 
+Passwords
+=========
+
+
+I forgot my password - what now?
+--------------------------------
+
+You can reset it here: https://www.metacenter.no/user/
+
+
+How do I change my password on Stallo?
+--------------------------------------
+
+The passwd command does not seem to work. My password is reset back to
+the old one after a while. Why is this happening?
+
+The Stallo system is using a centralised database for user management.
+This will override the password changes done locally on Stallo.
+
+The password can be changed on the
+`password metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
+username on Stallo and the NOTUR domain.
+
+
 Installing software
 ===================
 
@@ -101,20 +125,6 @@ For more options see::
 
 Connecting via ssh
 ==================
-
-
-How do I change my password on Stallo?
---------------------------------------
-
-The passwd command does not seem to work. My password is reset back to
-the old one after a while. Why is this happening?
-
-The Stallo system is using a centralised database for user management.
-This will override the password changes done locally on Stallo.
-
-The password can be changed on the
-`password metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
-username on Stallo and the NOTUR domain.
 
 
 How can I export the display from a compute node to my desktop?
