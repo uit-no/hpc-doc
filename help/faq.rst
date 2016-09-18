@@ -113,7 +113,7 @@ The Stallo system is using a centralised database for user management.
 This will override the password changes done locally on Stallo.
 
 The password can be changed on the
-`passwrod metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
+`password metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
 username on Stallo and the NOTUR domain.
 
 
@@ -297,7 +297,7 @@ A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can us
 (You can of course have a job running on multiple nodes, using up to 32
 GB of memory on each node.)
 
-If you need more memory pr. process you must contact the hpc staff
+If you need more memory per process you must contact the hpc staff
 to get access to a highmem queue.
 
 For instance, if you want to use 4 CPUs with 8 GB of memory:
