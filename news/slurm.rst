@@ -1,4 +1,12 @@
 
+.. figure:: Slurm.png
+   :scale: 50 %
+
+   Credit: Futurama (http://futurama.wikia.com/wiki/Slurms_MacKenzie)
+
+
+.. _slurm:
+
 
 Status of migration to the SLURM resource manager
 =================================================
@@ -25,7 +33,7 @@ Timeframe
 The migration process depends on the integration of the
 accounting database with the new SLURM scheduling engine.
 
-We are now in the process of migrating users/user groups/communities. First move will be the community of schrodinger users. This is scheduled for May 2016.
+We are now in the process of migrating users/user groups/communities. First move will be the community of schrodinger users. This is scheduled for May 016.
 
 
 Migration process
