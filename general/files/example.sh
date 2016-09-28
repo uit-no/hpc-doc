@@ -1,29 +1,28 @@
-#!/usr/bin/env bash
+#!/bin/bash
+# First example of running a parallel job under the batch system.
+#
+# allocate a total of 80 processes, since this is both dividable by 16 and 20.
+#-----------------------
+#SBATCH --job-name=Hello_World
+#SBATCH --ntasks=80
+# run for ten minutes
+#SBATCH --time=0-00:10:00
+#SBATCH --mem-per-cpu=1GB
+#SBATCH --mail-type=ALL
+#-----------------------
 
-# which account to charge
-#PBS -AnnXXXXk
+module load notur
 
-# we run on two nodes, 40 cores in total
-#PBS -lnodes=2:ppn=20
+mkdir -p $SCRATCH
+cd $SUBMITDIR
 
-# we run for max 10 minutes
-#PBS -lwalltime=00:10:00
+cp hello_c_mpi.x $SCRATCH
 
-# no bash command may be placed before the last PBS directive
+cd $SCRATCH
 
-# create temporary scratch area for this job on the global file system
-SCRATCH_DIRECTORY=/global/work/$USER/$PBS_JOBID
-mkdir -p $SCRATCH_DIRECTORY
+time mpirun ./hello_c_mpi.x > hello.output
 
-# we will run the calculation in the scratch directory and not
-# in the home directory
-cd $SCRATCH_DIRECTORY
+cp hello.output $SUBMITDIR
+cd $SUBMITDIR
 
-# here we execute an MPI-parallel binary
-mpirun -np $PBS_NP $PBS_O_WORKDIR/my_binary > $PBS_O_WORKDIR/my_output.txt
-
-# before cleaning up remember to copy back important files
-
-# clean up the scratchdir (commented out)
-# cd /tmp
-# rm -rf $SCRATCH_DIRECTORY
+rm -rf $SCRATCH
