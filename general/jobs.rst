@@ -111,16 +111,21 @@ we generally have these two rules for prioritizing jobs:
 #. Large jobs, that is jobs with high cpucounts, are prioritized.
 #. Short jobs take precedence over long jobs.
 
-Cpucount
---------
+Process count
+-------------
 
-We strongly advice all users to ask for all cpus on a node when running 
-multinode jobs, that is, submit the job with ``-lnodes=X:ppn=16``. 
+We strongly advice all users to ask for a given set of cores when submitting multi-core jobs. 
+To make sure that you utilize full nodes, you should ask for sets that adds up to both
+16 and 20 (80, 160 etc) due to the hardware specifics of Stallo i.e. submit the job with ``--ntasks=80``. 
+
 This will make the best use of the resources and give the most predictable 
-execution times. For single node jobs, e.g. jobs that ask for less 
-than 16 cpus, we recommend to use ``-lnodes=1:ppn={1,2,4,8 or 16}``, this will make it possible for the batch 
-system scheduler to fill up the compute nodes completely.
-A warning will be issued if these recommendations are not followed.
+execution times. If your job require more than the default available memory pr core (32 GB/node gives 
+2 GB/core for 16 core nodes and 1.6GB/core for 20 core nodes) you should adjust this need with
+the following command: ``#SBATCH --mem-per-cpu=4GB`` If doing this, the batch system will automatically
+allocate 8 cores or less pr. node.
+
+For single node jobs, just ask for less than 16 cores with less than 1.6GB of memory/core.
+
 
 Scalability
 -----------
@@ -139,36 +144,27 @@ most used applications can be found in :ref:`sw_guides`.
 Queues
 ======
 
-In general it is not necessary to specify a specific queue for your
-job, the batch system will route your job to the right queue
-automatically based on your job parameters. There are two exceptions to
-this, the express and the highmem queue
+SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known 
+as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``. 
 
-express:
-    Jobs will get higher priority than jobs in other queues. Submit with
-    qsub -q express .... **Limits:** Max walltime is 8 hours, no other resource
-    limits, but there are very strict limits on the number of jobs running
-    etc. 
-highmem:
-    Jobs will get access to the nodes with large memory (32GB). Submit with
-    ``qsub -q highmem ....`` 
-    **Limits:** Restricted access, send a request to support-uit@uit.no 
-    to get access to this queue. Jobs will be restricted to the 32 nodes with 128GB memory.
+We have the following partitions:
 
-Other queues
+normal:
+    The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
 
-default:
-    The default queue. Routes jobs to the queues below.
-short:
-    Jobs in this queue is allowed to run on any nodes, also the highmem
-    nodes. **Limits:** walltime < 48 hours.
 singlenode:
-    Jobs that will run within one compute node will end up in this queue.
-multinode:
-    Contains jobs that span multiple nodes.
+    If you ask for less resources than available on one single node, this will be the partition your job 
+    will be put in. We may remove the single-user policy on this partition in the future.
 
-Again, it is not necessary to ask for any specific queue unless you
-want to use ``express`` or ``highmem``.
+multinode:
+    If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
+    your job will land into this partition.  
+
+## This has to be seriously rewritten when we know the specs. Now it is short, singlenode and multinode. 
+## Has also to specify qos=long for single and multi longer than 2 days, short is in short.
+
+## Here we need to write something about qos devel and partition highmem in the future. Also look at abel docu.
+
 
 Use of large memory nodes
 =========================
@@ -176,8 +172,11 @@ Use of large memory nodes
 Large memory nodes
 ---------------------
 
-Stallo has 32 compute nodes with 128GB memory each (the 272 others have
-32GB memory).
+Stallo has 32 compute nodes with 128GB memory each (the 744 others have
+32GB memory). The large memory nodes has 8 GB of memory available pr. core, 
+but in principle they should only be utilized for jobs that require more than
+32 GB of memory since the memory/core issue can be solved by downscaling the 
+number of cores that is used pr. memory-pool.
 
 To use the large memory nodes you should ask for access to the
 ``highmem`` queue, just send a mail to support-uit@notur.no. After being
@@ -186,7 +185,7 @@ queue:
 
 ::
 
-    qsub -q highmem .........
+    ``sbatch --partition=highmem ...``
 
 Remark: You only need to apply for access to the large memory nodes
 if you want to run jobs that have more than 48 hours walltime limit on
@@ -207,10 +206,10 @@ You can run an interactive jobs by using the ``-I`` flag to qsub:
 
 ::
 
-    qsub -I .......
+    srun --pty bash -I
 
-The command prompt will appear as soon as the job start. If you also
-want to run a graphical application you must also use ``-X`` flag.
+The command prompt will appear as soon as the job start. 
+
 Interactive jobs has the same policies as normal batch jobs, there are
 no extra restrictions.
 
@@ -226,16 +225,16 @@ Limit                           Value
 ============================== =================
 Max number of running jobs      1024
 Maximum cpus per job            2048
-Maximum walltime                No limit
+Maximum walltime                28 days
 Maximum memory per job          No limit:sup:`1`
 ============================== =================
 
 :sup:`1` There is a practical limit of 128GB per compute node used.
 
 
-**Remark:** Even if we do not impose any limit on the length of the jobs
-on stallo we only give a weeks warning on system maintenance. Jobs with
-more than 7 days walltime, will be terminated and restarted if possible.
+**Remark:** Even if we impose a 28 day run time limit on stallo we only give 
+a weeks warning on system maintenance. Jobs with more than 7 days walltime, 
+will be terminated and restarted if possible.
 
 Scheduling policy on the machine
 ================================
@@ -309,7 +308,7 @@ Short jobs:
 
 ::
 
-    qsub -lnodes=1:ppn=16,walltime=48:00:00 ........
+    sbatch -n 20 -t 2-00:00:00 / or --time=48:00:00 ...
 
 Will be allowed to run anywhere.
 
@@ -317,20 +316,9 @@ Long jobs:
 
 ::
 
-    qsub -lnodes=8:ppn=16,walltime=240:00:00 .........
+    sbatch -n 160 --time=10-00:00:00 / --time=240:00:00 --partition=multinode --qos=long ...
 
 Will run within one island, but not on the highmem nodes.
-
-
-Highmem jobs:
-
-::
-
-    qsub -q highmem -lnodes=1:ppn=16,pmem=8gb,walltime=240:00:00 ........
-
-This job will run on the highmem nodes if the user is granted access by
-the administrators. Otherwise it will never start. **pmem** is memory per 
-process.
 
 
 Express queue for testing job scripts and interactive jobs.
@@ -339,23 +327,25 @@ Express queue for testing job scripts and interactive jobs.
 
 By submitting a job to the express queue you can get higher throughput
 for testing and shorter start up time for interactive jobs. Just use the
-``-q express`` flag to submit to this queue:
+``--qos=devel`` flag to submit to this queue:
 
 ::
 
-    qsub -q express jobscript.sh
+    sbatch --qos=devel jobscript.sh
 
 or for an interactive job:
 
 ::
 
-    qsub -q express -I
+    srun --qos=devel --pty bash -I
 
 This will give you a faster access if you have special needs during
 development, testing of job script logic or interactive use.
 
 Priority and limitations
 ========================
+
+## This will have to be rewritten according to the devel settings. I leave it now. espent.
 
 Jobs in the express queue will get higher priority than any other jobs
 in the system and will thus have a shorter queue delay than regular
