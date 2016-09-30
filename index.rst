@@ -66,7 +66,6 @@ Development of applications on Stallo
    development/compilers.rst
    development/environment.rst
    development/optimization.rst
-   development/scripting.rst
    development/debugging.rst
 
 
