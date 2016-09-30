@@ -91,7 +91,7 @@ node, and with display forwarding to your desktop you should in stead do
 something like this:
 
 #. first login to Stallo with display forwarding,
-#. then you should reserve a node, with display forwarding, trough the
+#. then you should reserve a node through the
    queuing system
 
 Below is an example on how you can do this:
@@ -103,12 +103,10 @@ Below is an example on how you can do this:
     
     2) Reserve and log in on a compute node with display forwarding.
        (start an interactive job.)
-    $ qsub -lnodes=1,walltime=1:0:0 -I -X        
-
-This example assumes that you are running an X-server on your local
-desktop, which should be available for most users running Linux, Unix
-and Mac Os X. If you are using Windows you must install some X-server
-on your local PC.
+    $ srun srun -N 1 -t 1:0:0 --pty bash -I 
+    
+    3) Open a new terminal window, type squeue -j <jobid> (it shows you which node(s) was allocated 
+       to that specific job). Then ssh -Y <nodename> to that node and start your preferred gui.
 
 
 Graphical logon to Stallo
