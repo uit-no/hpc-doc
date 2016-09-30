@@ -55,32 +55,15 @@ scontrol release <job_id>
     Release the hold on a job.
 
 
-Getting information about your job
-==================================
+Account information
+===================
 
-For details run the command with the `-`-help option.
-
-scontrol show jobid -dd <jobid>
-    List detailed information for a job (useful for troubleshooting).
-sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
-    To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
-
-
-Getting queue and account information
-=====================================
-
-sinfo
-    List partitions. Somewhat similar to queues in Torque/ Maui. For more details, see partitions_.
 sbank balance statement -u
     Information on available CPU-hours in your accounts.
 
 
-Recommended job parameters
-==========================
-
-
 Walltime
---------
+========
 
 We recommend you to be as precise as you can when specifying the
 parameters as they will inflict on how fast your jobs will start to run.
@@ -93,7 +76,7 @@ We generally have these rules for prioritizing jobs:
 
 
 Process count
--------------
+=============
 
 We strongly advice all users to ask for a given set of cores when submitting
 multi-core jobs.  To make sure that you utilize full nodes, you should ask for
@@ -124,8 +107,8 @@ doubling the cpu-counts you should probably not go any further. Recommendations
 to a few of the most used applications can be found in :ref:`sw_guides`.
 
 
-Partitions and services
-------------------------
+Partitions (queues) and services
+================================
 
 SLURM differs slightly from the previous Torque system with respect to
 definitions of various parameters, and what was known as queues in Torque may
@@ -215,6 +198,13 @@ no extra restrictions.
 
 Monitoring your jobs
 ====================
+
+For details run the command with the `-`-help option.
+
+scontrol show jobid -dd <jobid>
+    List detailed information for a job (useful for troubleshooting).
+sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
+    To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
 
 From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
