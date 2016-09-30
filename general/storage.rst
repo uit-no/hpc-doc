@@ -9,15 +9,15 @@ Available file system
 
 Stallo has a "three folded" file system:
 
-* global accessible home area (user area):             /home        (64 TB)
-* global accessible work or scratch area:              /global/work (1000 TB)
-* local  accessible work or scratch area on each node: /local/work  (~450 GB)
+* Global accessible home area (user area):            /home        (64 TB)
+* Global accessible work or scratch area:             /global/work (1000 TB)
+* Local accessible work or scratch area on each node: /local/work  (~450 GB)
 
 
 Home area
 ---------
 
-The file system for user home directories on stallo. It is a 64 TB global file
+The file system for user home directories on Stallo. It is a 64 TB global file
 system, which is accessible from both the login nodes and all the compute
 nodes. The default size of the home directory's for each user is 300 GB. If
 more space is needed for permanent storage users have to apply for it. Please
@@ -25,7 +25,7 @@ contact the system administrators, support-uit@notur.no, for more information
 about this.
 
 The home area is for "permanent" storage only, so please do not use it for
-temporary storage during production runs.  Jobs using the home area for scratch
+temporary storage during production runs. Jobs using the home area for scratch
 files while running may be killed without any warning.
 
 
@@ -34,77 +34,44 @@ Work/scratch areas
 
 There are two different work/scratch areas available on Stallo:
 
-*  There is an 1000 TB global accessible work area on the cluster.
-   This is accessible from both the login nodes and all the compute nodes as
-   /global/work. *This is the recommended work area, both because of size and
-   performance!* Users can stripe files themselves as this file system is a Lustre
-   file system.
-*  In addition, each compute node has a small work area of approximately
-   450 GB, only locally accessible on each node. This area is accessible as
-   /local/work on each compute node. In general we do not  recommend to use
-   /local/work, both because of (the lack of) size and performance, however for
-   some users this may be the best alternative.
+* 1000 TB global accessible work area on the cluster,
+  accessible from both the login nodes and all the compute nodes as
+  /global/work. This is the recommended work area, both because of size and
+  performance! Users can stripe files themselves as this file system is a Lustre
+  file system.
+* In addition, each compute node has a small work area of approximately
+  450 GB, only locally accessible on each node. This area is accessible as
+  /local/work on each compute node. In general we do not  recommend to use
+  /local/work, both because of (the lack of) size and performance, however for
+  some users this may be the best alternative.
 
 These work areas should be used for all jobs running on Stallo.
-
-After a job has finished old files should be deleted, this is to
-ensure that there are plenty of available space for new jobs. Files left
-on the work areas after a job has finished may be removed without any
-warning.
 
 There is no backup of files stored on the work areas.
 If you need permanent storage of large amounts of data, please
 contact the system administrators: support-uit@notur.no
 
-
-Disk quota and accounting
--------------------------
-
-Each user has the default size of the home directory 300 GB. If more space is
-needed for permanent storage, users have to apply for it. Please contact the
-system administrators, support-uit@notur.no, for more information about this.
-Disk quota is not supported on work/scratch areas. Please use common courtesy
+Disk quota is not enforced on work/scratch areas. Please use common courtesy
 and keep your work/scratch partitions clean. Move all files you do not need on
-stallo elsewhere or delete them. Since overfilled work/scratch partitions can
+Stallo elsewhere or delete them. Since overfilled work/scratch partitions can
 cause problems, files older than 14 days are subject for deletion without any
 notice.
 
-
-What area to use for what data
-------------------------------
-
-/home should be used for storing tools, like application sources,
-scripts, or any relevant data which must have a backup.
-
-/work/ should be used for running jobs, as a main storage during data
-processing. All data after processing must be moved out of the machine
-or deleted after use.
-
-
-Policies for deletion of temporary data
----------------------------------------
-
-/global/work/ has no backup and, file older than 14 days are subject for
-deletion without any notice. /local/work/ has no backup and, files
-belonging to users other than the one that runs a job on the node will
-be deleted.
-
-Since this deletion process (as well as the high disk usage percent)
-will take away disk-performance from the running jobs - the best
-solution is of course for you to remember to clean up after each job.
+Files on /local/work/ belonging to users other than the one that runs a job on
+the node will be deleted.
 
 
 Backup
 ------
 
-There is no real backup of the data on stallo. However we do keep daily snapshots of
-/home and /project for the last 7 days. The /home snapshots are kept at
-/global/hds/.snapshot/
+There is no real backup of the data on Stallo. However we do keep daily
+snapshots of /home and /project for the last 7 days. The /home snapshots are
+kept at /global/hds/.snapshot/
 
-
-There are no backup of files stored on the /work areas.
-If you need permanent storage of large amounts of data, or if you need to restore some lost data, please
-contact the system administrators: support-uit@notur.no
+There is no backup of files stored on the /global/work and /local/work areas.
+If you need permanent storage of large amounts of data, or if you need to
+restore some lost data, please contact the system administrators:
+support-uit@notur.no
 
 
 Archiving data

@@ -5,143 +5,163 @@ Frequently asked questions
 ==========================
 
 
-General
-=======
-
-CPU v.s. core / processor core.
--------------------------------
-
-How should I interpret the term CPU in this documentation?
-
-In  this documentation we are frequently using the term *CPU*, which in
-most cases are equivalent to the more precise term *processor core* /
-*core*\. The \ *multi core age*\  is here now \ *:-)*
+Passwords
+=========
 
 
-I am getting hundreds of e-mails in a few minutes, what do I do?
-----------------------------------------------------------------
+I forgot my password - what now?
+--------------------------------
 
-Help - I am getting the same e-mail every 30 seconds. Already received
-more that 100 of them!!!
-
-If you are receiving a lot of e-mails looking someting like this:
-
-PBS Job Id: 52237.stallo.uit.no
-Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
-job deleted
-Job deleted at request of maui@stallo.uit.no
-MOAB\_INFO:  job exceeded wallclock limit
-
-You can stop the job by running the command:
-
-::
-
-    qsig -s NULL <job_id>
+You can reset it here: https://www.metacenter.no/user/
 
 
-Account usage and login in
-==========================
-
-How can I check my disk quota and disk usage?
----------------------------------------------
-
-How large is my disk quota, and how much of it have I used?
-
-To check how large your disk quota is, and how much of it you have used,
-you can use the following command:
-
-::
-
-    quota -s
-
-Its only the *$HOME* and *$PROJECT* disks that have quota.
-
-
-
-How can I get information about my account?
--------------------------------------------
-
-How can I get information on how many CPU hours are used and left on my
-account?
-
-For a simple summary, you can use the command '*cost*\ '.
-
-For more details, you can use the command '*gstatement*\ ' :
-
-::
-
-    gstatement --hours --summarize -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
-
-For a detailed overview over usage you can use:
-
-::
-
-    gstatement --hours -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
-
-For more options see
-
-::
-
-    gstatement --help
-
-
-How do I change my password on stallo?
+How do I change my password on Stallo?
 --------------------------------------
 
 The passwd command does not seem to work. My password is reset back to
 the old one after a while. Why is this happening?
 
-The stallo system is using a centralised database for user management.
-This will override the password changes done locally on stallo.
+The Stallo system is using a centralised database for user management.
+This will override the password changes done locally on Stallo.
 
 The password can be changed on the
-`passwrod metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
-username on stallo and the NOTUR domain.
+`password metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
+username on Stallo and the NOTUR domain.
 
 
-Exporting the display from a compute node to my desktop?
---------------------------------------------------------
+Installing software
+===================
+
+Can I install Python software as a normal user without sudo rights?
+-------------------------------------------------------------------
+
+Yes. The recommended way to achieve this is using
+virtual environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+Example (as an example we install the Biopython package)::
+
+  $ module load gcc/4.9.1
+  $ virtualenv venv
+  $ source venv/bin/activate
+  $ pip install biopython
+
+Next time you log into the machine you have to activate
+the virtual environment::
+
+  $ source venv/bin/activate
+
+And you do not have to call it "venv". It is no problem to have many
+virtual environments in your home directory.
+
+If you want to inherit system site packages into your virtual
+environment, do this instead::
+
+  $ virtualenv --system-site-packages venv
+  $ source venv/bin/activate
+  $ pip install biopython
+
+
+Running software
+================
+
+Why is a specific node so incredibly slow compared to others?
+-------------------------------------------------------------
+
+The node is probably swapping.
+
+
+What does swapping mean and why should I care?
+----------------------------------------------
+
+If the jobs consume more memory than the node physically has, the node starts
+to swap out memory to the disk.  This typically means a significant slowdown of
+the calculation.  And this is why you need to care about swapping: your
+calculation will slow down to a grinding halt.  You can also crash the node
+which is bad for us.
+
+
+How can I check whether my calculation is swapping?
+---------------------------------------------------
+
+Option 1 (inside the university network) is to check
+http://stallo-login1.uit.no/jobbrowser/.  Click on "nodes" and then the node in
+question.  On the right hand panel you see "Memory last hour". If memory is
+above the red mark, the node will swap.
+
+Option 2 is to log into the node and run "top". On the top you see how much
+memory is consumed and whether the node is swapping.
+
+
+Compute and storage quota
+=========================
+
+How can I check my disk quota and disk usage?
+---------------------------------------------
+
+To check how large your disk quota is, and how much of it you have used,
+you can use the following command::
+
+  $ quota -s
+
+Only home and project partitions have quota.
+
+
+How many CPU hours have I spent?
+--------------------------------
+
+For a simple summary, you can use the command ``cost``,
+for more details, you can use::
+
+  $ gstatement --hours --summarize -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
+
+For a detailed overview over usage you can use::
+
+  $ gstatement --hours -p PROSJEKT -s YYYY-MM-DD -e YYYY-MM-DD
+
+For more options see::
+
+  $ gstatement --help
+
+
+Connecting via ssh
+==================
+
 
 How can I export the display from a compute node to my desktop?
+---------------------------------------------------------------
 
 If you needs to export the display from a compute node to your desktop
 you should
 
-#. first login to Stallo with display forwarding,
-#. then you should reserve a node, with display forwarding, trough the
-   queuing system
+#. First login to Stallo with display forwarding.
+#. Then you should reserve a node, with display forwarding, trough the
+   queuing system.
 
-Below is an example on how you can do this:
+Here is an example::
 
-::
-
-    ssh -Y stallo.uit.no                       1) Long in on Stallo with display forwarding.qsub -lnodes=1,walltime=1:0:0 -I -X        2) Reserve and log in on a compute node with display forwarding.
+  $ ssh -Y stallo.uit.no                 # log in with port forwarding
+  $ qsub -lnodes=1,walltime=1:0:0 -I -X  # reserve and log in on a compute node with display forwarding
 
 This example assumes that you are running an X-server on your local
 desktop, which should be available for most users running Linux, Unix
 and Mac Os X. If you are using Windows you must install some X-server
 on your local PC.
 
+
 How can I access a compute node from the login node?
 ----------------------------------------------------
 
-How can I access a compute node in the cluster from the login node?
+Log in to stallo.uit.no and type e.g.::
 
-Log in to *stallo.uit.no* and type e.g.:
+  $ ssh compute-1-3
 
-::
+or use the shorter version::
 
-    ssh compute-1-3
-
-or us the shorter version:
-
-::
-
-    ssh c1-3
+  $ ssh c1-3
 
 
-My ssh connections are dying / freezing.
-----------------------------------------
+My ssh connections are dying / freezing
+---------------------------------------
 
 How to prevent your ssh connections from dying / freezing.
 
@@ -164,8 +184,8 @@ you can take a look at this page explaining
 for a similar solution.
 
 
-Queue system and running jobs
-=============================
+Jobs and queue system
+=====================
 
 Where can I find an example of job script?
 ------------------------------------------
@@ -282,26 +302,26 @@ What is the maximum memory limit for a job?
 
 What is the absolute maximum memory I can set for a job on Stallo?
 
-Stallo have 50 nodes with 32 GB memory each, while the rest have 16 GB.
-
-So 32 GB is the maximum memory limit you can ask for in a job running on
-a single node.
+A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can use.
 
 (You can of course have a job running on multiple nodes, using up to 32
 GB of memory on each node.)
 
-For instance, if you want to use 4 CPUs with 4 GB of memory:
+If you need more memory per process you must contact the hpc staff
+to get access to a highmem queue.
+
+For instance, if you want to use 4 CPUs with 8 GB of memory:
 
 ::
 
-    -lnodes=1:ppn=4,pmem=4gb
+    -lnodes=1:ppn=4,pmem=8gb
 
 If you want to use only one CPU, you can ask for all it\`s memory this
 way:
 
 ::
 
-    -lnodes=1:ppn=1,pmem=16gb
+    -lnodes=1:ppn=1,pmem=32gb
 
 
 How much memory have I reserved, and how much am I using?
@@ -420,10 +440,8 @@ Delete all your queued jobs:
 items.)
 
 
-I am not able to kill my job!!!
--------------------------------
-
-I am not able to kill my job!!!
+I am not able to kill my job!
+-----------------------------
 
 If you want to kill a job, and the normal way of doing it, *qdel
 <job_id>*, does not work you should try the following command:
@@ -465,6 +483,7 @@ Example; to apply for  nodes c2-1 and c2-2:
     qsub -lnodes=c2-1:ppn=8+c2-2:ppn=8
 
 .. _exclude-a-node-from-running-a-job:
+
 
 How do I exclude a node from running a job?
 -------------------------------------------
@@ -588,18 +607,79 @@ See the description of the ``-Wdepend`` option in the qsub manpage.
 How can I submit many jobs in one command?
 ------------------------------------------
 
-use job arrays:
+Use job arrays::
 
-::
+  qsub -t 1-16 myjob
 
-    qsub -t 1-16 Myjob
+will send ``myjob`` 16 times into the queue. They can be distinguished by
+the value of the environmental variable::
 
-will send Myjob 16 times into the queue. They can be distinguished by
-the value of the environmental variable 
+  ${PBS_ARRAYID}
 
-::
 
-    $PBS_ARRAYID
+How can I package many small jobs into one run script?
+------------------------------------------------------
+
+Again the answer are job arrays.
+As an example, let us consider the following script called "myscript":
+
+.. code-block:: bash
+
+  #!/usr/bin/env bash
+
+  echo "hello from myscipt with argument $1"
+
+When you execute it with an argument, it prints the argument::
+
+  $ ./myscript 137
+  hello from myscipt with argument 137
+
+Now consider the following runscript:
+
+.. code-block:: bash
+
+  #!/usr/bin/env bash
+
+  #PBS -l nodes=1:ppn=20
+  #PBS -l walltime=00:05:00
+  #PBS -t 1-20
+
+  SCRATCH_DIRECTORY=/global/work/$USER/$PBS_JOBID
+  mkdir -p $SCRATCH_DIRECTORY
+
+  cd $SCRATCH_DIRECTORY
+  $PBS_O_WORKDIR/myscript ${PBS_ARRAYID}
+
+  cd $PBS_O_WORKDIR
+  rm -rf $SCRATCH_DIRECTORY
+
+This script will run on one node and submit
+``myscript`` 20 times, each of them will print ``${PBS_ARRAYID}``
+which iterates from 1 to 20.
+
+
+CPU v.s. core
+-------------
+
+In this documentation we are frequently using the term *CPU*, which in
+most cases are equivalent to the more precise term *processor core* /
+*core*\. The \ *multi core age*\  is here now \ *:-)*
+
+
+I am getting hundreds of e-mails in a few minutes, what do I do?
+----------------------------------------------------------------
+
+If you are receiving a lot of e-mails looking like this::
+
+  PBS Job Id: 52237.stallo.uit.no
+  Job Name:   Ni\_II\_PP\_PPhMe2\_C2\_S00
+  job deleted
+  Job deleted at request of maui@stallo.uit.no
+  MOAB\_INFO:  job exceeded wallclock limit
+
+You can stop the job by running the command::
+
+  $ qsig -s NULL <job_id>
 
 
 Running many short tasks
@@ -626,8 +706,8 @@ described by `Amdahls <http://en.wikipedia.org/wiki/Amdahl's_law>`_ Law.
 Without going into any more details, let's look at the solution.
 
 
-Running tasks in parallel within one job.
------------------------------------------
+Running tasks in parallel within one job
+----------------------------------------
 
 By using some shell trickery one can spawn and load-balance multiple
 independent task running in parallel within one node, just background
@@ -648,8 +728,8 @@ And here is the ``dowork.sh`` script:
 MPI
 ===
 
-My MPI application runs out of memory.
---------------------------------------
+My MPI application runs out of memory
+-------------------------------------
 
 The OpenMPI library sometimes consumes a lot of memory for its
 communication buffers. This seems to happen when an application does a
@@ -673,8 +753,8 @@ For more information about openmpi tunables see the
 `open-mpi page <http://www.open-mpi.org/faq/?category=openfabrics#limiting-registered-memory-usage>`__.
 
 
-My mpi job crashes with a retry limit exceeded error.
------------------------------------------------------
+My mpi job crashes with a retry limit exceeded error
+----------------------------------------------------
 
 Sometimes a mpi job will fail saying that its retry limit is exceeded.
 
@@ -699,8 +779,8 @@ dummy job on a specific node.
 If this does not help, send us a problem report.
 
 
-Tuning OpenMPI performance - non default settings on Stallo.
-------------------------------------------------------------
+Tuning OpenMPI performance - non default settings on Stallo
+-----------------------------------------------------------
 
 We have changed one setting on stallo to limit the memory consumption of
 the OpenMPI library. The following is set as global default:
@@ -724,8 +804,8 @@ to -1 to remove this limit if your application gets into problems.
 Please let us know if this influences your application.
 
 
-My MPI application hangs on startup.
-------------------------------------
+My MPI application hangs on startup
+-----------------------------------
 
 We have discovered that some applications doesn't work well with the
 default OpenMPI version, 1.3.2. Reverting back to v1.2.4 might solve the
@@ -741,13 +821,11 @@ If your application has both of the following symptoms:
    command), but not with infiniband
 
 Then try to revert back to OpenMPI 1.2.4 by setting this before
-recompiling and in your job script:
+recompiling and in your job script::
 
-::
-
-    module unload openmpi
-    module load openmpi/1.2.4
-    module load intel-compiler
+  $ module unload openmpi
+  $ module load openmpi/1.2.4
+  $ module load intel-compiler
 
 Please tell us if this helps for you application. We try to get an idea
-of the extent of this problem. Send a report to support-uit@notur.no .
+of the extent of this problem. Send a report to support-uit@notur.no.

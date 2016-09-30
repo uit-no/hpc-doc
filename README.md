@@ -21,9 +21,10 @@ UiT The Arctic University of Norway.
 ```
 git clone https://github.com/uit-no/hpc-doc.git
 cd hpc-doc
-virtualenv venv           # optional step in case you need to install sphinx
-source venv/bin/activate  # optional step in case you need to install sphinx
-pip install sphinx        # optional step in case you need to install sphinx
+virtualenv venv
+source venv/bin/activate
+pip install sphinx
+pip install sphinx_rtd_theme
 sphinx-build . _build
 ```
 
