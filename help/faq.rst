@@ -123,6 +123,7 @@ For more options see::
   $ gstatement --help
 
 
+
 Connecting via ssh
 ==================
 
@@ -140,7 +141,7 @@ you should
 Here is an example::
 
   $ ssh -Y stallo.uit.no                 # log in with port forwarding
-  $ qsub -lnodes=1,walltime=1:0:0 -I -X  # reserve and log in on a compute node with display forwarding
+  $ srun -N 1 -t 1:0:0 --pty bash -I     # reserve and log in on a compute node
 
 This example assumes that you are running an X-server on your local
 desktop, which should be available for most users running Linux, Unix
@@ -205,7 +206,7 @@ How can I find out when my job will start?
 To find out approximately when the job scheduler thinks your job will
 start, use the command::
 
-  showstart <job_id>
+  squeue --start -j <job_id>
 
 This command will give you information about how many CPUs your job
 requires, for how long, as well as when approximately it will start and
@@ -230,7 +231,7 @@ If you prefer to use the command line, to see the jobqueue use the command 'show
 
 ::
 
-    showq
+    squeue
 
 This command gives you a list of running jobs, idle jobs and blocked
 jobs. Each line in the list gives you the jobid, which user is running
@@ -241,7 +242,7 @@ To get more information about the command:
 
 ::
 
-    showq -h
+    squeue --help
 
 You can also use the command
 
@@ -383,7 +384,7 @@ You can also get more info about your job parameters using this command:
 
 ::
 
-    qstat -f <job_id>
+    scontrol  show job <job_id>
 
 
 How can I kill my job?

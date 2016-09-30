@@ -72,18 +72,19 @@ For example 12 MPI processes with 8 threads each (i.e. uses 96 cores):
 
 ::
 
-    export OMP_NUM_THREADS=8
-    mpirun -np 12 -npernode 1 MyHybridApplication
+    export OMP_NUM_THREADS=16
+    mpirun -np 6 -npernode 1 MyHybridApplication
 
-OMP _NUM _THREADS=8 is the default, so it would normally not be
+OMP_NUM_THREADS=16 is the default, so it would normally not be
 necessary to specify it.
 
-Note that you must ensure that you have reserved 12 nodes (96 cores) for
+Note that you must ensure that you have reserved 6 nodes (96 cores) for
 this application:
 
 ::
 
-    $PBS -lnodes=12:ppn=8
+    $SBATCH -N 6
+    $SBATCH --ntask-per-node=16
 
  
 
