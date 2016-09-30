@@ -4,6 +4,6 @@
 Example job script
 ==================
 
-.. literalinclude:: files/example.sh
+.. literalinclude:: files/slurm-MPI-multinode.sh
    :language: bash
    :linenos:

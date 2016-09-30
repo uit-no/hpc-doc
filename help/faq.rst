@@ -307,21 +307,13 @@ A Stallo nodes have 32 GB memory, so 32GB is the maximum a single process can us
 (You can of course have a job running on multiple nodes, using up to 32
 GB of memory on each node.)
 
-If you need more memory per process you must contact the hpc staff
-to get access to a highmem queue.
+For instance, if you want to use 4 CPUs with 8 GB of memory::
 
-For instance, if you want to use 4 CPUs with 8 GB of memory:
+  -lnodes=1:ppn=4,pmem=8gb
 
-::
+If you want to use only one CPU, you can ask for all its memory::
 
-    -lnodes=1:ppn=4,pmem=8gb
-
-If you want to use only one CPU, you can ask for all it\`s memory this
-way:
-
-::
-
-    -lnodes=1:ppn=1,pmem=32gb
+  -lnodes=1:ppn=1,pmem=32gb
 
 
 How much memory have I reserved, and how much am I using?
