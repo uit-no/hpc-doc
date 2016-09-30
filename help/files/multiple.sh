@@ -7,13 +7,14 @@
 #
 # This example will only work within one compute node so let's run
 # on one node using all the cpu-cores:
-#PBS -lnodes=1:ppn=20
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=20
 
 # We assume we will be done in 10 minutes:
-#PBS -lwalltime=00:10:00
+#SBATCH --time=0-00:10:00
 
 # Let us use all CPUs:
-maxpartasks=$PBS_NP
+maxpartasks=$SLURM_TASKS_PER_NODE
 
 # Let's assume we have a bunch of tasks we want to perform.
 # Each task is done in the form of a shell script with a numerical argument:
@@ -22,7 +23,7 @@ maxpartasks=$PBS_NP
 # from 1 to 100, edit this to your liking:
 tasks=$(seq 100)
 
-cd $PBS_O_WORKDIR
+cd $SLURM_SUBMIT_DIR
 
 for t in $tasks; do
   # Do the real work, edit this section to your liking.
