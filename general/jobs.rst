@@ -250,39 +250,6 @@ stallo architecture.
 
 See :ref:`about_stallo` chapter of the documentation for more details.
 
-Job to node mapping
--------------------
-
-The basic philosophy for the job to node mapping is to run the job on the nodes best
-suited for the task.
-
--  Short jobs are allowed to run anywhere. Short jobs are defined as
-   jobs with walltime < 48 hours.
--  Large memory jobs with walltime > 48 should run in the highmem queue.
-   This queue is restricted access so the user will need to notify the
-   support team if access to these nodes are needed. Memory usage in
-   this queue will be monitored to prevent misuse.
-
-
-Examples.
----------
-
-Short jobs:
-
-::
-
-    sbatch -n 20 -t 2-00:00:00 / or --time=48:00:00 ...
-
-Will be allowed to run anywhere.
-
-Long jobs:
-
-::
-
-    sbatch -n 160 --time=10-00:00:00 / --time=240:00:00 --partition=multinode --qos=long ...
-
-Will run within one island, but not on the highmem nodes.
-
 
 Express queue for testing job scripts and interactive jobs.
 ===========================================================
@@ -361,8 +328,7 @@ if you have one job in the Idle queue, that is not very important to you, and
 it is blocking other, more urgent, jobs from starting, you might want to put
 that one job on hold. Jobs on hold will not start until the hold is released.
 *Deferred* jobs will not start. In most cases, the job is deferred because it
-is asking for a combination of resources that stallo can not provide, f.e.
-highmem queue and 20 core nodes.
+is asking for a combination of resources that Stallo can not provide.
 
 Please contact the support staff, if you don't understand why your job has a
 hold or deferred state.
