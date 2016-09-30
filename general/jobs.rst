@@ -90,8 +90,6 @@ sbank balance statement -u
 Recommended job parameters
 ==========================
 
-See the :ref:`jobscript` for a list of relevant parameters.
-
 
 Walltime
 --------
@@ -100,26 +98,30 @@ We recommend you to be as precise as you can when specifying the
 parameters as they will inflict on how fast your jobs will start to run.
 We generally have these rules for prioritizing jobs:
 
-#. Large jobs, that is jobs with high cpucounts, are prioritized.
+#. Large jobs, that is jobs with high CPUcounts, are prioritized.
 #. Short jobs take precedence over long jobs.
-#. Use fairshare. This means that users with a lot of jobs running will get a
+#. Use fairshare. This means that users with many jobs running will get a
    decreased priority compared to other users.
 
 
 Process count
 -------------
 
-We strongly advice all users to ask for a given set of cores when submitting multi-core jobs.
-To make sure that you utilize full nodes, you should ask for sets that adds up to both
-16 and 20 (80, 160 etc) due to the hardware specifics of Stallo i.e. submit the job with ``--ntasks=80``.
+We strongly advice all users to ask for a given set of cores when submitting
+multi-core jobs.  To make sure that you utilize full nodes, you should ask for
+sets that adds up to both 16 and 20 (80, 160 etc) due to the hardware specifics
+of Stallo i.e. submit the job with ``--ntasks=80`` **if** your application
+scales to this number of tasks.
 
 This will make the best use of the resources and give the most predictable
-execution times. If your job require more than the default available memory pr core (32 GB/node gives
-2 GB/core for 16 core nodes and 1.6GB/core for 20 core nodes) you should adjust this need with
-the following command: ``#SBATCH --mem-per-cpu=4GB`` If doing this, the batch system will automatically
-allocate 8 cores or less pr. node.
+execution times. If your job requires more than the default available memory per
+core (32 GB/node gives 2 GB/core for 16 core nodes and 1.6GB/core for 20 core
+nodes) you should adjust this need with the following command: ``#SBATCH
+--mem-per-cpu=4GB`` When doing this, the batch system will automatically allocate
+8 cores or less per node.
 
-For single node jobs, just ask for less than 16 cores with less than 1.6GB of memory/core.
+For single node jobs, just ask for less than 16 cores with less than 1.6GB of
+memory/core.
 
 
 Scalability
