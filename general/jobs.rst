@@ -24,7 +24,7 @@ If you are already used to Torque/Maui (the previous queue system used on Stallo
 Create a job
 ============
 
-To run a job on the system one needs to create a job script. A job
+To run a job on the system you need to create a job script. A job
 script is a regular shell script (bash) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
 batch system upon submission.
@@ -36,7 +36,7 @@ For a quick feel for how to create and run batch jobs and for a more complete ex
 
    job-script-example.rst
 
-
+	      
 Manage a job
 ============
 
@@ -72,7 +72,7 @@ Getting job info
 For details run the command with the `-`-help option.
 
 squeue
-    List all jobs. This command can show you a lot of information, including expected start-time of a job. See ``squeue --help`` for more information.
+    List all jobs. This command can show you a lot of information, including expected start-time of a job.
 squeue -u <username>
     List all current jobs for a user.
 scontrol show jobid -dd <jobid>
@@ -83,7 +83,7 @@ sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
 Get queue and account info
 --------------------------
 sinfo
-    List partitions. What in Torque/ Maui was called queues, is now called partitions in Slurm.
+    List partitions. Somewhat similar to queues in Torque/ Maui. For more details, see partitions_.
 sbank balance statement -u
     Information on available CPU-hours in your accounts.
 
@@ -101,8 +101,8 @@ Walltime
 --------
 
 We recommend you to be as precise as you can when specifying the
-parameters as they will inflict on how fast your jobs will start to run
-we generally have these two rules for prioritizing jobs:
+parameters as they will inflict on how fast your jobs will start to run.
+We generally have these two rules for prioritizing jobs:
 
 #. Large jobs, that is jobs with high cpucounts, are prioritized.
 #. Short jobs take precedence over long jobs.
@@ -136,15 +136,16 @@ should probably not go any further. Recommendations to a few of the
 most used applications can be found in :ref:`sw_guides`.
 
 
-
-Queues
-======
+Partitions
+----------
 
 SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
 as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``.
 
 We have the following partitions:
 
+short:
+    Used for testing your scripts. Up to 1 hour of walltime.
 normal:
     The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
 
@@ -156,25 +157,6 @@ multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
     your job will land into this partition.
 
-## This has to be seriously rewritten when we know the specs. Now it is short, singlenode and multinode.
-## Has also to specify qos=long for single and multi longer than 2 days, short is in short.
-
-## Here we need to write something about qos devel and partition highmem in the future. Also look at abel docu.
-
-
-Interactive job submission
-==========================
-
-You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
-
-::
-
-    srun -N 1 -t 1:0:0 --pty bash -I
-
-The command prompt will appear as soon as the job start.
-
-Interactive jobs has the same policies as normal batch jobs, there are
-no extra restrictions.
 
 General job limitations
 -----------------------
@@ -199,8 +181,25 @@ Maximum memory per job          No limit:sup:`1`
 a weeks warning on system maintenance. Jobs with more than 7 days walltime,
 will be terminated and restarted if possible.
 
+
+Interactive job submission
+==========================
+
+You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
+
+    srun -N 1 -t 1:0:0 --pty bash -I
+
+The command prompt will appear as soon as the job start.
+
+Interactive jobs has the same policies as normal batch jobs, there are
+no extra restrictions.
+
+
 Scheduling policy on the machine
 ================================
+
+See :ref:`about_stallo` chapter of the documentation if you need more information on the system architecture.
+
 
 Priority
 --------
@@ -214,66 +213,9 @@ The scheduler is set up to
 #. use fairshare, so a users with a lot of jobs running will get a
    decreased priority compared to other users.
 
-Resource Limits
----------------
 
-No user will be allowed to have more than 168 000 cpu-hours allocated
-for running jobs at any time. This means that a user at most can
-allocate 1000 cpus for a week for concurrently running jobs (or 500 cpus
-for two weeks or 2000 cpus for half a week).
-
-No single user will be allowed to use more than 500 jobs at any time.
-(you can well submit more, but you cannot have more than 500 running at
-the same time)
-
-Users can apply for exceptions to these rules by contacting
-support-uit@notur.no.
-
-
-The stallo archictecture
-------------------------
-
-Before we dive into the details we need to say a few things about the
-stallo architecture.
-
--  The Stallo cluster has 304 compute nodes with 16 cpu-cores each
-   totalling 4864 cpu-cores (hereafter denoted as cpus).
--  The Stallo cluster has two different memory configurations, 272 nodes
-   have 32GB memory and 32 nodes have 128GB memory.
--  The Stallo cluster has all nodes connected with a high speed network_ which
-   gives very high throughput and low latency.  The network is split into *islands*
-   with 128 nodes/2048 cpus each and jobs will run within one single island. This
-   is done automatically by the scheduler.
-
-
-.. _network: http://en.wikipedia.org/wiki/InfiniBand
-
-See :ref:`about_stallo` chapter of the documentation for more details.
-
-
-Express queue for testing job scripts and interactive jobs.
-===========================================================
-
-
-By submitting a job to the express queue you can get higher throughput
-for testing and shorter start up time for interactive jobs. Just use the
-``--qos=devel`` flag to submit to this queue:
-
-::
-
-    sbatch --qos=devel jobscript.sh
-
-or for an interactive job:
-
-::
-
-    srun --qos=devel --pty bash -I
-
-This will give you a faster access if you have special needs during
-development, testing of job script logic or interactive use.
-
-Priority and limitations
-========================
+Limitations
+-----------
 
 ## This will have to be rewritten according to the devel settings. I leave it now. espent.
 
@@ -297,8 +239,9 @@ the overall throughput of your jobs. Also remark that large jobs get
 prioritized anyway so they will most probably not benefit anything from
 using the express queue.
 
-Live status information
-=======================
+
+Monitoring your jobs
+====================
 
 From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
@@ -309,7 +252,7 @@ on Stallo:
 .. _job_status:
 
 Understanding your job status
-=============================
+-----------------------------
 
 When you look at the job queue through your browser
 `<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``showq``
