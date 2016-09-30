@@ -72,7 +72,7 @@ Getting job info
 For details run the command with the `-`-help option.
 
 squeue
-    List all jobs. This command can show you a lot of information, including expected start-time of a job. See ``squeue --help`` for more information.
+    List all jobs. This command can show you a lot of information, including expected start-time of a job.
 squeue -u <username>
     List all current jobs for a user.
 scontrol show jobid -dd <jobid>
@@ -83,7 +83,7 @@ sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
 Get queue and account info
 --------------------------
 sinfo
-    List partitions. What in Torque/ Maui was called queues, is now called partitions in Slurm.
+    List partitions. Somewhat similar to queues in Torque/ Maui. For more details, see partitions_.
 sbank balance statement -u
     Information on available CPU-hours in your accounts.
 
@@ -136,8 +136,7 @@ should probably not go any further. Recommendations to a few of the
 most used applications can be found in :ref:`sw_guides`.
 
 
-
-Queues
+Partitions
 ======
 
 SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
@@ -145,6 +144,8 @@ as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``
 
 We have the following partitions:
 
+short:
+    Used for testing your scripts. Up to 1 hour of walltime.
 normal:
     The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
 
