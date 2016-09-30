@@ -178,7 +178,7 @@ You submit to the devel-service by typing::
 
   #SBATCH --qos=devel
 
-in your jobscript.
+in your job script.
 
 
 General job limitations
@@ -188,19 +188,18 @@ The following limits are the default per user in the batch system. Users
 can ask for increased limits by sending a request to
 support-uit@notur.no.
 
-============================== =================
-Limit                           Value
-============================== =================
-Max number of running jobs      1024
-Maximum cpus per job            2048
-Maximum walltime                28 days
-Maximum memory per job          No limit:sup:`1`
-============================== =================
+========================== ================
+Limit                      Value
+========================== ================
+Max number of running jobs 1024
+Maximum cpus per job       2048
+Maximum walltime           28 days
+Maximum memory per job     No limit:sup:`1`
+========================== ================
 
 :sup:`1` There is a practical limit of 128GB per compute node used.
 
-
-**Remark:** Even if we impose a 28 day run time limit on stallo we only give
+**Remark:** Even if we impose a 28 day run time limit on Stallo we only give
 a weeks warning on system maintenance. Jobs with more than 7 days walltime,
 will be terminated and restarted if possible.
 
