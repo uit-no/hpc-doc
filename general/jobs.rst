@@ -162,39 +162,6 @@ multinode:
 ## Here we need to write something about qos devel and partition highmem in the future. Also look at abel docu.
 
 
-Use of large memory nodes
-=========================
-
-Large memory nodes
----------------------
-
-Stallo has 32 compute nodes with 128GB memory each (the 744 others have
-32GB memory). The large memory nodes has 8 GB of memory available pr. core, 
-but in principle they should only be utilized for jobs that require more than
-32 GB of memory since the memory/core issue can be solved by downscaling the 
-number of cores that is used pr. memory-pool.
-
-To use the large memory nodes you should ask for access to the
-``highmem`` queue, just send a mail to support-uit@notur.no. After being
-granted access to the ``highmem`` queue you can submit directly to the
-queue:
-
-::
-
-    ``sbatch --partition=highmem ...``
-
-Remark: You only need to apply for access to the large memory nodes
-if you want to run jobs that have more than 48 hours walltime limit on
-these nodes.
-
-Short jobs requiring less than 48 hours runtime can get assigned to the
-highmem nodes without running in the ``highmem`` queue. This can happen
-if you submit requiring more than 2gb memory per process:
-
-::
-
-    qsub -lnodes=2:ppn=16,pmem=4gb,walltime=12:00:00 .........
-
 Interactive job submission
 ==========================
 
