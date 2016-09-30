@@ -139,13 +139,15 @@ to a few of the most used applications can be found in :ref:`sw_guides`.
 Partitions and services
 ------------------------
 
-SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
-as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``.
+SLURM differs slightly from the previous Torque system with respect to
+definitions of various parameters, and what was known as queues in Torque may
+be covered by both ``--partition=...`` and ``--qos=...``.
 
 We have the following partitions:
 
 short:
     Used for testing your scripts. Up to 1 hour of walltime.
+
 normal:
     The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
 
@@ -157,8 +159,11 @@ multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
     your job will land into this partition.
 
+To figure out the walltime limits for the various partitions, type::
 
-As a service to users that needs to submit short jobs for testing and debugging, we have a service called develop.
+  $ sinfo --format="%P %l"
+
+As a service to users that needs to submit short jobs for testing and debugging, we have a service called devel.
 These jobs have higher priority, with a maximum of 4 hrs of walltime and no option for prolonging runtime.
 
 Jobs in using devel service will get higher priority than any other jobs
@@ -171,7 +176,7 @@ jobs. To prevent misuse the devel service has the following limitations:
 
 You submit to the devel-service by typing::
 
-#SBATCH --qos=devel
+  #SBATCH --qos=devel
 
 in your jobscript.
 
