@@ -191,8 +191,7 @@ Jobs and queue system
 Where can I find an example of job script?
 ------------------------------------------
 
-You can find an example with comments in
-:ref:`jobscript`
+You can find job script examples in :ref:`job_script_examples`.
 
 Relevant application specific examples (also for beginning users) for a few applications can be found in
 :ref:`sw_guides`.

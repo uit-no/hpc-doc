@@ -24,19 +24,19 @@ If you are already used to Torque/Maui (the previous queue system used on Stallo
 Create a job
 ============
 
-To run a job on the system you need to create a job script. A job
-script is a regular shell script (bash) with some directives
-specifying number of cpus, memory etc. that will be interpreted by the
-batch system upon submission.
+To run a job on the system you need to create a job script. A job script is a
+regular shell script (bash) with some directives specifying number of CPUs,
+memory etc. that will be interpreted by the batch system upon submission.
 
-For a quick feel for how to create and run batch jobs and for a more complete example see
+For a quick feel for how to create and run batch jobs and for a more complete
+example see:
 
 .. toctree::
    :maxdepth: 1
 
-   job-script-example.rst
+   job-script-examples.rst
 
-	      
+
 Manage a job
 ============
 
@@ -106,7 +106,7 @@ We generally have these rules for prioritizing jobs:
 #. Use fairshare. This means that users with a lot of jobs running will get a
    decreased priority compared to other users.
 
-   
+
 Process count
 -------------
 
@@ -158,7 +158,7 @@ multinode:
     your job will land into this partition.
 
 
-As a service to users that needs to submit short jobs for testing and debugging, we have a service called develop. 
+As a service to users that needs to submit short jobs for testing and debugging, we have a service called develop.
 These jobs have higher priority, with a maximum of 4 hrs of walltime and no option for prolonging runtime.
 
 Jobs in using devel service will get higher priority than any other jobs
