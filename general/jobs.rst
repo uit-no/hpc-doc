@@ -6,11 +6,6 @@ Jobs, scripts and queues
 
 .. index:: batch system, jobscripts, job management
 
-TORQUE vs. SLURM
-================
-
-If you are already used to Torque/Maui (the previous queue system used on Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful. 
-
 Batch system
 ============
 
@@ -23,6 +18,7 @@ resources.
 The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`_
 (Simple Linux Utility for Resource Management.)
 
+If you are already used to Torque/Maui (the previous queue system used on Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful. 
 
 
 Create a job 
