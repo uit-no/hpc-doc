@@ -165,11 +165,11 @@ multinode:
 Interactive job submission
 ==========================
 
-You can run an interactive jobs by using the ``-I`` flag to qsub, for example::
+You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
 
 ::
 
-    srun --pty bash -I
+    srun -N 1 -t 1:0:0 --pty bash -I
 
 The command prompt will appear as soon as the job start.
 
