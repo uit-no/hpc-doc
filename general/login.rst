@@ -99,11 +99,13 @@ Below is an example on how you can do this:
 ::
 
     1) Log in on Stallo with display forwarding.  
-    $ ssh -Y stallo.uit.no                       
+
+       $ ssh -Y stallo.uit.no                       
     
     2) Reserve and log in on a compute node with display forwarding.
        (start an interactive job.)
-    $ srun srun -N 1 -t 1:0:0 --pty bash -I 
+
+       $ srun srun -N 1 -t 1:0:0 --pty bash -i
     
     3) Open a new terminal window, type squeue -j <jobid> (it shows you which node(s) was allocated 
        to that specific job). Then ssh -Y <nodename> to that node and start your preferred gui.
