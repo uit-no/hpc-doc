@@ -6,19 +6,19 @@ Jobs, scripts and queues
 
 .. index:: batch system, jobscripts, job management
 
+
 Batch system
 ============
 
-The Stallo system is a resource that is shared between a lot of users
-so to ensure fair use everyone must do their computations by submitting jobs
-through a
-batch system that will execute the applications on the available
-resources.
+The Stallo system is a resource that is shared between many of users and to
+ensure fair use everyone must do their computations by submitting jobs through
+a batch system that will execute the applications on the available resources.
 
-The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`_
-(Simple Linux Utility for Resource Management.)
+The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`_ (Simple
+Linux Utility for Resource Management.)
 
-If you are already used to Torque/Maui (the previous queue system used on Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful.
+If you are already used to Torque/Maui (the previous queue system used on
+Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful.
 
 
 Create a job
