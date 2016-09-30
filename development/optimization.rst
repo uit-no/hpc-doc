@@ -24,7 +24,7 @@ Here is an example script:
    :language: bash
    :linenos:
 
-What we do there is to profile an example binary located in ``$PBS_O_WORKDIR/example.x``.
+What we do there is to profile an example binary located in ``$SLURM_SUBMIT_DIR/example.x``.
 
 The profiler generates summary files in html and txt format
 and this is how an example html summary can look (open it in your browser):

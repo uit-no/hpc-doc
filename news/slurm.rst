@@ -8,37 +8,20 @@
 .. _slurm:
 
 
-Status of migration to the SLURM resource manager
-=================================================
+We have migrated to the SLURM resource manager
+==============================================
 
-Our plan is to replace the current resource management system by `SLURM
-<http://slurm.schedmd.com/>`_ during this fall. This is the same system that is
-currently used on `Abel
-<http://www.uio.no/english/services/it/research/hpc/abel/>`_, the UiO
+We have replaced our past resource management system by `SLURM
+<http://slurm.schedmd.com/>`_. This is the same system that is
+currently used on
+`Abel <http://www.uio.no/english/services/it/research/hpc/abel/>`_, the UiO
 supercomputer.
 
 
-Reason
-------
+Motivation
+----------
 
-One reason for the switch is that the resource management system we currently
-use, the Torque-Maui scheduling system, is no longer actively maintained.  The
-other reason is to make the user experience across Norwegian and Nordic HPC
-systems more uniform and homogeneous.
-
-
-Timeframe
----------
-
-The migration process depends on the integration of the
-accounting database with the new SLURM scheduling engine.
-
-We are now in the process of migrating users/user groups/communities. First move will be the community of schrodinger users. This is scheduled for May 016.
-
-
-Migration process
------------------
-
-You will find here details of the migration process which we will
-outline well in advance of the planned switch.
-
+One reason for the switch is that the Torque-Maui scheduling system that we
+have used until now is no longer maintained.  The other reason is to make the
+user experience across Norwegian and Nordic HPC systems more uniform and
+homogeneous.

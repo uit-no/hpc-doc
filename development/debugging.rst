@@ -57,9 +57,8 @@ list of values. Another useful option is to visualize the array: after choosing
 this with a 2D array, use middle button and drag mouse to rotate the surface
 that popped up, shift+middle button to pan, Ctrl+middle button to zoom in/out.
 
-Running totalview inside the batch system (compute nodes)::
+Running totalview on an interactive node::
 
-  $ qsub -I -lnodes=[#procs] -lwalltime=[time] -A [account] -q express -X
   $ mkdir -p /global/work/$USER/test_dir
   $ cp $HOME/test_dir/a.out /global/work/$USER/test_dir
   $ cd /global/work/$USER/test_dir
