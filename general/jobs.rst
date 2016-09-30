@@ -102,11 +102,14 @@ Walltime
 
 We recommend you to be as precise as you can when specifying the
 parameters as they will inflict on how fast your jobs will start to run.
-We generally have these two rules for prioritizing jobs:
+We generally have these rules for prioritizing jobs:
 
 #. Large jobs, that is jobs with high cpucounts, are prioritized.
 #. Short jobs take precedence over long jobs.
+#. Use fairshare. This means that users with a lot of jobs running will get a
+   decreased priority compared to other users.
 
+   
 Process count
 -------------
 
@@ -201,17 +204,6 @@ Scheduling policy on the machine
 See :ref:`about_stallo` chapter of the documentation if you need more information on the system architecture.
 
 
-Priority
---------
-
-The scheduler is set up to
-
-#. prioritize large jobs, that is, jobs that request large amount of
-   cpus.
-#. prioritize short jobs. The priority is calculated as proportional to
-   the expansion factor: (queuetime+walltime)/walltime.
-#. use fairshare, so a users with a lot of jobs running will get a
-   decreased priority compared to other users.
 
 
 Limitations
@@ -255,7 +247,7 @@ Understanding your job status
 -----------------------------
 
 When you look at the job queue through your browser
-`<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``showq``
+`<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``squeue``
 command, you will see that the queue is divided in 3 parts: Active jobs, Idle
 jobs, and Blocked jobs.
 
