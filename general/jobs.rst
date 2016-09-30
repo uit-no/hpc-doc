@@ -21,15 +21,14 @@ If you are already used to Torque/Maui (the previous queue system used on
 Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful.
 
 
-Create a job
-============
+Creating a job script
+=====================
 
 To run a job on the system you need to create a job script. A job script is a
-regular shell script (bash) with some directives specifying number of CPUs,
-memory etc. that will be interpreted by the batch system upon submission.
+regular shell script (bash) with some directives specifying the number of CPUs,
+memory, etc., that will be interpreted by the batch system upon submission.
 
-For a quick feel for how to create and run batch jobs and for a more complete
-example see:
+For job script examples, see:
 
 .. toctree::
    :maxdepth: 1
@@ -37,13 +36,13 @@ example see:
    job-script-examples.rst
 
 
-Manage a job
-============
+Managing a job
+==============
 
-A job's lifecycle can be managed with as little as three different
-commands
+The lifecycle of a job can be managed with as little as three different
+commands:
 
-#. Submit the job with ``sbatch jobscript.sh``.
+#. Submit the job with ``sbatch <script_name>``.
 #. Check the job status with ``squeue``. (to limit the display to only
    your jobs use ``squeue -u <user_name>``.)
 #. (optional) Delete the job with ``scancel <job_id>``.
