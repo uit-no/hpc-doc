@@ -202,6 +202,8 @@ Maximum memory per job          No limit:sup:`1`
 a weeks warning on system maintenance. Jobs with more than 7 days walltime,
 will be terminated and restarted if possible.
 
+See :ref:`about_stallo` chapter of the documentation if you need more information on the system architecture.
+
 
 Interactive job submission
 ==========================
@@ -214,13 +216,6 @@ The command prompt will appear as soon as the job start.
 
 Interactive jobs has the same policies as normal batch jobs, there are
 no extra restrictions.
-
-
-Scheduling policy on the machine
-================================
-
-See :ref:`about_stallo` chapter of the documentation if you need more information on the system architecture.
-
 
 
 Monitoring your jobs
