@@ -207,94 +207,29 @@ start, use the command::
 
   squeue --start -j <job_id>
 
-This command will give you information about how many CPUs your job
-requires, for how long, as well as when approximately it will start and
-complete.
-It must be emphasized that this is just a best guess, queued jobs may
-start earlier because of running jobs that finishes before they hit the
-walltime limit and jobs may start later than projected because new jobs
-are submitted that get higher priority.
+This command will give you information about how many CPUs your job requires,
+for how long, as well as when approximately it will start and complete.  It
+must be emphasized that this is just a best guess, queued jobs may start
+earlier because of running jobs that finishes before they hit the walltime
+limit and jobs may start later than projected because new jobs are submitted
+that get higher priority.
 
 
 How can I see the queing situation?
 -----------------------------------
 
-How can I see how my jobs are doing in the queue, if my jobs are idle,
-blocked, running?
+How can I see how my jobs are doing in the queue, if my jobs are idle, blocked,
+running?
 
-On the webpage
-http://stallo-login1.uit.no/jobbrowser/
-you can find information about the current load on stallo, some information about the nodes, and the information you would get from the showq command, which is described below. You can also find information about your job and if you the job is running, you can find graphs about its usage of the CPUs, memory and so on.
+On the webpage http://stallo-login1.uit.no/jobbrowser/ you can find information
+about the current load on stallo, some information about the nodes, and the
+information you would get from the showq command, which is described below. You
+can also find information about your job and if you the job is running, you can
+find graphs about its usage of the CPUs, memory and so on.
 
-If you prefer to use the command line, to see the jobqueue use the command 'showq':
+If you prefer to use the command line, to see the job queue use::
 
-::
-
-    squeue
-
-This command gives you a list of running jobs, idle jobs and blocked
-jobs. Each line in the list gives you the jobid, which user is running
-the job, number of cpus it\`s using, time remaining and start time of
-the job. The list is sorted by remaining time for the jobs.
-
-To get more information about the command:
-
-::
-
-    squeue --help
-
-You can also use the command
-
-::
-
-    qstat
-
-which gives you a list of jobs on Stallo, sorted by jobid. This
-command also has man-pages:
-
-::
-
-    man qstat
-
-Example of the 'qstat' output:
-
-+---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
-| *Job id*      |     | *Name*        |     | *User*   |     | *Time Use*   |     | *S*   |     | *Queue*    |
-+===============+=====+===============+=====+==========+=====+==============+=====+=======+=====+============+
-| *58.mangas*   |     | *rc5des.sh*   |     | *royd*   |     | *00:07:46*   |     | *R*   |     | *normal*   |
-+---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
-| *59.mangas*   |     | *rc5des.sh*   |     | *royd*   |     | *00:07:46*   |     | *R*   |     | *normal*   |
-+---------------+-----+---------------+-----+----------+-----+--------------+-----+-------+-----+------------+
-
-where:
-
--  **Job id** - The name of the job in the queueing system
--  **Name** - The name of the script you give to qsub
--  **User** - The job owner
--  **Time Use** - The walltime of the job
--  **S** - The state of the job, R - running, Q - waiting, S - suspended
--  **Queue** - The queue where the job is running
-
-
-How can I view the output of my job?
-------------------------------------
-
-Use the \`\`qpeek\`\` command.
-
-The \`\`qpeek\`\` command can list your job output while it is running.
-It behaves much like the \`\`tail\`\` command so using \`\`-f\`\` will
-display the output as it is written::
-
- $qpeek -f <job_id>
- 1.0
- 2.0
- 3.0
- 4.0
-
-See \`\`qpeek -h\`\` for more info.
-You can also submit your job with the \`\`-k oe\`\` flag, then the
-standard error and standard output of your job will be put in your home
-directory, see \`\`man qsub\`\` for more details.
+  $ squeue
 
 
 What is the maximum memory limit for a job?
