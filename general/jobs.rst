@@ -204,13 +204,19 @@ See :ref:`about_stallo` chapter of the documentation if you need more informatio
 Interactive job submission
 ==========================
 
-You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
+You can run an interactive jobs by using the ``-I`` flag to srun (note order of commands)::
 
-    srun -N 1 -t 1:0:0 --pty bash -I
+  $ srun -N 1 -t 01:00:00 --pty bash -I
 
-The command prompt will appear as soon as the job start.
+Here we ask for an interactive node for one hour.
+The command prompt will appear as soon as the job starts.
 
-Interactive jobs has the same policies as normal batch jobs, there are
+This is how it looks once the interactive job starts::
+
+  srun: job 12345 queued and waiting for resources
+  srun: job 12345 has been allocated resources
+
+Interactive jobs have the same policies as normal batch jobs, there are
 no extra restrictions.
 
 
@@ -222,6 +228,7 @@ on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
 *  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
+
 
 .. _job_status:
 
