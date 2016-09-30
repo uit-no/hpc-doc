@@ -88,14 +88,11 @@ sbank balance statement -u
     Information on available CPU-hours in your accounts.
 
 
-Useful job script parameters
-============================
+Recommended job parameters
+==========================
 
 See the :ref:`jobscript` for a list of relevant parameters.
 
-
-Recommended job parameters
-==========================
 
 Walltime
 --------
@@ -166,7 +163,7 @@ These jobs have higher priority, with a maximum of 4 hrs of walltime and no opti
 
 Jobs in using devel service will get higher priority than any other jobs
 in the system and will thus have a shorter queue delay than regular
-jobs. To prevent misuse the express queue has the following limitations:
+jobs. To prevent misuse the devel service has the following limitations:
 
 *  Only one running job per user.
 *  Maximum 4 hours walltime.
