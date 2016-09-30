@@ -40,8 +40,6 @@ For a quick feel for how to create and run batch jobs and for a more complete ex
 Manage a job
 ============
 
-## Do we need this paragraph when we list the exact same info and commands within the next 20-ish lines? -marte
-
 A job's lifecycle can be managed with as little as three different
 commands
 
@@ -159,23 +157,6 @@ multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
     your job will land into this partition.
 
-## This has to be seriously rewritten when we know the specs. Now it is short, singlenode and multinode.
-## Has also to specify qos=long for single and multi longer than 2 days, short is in short.
-
-## Here we need to write something about qos devel and partition highmem in the future. Also look at abel docu.
-
-
-Interactive job submission
-==========================
-
-You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
-
-    srun -N 1 -t 1:0:0 --pty bash -I
-
-The command prompt will appear as soon as the job start.
-
-Interactive jobs has the same policies as normal batch jobs, there are
-no extra restrictions.
 
 General job limitations
 -----------------------
@@ -200,6 +181,20 @@ Maximum memory per job          No limit:sup:`1`
 a weeks warning on system maintenance. Jobs with more than 7 days walltime,
 will be terminated and restarted if possible.
 
+
+Interactive job submission
+==========================
+
+You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
+
+    srun -N 1 -t 1:0:0 --pty bash -I
+
+The command prompt will appear as soon as the job start.
+
+Interactive jobs has the same policies as normal batch jobs, there are
+no extra restrictions.
+
+
 Scheduling policy on the machine
 ================================
 
@@ -218,24 +213,9 @@ The scheduler is set up to
 #. use fairshare, so a users with a lot of jobs running will get a
    decreased priority compared to other users.
 
-Resource Limits
----------------
 
-No user will be allowed to have more than 168 000 cpu-hours allocated
-for running jobs at any time. This means that a user at most can
-allocate 1000 cpus for a week for concurrently running jobs (or 500 cpus
-for two weeks or 2000 cpus for half a week).
-
-No single user will be allowed to use more than 500 jobs at any time.
-(you can well submit more, but you cannot have more than 500 running at
-the same time)
-
-Users can apply for exceptions to these rules by contacting
-support-uit@notur.no.
-
-
-Priority and limitations
-========================
+Limitations
+-----------
 
 ## This will have to be rewritten according to the devel settings. I leave it now. espent.
 
@@ -258,6 +238,7 @@ a large amount of jobs to the express queue will most probably decrease
 the overall throughput of your jobs. Also remark that large jobs get
 prioritized anyway so they will most probably not benefit anything from
 using the express queue.
+
 
 Monitoring your jobs
 ====================
