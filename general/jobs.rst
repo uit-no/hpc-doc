@@ -9,25 +9,25 @@ Jobs, scripts and queues
 Batch system
 ============
 
-The Stallo system is a resource that is shared between a lot of users 
-so to ensure fair use everyone must do their computations by submitting jobs 
+The Stallo system is a resource that is shared between a lot of users
+so to ensure fair use everyone must do their computations by submitting jobs
 through a
 batch system that will execute the applications on the available
-resources. 
+resources.
 
 The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`_
 (Simple Linux Utility for Resource Management.)
 
-If you are already used to Torque/Maui (the previous queue system used on Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful. 
+If you are already used to Torque/Maui (the previous queue system used on Stallo), but not SLURM, you might find this :ref:`torque_slurm_table` useful.
 
 
-Create a job 
+Create a job
 ============
 
 To run a job on the system one needs to create a job script. A job
 script is a regular shell script (bash) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
-batch system upon submission. 
+batch system upon submission.
 
 For a quick feel for how to create and run batch jobs and for a more complete example see
 
@@ -37,7 +37,7 @@ For a quick feel for how to create and run batch jobs and for a more complete ex
    job-script-example.rst
 
 
-Manage a job 
+Manage a job
 ============
 
 A job's lifecycle can be managed with as little as three different
@@ -65,9 +65,9 @@ scancel <job_id>
 scontrol hold <job_id>
     Put a hold on the job. A job on hold will not start or block other jobs from starting until you release the hold.
 scontrol release <job_id>
-    Release the hold on a job. 
+    Release the hold on a job.
 
-Getting job info 
+Getting job info
 ----------------
 For details run the command with the `-`-help option.
 
@@ -82,13 +82,13 @@ sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
 
 Get queue and account info
 --------------------------
-sinfo 
+sinfo
     List partitions. What in Torque/ Maui was called queues, is now called partitions in Slurm.
 sbank balance statement -u
     Information on available CPU-hours in your accounts.
-    
 
-Useful job script parameters 
+
+Useful job script parameters
 ============================
 
 See the :ref:`jobscript` for a list of relevant parameters.
@@ -110,12 +110,12 @@ we generally have these two rules for prioritizing jobs:
 Process count
 -------------
 
-We strongly advice all users to ask for a given set of cores when submitting multi-core jobs. 
+We strongly advice all users to ask for a given set of cores when submitting multi-core jobs.
 To make sure that you utilize full nodes, you should ask for sets that adds up to both
-16 and 20 (80, 160 etc) due to the hardware specifics of Stallo i.e. submit the job with ``--ntasks=80``. 
+16 and 20 (80, 160 etc) due to the hardware specifics of Stallo i.e. submit the job with ``--ntasks=80``.
 
-This will make the best use of the resources and give the most predictable 
-execution times. If your job require more than the default available memory pr core (32 GB/node gives 
+This will make the best use of the resources and give the most predictable
+execution times. If your job require more than the default available memory pr core (32 GB/node gives
 2 GB/core for 16 core nodes and 1.6GB/core for 20 core nodes) you should adjust this need with
 the following command: ``#SBATCH --mem-per-cpu=4GB`` If doing this, the batch system will automatically
 allocate 8 cores or less pr. node.
@@ -132,7 +132,7 @@ should not ask for more cpus for a job than you really can utilize
 efficiently. Try to run your job on 1,2,4,8,16 cpus and so on to see
 when the runtime for your job starts tailing off. When you start to see
 less than 30% improvement in runtime when doubling the cpu-counts you
-should probably not go any further. Recommendations to a few of the 
+should probably not go any further. Recommendations to a few of the
 most used applications can be found in :ref:`sw_guides`.
 
 
@@ -140,8 +140,8 @@ most used applications can be found in :ref:`sw_guides`.
 Queues
 ======
 
-SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known 
-as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``. 
+SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
+as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``.
 
 We have the following partitions:
 
@@ -149,14 +149,14 @@ normal:
     The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
 
 singlenode:
-    If you ask for less resources than available on one single node, this will be the partition your job 
+    If you ask for less resources than available on one single node, this will be the partition your job
     will be put in. We may remove the single-user policy on this partition in the future.
 
 multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
-    your job will land into this partition.  
+    your job will land into this partition.
 
-## This has to be seriously rewritten when we know the specs. Now it is short, singlenode and multinode. 
+## This has to be seriously rewritten when we know the specs. Now it is short, singlenode and multinode.
 ## Has also to specify qos=long for single and multi longer than 2 days, short is in short.
 
 ## Here we need to write something about qos devel and partition highmem in the future. Also look at abel docu.
@@ -171,7 +171,7 @@ You can run an interactive jobs by using the ``-I`` flag to qsub, for example::
 
     srun --pty bash -I
 
-The command prompt will appear as soon as the job start. 
+The command prompt will appear as soon as the job start.
 
 Interactive jobs has the same policies as normal batch jobs, there are
 no extra restrictions.
@@ -195,8 +195,8 @@ Maximum memory per job          No limit:sup:`1`
 :sup:`1` There is a practical limit of 128GB per compute node used.
 
 
-**Remark:** Even if we impose a 28 day run time limit on stallo we only give 
-a weeks warning on system maintenance. Jobs with more than 7 days walltime, 
+**Remark:** Even if we impose a 28 day run time limit on stallo we only give
+a weeks warning on system maintenance. Jobs with more than 7 days walltime,
 will be terminated and restarted if possible.
 
 Scheduling policy on the machine
@@ -240,9 +240,9 @@ stallo architecture.
    totalling 4864 cpu-cores (hereafter denoted as cpus).
 -  The Stallo cluster has two different memory configurations, 272 nodes
    have 32GB memory and 32 nodes have 128GB memory.
--  The Stallo cluster has all nodes connected with a high speed network_ which 
-   gives very high throughput and low latency.  The network is split into *islands* 
-   with 128 nodes/2048 cpus each and jobs will run within one single island. This 
+-  The Stallo cluster has all nodes connected with a high speed network_ which
+   gives very high throughput and low latency.  The network is split into *islands*
+   with 128 nodes/2048 cpus each and jobs will run within one single island. This
    is done automatically by the scheduler.
 
 
@@ -344,9 +344,9 @@ on Stallo:
 Understanding your job status
 =============================
 
-When you look at the job queue through your browser `<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``showq`` command, you will see that the queue is divided in 3 parts: Active jobs, Idle jobs, and Blocked jobs. 
+When you look at the job queue through your browser `<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``showq`` command, you will see that the queue is divided in 3 parts: Active jobs, Idle jobs, and Blocked jobs.
 
-Active jobs are the jobs that are running at the moment. Idle jobs are next in line to start running, when the needed resources become available. Each user can by default have only one job in the Idle Jobs queue. 
+Active jobs are the jobs that are running at the moment. Idle jobs are next in line to start running, when the needed resources become available. Each user can by default have only one job in the Idle Jobs queue.
 
 Blocked jobs are all other jobs. Their state can be *Idle*, *Hold*, or *Deferred*. *Idle* means that they are waiting to get to the Idle queue. They will eventually start when the resources become available. The jobs with the *Hold* state have been put on hold either by the system, or by the user. F.e. if you have one job in the Idle queue, that is not very important to you, and it is blocking other, more urgent, jobs from starting, you might want to put that one job on hold. Jobs on hold will not start until the hold is released. *Deferred* jobs will not start. In most cases, the job is deferred because it is asking for a combination of resources that stallo can not provide, f.e. highmem queue and 20 core nodes.
 
