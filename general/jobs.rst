@@ -136,8 +136,8 @@ should probably not go any further. Recommendations to a few of the
 most used applications can be found in :ref:`sw_guides`.
 
 
-Partitions
-----------
+Partitions and services
+------------------------
 
 SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
 as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``.
@@ -156,6 +156,24 @@ singlenode:
 multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
     your job will land into this partition.
+
+
+As a service to users that needs to submit short jobs for testing and debugging, we have a service called develop. 
+These jobs have higher priority, with a maximum of 4 hrs of walltime and no option for prolonging runtime.
+
+Jobs in using devel service will get higher priority than any other jobs
+in the system and will thus have a shorter queue delay than regular
+jobs. To prevent misuse the express queue has the following limitations:
+
+*  Only one running job per user.
+*  Maximum 4 hours walltime.
+*  Only one job queued at any time, remark this is for the whole queue.
+
+You submit to the devel-service by typing::
+
+#SBATCH --qos=devel
+
+in your jobscript.
 
 
 General job limitations
@@ -212,33 +230,6 @@ The scheduler is set up to
    the expansion factor: (queuetime+walltime)/walltime.
 #. use fairshare, so a users with a lot of jobs running will get a
    decreased priority compared to other users.
-
-
-Limitations
------------
-
-## This will have to be rewritten according to the devel settings. I leave it now. espent.
-
-Jobs in the express queue will get higher priority than any other jobs
-in the system and will thus have a shorter queue delay than regular
-jobs. To prevent misuse the express queue has the following limitations:
-
-*  Only one running job per user.
-*  Maximum 8 hours walltime.
-*  Maximum 8 nodes per job. This allows for jobs requesting up to 64
-   cpus to run in the queue, ``-lnodes=8:ppn=8``. Remark:
-   ``-lnodes=64`` will NOT work, the nodes number must be less than or
-   equal 8.
-*  Only one job queued at any time, remark this is for the whole queue.
-   This is to prevent express jobs delaying large regular jobs.
-
-So, it is more or less pointless to try to use the express queue to
-sneak regular production jobs passed the other regular jobs. Submitting
-a large amount of jobs to the express queue will most probably decrease
-the overall throughput of your jobs. Also remark that large jobs get
-prioritized anyway so they will most probably not benefit anything from
-using the express queue.
-
 
 Monitoring your jobs
 ====================
