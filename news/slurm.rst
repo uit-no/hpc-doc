@@ -1,4 +1,12 @@
 
+.. figure:: Slurm.png
+   :scale: 50 %
+
+   Credit: Futurama (http://futurama.wikia.com/wiki/Slurms_MacKenzie)
+
+
+.. _slurm:
+
 
 Status of migration to the SLURM resource manager
 =================================================
@@ -24,6 +32,7 @@ Timeframe
 
 The migration process depends on the integration of the
 accounting database with the new SLURM scheduling engine.
+
 
 Migration process
 -----------------

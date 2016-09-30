@@ -23,7 +23,7 @@ News and Events
 
    news/news.rst
    news/slurm.rst
-
+   news/new_sw.rst
 
 Getting help
 ------------
@@ -33,6 +33,7 @@ Getting help
 
    help/faq.rst
    help/contact.rst
+   help/writing-support-requests.rst
    help/staff.rst
    help/visit.rst
 

@@ -1,3 +1,10 @@
+
+.. figure:: tag.jpg
+   :scale: 57 %
+
+   Found in Via Notari, Pisa; (c) Roberto Di Remigio.
+
+
 .. _news:
 
 News and notifications
@@ -14,7 +21,7 @@ System status and activity
 --------------------------
 
 You can get a quick overview of the system load on Stallo on the
-`Notur hardware page <http://www.notur.no/hardware/status/>`_.
+`Sigma2 hardware page <https://www.sigma2.no/hardware/status>`_.
 More information on the system load, queued jobs, and node states can
 be found on the `jobbrowser page <http://stallo-login1.uit.no/jobbrowser/>`_
 (only visible from within the UiT network).
