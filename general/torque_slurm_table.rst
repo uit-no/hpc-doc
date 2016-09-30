@@ -8,7 +8,6 @@ Quick Guide to translate PBS/Torque to SLURM
 User commands            PBS/Torque          SLURM
 ======================== =================== ==========================
 Job submission           qsub [filename]     sbatch [filename]
-Interactive job          qsub -I -X          sintr
 Job deletion             qdel [job_id]       scancel [job_id]
 Job status (by job)      qstat [job_id]      squeue `-`-job [job_id]
 Full job status (by job) qstat -f [job_id]   scontrol show job [job_id]
@@ -28,7 +27,6 @@ Job specification     PBS/Torque                  SLURM
 ===================== =========================== ==========================================
 Script directive      #PBS                        #SBATCH
 Job Name              -N [name]                   `-`-job-name=[name] OR -J [name]
-Queue                 -q [queue]                  `-`-partition=[queue] OR -p [queue]
 Node Count            -l nodes=[count]            `-`-nodes=[min[-max]] OR -N [min[-max]]
 CPU Count             -l ppn=[count]              `-`-ntasks-per-node=[count]
 CPUs Per Task                                     `-`-cpus-per-task=[count]
