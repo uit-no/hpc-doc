@@ -1,6 +1,5 @@
 
-.. figure:: Slurm.png
-   :scale: 50 %
+.. figure:: slurm.jpg
 
    Credit: Futurama (http://futurama.wikia.com/wiki/Slurms_MacKenzie)
 
