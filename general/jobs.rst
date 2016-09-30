@@ -36,8 +36,8 @@ For job script examples, see:
    job-script-examples.rst
 
 
-Managing a job
-==============
+Managing jobs
+=============
 
 The lifecycle of a job can be managed with as little as three different
 commands:
@@ -47,40 +47,28 @@ commands:
    your jobs use ``squeue -u <user_name>``.)
 #. (optional) Delete the job with ``scancel <job_id>``.
 
+You can also hold the start of a job:
 
-List of useful commands
-=======================
-
-Managing jobs
--------------
-See the man page for each command for details.
-
-sbatch <file_name>
-    Submit jobs. All job parameters can be specified on the command line or
-    in the job script. Command line arguments take precedence over
-    directives in the script.
-scancel <job_id>
-    Delete a job.
 scontrol hold <job_id>
     Put a hold on the job. A job on hold will not start or block other jobs from starting until you release the hold.
 scontrol release <job_id>
     Release the hold on a job.
 
-Getting job info
-----------------
+
+Getting information about your job
+==================================
+
 For details run the command with the `-`-help option.
 
-squeue
-    List all jobs. This command can show you a lot of information, including expected start-time of a job.
-squeue -u <username>
-    List all current jobs for a user.
 scontrol show jobid -dd <jobid>
     List detailed information for a job (useful for troubleshooting).
 sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
     To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
 
-Get queue and account info
---------------------------
+
+Getting queue and account information
+=====================================
+
 sinfo
     List partitions. Somewhat similar to queues in Torque/ Maui. For more details, see partitions_.
 sbank balance statement -u
