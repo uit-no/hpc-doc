@@ -24,7 +24,7 @@ If you are already used to Torque/Maui (the previous queue system used on Stallo
 Create a job
 ============
 
-To run a job on the system one needs to create a job script. A job
+To run a job on the system you need to create a job script. A job
 script is a regular shell script (bash) with some directives
 specifying number of cpus, memory etc. that will be interpreted by the
 batch system upon submission.
@@ -36,9 +36,11 @@ For a quick feel for how to create and run batch jobs and for a more complete ex
 
    job-script-example.rst
 
-
+	      
 Manage a job
 ============
+
+## Do we need this paragraph when we list the exact same info and commands within the next 20-ish lines? -marte
 
 A job's lifecycle can be managed with as little as three different
 commands
@@ -101,8 +103,8 @@ Walltime
 --------
 
 We recommend you to be as precise as you can when specifying the
-parameters as they will inflict on how fast your jobs will start to run
-we generally have these two rules for prioritizing jobs:
+parameters as they will inflict on how fast your jobs will start to run.
+We generally have these two rules for prioritizing jobs:
 
 #. Large jobs, that is jobs with high cpucounts, are prioritized.
 #. Short jobs take precedence over long jobs.
@@ -137,7 +139,7 @@ most used applications can be found in :ref:`sw_guides`.
 
 
 Partitions
-======
+----------
 
 SLURM differs slightly from Torque with respect to definitions of various parameters, and what was known
 as queues in Torque may be covered by both ``--partition=...`` and ``--qos=...``.
@@ -167,8 +169,6 @@ Interactive job submission
 ==========================
 
 You can run an interactive jobs by using the ``-I`` flag to srun (nb: Note order of commands)::
-
-::
 
     srun -N 1 -t 1:0:0 --pty bash -I
 
@@ -203,6 +203,9 @@ will be terminated and restarted if possible.
 Scheduling policy on the machine
 ================================
 
+See :ref:`about_stallo` chapter of the documentation if you need more information on the system architecture.
+
+
 Priority
 --------
 
@@ -231,48 +234,6 @@ Users can apply for exceptions to these rules by contacting
 support-uit@notur.no.
 
 
-The stallo archictecture
-------------------------
-
-Before we dive into the details we need to say a few things about the
-stallo architecture.
-
--  The Stallo cluster has 304 compute nodes with 16 cpu-cores each
-   totalling 4864 cpu-cores (hereafter denoted as cpus).
--  The Stallo cluster has two different memory configurations, 272 nodes
-   have 32GB memory and 32 nodes have 128GB memory.
--  The Stallo cluster has all nodes connected with a high speed network_ which
-   gives very high throughput and low latency.  The network is split into *islands*
-   with 128 nodes/2048 cpus each and jobs will run within one single island. This
-   is done automatically by the scheduler.
-
-
-.. _network: http://en.wikipedia.org/wiki/InfiniBand
-
-See :ref:`about_stallo` chapter of the documentation for more details.
-
-
-Express queue for testing job scripts and interactive jobs.
-===========================================================
-
-
-By submitting a job to the express queue you can get higher throughput
-for testing and shorter start up time for interactive jobs. Just use the
-``--qos=devel`` flag to submit to this queue:
-
-::
-
-    sbatch --qos=devel jobscript.sh
-
-or for an interactive job:
-
-::
-
-    srun --qos=devel --pty bash -I
-
-This will give you a faster access if you have special needs during
-development, testing of job script logic or interactive use.
-
 Priority and limitations
 ========================
 
@@ -298,8 +259,8 @@ the overall throughput of your jobs. Also remark that large jobs get
 prioritized anyway so they will most probably not benefit anything from
 using the express queue.
 
-Live status information
-=======================
+Monitoring your jobs
+====================
 
 From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
@@ -310,7 +271,7 @@ on Stallo:
 .. _job_status:
 
 Understanding your job status
-=============================
+-----------------------------
 
 When you look at the job queue through your browser
 `<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``showq``
