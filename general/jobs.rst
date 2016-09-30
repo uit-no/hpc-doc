@@ -127,14 +127,13 @@ memory/core.
 Scalability
 -----------
 
-You should run a few tests to see what is the best fit between
-minimizing runtime and maximizing your allocated cpu-quota. That is you
-should not ask for more cpus for a job than you really can utilize
-efficiently. Try to run your job on 1,2,4,8,16 cpus and so on to see
-when the runtime for your job starts tailing off. When you start to see
-less than 30% improvement in runtime when doubling the cpu-counts you
-should probably not go any further. Recommendations to a few of the
-most used applications can be found in :ref:`sw_guides`.
+You should run a few tests to see what is the best fit between minimizing
+runtime and maximizing your allocated cpu-quota. That is you should not ask for
+more cpus for a job than you really can utilize efficiently. Try to run your
+job on 1, 2, 4, 8, 16, etc., cores to see when the runtime for your job starts
+tailing off. When you start to see less than 30% improvement in runtime when
+doubling the cpu-counts you should probably not go any further. Recommendations
+to a few of the most used applications can be found in :ref:`sw_guides`.
 
 
 Partitions and services
