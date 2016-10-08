@@ -26,17 +26,17 @@ mkdir -p $SCRATCH
 cd $SCRATCH
 
 # we copy everything we need to the scratch directory
-# $SUBMITDIR points to the path where this script was submitted from
-cp $SUBMITDIR/my_binary.x $SCRATCH
+# $SLURM_SUBMIT_DIR points to the path where this script was submitted from
+cp $SLURM_SUBMIT_DIR/my_binary.x $SCRATCH
 
 # we execute the job and time it
 time mpirun ./my_binary.x > my_output
 
-# after the job is done we copy our output back to $SUBMITDIR
-cp $SCRATCH/my_output $SUBMITDIR
+# after the job is done we copy our output back to $SLURM_SUBMIT_DIR
+cp $SCRATCH/my_output $SLURM_SUBMIT_DIR
 
 # we step out of $SCRATCH and remove it
-cd $SUBMITDIR
+cd $SLURM_SUBMIT_DIR
 rm -rf $SCRATCH
 
 # happy end
