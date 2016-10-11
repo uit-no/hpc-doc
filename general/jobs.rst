@@ -36,6 +36,31 @@ For job script examples, see:
    job-script-examples.rst
 
 
+How to pass command-line parameters to the job script
+-----------------------------------------------------
+
+It is sometimes convenient if you do not have to edit the job script every time you want
+to change the input file. Or perhaps you want to submit hundreds of jobs and
+loop over a range of input files. For this it is handy to pass command-line
+parameters to the job script.
+
+In SLURM you can do this::
+
+  $ sbatch myscript.sh myinput myoutput
+
+And then you can pick the parameters up inside the job script::
+
+  #!/bin/bash
+
+  #SBATCH ...
+  #SBATCH ...
+  ...
+
+  # argument 1 is the input file
+  # argument 2 is the output file
+  mybinary.x < ${1} > ${2}
+
+
 Managing jobs
 =============
 
