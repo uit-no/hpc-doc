@@ -37,7 +37,8 @@ I need a Python package X but the one on Stallo is too old or I can not find it
 
 I need a newer version of Scipy, Numpy, etc. Can you install it?
 
-We sometimes have newer versions of software packages installed, but for different reasons they are not yet visible with the default user settings. In such a case, you will find information (or a link pointing to information) about it here: http://hpc.uit.no/en/latest/news/new_sw.html
+We often have newer versions of software packages installed which may not be visible
+with the default user settings. Find more about it here: http://hpc.uit.no/en/latest/news/new_sw.html
 
 In cases where this still doesn't solve your problem and you would like to install it yourself, please read the question below about installing without sudo rights.
 
