@@ -29,12 +29,6 @@ cd $SCRATCH
 # $SLURM_SUBMIT_DIR points to the path where this script was submitted from
 cp $SLURM_SUBMIT_DIR/my_binary.x $SCRATCH
 
-# make sure that temporary message files are created on the local disk
-# this is important for performance
-export TMP=/tmp
-export TEMP=/tmp
-export TMPDIR=/tmp
-
 # we execute the job and time it
 time mpirun ./my_binary.x > my_output
 
