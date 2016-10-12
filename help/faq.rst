@@ -32,6 +32,19 @@ username on Stallo and the NOTUR domain.
 Installing software
 ===================
 
+I need a Python package X but the one on Stallo is too old or I can not find it
+-------------------------------------------------------------------------------
+
+I need a newer version of Scipy, Numpy, etc. Can you install it?
+
+We often have newer versions of software packages installed which may not be visible
+with the default user settings. Find out more about it here: http://hpc.uit.no/en/latest/news/new_sw.html
+
+In cases where this still doesn't solve your problem and you would like to install it yourself, please read the next section below about installing without sudo rights.
+
+If we don't have it installed, and installing it yourself is not a good solution for you, please contact us and we will do our best to help you.
+
+
 Can I install Python software as a normal user without sudo rights?
 -------------------------------------------------------------------
 
