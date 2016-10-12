@@ -5,7 +5,8 @@ How to get a local account on Stallo
 To get a local account on Stallo, you need to:
 ----------------------------------------------
 
-* Provide us with your full name
+* Provide us with your full name, date of birth and nationality
+* Provide us with you position (student, master student, PhD, PostDoc, staff member).
 * Provide us with your institutional mail adress (i.e. to the research institution with which you belong)
 * Provide us with the name and adress to which instution you belong; also including centre, institute etc.
 * Provide us with a preferred username.
