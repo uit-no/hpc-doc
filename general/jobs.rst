@@ -150,6 +150,7 @@ normal:
 singlenode:
     If you ask for less resources than available on one single node, this will be the partition your job
     will be put in. We may remove the single-user policy on this partition in the future.
+    This partition is also for single-node jobs that run for longer than 48 hours.
 
 multinode:
     If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
