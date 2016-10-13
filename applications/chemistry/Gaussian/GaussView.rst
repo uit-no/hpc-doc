@@ -1,5 +1,3 @@
-.. _gaussview:
-
 ======================
 GaussView for Gaussian
 ======================
@@ -10,16 +8,13 @@ Gaussview is a visualization program that can be used to open Gaussian output fi
 GaussView on Stallo
 --------------------
 
-The GaussView version for Gaussian 03 is release 4.1.2. To load and run GaussView on Stallo, you first have to load the relevant gaussian module, and then call gaussview::
+The GaussView version for Gaussian 09 is release 5.0.8 To load and run GaussView on Stallo, you first have to load the relevant gaussian module, and then call gaussview::
 
-   $ module load g03
+   $ module load gaussian/09.d01
    $ gview
 
-For more information how to use gaussview see: http://www.gaussian.com/g_brochures/gv.htm 
-
+More information about GaussView:
+---------------------------------
+* General info about the program: http://www.gaussian.com/g_prod/gv5.htm
+* Online reference: http://www.gaussian.com/g_tech/gv5ref/gv5ref_toc.htm
  
-
-Links
-------
-
-General : http://www.gaussian.com/g_brochures/gv.htm 

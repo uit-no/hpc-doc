@@ -5,14 +5,16 @@
 # This script asks for a given set of cores. Stallo has got 16 or 20 cores/node,
 # asking for something that adds up to both is our general recommodation (80, 160 etc)
 # Runtime for this job is 59 minutes; syntax is hh:mm:ss. 
-# Memory not set since you are using full node, 
-# it can be specified pr core, virtual or total pr job (be carefull).   
+# Memory is set to 1500MB; but does really not matter since you are using full node.
+# Though it is worth noting that memory settings for slurm seems to be a hard limit,
+# it can be specified pr core or total pr job/node (be carefull with the latter).   
 #-------------------------------------
 # SLURM-section 
 #SBATCH --job-name=g09_runex
-#SBATCH --ntasks=40
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=20
 #SBATCH --time=00:59:00
-#SBATCH --mem-per-cpu=1GB
+#SBATCH --mem-per-cpu=1500MB
 #SBATCH --output=g09_runex.log
 #SBATCH --mail-type=ALL
 #SBATCH --exclusive
@@ -30,7 +32,7 @@ extention=com # We use the same naming scheme as the software default
 # We load all the default program system settings with module load:
 
 module load notur 
-module load gaussian
+module load gaussian/09.d01
 
 # Check other available versions with "module avail gaussian"
 
@@ -40,14 +42,26 @@ module load gaussian
 # Necessary variables are defined in the notur and the software modules.
 
 mkdir -p $GAUSS_SCRDIR
+echo " The job will use scratch directory ${GAUSS_SCRDIR}." # Message written to log for safety measure.
 
 # Preparing and moving inputfiles to tmp:
 
 cd $SUBMITDIR
-cp caffeine.com $GAUSS_SCRDIR
+cp $input.com $GAUSS_SCRDIR
+
+# Checking for old job files to do restart from:
+if [ -f $input.chk ]
+then
+        echo "Copying chk-file to scratch."
+        cp $input.chk $GAUSS_SCRDIR
+else
+        echo "No chk file found."
+        echo "Starting the gaussian job without a checkpointfile."
+fi
+
 cd $GAUSS_SCRDIR
 
-# Preparation of inputfile is done by G09.prep in folder $g09tooldir
+# Preparation of inputfile is done by G09.prep.slurm in folder $g09tooldir
 # If you want to inspect it, cd $g09tooldir after loading the gaussian module
 
 G09.prep.slurm $input
@@ -66,9 +80,6 @@ time g09 < $input.com > gaussian_$input.out
 
 cp gaussian_$input.out $SUBMITDIR
 cp $input.chk $SUBMITDIR
-
-mkdir $USERWORK/$input.${BATCHNUM}.res
-cp $GAUSS_SCRDIR/* $input.${BATCHNUM}.res
 
 # To zip some of the output might be a good idea!
 
