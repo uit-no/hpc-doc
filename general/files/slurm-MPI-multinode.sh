@@ -29,7 +29,7 @@
 
 # no bash command may be placed before the last SBATCH directive
 
-# $SCRATCH is set to /global/work/$USER/$SLURM_JOBID.stallo-adm.uit.no
+# $SCRATCH will be set to /global/work/$USER/$SLURM_JOBID.stallo-adm.uit.no
 mkdir -p $SCRATCH
 cd $SCRATCH
 
