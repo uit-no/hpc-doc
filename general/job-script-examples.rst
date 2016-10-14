@@ -103,3 +103,11 @@ Observe that they all started (approximately) at the same time::
   output_7.txt:start at 14:43:58
   output_8.txt:start at 14:44:00
   output_9.txt:start at 14:43:59
+
+
+Example on how to allocate entire memory on one node
+----------------------------------------------------
+
+.. literalinclude:: files/slurm-big-memory.sh
+   :language: bash
+   :linenos:
