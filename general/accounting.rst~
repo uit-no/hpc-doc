@@ -36,6 +36,12 @@ Assume that you have a node with 20 cpu-cores and 32 GB memory::
 
 The available memory and core settings for Stallo are explained here: :ref:`about_stallo`
 
+.. toctree::
+   :maxdepth: 1
+
+   stallo.rst
+
+
 Inspecting your quota.
 ======================
 

@@ -1,3 +1,5 @@
+.. _gaussian_on_stallo:
+
 =====================================
 About the Gaussian install on Stallo
 =====================================
