@@ -245,10 +245,40 @@ If you prefer to use the command line, to see the job queue use::
   $ squeue
 
 
+Why does my job not start or give me error feedback when submitting?
+--------------------------------------------------------------------
+
+When I try to start a job with 2GB of memory pr. core, I get the following error::
+
+sbatch: error: Batch job submission failed: Requested node configuration is not available
+
+With 1GB/core it works fine. What might be the cause to this?
+
+On Stallo we have two different configurations available; 16 core and 20 core nodes - with both a 
+total of 32 GB of memory/node. Currently only the 20 core nodes have been enabled for the SLURM
+batch system, these have no local disk and thus no swap space. If you ask for full nodes by 
+specifying both number of nodes and cores/node together with 2 GB of memory/core, you will ask 
+for 20 cores/node and 40 GB of memory. This configuration does not exist on Stallo. If you ask 
+for 16 cores, still with 2GB/core, it seems to be a sort of buffer within SLURM no allowing you 
+to consume absolutely all memory available (system needs some to work). 2000MB seems to work 
+fine, but not 2 GB for 16 cores/node.
+
+The solution we wan´t to push in general, see :ref:`first_time_gaussian`, is this:
+
+Specify number of tasks::
+
+#SBATCH -ntasks=80 # (number of nodes * number of cores, i.e. 5*16 or 4*20 = 80)
+
+If you then ask for 2000MB of memory/core, you will be given 16 cores/node and a total 
+of 16 nodes. 4000MB will give you 8 cores/node - everyone being happy. Just note the 
+info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much as 
+mem-per-cpu 2000MB.
+
+
 CPU v.s. core
 -------------
 
-InÂ this documentation we are frequently using the term *CPU*, which in
+In this documentation we are frequently using the term *CPU*, which in
 most cases are equivalent to the more precise term *processor core* /
 *core*\. The \ *multi core age*\  is here now \ *:-)*
 

@@ -2,7 +2,7 @@
 ################### Gaussian Job Batch Script Example ###################
 # Section for defining queue-system variables:
 #-------------------------------------
-# This script asks for a given set of cores. Stallo has got 16 or 20 cores/node,
+# This script asks for a given set nodes and cores/node. Stallo has got 16 or 20 cores/node,
 # asking for something that adds up to both is our general recommodation (80, 160 etc)
 # Runtime for this job is 59 minutes; syntax is hh:mm:ss. 
 # Memory is set to 1500MB; but does really not matter since you are using full node.

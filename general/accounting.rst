@@ -1,3 +1,4 @@
+.. _accounting:
 
 =============================
 CPU-hour quota and accounting
