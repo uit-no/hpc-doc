@@ -7,10 +7,8 @@ Job script examples
 Help! I don't know what OpenMP or MPI means!
 --------------------------------------------
 
-OpenMP and MPI are parallelization frameworks. If your calculation
-is sequential (running on one core only) or you plan to run many sequential
-calculations in one job script, then take the "single-node OpenMP job" script
-and remove the line that contains "export OMP_NUM_THREADS=$SLURM_TASKS_PER_NODE".
+OpenMP and MPI are parallelization frameworks. If you want to run many similar
+jobs that each use one core at a time, scroll down to job arrays.
 
 
 Example for an OpenMP job
@@ -29,5 +27,17 @@ Example for a MPI job
 ---------------------
 
 .. literalinclude:: files/slurm-MPI.sh
+   :language: bash
+   :linenos:
+
+Save it to a file (e.g. run.sh) and submit it with::
+
+  $ sbatch run.sh
+
+
+Running many sequential jobs in parallel using job arrays
+---------------------------------------------------------
+
+.. literalinclude:: files/slurm-job-array.sh
    :language: bash
    :linenos:

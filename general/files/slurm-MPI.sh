@@ -1,51 +1,48 @@
 #!/bin/bash
 
-####################################
-# example for a multi-node MPI job #
-####################################
-# This script asks for a given set of cores. Stallo has got 16 or 20 cores/node,
-# asking for something that adds up to both is our general recommodation (80, 160 etc)
-# Runtime for this job is 5 minutes; syntax is dd-hh:mm:ss. 
-# Memory is set to 1500MB; this should not matter as long as you are running on full nodes. 
-# Though it is worth noting that memory settings for slurm seems to be a hard limit,
-# it can be specified pr core or total pr job/node (be carefull with the latter).   
-# Note also that we have specified 1500MB and NOT 1.5 GB. (that leaves a small bit for the system).
+##########################
+# example for an MPI job #
+##########################
 
-#SBATCH --job-name=example_job
+#SBATCH --job-name=example
 
 # 80 MPI tasks in total
+# Stallo has 16 or 20 cores/node and therefore we take
+# a number that is divisible by both
 #SBATCH --ntasks=80
 
 # run for five minutes
 #              d-hh:mm:ss
 #SBATCH --time=0-00:05:00
-# If you plan to run for much longer, please check necessary partions
-# with sinfo. For multinode mpi jobs it would be --partition=multinode.
-# 1500MB memory per core
-#SBATCH --mem-per-cpu=1500MB
+
+# short partition should do it
+#SBATCH --partition short
+
+# 500MB memory per core
+# this is a hard limit 
+#SBATCH --mem-per-cpu=500MB
 
 # turn on all mail notification
 #SBATCH --mail-type=ALL
 
-# no bash command may be placed before the last SBATCH directive
-
-# $SCRATCH will be set to /global/work/$USER/$SLURM_JOBID.stallo-adm.uit.no
-mkdir -p $SCRATCH
-cd $SCRATCH
+# define and create a unique scratch directory
+SCRATCH_DIRECTORY=/global/work/${USER}/example/${SLURM_JOBID}
+mkdir -p ${SCRATCH_DIRECTORY}
+cd ${SCRATCH_DIRECTORY}
 
 # we copy everything we need to the scratch directory
-# $SLURM_SUBMIT_DIR points to the path where this script was submitted from
-cp $SLURM_SUBMIT_DIR/my_binary.x $SCRATCH
+# ${SLURM_SUBMIT_DIR} points to the path where this script was submitted from
+cp ${SLURM_SUBMIT_DIR}/my_binary.x ${SCRATCH_DIRECTORY}
 
 # we execute the job and time it
 time mpirun ./my_binary.x > my_output
 
 # after the job is done we copy our output back to $SLURM_SUBMIT_DIR
-cp $SCRATCH/my_output $SLURM_SUBMIT_DIR
+cp ${SCRATCH_DIRECTORY}/my_output ${SLURM_SUBMIT_DIR}
 
-# we step out of $SCRATCH and remove it
-cd $SLURM_SUBMIT_DIR
-rm -rf $SCRATCH
+# we step out of the scratch directory and remove it
+cd ${SLURM_SUBMIT_DIR}
+rm -rf ${SCRATCH_DIRECTORY}
 
 # happy end
 exit 0
