@@ -1,8 +1,8 @@
 #!/bin/bash
 
-######################################################
-# example for an job where we consume lots of memory #
-######################################################
+#####################################################
+# example for a job where we consume lots of memory #
+#####################################################
 
 #SBATCH --job-name=example
 
