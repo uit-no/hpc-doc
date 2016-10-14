@@ -274,6 +274,21 @@ of 16 nodes. 4000MB will give you 8 cores/node - everyone being happy. Just note
 info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much as 
 mem-per-cpu 2000MB.
 
+Why do I get ``slurmstepd: Exceeded step memory limit`` in my log/output?
+
+For slurm, the memory flag seems to be a hard limit, meaning that when each core
+tries to utilize more than the given amount of memory, it is killed by the slurm-deamon.
+For example ``$SBATCH --mem-per-cpu=2GB`` means that you maximum can use 2 GB of memory pr
+core. With memory intensive applications like comsol or VASP, your job will likely be 
+terminated. The solution to this problem is to, like we have said elsewhere, specify the 
+number of tasks irrespectively of cores/node and ask for as much memory you will need.
+
+For instance::
+
+ #SBATCH --ntasks=20
+ #SBATCH --time=0-24:05:00
+ #SBATCH --mem-per-cpu=6000MB
+
 
 CPU v.s. core
 -------------
