@@ -27,6 +27,7 @@ cd ${SCRATCH_DIRECTORY}
 
 cp ${SLURM_SUBMIT_DIR}/test.py ${SCRATCH_DIRECTORY}
 
+# each job will see a different ${SLURM_ARRAY_TASK_ID}
 echo "now processing task id:: " ${SLURM_ARRAY_TASK_ID}
 python test.py > output_${SLURM_ARRAY_TASK_ID}.txt
 
