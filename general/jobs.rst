@@ -142,10 +142,10 @@ be covered by both ``--partition=...`` and ``--qos=...``.
 We have the following partitions:
 
 short:
-    Used for testing your scripts. Up to 1 hour of walltime.
+    For testing and debugging. Up to 1 hour of walltime.
 
 normal:
-    The default partition. Multi nodes (i.e. more than 20 cores) and up to 48 hrs of walltime.
+    The default partition. Up to 48 hours of walltime.
 
 singlenode:
     If you ask for less resources than available on one single node, this will be the partition your job
