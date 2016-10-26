@@ -2,23 +2,22 @@
 ################### Gaussian Job Batch Script Example ###################
 # Section for defining queue-system variables:
 #-------------------------------------
-# This script asks for a given set nodes and cores/node. Stallo has got 16 or 20 cores/node,
-# asking for something that adds up to both is our general recommodation (80, 160 etc)
-# Runtime for this job is 59 minutes; syntax is hh:mm:ss. 
+# This script asks for a given set nodes and cores/node. Stallo has got 20 cores/node,
+# asking for full nodes will make your life easier!) 
+# Runtime for this job is 59 minutes; syntax is dd-hh:mm:ss.
 # Memory is set to 1500MB; but does really not matter since you are using full node.
 # Though it is worth noting that memory settings for slurm seems to be a hard limit,
 # it can be specified pr core or total pr job/node (be carefull with the latter).   
 #-------------------------------------
 # SLURM-section 
 #SBATCH --job-name=g09_runex
-#SBATCH --nodes=2
+#SBATCH -N 2
 #SBATCH --ntasks-per-node=20
-#SBATCH --time=00:59:00
+#SBATCH --time=00-00:59:00
 #SBATCH --mem-per-cpu=1500MB
 #SBATCH --output=g09_runex.log
 #SBATCH --mail-type=ALL
-#SBATCH --exclusive
-#SBATCH --partition=multinode
+#SBATCH --partition=gaussian
 ######################################
 # Section for defining job variables and settings:
 #-------------------------------------
