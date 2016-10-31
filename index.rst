@@ -37,9 +37,16 @@ HPC-UiT Services User Documentation
 
 .. toctree::
    :maxdepth: 1
+   :caption: Stallo
+
+   stallo/stallo.rst
+   stallo/uit-guidelines.rst
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: General information
 
-   general/stallo.rst
    general/account.rst
    general/login.rst
    general/accounting.rst
@@ -48,7 +55,6 @@ HPC-UiT Services User Documentation
    general/file_transfer.rst
    general/jobs.rst
    general/applications.rst
-   general/guidelines.rst
    general/dos_and_donts.rst
 
 
