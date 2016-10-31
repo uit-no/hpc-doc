@@ -45,12 +45,18 @@ HPC-UiT Services User Documentation
 
 .. toctree::
    :maxdepth: 1
+   :caption: Account
+
+   account/account.rst
+   account/login.rst
+   account/accounting.rst
+   account/linux.rst
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: General information
 
-   general/account.rst
-   general/login.rst
-   general/accounting.rst
-   general/linux.rst
    general/storage.rst
    general/file_transfer.rst
    general/jobs.rst
