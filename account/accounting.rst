@@ -87,5 +87,3 @@ on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
 *  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
-
-You can find more information about the job queue in :ref:`jobs` and, more specifically, :ref:`job_status` parts of this documentation.

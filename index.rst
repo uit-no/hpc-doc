@@ -66,9 +66,16 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
    :caption: Jobs
 
-   jobs/examples.rst
-   jobs/jobs.rst
    jobs/dos_and_donts.rst
+   jobs/examples.rst
+   jobs/account.rst
+   jobs/batch.rst
+   jobs/management.rst
+   jobs/walltime.rst
+   jobs/process-count.rst
+   jobs/partitions.rst
+   jobs/interactive.rst
+   jobs/monitoring.rst
 
 
 .. toctree::
