@@ -67,8 +67,14 @@ HPC-UiT Services User Documentation
    :caption: General information
 
    general/jobs.rst
-   general/applications.rst
    general/dos_and_donts.rst
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Software
+
+   software/applications.rst
 
 
 .. toctree::
