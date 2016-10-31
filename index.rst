@@ -75,6 +75,7 @@ HPC-UiT Services User Documentation
    :caption: Software
 
    software/applications.rst
+   software/modules.rst
 
 
 .. toctree::
