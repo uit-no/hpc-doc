@@ -55,10 +55,17 @@ HPC-UiT Services User Documentation
 
 .. toctree::
    :maxdepth: 1
+   :caption: Storage
+
+   storage/storage.rst
+   storage/file_transfer.rst
+   storage/lustre-performance.rst
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: General information
 
-   general/storage.rst
-   general/file_transfer.rst
    general/jobs.rst
    general/applications.rst
    general/dos_and_donts.rst
