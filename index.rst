@@ -66,6 +66,7 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
    :caption: Jobs
 
+   jobs/examples.rst
    jobs/jobs.rst
    jobs/dos_and_donts.rst
 

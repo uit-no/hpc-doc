@@ -28,12 +28,7 @@ To run a job on the system you need to create a job script. A job script is a
 regular shell script (bash) with some directives specifying the number of CPUs,
 memory, etc., that will be interpreted by the batch system upon submission.
 
-For job script examples, see:
-
-.. toctree::
-   :maxdepth: 1
-
-   job-script-examples.rst
+You can find job script examples in :ref:`job_script_examples`.
 
 
 How to pass command-line parameters to the job script
