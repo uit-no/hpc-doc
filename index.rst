@@ -15,21 +15,18 @@ HPC-UiT Services User Documentation
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-News and Events
----------------
-
 .. toctree::
    :maxdepth: 1
+   :caption: News and Events
 
    news/news.rst
    news/slurm.rst
    news/new_sw.rst
 
-Getting help
-------------
 
 .. toctree::
    :maxdepth: 1
+   :caption: Getting help
 
    help/faq.rst
    help/contact.rst
@@ -38,11 +35,9 @@ Getting help
    help/visit.rst
 
 
-General information
--------------------
-
 .. toctree::
    :maxdepth: 1
+   :caption: General information
 
    general/stallo.rst
    general/account.rst
@@ -57,11 +52,9 @@ General information
    general/dos_and_donts.rst
 
 
-Development of applications on Stallo
--------------------------------------
-
 .. toctree::
    :maxdepth: 1
+   :caption: Code development
 
    development/compilers.rst
    development/environment.rst
@@ -69,10 +62,8 @@ Development of applications on Stallo
    development/debugging.rst
 
 
-Applications
-------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Applications
 
    applications/sw_guides.rst
