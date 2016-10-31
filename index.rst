@@ -64,10 +64,10 @@ HPC-UiT Services User Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: General information
+   :caption: Jobs
 
-   general/jobs.rst
-   general/dos_and_donts.rst
+   jobs/jobs.rst
+   jobs/dos_and_donts.rst
 
 
 .. toctree::
