@@ -1,7 +1,7 @@
 
 
-Do's and do-not-do's
-====================
+Dos and don'ts
+==============
 
 - Never run calculations on the home disk
 - Always use the queueing system
