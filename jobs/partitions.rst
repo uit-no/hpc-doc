@@ -1,4 +1,4 @@
-
+.. _label_partitions:
 
 Partitions (queues) and services
 ================================

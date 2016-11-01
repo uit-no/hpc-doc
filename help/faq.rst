@@ -201,6 +201,12 @@ for a similar solution.
 Jobs and queue system
 =====================
 
+I am not able to submit jobs longer than two days
+-------------------------------------------------
+
+Please read about :ref:`label_partitions`.
+
+
 Where can I find an example of job script?
 ------------------------------------------
 
@@ -263,7 +269,7 @@ for 16 cores, still with 2GB/core, it seems to be a sort of buffer within SLURM 
 to consume absolutely all memory available (system needs some to work). 2000MB seems to work 
 fine, but not 2 GB for 16 cores/node.
 
-The solution we wan´t to push in general, see :ref:`first_time_gaussian`, is this:
+The solution we want to push in general, see :ref:`first_time_gaussian`, is this:
 
 Specify number of tasks::
 
