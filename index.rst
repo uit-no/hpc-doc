@@ -55,15 +55,6 @@ HPC-UiT Services User Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Storage
-
-   storage/storage.rst
-   storage/file_transfer.rst
-   storage/lustre-performance.rst
-
-
-.. toctree::
-   :maxdepth: 1
    :caption: Jobs
 
    jobs/dos_and_donts.rst
@@ -84,7 +75,24 @@ HPC-UiT Services User Documentation
 
    software/applications.rst
    software/modules.rst
+   software/new_modules.rst
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Applications
+
+   applications/sw_guides.rst
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Storage
+
+   storage/storage.rst
+   storage/file_transfer.rst
+   storage/lustre-performance.rst
+   
 
 .. toctree::
    :maxdepth: 1
@@ -95,9 +103,3 @@ HPC-UiT Services User Documentation
    development/optimization.rst
    development/debugging.rst
 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Applications
-
-   applications/sw_guides.rst

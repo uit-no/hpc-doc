@@ -1,7 +1,7 @@
+.. _old_scheme:
 
-
-Modules
-=======
+Old Scheme Modules
+===================
 
 Software installations on the clusters span many applications, and many
 different version numbers of the same application. It is not possible (nor
