@@ -40,6 +40,7 @@ module load gaussian/09.d01
 # Now we create working directory and temporary scratch for the job(s):
 # Necessary variables are defined in the notur and the software modules.
 
+export $GAUSS_SCRDIR=/global/work/$USER/$SLURM_JOB_ID
 mkdir -p $GAUSS_SCRDIR
 echo " The job will use scratch directory ${GAUSS_SCRDIR}." # Message written to log for safety measure.
 
@@ -85,6 +86,8 @@ cp $input.chk $SUBMITDIR
 # Investigate potentially other files to keep:
 echo `pwd`
 echo `ls -ltr`
+
+
 
 # ALLWAYS clean up after yourself. Please do uncomment the following line
 #cd $SUBMITDIR
