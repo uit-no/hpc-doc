@@ -61,6 +61,7 @@ HPC-UiT Services User Documentation
    jobs/examples.rst
    jobs/account.rst
    jobs/batch.rst
+   jobs/environment-variables.rst
    jobs/management.rst
    jobs/walltime.rst
    jobs/process-count.rst
