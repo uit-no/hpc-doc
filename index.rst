@@ -62,6 +62,7 @@ HPC-UiT Services User Documentation
    jobs/account.rst
    jobs/batch.rst
    jobs/environment-variables.rst
+   jobs/torque_slurm_table.rst
    jobs/management.rst
    jobs/walltime.rst
    jobs/process-count.rst
