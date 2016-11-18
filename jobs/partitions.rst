@@ -21,8 +21,8 @@ singlenode:
     This partition is also for single-node jobs that run for longer than 48 hours.
 
 multinode:
-    If you ask for more resources than you will find on one node and request walltime longer than 48 hrs,
-    your job will land into this partition.
+    Request this partition if you ask for more resources than you will find on
+    one node and request walltime longer than 48 hrs.
 
 To figure out the walltime limits for the various partitions, type::
 
