@@ -20,6 +20,8 @@
 # this is a hard limit 
 #SBATCH --mem-per-cpu=500MB
 
+# you may not place bash commands before the last SBATCH directive
+
 # define and create a unique scratch directory
 SCRATCH_DIRECTORY=/global/work/${USER}/job-array-example/${SLURM_JOBID}
 mkdir -p ${SCRATCH_DIRECTORY}

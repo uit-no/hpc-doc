@@ -24,6 +24,8 @@
 # turn on all mail notification
 #SBATCH --mail-type=ALL
 
+# you may not place bash commands before the last SBATCH directive
+
 # define and create a unique scratch directory
 SCRATCH_DIRECTORY=/global/work/${USER}/example/${SLURM_JOBID}
 mkdir -p ${SCRATCH_DIRECTORY}
