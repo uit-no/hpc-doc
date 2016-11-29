@@ -30,7 +30,7 @@ extention=com # We use the same naming scheme as the software default
 
 # We load all the default program system settings with module load:
 
-module load notur 
+module load notur
 module load gaussian/09.d01
 
 # Check other available versions with "module avail gaussian"
@@ -40,7 +40,8 @@ module load gaussian/09.d01
 # Now we create working directory and temporary scratch for the job(s):
 # Necessary variables are defined in the notur and the software modules.
 
-export $GAUSS_SCRDIR=/global/work/$USER/$SLURM_JOB_ID
+export GAUSS_SCRDIR=/global/work/$USER/$SLURM_JOB_ID
+
 mkdir -p $GAUSS_SCRDIR
 echo " The job will use scratch directory ${GAUSS_SCRDIR}." # Message written to log for safety measure.
 
@@ -64,7 +65,7 @@ cd $GAUSS_SCRDIR
 # Preparation of inputfile is done by G09.prep.slurm in folder $g09tooldir
 # If you want to inspect it, cd $g09tooldir after loading the gaussian module
 
-G09.prep.slurm $input
+G09.prep $input
 
 ######################################
 # Section for running the program and cleaning up:
