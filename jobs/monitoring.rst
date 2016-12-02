@@ -17,16 +17,24 @@ on Stallo:
 *  `Job queue <http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_
 
 
-.. _job_status:
+CPU load and memory consumption of your job
+-------------------------------------------
 
+In order to find out the CPU load and memory consumption of your running jobs or jobs
+which have finished less than 48 hours ago, please use the `job browser
+<http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_ (accessible from within the UNINETT
+network).
+
+
+.. _job_status:
 
 Understanding your job status
 -----------------------------
 
-When you look at the job queue through your browser
-`<http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_, or you use the ``squeue``
-command, you will see that the queue is divided in 3 parts: Active jobs, Idle
-jobs, and Blocked jobs.
+When you look at the job queue through the `job browser
+<http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_, or you use the
+``squeue`` command, you will see that the queue is divided in 3 parts: Active
+jobs, Idle jobs, and Blocked jobs.
 
 Active jobs are the jobs that are running at the moment. Idle jobs are next in
 line to start running, when the needed resources become available. Each user
