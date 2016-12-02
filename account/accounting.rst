@@ -79,6 +79,7 @@ for more detail see:
 
     gstatement --man
 
+
 Live status information
 =======================
 
@@ -86,4 +87,4 @@ From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
-*  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
+*  `Job queue <http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_

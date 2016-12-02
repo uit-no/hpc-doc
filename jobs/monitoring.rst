@@ -14,16 +14,17 @@ From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
 
 *  `Load situation <http://stallo-adm.uit.no/ganglia/>`_
-*  `Job queue <http://stallo-login1.uit.no/jobbrowser/showq>`_
+*  `Job queue <http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_
 
 
 .. _job_status:
+
 
 Understanding your job status
 -----------------------------
 
 When you look at the job queue through your browser
-`<http://stallo-login1.uit.no/jobbrowser/showq/>`_, or you use the ``squeue``
+`<http://stallo-login2.uit.no/slurmbrowser/html/squeue.html>`_, or you use the ``squeue``
 command, you will see that the queue is divided in 3 parts: Active jobs, Idle
 jobs, and Blocked jobs.
 

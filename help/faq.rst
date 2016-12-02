@@ -97,9 +97,9 @@ How can I check whether my calculation is swapping?
 ---------------------------------------------------
 
 Option 1 (inside the university network) is to check
-http://stallo-login1.uit.no/jobbrowser/.  Click on "nodes" and then the node in
-question.  On the right hand panel you see "Memory last hour". If memory is
-above the red mark, the node will swap.
+http://stallo-login2.uit.no/slurmbrowser/html/squeue.html. Click on "nodes" and
+then the node in question.  On the right hand panel you see "Memory last hour".
+If memory is above the red mark, the node will swap.
 
 Option 2 is to log into the node and run "top". On the top you see how much
 memory is consumed and whether the node is swapping.
@@ -240,11 +240,12 @@ How can I see the queing situation?
 How can I see how my jobs are doing in the queue, if my jobs are idle, blocked,
 running?
 
-On the webpage http://stallo-login1.uit.no/jobbrowser/ you can find information
-about the current load on stallo, some information about the nodes, and the
-information you would get from the showq command, which is described below. You
-can also find information about your job and if you the job is running, you can
-find graphs about its usage of the CPUs, memory and so on.
+On the webpage http://stallo-login2.uit.no/slurmbrowser/html/squeue.html you
+can find information about the current load on stallo, some information about
+the nodes, and the information you would get from the showq command, which is
+described below. You can also find information about your job and if you the
+job is running, you can find graphs about its usage of the CPUs, memory and so
+on.
 
 If you prefer to use the command line, to see the job queue use::
 
