@@ -116,7 +116,9 @@ Graphical logon to Stallo
 
 If you want to run applications with graphical user interfaces we recommend you to use the
 `remote desktop service <http://stallo-gui.uit.no/vnc/>`_
-on Stallo.
+on Stallo. 
+
+If you have a new account and you have never logged in on Stallo before, first log in with a classical ssh connection (see above). Afterwards you can use the graphical logon. Otherwise it can happen that your /home will not be created and you will get an error message of the type: "Could not chdir to home directory /home/your_user_name: No such file or directory"
 
 **Important:**
  
