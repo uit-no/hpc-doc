@@ -1,5 +1,4 @@
 
-.. _schrodinger:
 
 Schrodinger Workshop
 ====================
