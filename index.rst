@@ -24,6 +24,7 @@ HPC-UiT Services User Documentation
    news/new_sw.rst
    news/schrodinger.rst
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Getting help
