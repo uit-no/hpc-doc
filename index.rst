@@ -22,7 +22,7 @@ HPC-UiT Services User Documentation
    news/news.rst
    news/slurm.rst
    news/new_sw.rst
-
+   news/schordinger.rst
 
 .. toctree::
    :maxdepth: 1
