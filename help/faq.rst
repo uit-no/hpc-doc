@@ -1,5 +1,6 @@
 
 
+
 ==========================
 Frequently asked questions
 ==========================
@@ -255,11 +256,20 @@ If you prefer to use the command line, to see the job queue use::
 Why does my job not start or give me error feedback when submitting?
 --------------------------------------------------------------------
 
-When I try to start a job with 2GB of memory pr. core, I get the following error::
+Most often the reason a job is not starting is that Stallo is full at the moment and there are many jobs waiting in the queue. But sometimes there is an error in the job script and you are asking for a configuration that is not possible on Stallo. In such a case the job will not start.
+
+To find out how to monitor your jobs and check their status see :ref:`monitoring_jobs`.
+
+Below are a few cases of why jobs don't start or error messages you might get:
+
+
+**Memory** **per** **core**
+
+"When I try to start a job with 2GB of memory pr. core, I get the following error::
 
 sbatch: error: Batch job submission failed: Requested node configuration is not available
 
-With 1GB/core it works fine. What might be the cause to this?
+With 1GB/core it works fine. What might be the cause to this?"
 
 On Stallo we have two different configurations available; 16 core and 20 core nodes - with both a 
 total of 32 GB of memory/node. Currently only the 20 core nodes have been enabled for the SLURM
@@ -281,7 +291,11 @@ of 16 nodes. 4000MB will give you 8 cores/node - everyone being happy. Just note
 info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much as 
 mem-per-cpu 2000MB.
 
-Why do I get ``slurmstepd: Exceeded step memory limit`` in my log/output?
+
+
+**Step memory limit**
+
+"Why do I get ``slurmstepd: Exceeded step memory limit`` in my log/output?"
 
 For slurm, the memory flag seems to be a hard limit, meaning that when each core
 tries to utilize more than the given amount of memory, it is killed by the slurm-deamon.
@@ -295,6 +309,18 @@ For instance::
  #SBATCH --ntasks=20
  #SBATCH --time=0-24:05:00
  #SBATCH --mem-per-cpu=6000MB
+
+
+
+**QOSMaxWallDurationPerJobLimit**
+
+QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exceeded. Basically, the user has asked for more time than is allowed for the QOS associated with the job.
+
+
+
+**Priority vs. Resources**
+
+Priority means that resources are in principle available, but someone else has higher priority in the queue. Resources means the at the moment the requested resources are not available.
 
 
 CPU v.s. core
@@ -346,5 +372,7 @@ And here is the ``dowork.sh`` script:
 .. literalinclude:: files/dowork.sh
    :language: bash
    :linenos:
+
+
 
 
