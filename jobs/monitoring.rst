@@ -1,4 +1,4 @@
-
+.. _monitoring_jobs:
 
 Monitoring your jobs
 ====================
