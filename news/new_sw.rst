@@ -11,8 +11,10 @@ We have many new software packages installed, that are at the moment not visible
 though they are already accessible. On the afore mentioned days we will make these packages visible by default. 
 You will still be able to use the "old" software you used before, but some names will have changed.
 The name changes are in using mixed case in stead of just small case, f.e. "python" is will become "Python".
-If you are looking for a package, try
-$ module avail <package_name>
+If you are looking for a package, try::
+
+  $ module avail <package_name>
+
 This command is case insensitive, and will list you all possible modules you can load for this package 
 (both from the new and the old installations).
 
