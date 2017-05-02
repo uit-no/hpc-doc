@@ -37,3 +37,5 @@ to remmove all loaded packages and start over.
 
 If you have trouble or questions, please, check this manual and contact us.
 
+For information about how to reach the "new" packages before we make this scheme default see in the software section, :ref:`new_scheme`.
+
