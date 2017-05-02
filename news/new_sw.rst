@@ -23,11 +23,11 @@ With the new packages it is also more common that when you load one package it w
 load several other packages that it needs to function. 
 Check what you have currently loaded with::
 
-  ``$ module load``
+  $ module load
   
 or ``$ ml`` for short and uloaded conflicting modules or do::
 
-  ``$ module purge``
+  $ module purge
 
 to remmove all loaded packages and start over.
 
