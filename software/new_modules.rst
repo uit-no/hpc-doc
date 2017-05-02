@@ -6,7 +6,7 @@ New Scheme Modules
 We are working on a new scheme for installing, updating and maintaining software packages, \
 including making modules and module files schemes. **All new software is and will be installed  \
 according to this scheme.** For several reasons we can not make these installations as the \
-default setting for all users just yet, but we found it beneficial that you at least have access\
+default setting for all users just yet, but we found it beneficial that you at least have access \
 to them. Please note, that we might still do some changes without prior notice. In particular, \
 the name of the packages and the behavior of lmod commands such as `module load`, `module avail`,\
 `module spider`, etc. is likely to change. If you have trouble finding something, or have some questions,\
