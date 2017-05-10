@@ -1,41 +1,60 @@
-
 .. _new_sw:
 
 New software and module scheme
 ===============================
 
-**On the 9th-10th of May 2017 the default module setup will change.**
+**On the 9th-10th of May 2017, the default module setup changed. It is likely that you will have problems loading modules and jobs waiting to start might crash. Jobs already running should not be affected.**
 
 What this means: 
-We have many new software packages installed, that are at the moment not visible by default, 
-though they are already accessible. On the afore mentioned days we will make these packages visible by default. 
-You will still be able to use the "old" software you used before, but some names will have changed.
-The name changes are in using mixed case in stead of just small case, f.e. "python" is will become "Python".
+We have many new software packages installed, that were not visible by default, 
+though they were already accessible. On the afore mentioned days we made these packages visible by default. There are several big changes that you will experience, and sadly this might break your job scripts and cause you error messages when trying to load modules. Jobs that are waiting to start might crash at start because they can not load modules, but already running jobs should run without problems. We apologize for these problems and we believe that this way of switching is still a better alternative than shutting Stallo down.
+
+
+If you have trouble or questions, please, check this manual and contact us.
+
+Here are the main changes you will experience:
+
+Change of software module names
+-------------------------------
+You will still be able to use the "old" software you used before, but many names of sw packages will change.
+The name changes are in using mixed case instead of just small case, f.e. "python" is will become "Python", "openmpi" becomes "OpenMPI", and so on. The version of the modules has also changed. In most modules the version now contains some basic information on what it was compiled with - f.e. intel/2016a or foss/2016a (Free Open Source Software, commonly referred to as GNU) - and in some cases also information on some dependency - f.e. Python/2.7.12. In the new installation, the name "intel" has a somewhat different meaning from the old installations: loading intel/13.0 will give you the intel module, and you will have icc and ifort available to you; loading intel/2016a will load several packages including icc, ifort, imkl and impi. More information on this coming soon.
+
 If you are looking for a package, try::
 
   $ module avail <package_name>
 
-This command is case insensitive, and will list you all possible modules you can load for this package 
-(both from the new and the old installations).
+This command is case insensitive, and lists you all modules, which you can load for this package 
+(both from the new and the old installations). If you get too many results because the name of your package is part of other names (f.e. "R", "intel", or "Python") add a "/" at the end of the name::
 
-Another important change is behaviour of potentially conflicting modules. In the "old setup" you are 
+  $ module avail <package_name>/
+
+
+Behavior of potentially conflicting modules
+--------------------------------------------
+Another important change is behavior of potentially conflicting modules. In the "old setup" you are 
 not able to have two conflicting modules - f.e. openmpi and impi - loaded at the same time. 
 This is only partially true for the "new scheme" and you will need to pay more attention to this. 
-With the new packages it is also more common that when you load one package it will automatically 
+With the new packages, it is also more common that when you load one package it will automatically 
 load several other packages that it needs to function. 
 Check what you have currently loaded with::
 
   $ module load
   
-or ``$ ml`` for short and uloaded conflicting modules or do::
+or ``$ ml`` for short, and unload conflicting modules, or do::
 
   $ module purge
 
-to remmove all loaded packages and start over.
+to remove all loaded packages and start over.
 
-**If you have already started using the new modules** by loading the  "notur" module and sourcing "mod_setup.sh", simply remove these 2 steps and continue working as normal.
 
-If you have trouble or questions, please, check this manual and contact us.
+StdEnv and StdMod
+-----------------
+By default, you will have StdEnv and StdMod loaded. StdEnv sets up the paths and other variables for you to have a working module environment. It has a "sticky" tag and will not be unloaded with a `module purge` or a `module unload StdEnv`. We strongly recommend keeping it loaded.
+StdMod loads the default system modules. You are welcome to unload it, if you wish, and both `module unload StdMod` or `module purge` will unload it.
 
-For information about how to reach the "new" packages before we make this scheme default see in the software section, :ref:`new_scheme`.
 
+If you are already using "mod_setup.sh"
+----------------------------------------
+If you have already started using the new modules by loading the "notur" module and sourcing "mod_setup.sh", simply remove these two steps and continue working as normal. We kept this option working for now to reduce the number of potentially crashing jobs, but we plan to remove it in the near future, so we recommend removing those lines from any new jobs you launch.
+
+For information about how to reach the "new" packages, before we make this scheme default, see in the software section :ref:`new_scheme`.
