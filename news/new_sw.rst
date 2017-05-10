@@ -40,7 +40,7 @@ Check what you have currently loaded with::
 
   $ module load
   
-or ``$ ml`` for short, and unload conflicting modules, or do::
+or ``ml`` for short, and unload conflicting modules, or do::
 
   $ module purge
 
@@ -49,9 +49,15 @@ to remove all loaded packages and start over.
 
 StdEnv and StdMod
 -----------------
-By default, you will have StdEnv and StdMod loaded. StdEnv sets up the paths and other variables for you to have a working module environment. It has a "sticky" tag and will not be unloaded with a `module purge` or a `module unload StdEnv`. We strongly recommend keeping it loaded.
-StdMod loads the default system modules. You are welcome to unload it, if you wish, and both `module unload StdMod` or `module purge` will unload it.
+By default, you will have StdEnv and StdMod loaded. StdEnv sets up the paths and other variables for you to have a working module environment. It has a "sticky" tag and will not be unloaded with a ``module purge`` or a ``module unload StdEnv``. We strongly recommend keeping it loaded.
+StdMod loads the default system modules. You are welcome to unload it, if you wish, and both ``module unload StdMod`` or ``module purge`` will unload it.
 
+
+Lmod warning "rebuild your saved collection"
+--------------------------------------------
+Lmod allows a user to save a bundle of modules as a collection using ``module save <collection_name>`` and ``module restore <collection_name>``. This enables you to quickly get the same list of modules loaded if you tend to use the same modules over and over.
+With a new module scheme came a different system MODULEPATH. For this reason, if you have some module collections saved, you will experience the following warning: "Lmod Warning:  The system MODULEPATH has changed: please rebuild your saved collection."
+To solve this you need to remove your old collections and create them again. We apologize for the inconvenience.
 
 If you are already using "mod_setup.sh"
 ----------------------------------------
