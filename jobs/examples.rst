@@ -34,7 +34,7 @@ Save it to a file (e.g. run.sh) and submit it with::
 
   $ sbatch run.sh
 
-Example for a hybrd MPI OpenMP job
+Example for a hybrid MPI OpenMP job
 ----------------------------------
 
 .. literalinclude:: files/slurm-MPI-OMP.sh
