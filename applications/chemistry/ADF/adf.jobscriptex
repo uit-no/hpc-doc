@@ -31,7 +31,7 @@ cores=40  # Number of cores potentially used by mpi engine in submit procedure
 # We load all the default program system settings with module load:
 
 module load notur 
-module load adf/2014.10
+module load ADF/2014.10
 
 # Check other available versions with "module avail adf"
 

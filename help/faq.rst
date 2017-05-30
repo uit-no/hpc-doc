@@ -54,7 +54,7 @@ virtual environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 Example (as an example we install the Biopython package)::
 
-  $ module load gcc/4.9.1
+  $ module load GCC/4.9.1
   $ virtualenv venv
   $ source venv/bin/activate
   $ pip install biopython

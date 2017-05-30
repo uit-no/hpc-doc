@@ -32,7 +32,7 @@ You load the application by typing:
 
 .. code-block:: bash
 
-    $ module load adf
+    $ module load ADF
 
 This command will give you the default version.
 
@@ -46,7 +46,7 @@ If you want to run other versions of ADF, change the <module load> parameter in 
 
 .. code-block:: bash
 
- $ module load adf/2014.08
+ $ module load ADF/2014.08
 
 First run of ADF/BAND on Stallo:
 ================================

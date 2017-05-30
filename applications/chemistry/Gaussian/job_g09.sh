@@ -31,7 +31,7 @@ extention=com # We use the same naming scheme as the software default
 # We load all the default program system settings with module load:
 
 module load notur
-module load gaussian/09.d01
+module load Gaussian/09.d01
 
 # Check other available versions with "module avail gaussian"
 

@@ -73,7 +73,7 @@ Use
 
 .. code-block:: bash
 
- $ module load schrodinger/<version> # i.e 2015.4
+ $ module load Schrodinger/<version> # i.e 2015.4
 
 to get access to Schrodinger.  The batch resource allocation system is integrated with the gui through a schrodinger.hosts file which is centrally administered. 
 

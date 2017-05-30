@@ -222,8 +222,8 @@ format like `netCDF <http://www.unidata.ucar.edu/software/netcdf/>`_ or
 Both formats are supported on stallo, but you have to load its modules
 to use them::
 
-  $ module load netcdf
+  $ module load netCDF
 
 Or::
 
-  $ module load hdf5
+  $ module load HDF5

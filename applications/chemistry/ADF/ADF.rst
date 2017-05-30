@@ -67,13 +67,13 @@ to see which versions of ADF are available. Use
 
 .. code-block:: bash
 
-    $ module load adf
+    $ module load ADF
 
 or 
 
 .. code-block:: bash
 
- $ module load adf/<version> # i.e 2014.10 (default)
+ $ module load ADF/<version> # i.e 2014.10 (default)
 
 to get access to ADF.  
 

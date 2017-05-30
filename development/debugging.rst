@@ -23,7 +23,7 @@ from this compilation will in the following examples be called
 First, load the totalview module to get the correct environment
 variables set::
 
-  $ module load totalview
+  $ module load TotalView
 
 To start debugging run::
 
@@ -62,7 +62,7 @@ Running totalview on an interactive node::
   $ mkdir -p /global/work/$USER/test_dir
   $ cp $HOME/test_dir/a.out /global/work/$USER/test_dir
   $ cd /global/work/$USER/test_dir
-  $ module load totalview
+  $ module load TotalView
   $ totalview a.out
 
 Replace [#procs] with the core-count for the job.
@@ -115,7 +115,7 @@ request. Typically the program will run 10-100 times slower under Valgrind.
 Simply start Valgrind with
 the path to the binary program to be tested::
 
-  $ module load valgrind
+  $ module load Valgrind
   $ valgrind /path/to/prog
 
 This runs Valgrind with the default "tool" which is called memcheck, which

@@ -50,12 +50,12 @@ How to load a module
 
 In order to make, for instance, the NetCDF library available issue the command::
 
-  module load netcdf
+  module load netCDF
 
 This will load the default NetCDF version. To load a specific version,
 just include the version after a slash::
 
-  module load netcdf/3.6.2
+  module load netCDF/3.6.2
 
  
 
