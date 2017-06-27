@@ -1,0 +1,10 @@
+! HF def2-TZVP
+
+%pal
+nprocs 4    # parallel execution
+end
+
+* xyz 0 1
+C  0.0  0.0  0.0
+O  0.0  0.0  1.13
+*
