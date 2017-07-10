@@ -30,6 +30,7 @@ HPC-UiT Services User Documentation
    :caption: Getting help
 
    help/faq.rst
+   help/AboutLicenses.rst
    help/X11-connection-problems.rst
    help/contact.rst
    help/writing-support-requests.rst
