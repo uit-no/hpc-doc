@@ -12,12 +12,12 @@ Also, due to a choice of policy, I am only adressing the issues of academic acce
 
 There is in general 6 different categories of access limitations for software on Stallo:
 
-1. Licenses paid entirely by the users.
-* Licenses paid partially by the users and partly by national bodies.
-* Licenses paid partly or entirely by institutions.
-* Licenses paid entirely by national bodies.
-* Licenses available only on a machine or a service (machine-license).
-* Free licenses that requires an agreement with the vendor before using the code.
+#. Licenses paid entirely by the users.
+#. Licenses paid partially by the users and partly by national bodies.
+#. Licenses paid partly or entirely by institutions.
+#. Licenses paid entirely by national bodies.
+#. Licenses available only on a machine or a service (machine-license).
+#. Free licenses that requires an agreement with the vendor before using the code.
 
 Category 1 is what is the "bring your own license" group. Either the vendor does not provide computer centre license, or pricing is somewhat outside the boundaries of acceptance for NOTUR. VASP is in this category, where NOTUR does administer a certain level of access based on feedback from the VASP vendor. Other examples is Petrel, Molpro (previously).
 
@@ -34,5 +34,7 @@ Category 6  In this group, we have Molcas, ORCA. (and maybe Dalton and Dirac). S
 and, of course, category 7 is the entire group of software where this is not really a problem;-).
 
 You will find more info in the application guides or in the respective module files. The latter info you get access to by typing:
+
+..code-block::bash
 
     module help <application> # Like for instance ADF
