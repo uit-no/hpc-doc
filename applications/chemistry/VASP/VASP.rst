@@ -14,7 +14,7 @@ You load the application by typing:
 
 .. code-block:: bash
 
-    $ module load vasp
+    $ module load VASP
 
 This command will give you the default version, which is currently 5.3.2
 

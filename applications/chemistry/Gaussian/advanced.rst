@@ -33,11 +33,11 @@ Gaussian 09 on Stallo
 
 To run Gaussian 09 on Stallo, the module containing all relevant environment settings for Gaussian has to be loaded::
 
-  $ module load gaussian
+  $ module load Gaussian
 
 Currently, both the minor revision b.01 and c.01 are available on Stallo, the default version being loaded is c.01. The reason for this is basically better scaling behavior. To load  loading version b.01::
 
- $ module load gaussian/09.b01
+ $ module load Gaussian/09.b01
 
 If you download a run script (see below), this will be taken care of by the script (though you have to change to your preferred flavor of the Gaussian 09 code). Two run scripts are available (for running in serial and parallel, respectively). Download one of the scripts to your home/$USER/bin and use it as described. 
 

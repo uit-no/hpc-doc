@@ -63,7 +63,7 @@ to see which versions of Gaussian are available. Use
 
 .. code-block:: bash
 
- $ module load gaussian/<version> # i.e 09.d01 
+ $ module load Gaussian/<version> # i.e 09.d01
 
 to get access to any given version of Gaussian.  
 

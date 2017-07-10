@@ -54,7 +54,7 @@ virtual environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 Example (as an example we install the Biopython package)::
 
-  $ module load gcc/4.9.1
+  $ module load GCC/4.9.1
   $ virtualenv venv
   $ source venv/bin/activate
   $ pip install biopython
@@ -200,29 +200,7 @@ for a similar solution.
 
 "X11 connection rejected because of wrong authentication"-problem
 ------------------------------------------------------------------
-
-This is a problem that has been reported mainly from the OS X-platform (Mac) and in lesser extent 
-from the ubuntu linux platform. It is entirely caused be the client machine, thus we acnnot offer any 
-support on this issue. If you experience the abovementioned problems, you either need to contact local IT-services
-or use the `remote desktop service <http://stallo-gui.uit.no/vnc/>`_
-. Which is the only supported graphical login service for Stallo.
-
-For Mac OS X Sierra (10.12) it is related to the fact that the xauth binary has a non-standard
-placement, causing ssh to not finding it when logging in with X11 tunelling enabled (ssh -Y). 
-
-Be ware that for the OS X platform, this also inflects the usage of the safari browser when 
-logging in to stallo-gui, since the browser seems to read the default path setup from the system.
-Using the Chrome browser solves the X11 problem on stallo-gui for OSX.
-
-The overall sollution for Espen on his Mac was the following: 
-
-* sudo emacs -nw /etc/ssh/ssh_config
-* Go to the line that starts with "# Host *" (line 20 in my config)
-* Added "XAuthLocation /usr/X11/bin/xauth" under ForwardAgent and ForwardX11.
-* Closed the file and closed all terminal windows.
-* Opened a terminal window and logged in to Stallo. Problem gone.
-
-* Since he had multiple user accounts on Stallo, he also had to add "X11Forwarding yes" to your sshd_config file.
+Please look at our documentation of this problem here: :ref:`X11_connection_problems`.
 
 Jobs and queue system
 =====================

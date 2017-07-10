@@ -34,7 +34,25 @@ Save it to a file (e.g. run.sh) and submit it with::
 
   $ sbatch run.sh
 
+Example for a hybrid MPI OpenMP job
+----------------------------------
 
+.. literalinclude:: files/slurm-MPI-OMP.sh
+   :language: bash
+   :linenos:
+
+Save it to a file (e.g. run.sh) and submit it with::
+
+  $ sbatch run.sh
+
+If you want to start more than one MPI rank per node you can
+use ``--ntasks-per-node`` in combination with ``--nodes``::
+    
+#SBATCH --nodes=4 --ntasks-per-node=2 --cpus-per-task=8
+
+will start 2 MPI tasks each on 4 nodes, where each task can use up
+to 8 threads.
+  
 Running many sequential jobs in parallel using job arrays
 ---------------------------------------------------------
 
