@@ -26,3 +26,5 @@ For more information on available versions, type:
 
 For more information, see: http://www.vasp.at
 
+We have made the following installs and updates of 5.4.1 on Stallo:
+
