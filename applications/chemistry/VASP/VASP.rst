@@ -4,11 +4,56 @@
 VASP (Vienna Ab initio Simulation Package)
 ==========================================
 
-VASP is a package for performing ab-initio quantum-mechanical molecular dynamics (MD) using pseudopotentials and a plane wave basis set.
+Information regarding the Vienna Ab initio Simulation Package (VASP) installed on Stallo.
 
-To use VASP you need to be a member of the vasp group, contact the HPC staff to get access.
-Vasp is a commercial software that requires a license for all who wants to run on Stallo, to get access you would need to prove that the group you are a member of holds a valid licence.
+Related information:
+---------------------
+.. toctree::
+   :maxdepth: 1
 
+   firsttime_vasp.rst
+   vasp_on_stallo.rst
+
+
+General information:
+=====================
+
+Policy:
+-------
+The Vasp program is not distributed via site licences. However, HPC-staff in NOTUR have access to the VASP code to be able to support any research groups that have a valid VASP license. 
+
+VASP is a commercial software package that requires a license for all who wants to run on Stallo. To get access you would need to prove that the group you are a m\
+ember of holds a valid licence; a representative for the research group needs to contact VASP and ask for an aknowledgement of you connection to the license. A VASP representative sends this acknowledgement to support@notur.no. Then your name is put into the VASP group, granting you access to the VASP 5 release of VASP on Stallo.
+
+The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as a whole to add to the community info/knowledge pool where such is made a\
+vailable. Also, HPC staff from UiT does not provide any support to VASP 4 anymore, basically due to age of the code.  
+
+Citation
+---------
+When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citation(s).
+
+License information:
+---------------------
+The VASP license is proprietary and commercial. It is based on group license policy, and for NOTUR systems VASP packages falls in the "bring your own license" category. (ref...)
+
+Description 
+------------
+VASP is a complex package for performing ab-initio quantum-mechanical molecular dynamics (MD) simulations using pseudopotentials or the projector-augmented wave method and a plane wave basis set. The approach implemented in VASP is based on the (finite-temperature) local-density approximation with the free energy as variational quantity and an exact evaluation of the instantaneous electronic ground state at each MD time step.
+
+VASP uses efficient matrix diagonalisation schemes and an efficient Pulay/Broyden charge density mixing. These techniques avoid all problems possibly occurring in the original Car-Parrinello method, which is based on the simultaneous integration of electronic and ionic equations of motion.
+
+The interaction between ions and electrons is described by ultra-soft Vanderbilt pseudopotentials (US-PP) or by the projector-augmented wave (PAW) method. US-PP (and the PAW method) allow for a considerable reduction of the number of plane-waves per atom for transition metals and first row elements. Forces and the full stress tensor can be calculated with VASP and used to relax atoms into their instantaneous ground-state.
+
+There are various type plug ins and added funktionality to VASP. On Stallo, we have added support for the Texas transition state tools (vTST)(http://theory.cm.utexas.edu/vtsttools/), the VASPsol(http://vaspsol.mse.ufl.edu) implicit solvation model made by Hennig and Mathew from University of Florida and the Bayesian Error Estimation Functionals (http://suncat.stanford.edu/about/facilities/software) from the SUNCAT center, Standford. 
+
+Online iformation from vendor:
+-------------------------------
+* Homepage: http://www.vasp.at
+* Documentation: http://cms.mpi.univie.ac.at/wiki/index.php/The_VASP_Manual
+
+
+Usage
+=====
 
 You load the application by typing:
 
@@ -16,7 +61,7 @@ You load the application by typing:
 
     $ module load VASP
 
-This command will give you the default version, which is currently 5.3.2
+This command will give you the default version.
 
 For more information on available versions, type:
 
@@ -24,89 +69,28 @@ For more information on available versions, type:
 
     $ module avail vasp
 
-For more information, see: http://www.vasp.at
-
-We have made the following installs and updates of 5.4.1 on Stallo:
-
-..code-block::bash
-
-	module avail VASP
-
-will show you a dramatic increase in the available VASP binaries for release 5.4.1.
-
-There is two main categories: 
-
-tooled; compiled with the texas transtition state tools ()and the VASPsol (http://vaspsol.mse.ufl.edu) solvation.F file.
-plain; compiled with out any addtional tools or add-ons.
-
-The reason for this is that we are uncertain of effects on the tooles on calculated numbers, due to reproducibility, we have chosen to hold the different version separate.
-
-For each group of binaries, you will find a total of 15 binaries, split into three different groups.
-
-unmodified group; binaries without any additional name to them; vasp_std
-noshear: vasp_std_noshear
-abfix: vasp_std_abfix
-
-The unmodified group is compiled on basis on the unmodified set of fortran files that comes with the code.
-The noshear version is compiled with
-The abfix version is compiled with 
-
-For the vasp_std in each category is compiled wtith the following cmake flags: 
-      FPP+=-DNGZhalf
-   EXE=vasp_std
-      FPP+=-DNGZhalf -DwNGZhalf
-   EXE=vasp_gam
-
-No modification in FPP settings: 
-else ifeq ($(VERSION),ncl)
-   EXE=vasp_ncl
+Experiencewise, VASP is a rather memory intensive code. Users are advised to read up on the general job script example(s) for SLURM and Stallo, and also how to specify memory in SLURM (the general SLURM manual - https://slurm.schedmd.com).
 
 
-vasp_gam
-vasp_gam_tbdyn
-vasp_ncl
-vasp_tbdyn
+First time you run a VASP job on Stallo?
+----------------------------------------
 
-This is in correspondance with the default scheme from VASP.
+Get the information you need here:
+
+.. toctree::
+   :maxdepth: 1
+
+   firsttime_vasp.rst
 
 
+About the VASP version(s) installed on Stallo:
+--------------------------------------------------
 
-ifndef VERSION
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf
-   else
-      FPP+=-DNGXhalf
-   endif
-   EXE=vasp_std
-else
-ifeq ($(VERSION),std)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf
-   else
-      FPP+=-DNGXhalf
-   endif
-   EXE=vasp_std
-else ifeq ($(VERSION),gam)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -DwNGZhalf
-   else
-      FPP+=-DNGXhalf -DwNGXhalf
-   endif
-   EXE=vasp_gam
-else ifeq ($(VERSION),tbdyn)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -Dtbdyn
-   else
-      FPP+=-DNGXhalf -Dtbdyn
-   endif
-   EXE=vasp_tbdyn
-else ifeq ($(VERSION),gam_tbdyn)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -DwNGZhalf -Dtbdyn
-   else
-      FPP+=-DNGXhalf -DwNGXhalf -Dtbdyn
-   endif
-   EXE=vasp_gam_tbdyn
-else ifeq ($(VERSION),ncl)
-   EXE=vasp_ncl
-else
+Since the installation we made on Stallo is rather taylor made, we have gathered information about this here:
+
+.. toctree::
+   :maxdepth: 1
+
+   vasp_on_stallo.rst
+
+Here we also adress compilation relevant information for those who would like to do it themselves. 

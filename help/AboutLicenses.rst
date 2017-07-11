@@ -35,6 +35,6 @@ and, of course, category 7 is the entire group of software where this is not rea
 
 You will find more info in the application guides or in the respective module files. The latter info you get access to by typing:
 
-..code-block::bash
+.. code-block::bash
 
     module help <application> # Like for instance ADF

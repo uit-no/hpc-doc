@@ -86,7 +86,7 @@ important software innovation  " both in 2004 and 2005 in HPCWire. Now
 Rocks is a de-facto standard for cluster-management in Norwegian
 supercomputing.
 
-Stallo - Norse mythology
+Stallo - Sami mythology
 ========================
 
 In the folklore of the Sami, a Stallo (also Stallu or Stalo) is a sami wizard.
