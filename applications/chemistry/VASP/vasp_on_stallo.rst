@@ -57,59 +57,10 @@ FPP settings for each binary:_
 ------------------------------
 
 # vasp_std is compiled with the following additional FPP flag(s): -DNGZhalf
-
-.. code-block:: bash
-
-ifeq ($(VERSION),std)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf
-   else
-      FPP+=-DNGXhalf
-   endif
-   EXE=vasp_std
-
 # vasp_gam is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf
-
-.. code-block:: bash
-
-else ifeq ($(VERSION),gam)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -DwNGZhalf
-   else
-      FPP+=-DNGXhalf -DwNGXhalf
-   endif
-   EXE=vasp_gam
-
 # vasp_ncl is compiled with the following additional FPP flag(s): no modifcations in FPP settings
-
-.. code-block::bash
-
-else ifeq ($(VERSION),ncl)
-   EXE=vasp_ncl
-
 # vasp_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -Dtbdyn
-
-.. code-block::bash
-
-else ifeq ($(VERSION),tbdyn)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -Dtbdyn
-   else
-      FPP+=-DNGXhalf -Dtbdyn
-   endif
-   EXE=vasp_tbdyn
-
 # vasp_gam_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf -Dtbdyn
-
-.. code-block:: bash
-
-else ifeq ($(VERSION),gam_tbdyn)
-   ifeq ($(DMPI),DMPI)
-      FPP+=-DNGZhalf -DwNGZhalf -Dtbdyn
-   else
-      FPP+=-DNGXhalf -DwNGXhalf -Dtbdyn
-   endif
-   EXE=vasp_gam_tbdyn
 
 We would be happy to provide a copy of our build scripts (patches) upon request. 
 
