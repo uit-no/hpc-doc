@@ -41,7 +41,7 @@ The %mem allocation of memory in the Gaussian input file means two things:
   size – thus you should never ask for more than half of the physical memory on the nodes, unless they have swap space available - which you never should assume. 
   Basically, the general %mem limit will allways be half of the physical memory pool given in MB instead of GB - 16000MB instead of 16GB since this leaves a small part for the system. 
 
-For core-count, node-count and amounts of memory on Stallo, see :ref:_about_stallo 
+For core-count, node-count and amounts of memory on Stallo, see :ref: about_stallo_ 
 
 
 Scalability and parallel performance of Gaussian on Stallo:

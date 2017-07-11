@@ -18,15 +18,11 @@ into your test job folder (which I assume you have created in advance).
 VASP input example:
 --------------------
 
-Download the tarred job example folder:
-
-.. only::builder_html
-
-   See: :download: `CeO2job-files <CeO2.tar.gz>`.
+Download the tarred job example folder here :download: `CeO2job-files <CeO2.tar.gz>`.
 
 move this file to your test job folder on Stallo and type
 
-.. code-block::bash
+.. code-block:: bash
 
    tar -zxf CeO2.tar.gz
 
@@ -35,17 +31,13 @@ Then; download the job-script as seen here:
 .. include:: job_vasp.sh
    :literal:
 
-Download it through this link:
-
-.. only::builder_html
-
-   See: :download: `job_vasp.sh <job_vasp.sh>`.
+Download it here :download: `job_vasp.sh <job_vasp.sh>`.
 
 
 These files are also available on Stallo:
 ------------------------------------------
 
-.. code-block::bash
+.. code-block:: bash
 
    module load VASP/5.4.1.plain-intel-2016a
    cd <to whatever you call your test folder>

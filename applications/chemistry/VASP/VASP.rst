@@ -44,7 +44,7 @@ VASP uses efficient matrix diagonalisation schemes and an efficient Pulay/Broyde
 
 The interaction between ions and electrons is described by ultra-soft Vanderbilt pseudopotentials (US-PP) or by the projector-augmented wave (PAW) method. US-PP (and the PAW method) allow for a considerable reduction of the number of plane-waves per atom for transition metals and first row elements. Forces and the full stress tensor can be calculated with VASP and used to relax atoms into their instantaneous ground-state.
 
-There are various type plug ins and added funktionality to VASP. On Stallo, we have added support for the Texas transition state tools (vTST)(http://theory.cm.utexas.edu/vtsttools/), the VASPsol(http://vaspsol.mse.ufl.edu) implicit solvation model made by Hennig and Mathew from University of Florida and the Bayesian Error Estimation Functionals (http://suncat.stanford.edu/about/facilities/software) from the SUNCAT center, Standford. 
+There are various type plug ins and added funktionality to VASP. On Stallo, we have added support for the Texas transition state tools (`vTST <http://theory.cm.utexas.edu/vtsttools/>`), the `VASPsol <http://vaspsol.mse.ufl.edu>` implicit solvation model made by Hennig and Mathew from University of Florida and the `Bayesian Error Estimation Functionals <http://suncat.stanford.edu/about/facilities/software>` from the SUNCAT center, Standford. 
 
 Online iformation from vendor:
 -------------------------------
@@ -69,7 +69,7 @@ For more information on available versions, type:
 
     $ module avail vasp
 
-Experiencewise, VASP is a rather memory intensive code. Users are advised to read up on the general job script example(s) for SLURM and Stallo, and also how to specify memory in SLURM (the general SLURM manual - https://slurm.schedmd.com).
+Experiencewise, VASP is a rather memory intensive code. Users are advised to read up on the general job script example(s) for SLURM and Stallo, and also how to specify memory in `SLURM <https://slurm.schedmd.com>`.
 
 
 First time you run a VASP job on Stallo?

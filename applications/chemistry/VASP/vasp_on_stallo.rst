@@ -14,7 +14,7 @@ Note that the VASP installation on Stallo mainly follows the standard syntax int
 
 If you do 
 
-.. code-block::bash
+.. code-block:: bash
 
         module avail VASP
 
@@ -58,7 +58,7 @@ FPP settings for each binary:_
 
 # vasp_std is compiled with the following additional FPP flag(s): -DNGZhalf
 
-.. code-block::bash
+.. code-block:: bash
 
 ifeq ($(VERSION),std)
    ifeq ($(DMPI),DMPI)
@@ -70,7 +70,7 @@ ifeq ($(VERSION),std)
 
 # vasp_gam is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf
 
-.. code-block::bash
+.. code-block:: bash
 
 else ifeq ($(VERSION),gam)
    ifeq ($(DMPI),DMPI)
@@ -101,7 +101,7 @@ else ifeq ($(VERSION),tbdyn)
 
 # vasp_gam_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf -Dtbdyn
 
-.. code-block::bash
+.. code-block:: bash
 
 else ifeq ($(VERSION),gam_tbdyn)
    ifeq ($(DMPI),DMPI)
