@@ -123,10 +123,7 @@ Observe that they all started (approximately) at the same time::
   output_9.txt:start at 14:43:59
 
 
-_
-.. all_mem:
-
-Example on how to allocate entire memory on one node_
+Example on how to allocate entire memory on one node
 ----------------------------------------------------
 
 .. literalinclude:: files/slurm-big-memory.sh

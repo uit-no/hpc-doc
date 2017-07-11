@@ -19,12 +19,10 @@ Gaussian input example:
 .. include:: caffeine.com
    :literal:
 
-**NB: Pay special attention to the %mem defined in the beginning of the file. Also note that there are no mentioning of Linda and shared memory cores. This is adressed here:**
 
-.. toctree::
-   :maxdepth: 1
+**NB: Pay special attention to the %mem defined in the beginning of the file. Also note that there are no mentioning of Linda and shared memory cores. This is addressed here:** :ref:`gaussian_on_stallo`
 
-   gaussianonstallo.rst
+You can also download the input file here: :download:`Caffeine-input<caffeine.com>`
 
 
 Gaussian runscrip example:
@@ -36,22 +34,29 @@ Gaussian runscrip example:
 
 **NB: Note that we for Gaussian advice to specify both nodes and core/node. This is due to the special way Gaussian sets up parallel jobs!**
 
-These files are also available on Stallo:
-------------------------------------------
+You can also download the input file here: :download:`Gaussian run script<job_g09.sh>`
 
-To find the jobscript example(s), type the following::
 
-    module load notur
-    cd $runex/Gaussian
-    ls
 
-Copy the contents of this folder to your home directory.
+The runscript example and the input file are also on Stallo:
+-------------------------------------------------------------
 
-Then, submit the job by typing::
+Type:
 
-    sbatch job_g09.sh
+.. code-block:: bash
+	
+	module load Gaussian/9.c01
+	cd <whereevertestfolderyouhave>
+	cp -R $RUNEX .
 
-Compare the energy of g09_caffeine.out with the correct energy of HF=-680.4153661 for this calculation. 
+
+When you have all the necessary files in the correct folders, submit the job by typing:
+
+.. code-block:: bash
+
+	sbatch job_g09.sh
+
+To verify that nothing has gone wrong, compare the energy of g09_caffeine.out with the correct energy of HF=-680.4153661 for this calculation. 
 The energy should ideally be identical or close to identical. After that, you may alter the varia\
 bles in the shell script as much as you like to adapt to your own jobs. Good luck.
 

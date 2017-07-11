@@ -50,17 +50,15 @@ These are familiar from the standard build system that is provided with the code
 
 * vasp_tbdyn
 * vasp_gam_tbdyn
-_
-.. fpp_vasp_settings:
 
-FPP settings for each binary:_
+FPP settings for each binary:
 ------------------------------
 
-# vasp_std is compiled with the following additional FPP flag(s): -DNGZhalf
-# vasp_gam is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf
-# vasp_ncl is compiled with the following additional FPP flag(s): no modifcations in FPP settings
-# vasp_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -Dtbdyn
-# vasp_gam_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf -Dtbdyn
+#. vasp_std is compiled with the following additional FPP flag(s): -DNGZhalf
+#. vasp_gam is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf
+#. vasp_ncl is compiled with the following additional FPP flag(s): no modifcations in FPP settings
+#. vasp_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -Dtbdyn
+#. vasp_gam_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf -Dtbdyn
 
 We would be happy to provide a copy of our build scripts (patches) upon request. 
 
@@ -69,12 +67,16 @@ About memory allocation for VASP:
 
 VASP is known to be potentially memory demanding. Quite often, you might experience to use less than the full number of cores on the node, but still all of the memory.
 
-For core-count, node-count and amounts of memory on Stallo, see :ref: about_stallo_
+For core-count, node-count and amounts of memory on Stallo, see :ref:`about_stallo`.
 
 There are two important considerations to make:
 
 First: Make sure that you are using the SBATCH --exclusive flag in your run script.
-Second: Read about how to allocate all the memory on the node, see :ref: all_mem_
+Second: How to allocate all the memory:  
+
+.. literalinclude:: ../../../jobs/files/slurm-big-memory.sh
+   :language: bash
+   :linenos:
 
 
 
