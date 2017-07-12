@@ -64,7 +64,7 @@ Use
 
 .. code-block:: bash
 
-    $ module avail gaussian
+    $ module avail Gaussian
 
 to see which versions of Gaussian are available. Use
 

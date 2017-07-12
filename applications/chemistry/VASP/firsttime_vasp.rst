@@ -18,7 +18,7 @@ into your test job folder (which I assume you have created in advance).
 VASP input example:
 --------------------
 
-Download the tarred job :download:`CeO2job-files <CeO2.tar.gz>`.
+Download the tarred job :download:`CeO2job-files <../files/CeO2.tar.gz>`.
 
 move this file to your test job folder on Stallo and type
 
@@ -28,10 +28,10 @@ move this file to your test job folder on Stallo and type
 
 Then; download the job-script as seen here:
 
-.. include:: job_vasp.sh
+.. include:: ../files/job_vasp.sh
    :literal:
 
-Download it here :download:`job_vasp.sh <../job_vasp.sh>`.
+Download it here :download:`job_vasp.sh <../files/job_vasp.sh>`.
 
 
 These files are also available on Stallo:
@@ -40,8 +40,8 @@ These files are also available on Stallo:
 .. code-block:: bash
 
    module load VASP/5.4.1.plain-intel-2016a
-   cd <to whatever you call your test folder>
-   cp -R $RUNEX .
+   cd <to whatever you call your test folder> # for instance testvasp
+   cp -R $RUNEX/* .
    sbatch job_vasp.sh
 
 and you are up running. Happy hunting.

@@ -1,31 +1,46 @@
+.. _ADF:
+
 ===========================================
 Amsterdam Density Functional program system
 ===========================================
 
-A description of the quantum chemistry and material science package ADF/BAND
+Information regarding the quantum chemistry and material science package ADF/BAND on Stallo
+
+Related information:
+====================
+
+.. toctree::
+ :maxdepth: 1
+
+ Band.rst
+ firsttime_adf.rst
+
 
 General Information:
 ====================
 
-The ADF software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
+Description:
+-------------
+
+ADF (Amsterdam Density Functional) is a Fortran program for calculations on atoms and molecules (in gas phase or solution). It can be used for the study of such diverse fields as molecular spectroscopy, organic and inorganic chemistry, crystallography and pharmacochemistry. A separate program BAND is available for the study of periodic systems: crystals, surfaces, and polymers. The COSMO-RS program is used for calculating thermodynamic properties of (mixed) fluids.
+
+The underlying theory is the Kohn-Sham approach to Density-Functional Theory (DFT).  The software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
+
 
 Online info from vendor:
 ------------------------
 
 Homepage: http://www.scm.com
-Documentation: http://www.scm.com/Doc
+Documentation: https://www.scm.com/doc/ADF/
 
 The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
 a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
 nding emails to support(either notur or scm) or trying the ADF mailing list (see http://www.scm.com/Support for more info).
 
-Citation
---------
-When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citat\
-ion(s).
 
-License information:
---------------------
+License and access policy:
+---------------------------
+
 The license of ADF/Band is commercial.
 
 NOTUR holds a national license of the ADF program system, making usage of ADF/BAND available for all academic scient\
@@ -46,72 +61,39 @@ We have a national license for the following packages:
 icense to be able to use and publish results obtained with this code on NOTUR installlations.`
 
 
-
-is software for first-principles electronic structure calculations. The program suite shows good scaling behaviour, and we have tested in the 80-160 core region but not beyond. For statements from vendor related to scaling, please visit their home page as shown on top of this page. 
-
-(link to general info about license policy notur when available; currently contact: www.sigma2.no)
+Citation
+--------
+When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citat\
+ion(s).
 
 
 Usage
 ======
 
-We generally advise to run ADF on more than one node, unless you do know that your particular problem does not make the code scale well. 
+The ADF/BAND suite of software is currently installed as precompiled binaries on Stallo. We install the intel-mpi version, since it has proven to collaborate the better with our mpi setup. We generally advise to run ADF on more than one node, unless you do know that your particular problem does not make the code scale well.
+
 
 Use
 
 .. code-block:: bash
 
-    $ module avail adf 
+    $ module avail ADF
 
-to see which versions of ADF are available. Use
-
-.. code-block:: bash
-
-    $ module load ADF
-
-or 
+to see which versions of Gaussian are available. Use
 
 .. code-block:: bash
 
- $ module load ADF/<version> # i.e 2014.10 (default)
+ $ module load ADF/<version> # i.e 2016.106
 
-to get access to ADF.  
-
-
-First run of ADF/BAND:
---------------------------------
-
-To get download the jobscript example(s), type the following:
-
-.. code-block::bash
-
-    module load notur
-    cd $APPEX/adf 
-
-Copy the contents of this folder to your home directory.
-
-Then, submit the job by typing:
-
-.. code-block::bash
-
-    sbatch job_adf.sh
-
-Compare the energy of adf_caffeine.out with the Bond Energy =  -156.75317227 eV in adf_example_correct_stallo.output. The energy should ideally be identical or close to identical. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. Good luck.
-
-- NB: ADF is installed as precompiled binaries, they come with their own mpi (intel MPI). So if you are not using the provided runscript example, please make sure that the default openmpi is swapped with the default intel-MPI module.
+to get access to any given version of ADF.  
 
 
-- On Stallo, we holds the nbo6 plug in license that allows users of adf to produce files that can be read with the nb06 software.
+The first time you run an ADF job?
+--------------------------------------
 
-ADF input example:
---------------------
+Get the information you need here:
 
-.. include:: adf.inputex
-   :literal:
+.. toctree::
+   :maxdepth: 1
 
-ADF runscrip example:
-------------------------
-
-.. include:: adf.jobscriptex
-   :literal:
-
+   firsttime_adf.rst

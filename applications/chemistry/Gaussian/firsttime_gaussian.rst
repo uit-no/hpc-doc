@@ -16,25 +16,25 @@ into your test job folder (which I assume you have created in advance).
 Gaussian input example:
 ------------------------
 
-.. include:: caffeine.com
+.. include:: ../files/caffeine.com
    :literal:
 
 
 **NB: Pay special attention to the %mem defined in the beginning of the file. Also note that there are no mentioning of Linda and shared memory cores. This is addressed here:** :ref:`gaussian_on_stallo`
 
-You can also download the input file here: :download:`Caffeine-input<caffeine.com>`
+You can also download the input file here: :download:`Caffeine-input<../files/caffeine.com>`
 
 
 Gaussian runscrip example:
 --------------------------
 
-.. include:: job_g09.sh
+.. include:: ../files/job_g09.sh
    :literal:
 
 
 **NB: Note that we for Gaussian advice to specify both nodes and core/node. This is due to the special way Gaussian sets up parallel jobs!**
 
-You can also download the input file here: :download:`Gaussian run script<job_g09.sh>`
+You can also download the runscript here: :download:`Gaussian run script<../files/job_g09.sh>`
 
 
 
@@ -45,9 +45,9 @@ Type:
 
 .. code-block:: bash
 	
-	module load Gaussian/9.c01
-	cd <whereevertestfolderyouhave>
-	cp -R $RUNEX .
+	module load Gaussian/9.d01
+	cd <whereevertestfolderyouhave> # For instance testgau
+	cp -R $RUNEX/* .
 
 
 When you have all the necessary files in the correct folders, submit the job by typing:

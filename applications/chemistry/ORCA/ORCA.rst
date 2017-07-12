@@ -1,3 +1,5 @@
+.. _ORCA:
+
 ====
 ORCA
 ====
@@ -10,11 +12,11 @@ research group level, provided compliance with the *ORCA End User License
 Agreement*. This means that interested users can download the precompiled
 executables from the ORCA web page themselves, and run the code on Stallo.
 
-Homepage: https://orcaforum.cec.mpg.de/
+* Homepage: https://orcaforum.cec.mpg.de/
 
-Manual: https://orcaforum.cec.mpg.de/OrcaManual.pdf
+* Manual: https://orcaforum.cec.mpg.de/OrcaManual.pdf
 
-Download: https://cec.mpg.de/orcadownload/index.php
+* Download: https://cec.mpg.de/orcadownload/index.php
 
 
 Installation
@@ -49,5 +51,5 @@ manual for details on how to run the code for your application.
 ORCA input example
 ------------------
 
-.. include:: orca.inp
+.. include:: ../files/orca.inp
    :literal:
