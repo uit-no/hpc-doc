@@ -16,8 +16,9 @@ the module system, and information about changes in application software see :re
    chemistry/ADF/ADF
    chemistry/Schrodinger/Schrodinger
    chemistry/ORCA/ORCA
+   chemistry/Molcas/Molcas
 
-   math-stat/MATLAB.rst
-   math-stat/Mathematica.rst
-   math-stat/R.rst
-   math-stat/STATA.rst
+   math-stat/MATLAB/MATLAB
+   math-stat/Mathematica/Mathematica
+   math-stat/R/R
+   math-stat/STATA/STATA
