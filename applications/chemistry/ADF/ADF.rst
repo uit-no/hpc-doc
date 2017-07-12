@@ -13,8 +13,7 @@ Related information:
  :maxdepth: 1
 
  Band.rst
- firsttime_adf.rst
-
+ firstime_adf.rst
 
 General Information:
 ====================
@@ -30,8 +29,8 @@ The underlying theory is the Kohn-Sham approach to Density-Functional Theory (DF
 Online info from vendor:
 ------------------------
 
-Homepage: http://www.scm.com
-Documentation: https://www.scm.com/doc/ADF/
+* Homepage: http://www.scm.com
+* Documentation: https://www.scm.com/doc/ADF/
 
 The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
 a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
@@ -89,11 +88,21 @@ to get access to any given version of ADF.
 
 
 The first time you run an ADF job?
---------------------------------------
+----------------------------------
 
 Get the information you need here:
 
-.. toctree::
-   :maxdepth: 1
 
-   firsttime_adf.rst
+.. toctree::
+ :maxdepth: 1
+
+ firstime_adf.rst
+
+
+Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
+
+
+
+
+
+
