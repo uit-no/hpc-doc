@@ -18,7 +18,9 @@ the module system, and information about changes in application software see :re
    chemistry/ORCA/ORCA
    chemistry/Molcas/Molcas
 
-   math-stat/MATLAB/MATLAB
-   math-stat/Mathematica/Mathematica
-   math-stat/R/R
-   math-stat/STATA/STATA
+   physics/COMSOL/COMSOL.rst
+
+   math-stat/MATLAB/MATLAB.rst
+   math-stat/Mathematica/Mathematica.rst
+   math-stat/R/R.rst
+   math-stat/STATA/STATA.rst
