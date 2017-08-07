@@ -36,7 +36,7 @@ When publishing results obtained with the referred software referred, please do 
 ion(s).
 
 
-Additional online info about Gaussian on Stallo:
+Additional online info about COMSOL on Stallo:
 =================================================
 
 Usage
@@ -51,7 +51,7 @@ Use
 
     $ module avail COMSOL
 
-to see which versions of Gaussian are available. Use
+to see which versions of COMSOL are available. Use
 
 .. code-block:: bash
 
