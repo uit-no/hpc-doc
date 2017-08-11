@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 #######################################
 # example for a hybrid MPI OpenMP job #

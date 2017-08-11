@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 #####################################################
 # example for a job where we consume lots of memory #

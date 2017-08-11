@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 #############################
 # example for an OpenMP job #
