@@ -198,9 +198,6 @@ you can take a look at this page explaining
 `keepalives <http://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter4.html#config-keepalive>`_
 for a similar solution.
 
-"X11 connection rejected because of wrong authentication"-problem
-------------------------------------------------------------------
-Please look at our documentation of this problem here: :ref:`X11_connection_problems`.
 
 Jobs and queue system
 =====================
