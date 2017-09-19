@@ -32,6 +32,7 @@ Save it to a file (e.g. run.sh) and submit it with::
 
   $ sbatch run.sh
 
+
 Example for a hybrid MPI OpenMP job
 ----------------------------------
 
@@ -49,6 +50,7 @@ use ``--ntasks-per-node`` in combination with ``--nodes``::
 
 will start 2 MPI tasks each on 4 nodes, where each task can use up
 to 8 threads.
+
   
 Running many sequential jobs in parallel using job arrays
 ---------------------------------------------------------
