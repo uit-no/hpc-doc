@@ -6,9 +6,10 @@
 
 #SBATCH --job-name=example
 
-# we ask for 2 MPI tasks with 20 cores each
-#SBATCH --ntasks=2
-#SBATCH --cpus-per-task=20
+# we ask for 4 MPI tasks with 10 cores each
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=10
 
 # run for five minutes
 #              d-hh:mm:ss
@@ -39,7 +40,7 @@ cp ${SLURM_SUBMIT_DIR}/my_binary.x ${SCRATCH_DIRECTORY}
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 # we execute the job and time it
-time ./my_binary.x > my_output
+time mpirun -np $SLURM_NTASKS ./my_binary.x > my_output
 
 # after the job is done we copy our output back to $SLURM_SUBMIT_DIR
 cp ${SCRATCH_DIRECTORY}/my_output ${SLURM_SUBMIT_DIR}

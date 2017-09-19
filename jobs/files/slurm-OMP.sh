@@ -6,9 +6,10 @@
 
 #SBATCH --job-name=example
 
-# we ask for 1 node with 20 cores
+# we ask for 1 task with 20 cores
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=20
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
 
 # run for five minutes
 #              d-hh:mm:ss
@@ -36,7 +37,7 @@ cd ${SCRATCH_DIRECTORY}
 cp ${SLURM_SUBMIT_DIR}/my_binary.x ${SCRATCH_DIRECTORY}
 
 # we set OMP_NUM_THREADS to the number of available cores
-export OMP_NUM_THREADS=${SLURM_TASKS_PER_NODE}
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 # we execute the job and time it
 time ./my_binary.x > my_output
