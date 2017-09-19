@@ -16,7 +16,6 @@ Example for an OpenMP job
 
 .. literalinclude:: files/slurm-OMP.sh
    :language: bash
-   :linenos:
 
 Save it to a file (e.g. run.sh) and submit it with::
 
@@ -28,7 +27,6 @@ Example for a MPI job
 
 .. literalinclude:: files/slurm-MPI.sh
    :language: bash
-   :linenos:
 
 Save it to a file (e.g. run.sh) and submit it with::
 
@@ -39,7 +37,6 @@ Example for a hybrid MPI OpenMP job
 
 .. literalinclude:: files/slurm-MPI-OMP.sh
    :language: bash
-   :linenos:
 
 Save it to a file (e.g. run.sh) and submit it with::
 
@@ -62,7 +59,6 @@ We take Python as an example but this does not matter for the job arrays:
 
 .. literalinclude:: files/test.py
    :language: python
-   :linenos:
 
 Save this to a file called "test.py" and try it out::
 
@@ -77,7 +73,6 @@ For this we use the following script:
 
 .. literalinclude:: files/slurm-job-array.sh
    :language: bash
-   :linenos:
 
 Sumbit the script and after a short while you should see 16 output files
 in your submit directory::
@@ -128,4 +123,3 @@ Example on how to allocate entire memory on one node
 
 .. literalinclude:: files/slurm-big-memory.sh
    :language: bash
-   :linenos:
