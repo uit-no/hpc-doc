@@ -37,7 +37,7 @@ cd ${SCRATCH_DIRECTORY}
 cp ${SLURM_SUBMIT_DIR}/my_binary.x ${SCRATCH_DIRECTORY}
 
 # we execute the job and time it
-time mpirun ./my_binary.x > my_output
+time mpirun -np $SLURM_NTASKS ./my_binary.x > my_output
 
 # after the job is done we copy our output back to $SLURM_SUBMIT_DIR
 cp ${SCRATCH_DIRECTORY}/my_output ${SLURM_SUBMIT_DIR}
