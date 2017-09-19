@@ -45,13 +45,13 @@ Save it to a file (e.g. run.sh) and submit it with::
 
 If you want to start more than one MPI rank per node you can
 use ``--ntasks-per-node`` in combination with ``--nodes``::
-    
+
 #SBATCH --nodes=4 --ntasks-per-node=2 --cpus-per-task=8
 
 will start 2 MPI tasks each on 4 nodes, where each task can use up
 to 8 threads.
 
-  
+
 Running many sequential jobs in parallel using job arrays
 ---------------------------------------------------------
 
@@ -118,6 +118,58 @@ Observe that they all started (approximately) at the same time::
   output_7.txt:start at 14:43:58
   output_8.txt:start at 14:44:00
   output_9.txt:start at 14:43:59
+
+
+Packaging smaller parallel jobs into one large parallel job
+-----------------------------------------------------------
+
+There are several ways to package smaller parallel jobs into one large parallel
+job. The preferred way is to use Job Arrays. Browse the web for many examples
+on how to do it. Here we want to present a more pedestrian alternative which
+can give a lot of flexibility.
+
+In this example we imagine that we wish to run 5 MPI jobs at the same time,
+each using 4 tasks, thus totalling to 20 tasks.  Once they finish, we wish to
+do a post-processing step and then resubmit another set of 5 jobs with 4 tasks
+each:
+
+.. code-block:: bash
+
+  #!/bin/bash
+
+  #SBATCH --job-name=example
+  #SBATCH --ntasks=20
+  #SBATCH --time=0-00:05:00
+  #SBATCH --partition short
+  #SBATCH --mem-per-cpu=500MB
+
+  cd ${SLURM_SUBMIT_DIR}
+
+  # first set of parallel runs
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+
+  wait
+
+  # here a post-processing step
+  # ...
+
+  # another set of parallel runs
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+  mpirun -n 4 ./my-binary &
+
+  wait
+
+  exit 0
+
+The ``wait`` commands are important here - the run script will only continue
+once all commands started with ``&`` have completed.
 
 
 Example on how to allocate entire memory on one node
