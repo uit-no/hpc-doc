@@ -331,6 +331,17 @@ most cases are equivalent to the more precise term *processor core* /
 *core*\. The \ *multi core age*\  is here now \ *:-)*
 
 
+How can I customize emails that I get after a job has completed?
+----------------------------------------------------------------
+
+Use the mail command and you can customize it to your liking but make sure
+that you send the email via the login node.
+
+As an example, add and adapt the following line at the end of your script::
+
+  echo "email content" | ssh stallo-1.local mail -s "job finished in /global/work/${USER}/${SLURM_JOBID}" firstname.lastname@uit.no
+
+
 Running many short tasks
 ========================
 
@@ -372,7 +383,3 @@ And here is the ``dowork.sh`` script:
 .. literalinclude:: files/dowork.sh
    :language: bash
    :linenos:
-
-
-
-
