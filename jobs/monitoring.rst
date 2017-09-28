@@ -3,12 +3,12 @@
 Monitoring your jobs
 ====================
 
-For details run the command with the `-`-help option.
+For details run the command with the `-`-help option::
 
-scontrol show jobid -dd <jobid>
-    List detailed information for a job (useful for troubleshooting).
-sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
-    To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
+  scontrol show jobid -dd <jobid>
+      List detailed information for a job (useful for troubleshooting).
+  sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
+      To get statistics on completed jobs by jobID. Once your job has completed, you can get additional information that was not available during the run. This includes run time, memory used, etc.
 
 From our monitoring tool Ganglia, you can watch live status information
 on Stallo:
