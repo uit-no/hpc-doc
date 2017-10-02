@@ -339,7 +339,7 @@ that you send the email via the login node.
 
 As an example, add and adapt the following line at the end of your script::
 
-  echo "email content" | ssh stallo-1.local mail -s "job finished in /global/work/${USER}/${SLURM_JOBID}" firstname.lastname@uit.no
+  echo "email content" | ssh stallo-1.local 'mail -s "job finished in /global/work/${USER}/${SLURM_JOBID}"' firstname.lastname@uit.no
 
 
 Running many short tasks
