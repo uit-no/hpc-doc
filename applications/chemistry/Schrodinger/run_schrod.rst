@@ -8,6 +8,8 @@ This page contains info about how to submit Schrodinger jobs on Stallo, based
 on two sets of examples - one for docking and one for molecular dynamics - 
 provided to us by users.
 
+Pay enhanced attention to the ssh -Y c1-3 in examples below; this represents the adviced behaviour on how to run jobs on Stallo for your benefit solely!
+
 Submitting jobs through the maestro interface:
 -----------------------------------------------
 
@@ -17,9 +19,9 @@ To get download the jobscript example(s), type the following:Direct log in via s
 
 .. code-block:: bash
 
- 	$ module load notur
- 	$ cd $runex/Schrodinger 
-	$ cp -R * ~/
+ 	$ module load Schrodinger/2017-2-intel-2016a
+ 	$ cp -R $runex/Schrodinger/* ~
+	# Be sure this do not overwrite any folder or info you may want to keep in your home.
 
 Note: This suite is quite extensive in its features, and we generally advice you to either join tutorial courses, talk \
 to experts in your proximity or read the vendor-provided documentation if you have absolutely no knowledge about how to \

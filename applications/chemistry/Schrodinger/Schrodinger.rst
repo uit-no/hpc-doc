@@ -39,8 +39,8 @@ Citation
 When publishing results obtained with the referred software, please do check the developers web page in order to find the correct citat\
 ion(s).
 
-License information:
---------------------
+License and access policy:
+---------------------------
 The licenses of Schrödinger Product Suites are commercial. 
 
 NOTUR is, together with the user community, funding a national license of Schrödinger´s Small Molecule Drug Discovery Suite and PyMol. The \
@@ -48,6 +48,8 @@ licenses are administered by a license server based on flexlm. The adress for th
 
 The outtake of license tokens is monitored on regular basis, and we try to catch those who seems to use the suite for regular scientific \
 production and ask them to contribute financially to the overall deal. So far, this policy have worked fairly well.
+
+All members of the co-funding research groups have unlimited access to the Schrödinger´s Small Molecule Drug Discovery Suite and PyMol license tokens. 
 
 `Please note that this is an academic type license; meaning that research institutes not being part of Norwegian Universities must provide their own l\
 icense to be able to use and publish results obtained with this code on NOTUR installlations.`
@@ -73,7 +75,7 @@ Use
 
 .. code-block:: bash
 
- $ module load Schrodinger/<version> # i.e 2015.4
+ $ module load Schrodinger/<version> # i.e 2017-2-intel-2016a
 
 to get access to Schrodinger.  The batch resource allocation system is integrated with the gui through a schrodinger.hosts file which is centrally administered. 
 
