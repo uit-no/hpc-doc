@@ -1,10 +1,10 @@
-.. _ADF:
+.. _Band:
 
 ===============================================================
 Amsterdam Density Functional program
 =====================================
 
-Information regarding the quantum chemistry code ADF on Stallo
+Information regarding the periodic DFT code Band on Stallo
 
 Related information:
 ====================
@@ -12,7 +12,7 @@ Related information:
 .. toctree::
  :maxdepth: 1
 
- firstime_adf.rst
+ firstime_band.rst
 
 General Information:
 ====================
@@ -20,15 +20,17 @@ General Information:
 Description:
 -------------
 
-According to the vendor, ADF (Amsterdam Density Functional) is a DFT program particularly strong in understanding and predicting structure, reactivity, and spectra of molecules. It is a Fortran program for calculations on atoms and molecules (in gas phase or solution). It can be used for the study of such diverse fields as molecular spectroscopy, organic and inorganic chemistry, crystallography and pharmacochemistry. 
+BAND is an atomic-orbital based DFT program for periodic systems (crystals, slabs, chains and molecules).
 
-The underlying theory is the Kohn-Sham approach to Density-Functional Theory (DFT).  The software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
+The Amsterdam Density Functional Band-structure program - BAND - can be used for calculations on periodic systems, i.e. polymers, slabs and crystals, and is supplemental to the molecular ADF program for non-periodic systems. It employs density functional theory in the Kohn-Sham approach. BAND is very similar to ADF in the chosen algorithms, although important differences remain. 
+
+BAND makes use of atomic orbitals, it can handle elements throughout the periodic table, and has several analysis options available. BAND can use numerical atomic orbitals, so that the core is described very accurately. Because of the numerical orbitals BAND can calculate accurate total energies. Furthermore it can handle basis functions for arbitrary l-values.
 
 
 Online documentation from vendor:
 ----------------------------------
 
-* Documentation: https://www.scm.com/doc/ADF/
+* Documentation: https://www.scm.com/doc/BAND
 
 The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
 a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
@@ -37,7 +39,7 @@ nding emails to support(either notur or scm) or trying the ADF mailing list (see
 Usage
 ======
 
-The ADF/BAND suite of software is currently installed as precompiled binaries on Stallo. We install the intel-mpi version, since it has proven to collaborate the better with our mpi setup. We generally advise to run ADF on more than one node, unless you do know that your particular problem does not make the code scale well.
+The ADF/BAND suite of software is currently installed as precompiled binaries on Stallo. We install the intel-mpi version, since it has proven to collaborate the better with our mpi setup. We generally advise to run Band on more than one node, unless you do know that your particular problem does not make the code scale well.
 
 
 Use
@@ -46,16 +48,16 @@ Use
 
     $ module avail ADF
 
-to see which versions of ADF which are available. Use
+to see which versions of Band which are available. Use
 
 .. code-block:: bash
 
  $ module load ADF/<version> # i.e 2016.106
 
-to get access to any given version of ADF.  
+to get access to any given version of Band.  
 
 
-The first time you run an ADF job?
+The first time you run an Band job?
 ----------------------------------
 
 Get the information you need here:
@@ -64,7 +66,7 @@ Get the information you need here:
 .. toctree::
  :maxdepth: 1
 
- firstime_adf.rst
+ firstime_band.rst
 
 
 Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
