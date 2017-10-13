@@ -1,0 +1,42 @@
+TITLE Untitled
+
+NumericalQuality Normal
+
+UNITS
+    length Angstrom
+    angle Degree
+END
+
+ATOMS
+    Si -0.67875 -0.67875 -0.67875
+    Si 0.67875 0.67875 0.67875
+END
+
+Lattice
+  0.0   10.860 10.860
+ 10.860  0.0   10.860
+ 10.860 10.860  0.0
+End
+
+DOS
+Enabled True
+End
+
+BasisDefaults
+BasisType DZ
+Core Large
+End
+
+XC
+LDA SCF VWN
+END
+
+GeoOpt
+UseVariableTrustRadius false
+End
+
+BZSTRUCT
+    Enabled True
+END
+
+end input
