@@ -44,7 +44,7 @@ These files are also available on Stallo:
 
 .. code-block:: bash
 
-   module load ADF/2016.106
+   module load ADF/adf2017.108
    cd <to whatever you call your test folder> # for instance ADFFIRSTJOB
    cp -R $RUNEX/* .
 

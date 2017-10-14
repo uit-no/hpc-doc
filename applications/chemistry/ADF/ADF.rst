@@ -1,6 +1,6 @@
 .. _ADF:
 
-====================================================================================
+=================================================
 The Amsterdam Density Functional modeling suite
 =================================================
 
@@ -9,13 +9,9 @@ This page contains general information about the ADF modeling suite installed on
 Related information:
 ====================
 
-.. toctree::
- :maxdepth: 1
+* `Info about the ADF program on Stallo <ADFprog.rst>`_
+* `Info abut the Band program on Stallo <Band.rst>`_
 
- ADFprog.rst
- firstime_adf.rst
- Band.rst
- firstime_band.rst
 
 General Information:
 ====================
@@ -71,17 +67,15 @@ Citation
 When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citat\
 ion(s).
 
-More info on ADF and Band:
----------------------------
 
 Here are links to more information about ADF and Band on Stallo:
+-----------------------------------------------------------------
 
+* `Info about the ADF program on Stallo <ADFprog.rst>`_
+* `First time run of ADF <firstime_adf.rst>`_
+* `Info abut the Band program on Stallo <Band.rst>`_
+* `First time run of Band <firsttime_band.rst>`_
 
-.. toctree::
- :maxdepth: 1
-
- ADFprog.rst
- Band.rst
 
 
 
