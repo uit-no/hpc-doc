@@ -1,0 +1,76 @@
+.. _ADFprog:
+
+===============================================================
+Amsterdam Density Functional program
+=====================================
+
+Information regarding the quantum chemistry code ADF on Stallo
+
+Related information:
+====================
+
+.. toctree::
+ :maxdepth: 1
+
+ firstime_adf.rst
+
+General Information:
+====================
+
+Description:
+-------------
+
+According to the vendor, ADF (Amsterdam Density Functional) is a DFT program particularly strong in understanding and predicting structure, reactivity, and spectra of molecules. It is a Fortran program for calculations on atoms and molecules (in gas phase or solution). It can be used for the study of such diverse fields as molecular spectroscopy, organic and inorganic chemistry, crystallography and pharmacochemistry. 
+
+The underlying theory is the Kohn-Sham approach to Density-Functional Theory (DFT).  The software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
+
+
+Online documentation from vendor:
+----------------------------------
+
+* Documentation: https://www.scm.com/doc/ADF/
+
+The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
+a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
+nding emails to support(either notur or scm) or trying the ADF mailing list (see http://www.scm.com/Support for more info).
+
+Usage
+======
+
+The ADF/BAND suite of software is currently installed as precompiled binaries on Stallo. We install the intel-mpi version, since it has proven to collaborate the better with our mpi setup. We generally advise to run ADF on more than one node, unless you do know that your particular problem does not make the code scale well.
+
+
+Use
+
+.. code-block:: bash
+
+    $ module avail ADF
+
+to see which versions of ADF which are available. Use
+
+.. code-block:: bash
+
+ $ module load ADF/<version> # i.e 2016.106
+
+to get access to any given version of ADF.  
+
+
+The first time you run an ADF job?
+----------------------------------
+
+Get the information you need here:
+
+
+.. toctree::
+ :maxdepth: 1
+
+ firstime_adf.rst
+
+
+Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
+
+
+
+
+
+
