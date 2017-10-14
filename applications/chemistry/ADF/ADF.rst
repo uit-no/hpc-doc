@@ -12,7 +12,7 @@ Related information:
 .. toctree::
  :maxdepth: 1
 
- ADF.rst
+ ADFprog.rst
  firstime_adf.rst
  Band.rst
  firstime_band.rst
@@ -80,7 +80,7 @@ Here are links to more information about ADF and Band on Stallo:
 .. toctree::
  :maxdepth: 1
 
- ADF.rst
+ ADFprog.rst
  Band.rst
 
 
