@@ -48,9 +48,9 @@ These files are also available on Stallo:
    cd <to whatever you call your test folder> # for instance BANDFIRSTJOB
    cp -R $RUNEX/* .
 
-To verify that the jobs has worked fine, check the outputfile. If it says EXIT and print Bond Energies at the end of the file, you are likely on the safe side. 
+To verify that the jobs has worked fine, check the outputfile. If it says EXIT and print Energy of Formation at the end of the file, you are likely on the safe side. 
 
-#Check the Bond Energy in adf_caffeine.out. The value should ideally be close to -156.75317227 eV. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. 
+#Check the ENERGY OF FORMATION in band_silicone.out. The value should ideally be close to -4.2467 eV. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. 
 
 **NB: The ADF modeling suite is installed as precompiled binaries, they come with their own mpi (intel MPI). So if you are not using the provided runscript example and/or loading the newer modules - please make sure that you load an intelmpi module and also preferably a rather recent intel compiler.**
 
