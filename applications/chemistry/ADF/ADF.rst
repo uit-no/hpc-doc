@@ -10,6 +10,7 @@ Related information:
 ====================
 
 * `Info about the ADF program on Stallo <ADFprog.rst>`_
+
 * `Info abut the Band program on Stallo <Band.rst>`_
 
 
@@ -72,8 +73,11 @@ Here are links to more information about ADF and Band on Stallo:
 -----------------------------------------------------------------
 
 * `Info about the ADF program on Stallo <ADFprog.rst>`_
+
 * `First time run of ADF <firstime_adf.rst>`_
+
 * `Info abut the Band program on Stallo <Band.rst>`_
+
 * `First time run of Band <firsttime_band.rst>`_
 
 
