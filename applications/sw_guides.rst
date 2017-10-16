@@ -13,7 +13,7 @@ the module system, and information about changes in application software see :re
 
    chemistry/Gaussian/Gaussian
    chemistry/VASP/VASP
-   chemistry/ADF/ADFsuite
+   chemistry/ADF/ADF
    chemistry/Schrodinger/Schrodinger
    chemistry/ORCA/ORCA
    chemistry/Molcas/Molcas
