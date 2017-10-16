@@ -8,7 +8,9 @@ This page contains info about how to submit Schrodinger jobs on Stallo, based
 on two sets of examples - one for docking and one for molecular dynamics - 
 provided to us by users.
 
-Pay enhanced attention to the ssh -Y c1-3 in examples below; this represents the adviced behaviour on how to run jobs on Stallo for your benefit solely!
+Pay enhanced attention to the ssh -Y c1-3 in examples below; this represents the adviced behaviour on how to run jobs on Stallo for your benefit solely! 
+
+A more thorough explanation to this, is that maestro starts a distribution and surveilance process that creates the jobs that enters the shared resources allocation (aka batch) system. If this process dies, the underlying jobs dies disregarding their computational status. This could have been solved by just running this on the login node, but imagine how it would have been with 1000 simultanious users sharing two login nodes and 50 of those ran 20-40 simultaneous perl and python processes each on the login nodes. So, please do as told. 
 
 Submitting jobs through the maestro interface:
 -----------------------------------------------
@@ -23,7 +25,7 @@ To get download the jobscript example(s), type the following:Direct log in via s
  	$ cp -R $runex/Schrodinger/* ~
 	# Be sure this do not overwrite any folder or info you may want to keep in your home.
 
-Note: This suite is quite extensive in its features, and we generally advice you to either join tutorial courses, talk \
+Note: This suite is quite extensive in features, and we generally advice you to either join tutorial courses, talk \
 to experts in your proximity or read the vendor-provided documentation if you have absolutely no knowledge about how to \
 use this suite of software. Here we only provide a couple of rough startup examples to get you up running.
 
@@ -37,7 +39,7 @@ Do the following:
 
    $ ssh -Y c1-3 
    $ cd example_md
-   $ maestro -NOSGL
+   $ maestro -SGL
 
 and start a Molecular Dynamics task from the Tasks menu bar. Load model system from file, choose desmond_md_example.cms
 
@@ -62,7 +64,7 @@ Do the following:
 
    $ ssh -Y c1-3
    $ cd example_docking
-   $ maestro -NOSGL
+   $ maestro -SGL
 
 and start a Docking task from the Tasks menu bar.
 
