@@ -38,6 +38,7 @@ Do the following:
 .. code-block:: bash
 
    $ ssh -Y c1-3 
+   $ module load Schrodinger/2017-2-intel-2016a
    $ cd example_md
    $ maestro -SGL
 
@@ -63,6 +64,7 @@ Do the following:
 .. code-block:: bash
 
    $ ssh -Y c1-3
+   $ module load Schrodinger/2017-2-intel-2016a
    $ cd example_docking
    $ maestro -SGL
 
