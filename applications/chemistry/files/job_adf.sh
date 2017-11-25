@@ -27,7 +27,7 @@
 
 input=caffeine # Name of input without extention 
 ext=adf # We use the same naming scheme as the software default, also for extention
-cores=40  # Number of cores potentially used by mpi engine in submit procedure
+cores=$SLURM_NTASKS  # Number of cores potentially used by mpi engine in submit procedure
 
 #-------------------------------
 
