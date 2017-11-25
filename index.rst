@@ -61,6 +61,7 @@ HPC-UiT Services User Documentation
    :caption: Jobs
 
    jobs/dos_and_donts.rst
+   jobs/running_mpi_jobs.rst
    jobs/examples.rst
    jobs/account.rst
    jobs/batch.rst

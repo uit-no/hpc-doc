@@ -10,6 +10,7 @@ the module system, and information about changes in application software see :re
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
 
    chemistry/Gaussian/Gaussian
    chemistry/VASP/VASP

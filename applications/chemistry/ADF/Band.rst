@@ -1,14 +1,13 @@
 .. _Band:
 
-===============================================================
-Amsterdam Density Functional program
-=====================================
+============================
+The periodic DFT code Band
+============================
 
-Information regarding the periodic DFT code Band on Stallo
+Information regarding the periodic DFT code Band on Stallo:
 
 Related information:
-====================
-
+---------------------
 .. toctree::
  :maxdepth: 1
 
@@ -27,14 +26,10 @@ The Amsterdam Density Functional Band-structure program - BAND - can be used for
 BAND makes use of atomic orbitals, it can handle elements throughout the periodic table, and has several analysis options available. BAND can use numerical atomic orbitals, so that the core is described very accurately. Because of the numerical orbitals BAND can calculate accurate total energies. Furthermore it can handle basis functions for arbitrary l-values.
 
 
-Online documentation from vendor:
-----------------------------------
+Online info from vendor:
+------------------------
 
 * Documentation: https://www.scm.com/doc/BAND
-
-The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
-a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
-nding emails to support(either notur or scm) or trying the ADF mailing list (see http://www.scm.com/Support for more info).
 
 Usage
 ======
@@ -52,7 +47,7 @@ to see which versions of Band which are available. Use
 
 .. code-block:: bash
 
- $ module load ADF/<version> # i.e 2016.106
+ $ module load ADF/<version> # i.e adf2017.108
 
 to get access to any given version of Band.  
 
@@ -70,8 +65,6 @@ Get the information you need here:
 
 
 Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
-
-
 
 
 

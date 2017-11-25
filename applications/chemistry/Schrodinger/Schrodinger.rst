@@ -9,7 +9,7 @@ A description of the Schrödinger product suites that are available for norwegia
 General Information:
 ====================
 
-NOTUR is, together with the user community, funding a national license of Schrödinger´s Small Molecule Drug Discovery Suite and PyMol.
+NOTUR is, together with the user community, funding a national license of Schrödinger´s Small Molecule Drug Discovery Suite and PyMol. This implies that users are allowed to download and install their own copies of the software, and using the license server for providing license tokens. More about that in another document: :ref:`install_schrodinger`. 
 
 Online info from vendor:
 ------------------------
@@ -60,8 +60,6 @@ Usage
 The most commot usage of schrodinger on Stallo is through the Maestro gui. Log in with x11-tunneling enabled, or through the web-interface http://stallo-gui.uit.no/.
 Load the module of choice: 
 
-One important note: All new installs will be made through the new software scheme on Stallo. Please confer the documentation for :ref:`new_scheme`.
-
 Use
 
 .. code-block:: bash
@@ -87,7 +85,7 @@ For examples on how to submit Schrodinger jobs on Stallo, look here :ref:`run_sc
 Finding available licenses
 ===========================
 
-This should in principle be obsolete for users, since we are promised unlimited licenses in the national system. But still, for the curious soles:
+This should in principle be obsolete for users, since we are promised unlimited licenses in the national system. But still, for the curious souls:
 
 If you want to know about avaible licenses; do the following
 
