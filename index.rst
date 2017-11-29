@@ -81,7 +81,6 @@ HPC-UiT Services User Documentation
 
    software/applications.rst
    software/modules.rst
-   software/new_modules.rst
 
 
 .. toctree::
