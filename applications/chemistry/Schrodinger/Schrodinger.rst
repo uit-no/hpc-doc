@@ -97,7 +97,12 @@ If you want to know about avaible licenses; do the following
 
 This command will give you information about license status for the national Schrodinger suite licenses.
 
+Access to PyMOL:
+=================
 
+For users that wants/needs access to PyMOL, please fill out the following form: https://skjema.uio.no/pymol-access. 
+
+**Please not that this strategy replaces old habits of sending personal emails in this regard.**
 
 
 
