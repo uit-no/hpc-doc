@@ -66,6 +66,21 @@ If you want to know whether there are available license tokens or not, load the 
 
     $ lmstat -c $LMCOMSOL_LICENSE_FILE -a
 
+The first time you run an COMSOL job on Stallo?
+----------------------------------
+
+Get the information you need here:
+
+
+.. toctree::
+ :maxdepth: 1
+
+ firstime_comsol.rst
+
+
+Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
+
+
 Happy calculations!
 
 
