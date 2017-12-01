@@ -62,5 +62,3 @@ To solve this you need to remove your old collections and create them again. We 
 If you are already using "mod_setup.sh" or "/home/easybuild/"
 ------------------------------------------------------------
 If you have already started using the new modules by loading the "notur" module and sourcing "mod_setup.sh", simply remove these two steps and continue working as normal. The same goes for any references to /home/easybuild/. We kept these options working for now to reduce the number of potentially crashing jobs, but we plan to remove them in the near future, so we recommend removing those lines from any new jobs you launch. You do not need the module "varset" any more, StdEnv has taken over its functionality. If the only reason you were using the "notur" module was to access the newer installations, you do not need it either. If you were using the "notur" module to run ADF or other software, then you still need to continue using it.
-
-For information about how to reach the "new" packages, before we make this scheme default, see in the software section :ref:`new_scheme`.
