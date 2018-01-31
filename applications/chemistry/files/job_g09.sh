@@ -61,7 +61,7 @@ Gaussian.prep $input
 
 # Running the program:
 
-time g09 < $input.com > gaussian_$input.out
+time g09 < ${input}.${ext} > gaussian_$input.out
 
 # Cleaning up and moving files back to home/submitdir:
 # Make sure to move all essential files 
