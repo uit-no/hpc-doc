@@ -1,50 +1,56 @@
-#!/bin/env bash -l
+#!/bin/bash -l
 
+# Note that this is a setup for the highmem 128GB nodes. To run on the regular
+# nodes, change to the normal partition and reduce the memory requirement.
 #####################################
-# SLURM-section
-# Note that this is a setup for the highmem 128GB nodes and will not work in normal partition.
 #SBATCH --job-name=comsol_runex
-#SBATCH -N 2 --ntasks-per-node=16
-#SBATCH --mem-per-cpu=7500MB # Leaving some memory for the system to work. 
-#SBATCH --time=0-01:01:00 # Syntax is DD-HH:MM:SS
-#SBATCH --partition=highmem # Necessary for running on high mem nodes.
-#SBATCH --mail-type=ALL
-#SBATCH --exclusive # Since you do not want to share this node. 
+#SBATCH --nodes=2
+#SBATCH --cpus-per-task=16      # Highmem nodes have 16 cores
+#SBATCH --mem-per-cpu=7500MB    # Leave some memory for the system to work
+#SBATCH --time=0-01:00:00       # Syntax is DD-HH:MM:SS
+#SBATCH --partition=highmem     # For regular nodes, change to "normal"
+#SBATCH --mail-type=ALL         # Notify me at start and finish
+#SBATCH --exclusive             # Not necessary, implied by the specs above
+#SBATCH --account=nnXXXXk       # Change to your account
 #####################################
 
-input=$1 # Name of input without extention.
+# define input
+inp=$1  # First input argument: Name of input without extention
+std=$2  # Second input argument: Type of study
 ext=mph # We use the same naming scheme as the software default extention
-study=$2 # To be able to add parameter outside of the script. 
-# If necessary, you can also define a project here.
-############
-# We need to prepare for jobs running on /global/work by making
-# a temp file for this job and moving input there:
-submitdir=$SLURM_SUBMIT_DIR
-comsol_wrk=/global/work/$USER/$SLURM_JOBID
-makedir -p comsol_wrk
-cp $input.$ext $comsol_wrk
-cd $comsol_wrk
-############
-# Now there is time to prepare the software to do the job;
 
+# define directories
+submitdir=${SLURM_SUBMIT_DIR}
+workdir=/global/work/${USER}/${SLURM_JOBID}
+
+# create work directory
+mkdir -p ${workdir}
+
+# move input to workdir
+cp ${inp}.${ext} ${workdir}
+
+# load necessary modules
 module purge
 module load COMSOL/5.3-intel-2016a
-# Now we are ready to submit job to batch system:
 
-time comsol -nn $SLURM_JOB_NUM_NODES -np $SLURM_NTASKS batch -inputfile $inp.$ext  -outputfile ${inp}_out.$ext  -study $study
+# run calculation in workdir
+cd ${workdir}
+time comsol -nn ${SLURM_NNODES}\
+            -np ${SLURM_CPUS_PER_TASK}\
+            -mpirsh /usr/bin/ssh\
+            -mpiroot $I_MPI_ROOT\
+            -mpi intel batch\
+            -inputfile ${inp}.${ext}\
+            -outputfile ${inp}_out.${ext}\
+            -study ${std}\
+            -mlroot /global/apps/matlab/R2014a
 
-# I allways like to have a timer on, maybe one weird tic of mine. I also exploit some
-# built in features and slurm variables in this submit line.
-
-#############
-
-# When time is done, time to clean up
-# First we move home results:
-#mv *.out $project/
-
+# move output back
 mv *out* $submitdir
-cd ..
-##rm -fr $scratchdisk 
+
+# cleanup
+cd $submitdir
+rm -r ${workdir}
 
 exit 0
 
