@@ -75,7 +75,7 @@ Get the information you need here:
 .. toctree::
  :maxdepth: 1
 
- firstime_comsol.rst
+ firsttime_comsol.rst
 
 
 Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
