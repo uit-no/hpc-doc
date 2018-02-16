@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HPC documentation'
-copyright = u'2015, HPC group - UiT The Arctic University of Norway'
+copyright = u'2018, HPC group - UiT The Arctic University of Norway'
 author = u'HPC group'
 
 # The version info for the project you're documenting, acts as replacement for
