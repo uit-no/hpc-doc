@@ -4,7 +4,7 @@
 
 Served via http://hpc-uit.readthedocs.org.
 
-Copyright (c) 2015
+Copyright (c) 2018
 Radovan Bast,
 Roy Dragseth,
 Dan Jonsson,
