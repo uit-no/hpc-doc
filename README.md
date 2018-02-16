@@ -6,10 +6,13 @@ Served via http://hpc-uit.readthedocs.org.
 
 Copyright (c) 2018
 Radovan Bast,
+Mathias Bockwoldt,
 Roy Dragseth,
+Stig Rune Jensen,
 Dan Jonsson,
 Jonas Juselius,
 Elena Malkin,
+Marte Skadsem,
 Espen Tangen,
 Giacomo Tartari,
 Steinar Traedal-Henden,
