@@ -4,15 +4,15 @@
 First time you run a VASP job?
 ===================================
 
-This page contains info aimed at first time 
-users of VASP on Stallo, but may also be usefull to 
-more experienced users. Please look carefully through the 
-provided examples. Also note that the job-script example is rather richly 
+This page contains info aimed at first time
+users of VASP on Stallo, but may also be usefull to
+more experienced users. Please look carefully through the
+provided examples. Also note that the job-script example is rather richly
 commented to provide additional and relevant info.
 
 
 
-If you want to run this testjob, download the copies of the scripts and put them 
+If you want to run this testjob, download the copies of the scripts and put them
 into your test job folder (which I assume you have created in advance).
 
 VASP input example:
@@ -45,4 +45,3 @@ These files are also available on Stallo:
    sbatch job_vasp.sh
 
 and you are up running. Happy hunting.
-
