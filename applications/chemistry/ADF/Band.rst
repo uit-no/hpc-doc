@@ -11,7 +11,7 @@ Related information:
 .. toctree::
  :maxdepth: 1
 
- firstime_band.rst
+ firsttime_band.rst
 
 General Information:
 ====================
@@ -21,7 +21,7 @@ Description:
 
 BAND is an atomic-orbital based DFT program for periodic systems (crystals, slabs, chains and molecules).
 
-The Amsterdam Density Functional Band-structure program - BAND - can be used for calculations on periodic systems, i.e. polymers, slabs and crystals, and is supplemental to the molecular ADF program for non-periodic systems. It employs density functional theory in the Kohn-Sham approach. BAND is very similar to ADF in the chosen algorithms, although important differences remain. 
+The Amsterdam Density Functional Band-structure program - BAND - can be used for calculations on periodic systems, i.e. polymers, slabs and crystals, and is supplemental to the molecular ADF program for non-periodic systems. It employs density functional theory in the Kohn-Sham approach. BAND is very similar to ADF in the chosen algorithms, although important differences remain.
 
 BAND makes use of atomic orbitals, it can handle elements throughout the periodic table, and has several analysis options available. BAND can use numerical atomic orbitals, so that the core is described very accurately. Because of the numerical orbitals BAND can calculate accurate total energies. Furthermore it can handle basis functions for arbitrary l-values.
 
@@ -49,11 +49,11 @@ to see which versions of Band which are available. Use
 
  $ module load ADF/<version> # i.e adf2017.108
 
-to get access to any given version of Band.  
+to get access to any given version of Band.
 
 
 The first time you run an Band job?
-----------------------------------
+-----------------------------------
 
 Get the information you need here:
 
@@ -61,10 +61,10 @@ Get the information you need here:
 .. toctree::
  :maxdepth: 1
 
- firstime_band.rst
+ firsttime_band.rst
 
 
-Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
+Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time.
 
 
 

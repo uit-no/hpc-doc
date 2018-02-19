@@ -1,10 +1,10 @@
 .. _sw_guides:
 
-Application guides 
+Application guides
 ------------------
 
-For a general explanation on how to make an application available for use, 
-the module system, and information about changes in application software see :ref:`applications`. 
+For a general explanation on how to make an application available for use,
+the module system, and information about changes in application software see :ref:`applications`.
 
 .. A list of software that is installed on stallo can be found in :ref:`sw_list`.
 
@@ -21,7 +21,7 @@ the module system, and information about changes in application software see :re
 
    physics/COMSOL/COMSOL
 
-   math-stat/MATLAB/MATLAB
-   math-stat/Mathematica/Mathematica
-   math-stat/R/R
-   math-stat/STATA/STATA
+   math-stat/MATLAB
+   math-stat/Mathematica
+   math-stat/R
+   math-stat/STATA
