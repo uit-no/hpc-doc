@@ -31,7 +31,6 @@ HPC-UiT Services User Documentation
 
    help/faq.rst
    help/AboutLicenses.rst
-   help/X11-connection-problems.rst
    help/contact.rst
    help/writing-support-requests.rst
    help/staff.rst
@@ -53,7 +52,6 @@ HPC-UiT Services User Documentation
    account/account.rst
    account/login.rst
    account/accounting.rst
-   account/linux.rst
 
 
 .. toctree::
@@ -97,7 +95,7 @@ HPC-UiT Services User Documentation
    storage/storage.rst
    storage/file_transfer.rst
    storage/lustre-performance.rst
-   
+
 
 .. toctree::
    :maxdepth: 1
