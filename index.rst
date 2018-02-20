@@ -42,7 +42,6 @@ HPC-UiT Services User Documentation
    :caption: Stallo
 
    stallo/stallo.rst
-   stallo/uit-guidelines.rst
 
 
 .. toctree::
