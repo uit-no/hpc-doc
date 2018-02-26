@@ -11,7 +11,7 @@ Related information:
 .. toctree::
  :maxdepth: 1
 
- firstime_adf.rst
+ firsttime_adf
 
 General Information:
 ====================
@@ -19,7 +19,7 @@ General Information:
 Description:
 -------------
 
-According to the vendor, ADF (Amsterdam Density Functional) is a DFT program particularly strong in understanding and predicting structure, reactivity, and spectra of molecules. It is a Fortran program for calculations on atoms and molecules (in gas phase or solution). It can be used for the study of such diverse fields as molecular spectroscopy, organic and inorganic chemistry, crystallography and pharmacochemistry. 
+According to the vendor, ADF (Amsterdam Density Functional) is a DFT program particularly strong in understanding and predicting structure, reactivity, and spectra of molecules. It is a Fortran program for calculations on atoms and molecules (in gas phase or solution). It can be used for the study of such diverse fields as molecular spectroscopy, organic and inorganic chemistry, crystallography and pharmacochemistry.
 
 The underlying theory is the Kohn-Sham approach to Density-Functional Theory (DFT).  The software is a DFT-only first-principles electronic structure calculations program system, and consists of a rich variety of packages.
 
@@ -48,7 +48,7 @@ to see which versions of ADF which are available. Use
 
  $ module load ADF/<version> # i.e adf2017.108
 
-to get access to any given version of ADF.  
+to get access to any given version of ADF.
 
 The first time you run an ADF job?
 ----------------------------------
@@ -59,9 +59,9 @@ Get the information you need here:
 .. toctree::
  :maxdepth: 1
 
- firstime_adf.rst
+ firsttime_adf.rst
 
 
-Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time. 
+Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time.
 
 
