@@ -11,7 +11,7 @@ Get an account
 
 If you are associated with UiT The Arctic University of Norway, you may apply locally. :doc:`/account/uitquota`
 
-You can also apply for an account for Stallo or any of the other Norwegian computer clusters at the `Metacenter account application <https:/www.metacenter.no/user/application/form/notur/>`. This is also possible if you already have a local account. :doc:`/account/account`
+You can also apply for an account for Stallo or any of the other Norwegian computer clusters at the `Metacenter account application <https:/www.metacenter.no/user/application/form/notur/>`_. This is also possible if you already have a local account. :doc:`/account/account`
 
 Connect to Stallo
 -----------------
