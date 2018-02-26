@@ -1,4 +1,4 @@
-.. _g09:
+.. _gaussian09:
 
 ===========
 Gaussian 09
@@ -21,11 +21,8 @@ http://www.gaussian.com/g_tech/g_ur/g09help.htm.
 
 Please do read these sections carefully.
 
-**Information related to inputs and output:**
 
-* For information about Gaussian input: :ref:`gaussian_input`
-* For input-example to download: :ref:`gaussian_water_input`
-* For information on Gaussview for Gaussian: :ref:`gaussview`
+For information on Gaussview for Gaussian: :ref:`gaussview`
 
 
 Gaussian 09 on Stallo
@@ -40,14 +37,6 @@ Currently, both the minor revision b.01 and c.01 are available on Stallo, the de
  $ module load Gaussian/09.b01
 
 If you download a run script (see below), this will be taken care of by the script (though you have to change to your preferred flavor of the Gaussian 09 code). Two run scripts are available (for running in serial and parallel, respectively). Download one of the scripts to your home/$USER/bin and use it as described.
-
-Scriptfile-examples
--------------------
-
-- :ref:`gaussian_serial_run`
-- :ref:`gaussian_para_run`
-
-(These scripts are also available on Stallo under /global/apps/gaussian/usage).
 
 
 Job submission guidelines
@@ -87,7 +76,7 @@ Best practice for running Gaussian 09 jobs
 -------------------------------------------
 
 - For geometry optimizations using DFT methods, we recommends using hybrid functionals. For pure functionals (no HF exchange) - unless you have tested it and know it works - we recommend to run Gaussian 09 only on not more than 3 nodes, using 14-16 cores/node. For hybrid functionals we have seen decent scaling up to 8 nodes using 16 cores/node for minor revision c.01. On old Stallo - we saw time gain up to 12 nodes, using 7 cores/node with c.01 and up to 8 nodes with b.01.
-- If your molecule is >60 atoms, Gaussian uses FMM by default (which is not parallelized), so do not run parallel in this case, unless you turn off FMM (NoFMM keyword). FMM is enabled for non-symmetric molecules with 60 atoms or more. For molecules with high symmetry this limit is 240 atoms for hybrid DFT and 360 atoms for pure DFT. (The text below is copied from http://www.gaussian.com/g_tech/g_ur/m_linda.htm)::
+- If your molecule is >60 atoms, Gaussian uses FMM by default (which is not parallelized), so do not run parallel in this case, unless you turn off FMM (NoFMM keyword). FMM is enabled for non-symmetric molecules with 60 atoms or more. For molecules with high symmetry this limit is 240 atoms for hybrid DFT and 360 atoms for pure DFT. (The text below is copied from http://www.gaussian.com/g_tech/g_ur/m_linda.htm):
 
 HF, CIS=Direct, and DFT calculations on molecules are Linda parallel, including energies, optimizations and frequencies. TDDFT energies and gradients and MP2 energies and gradients are also Linda parallel. Portions of MP2 frequency and CCSD calculations are Linda parallel, but others are only SMP-parallel, so they see some speedup from using a few nodes but no further improvement from larger numbers of nodes.
 
