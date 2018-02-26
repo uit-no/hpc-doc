@@ -12,6 +12,7 @@ Introduction
 Lustre is a scalable, high performance, parallel I/O file system. More information about Lustre can be found on Wikipedia_ .
 
 .. _Wikipedia: https://en.wikipedia.org/wiki/Lustre_(file_system)
+
 When using additional library for I/O (i.e. MPIIO, HDF5), reading and writing can be done in parallel from several nodes into single-shared file.
 
 At the time of writing this guide Lustre is available on 2 NOTUR machines:

@@ -12,7 +12,6 @@ HPC-UiT Services User Documentation
        data-chrome="nofooter noborders transparent">
        Tweets by @hpc_uit
     </a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 .. toctree::
@@ -31,7 +30,6 @@ HPC-UiT Services User Documentation
 
    help/faq.rst
    help/AboutLicenses.rst
-   help/X11-connection-problems.rst
    help/contact.rst
    help/writing-support-requests.rst
    help/staff.rst
@@ -43,7 +41,6 @@ HPC-UiT Services User Documentation
    :caption: Stallo
 
    stallo/stallo.rst
-   stallo/uit-guidelines.rst
 
 
 .. toctree::
@@ -53,7 +50,6 @@ HPC-UiT Services User Documentation
    account/account.rst
    account/login.rst
    account/accounting.rst
-   account/linux.rst
 
 
 .. toctree::
@@ -97,7 +93,7 @@ HPC-UiT Services User Documentation
    storage/storage.rst
    storage/file_transfer.rst
    storage/lustre-performance.rst
-   
+
 
 .. toctree::
    :maxdepth: 1

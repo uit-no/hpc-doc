@@ -5,10 +5,10 @@ Gaussian 09
 ===========
 
 Gaussian 09 is the current major release of the Gaussian Program System
-for computational chemistry. For online manual, see here: 
+for computational chemistry. For online manual, see here:
 http://www.gaussian.com/g_tech/g_ur/g09help.htm.
 
-**Before you do start using Gaussian 09, we encourage you to take a look at these pages at the Gaussian web site:** 
+**Before you do start using Gaussian 09, we encourage you to take a look at these pages at the Gaussian web site:**
 
 - Information on program limits for Gaussian 09: http://www.gaussian.com/g_tech/g_ur/b_proglimits.htm
 - Information on efficiency considerations for Gaussian 09:http://www.gaussian.com/g_tech/g_ur/m_eff.htm
@@ -19,7 +19,7 @@ http://www.gaussian.com/g_tech/g_ur/g09help.htm.
 - Content in the .tsnet.config file.
 - Advised number of nodes and cpus in parallel runs.
 
-Please do read these sections carefully. 
+Please do read these sections carefully.
 
 **Information related to inputs and output:**
 
@@ -39,7 +39,7 @@ Currently, both the minor revision b.01 and c.01 are available on Stallo, the de
 
  $ module load Gaussian/09.b01
 
-If you download a run script (see below), this will be taken care of by the script (though you have to change to your preferred flavor of the Gaussian 09 code). Two run scripts are available (for running in serial and parallel, respectively). Download one of the scripts to your home/$USER/bin and use it as described. 
+If you download a run script (see below), this will be taken care of by the script (though you have to change to your preferred flavor of the Gaussian 09 code). Two run scripts are available (for running in serial and parallel, respectively). Download one of the scripts to your home/$USER/bin and use it as described.
 
 Scriptfile-examples
 -------------------
@@ -62,22 +62,22 @@ For the serial script, the number of cores is set to 1, thus you only set name o
 That means running the job water.inp on a single core for 2 hours and 00 minutes. Command line argument 1 ($1) is name of input file without its extension (which is expected to be *.inp*) and command line argument 2 ($2) is walltime on the form hours:minutes.
 
 For parallel jobs you need to add the number of cpus, preferably on the form nodes and number of cores/node also on the command line, giving a total of four inputs from the command line to enter the script. Command line argument $1 is unchanged, but $2 will now be number of nodes and $3 will be number of cores/node, with $4 as walltime on the same form as for the serial script::
- 
+
  $ g09parallel.pbs water 2 16 2:00
 
 meaning job water.inp running on 2 nodes with 16 cores on each, a total of 32 cores, for 2 hours 00 minutes - having a total cpu-time count of 64 hours. See also http://www.gaussian.com/g_tech/g_ur/m_linda.htm for info on parallel running of Gaussian 09.
 
-**NOTE:** Running Gaussian 09 jobs in parallel requires the additional 
-keywords *%LindaWorkers* and *%NProcshared* in the Link 0 part of the 
-input file. This is further discussed here: `gaussian_input`. If you 
-run Gaussian 09-jobs using the scripts discussed above, this is taken 
+**NOTE:** Running Gaussian 09 jobs in parallel requires the additional
+keywords *%LindaWorkers* and *%NProcshared* in the Link 0 part of the
+input file. This is further discussed here: `gaussian_input`. If you
+run Gaussian 09-jobs using the scripts discussed above, this is taken
 care of automatically. If not, you need to put this information in your input file manually.
 
 If you plan to run on >1 node (using %NProcLinda), make a new file in your $HOME directory::
 
-    .tsnet.config  
+    .tsnet.config
 
-containing only the line:: 
+containing only the line::
 
     Tsnet.Node.lindarsharg:/global/apps/bin/pbsdshwrapper.py
 
@@ -110,8 +110,8 @@ Restart of jobs
 ^^^^^^^^^^^^^^^
 Retrieve the .chk file from the temporary directory and add the restart command to the input (opt=restart or scf=restart, depending on job). Make sure that the *.chk* and and the *.inp* files have the same firstname. Submit as usual.
 
-Restart from g03 checkpoint file\
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Restart from g03 checkpoint file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To do this, you need to convert the g03 .chk file to g09 .chk file using a script called c8609 in the g09 folder. Using global reference, it would look like this on Stallo::
 
  $ /global/apps/gaussian/g09.b01/g09/c8609 water.chk.
