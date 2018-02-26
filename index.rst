@@ -1,5 +1,5 @@
 
-
+===================================
 HPC-UiT Services User Documentation
 ===================================
 
@@ -12,6 +12,17 @@ HPC-UiT Services User Documentation
        data-chrome="nofooter noborders transparent">
        Tweets by @hpc_uit
     </a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <br /><br />
+
+
+:ref:`Stallo <about_stallo>` is the local computer cluster of UiT The Arctic University of Norway. If you are new here, you might want to learn the basics first here:
+
+
+.. toctree::
+   :maxdepth: 1
+
+   stallo/getting_started
 
 
 .. toctree::
@@ -19,19 +30,17 @@ HPC-UiT Services User Documentation
    :caption: News and Events
 
    news/news.rst
-   news/slurm.rst
    news/new_sw.rst
-   news/schrodinger.rst
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Getting help
 
-   help/faq.rst
-   help/AboutLicenses.rst
    help/contact.rst
    help/writing-support-requests.rst
+   help/faq.rst
+   help/AboutLicenses.rst
    help/staff.rst
    help/visit.rst
 
