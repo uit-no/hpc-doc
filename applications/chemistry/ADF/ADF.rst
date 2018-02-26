@@ -79,11 +79,4 @@ Here are links to more information about ADF and Band on Stallo:
    firsttime_adf
    Band
    firsttime_band
-
-
-
-
-
-
-
-
+   advanced
