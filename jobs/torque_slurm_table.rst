@@ -30,7 +30,7 @@ Job Name              -N [name]                   `-`-job-name=[name] OR -J [nam
 Node Count            -l nodes=[count]            `-`-nodes=[min[-max]] OR -N [min[-max]]
 CPU Count             -l ppn=[count]              `-`-ntasks-per-node=[count]
 CPUs Per Task                                     `-`-cpus-per-task=[count]
-Memory Size           -l mem=[MB]                 `-`-mem=[MB] OR `-`-`mem-per-cpu=[MB]
+Memory Size           -l mem=[MB]                 `-`-mem=[MB] OR `-`-mem-per-cpu=[MB]
 Wall Clock Limit      -l walltime=[hh:mm:ss]      `-`-time=[min] OR `-`-time=[days-hh:mm:ss]
 Node Properties       -l nodes=4:ppn=8:[property] `-`-constraint=[list]
 Standard Output File  -o [file_name]              `-`-output=[file_name] OR -o [file_name]

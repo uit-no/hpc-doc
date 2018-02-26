@@ -1,9 +1,11 @@
+.. _gaussview:
+
 ======================
 GaussView for Gaussian
 ======================
 
-Gaussview is a visualization program that can be used to open Gaussian output files and checkpoint files (.chk) to display structures, molecular orbitals, normal modes, etc. You can also set up jobs and submit them directly. 
- 
+Gaussview is a visualization program that can be used to open Gaussian output files and checkpoint files (.chk) to display structures, molecular orbitals, normal modes, etc. You can also set up jobs and submit them directly.
+
 
 GaussView on Stallo
 --------------------
@@ -17,4 +19,4 @@ More information about GaussView:
 ---------------------------------
 * General info about the program: http://www.gaussian.com/g_prod/gv5.htm
 * Online reference: http://www.gaussian.com/g_tech/gv5ref/gv5ref_toc.htm
- 
+
