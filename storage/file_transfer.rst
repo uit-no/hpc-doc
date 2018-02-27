@@ -4,16 +4,6 @@
 Transferring files to/from Stallo
 =================================
 
-All Notur systems are stand-alone systems, and in general we do not
-(NFS-)mount remote disks on them. Therefore you must either explicitly
-transfer any files you wish to use by using either sftp  or scp, or
-you can `mount your home directory('s) 
-<http://docs.notur.no/metacenter/metacenter-documentation/metacenter_user_guide/mounting_disks_on_notur_systems>`_ on the Notur systems *on your own computer*. 
-
-
-Transferring data to/from the system
-====================================
-
 Only ssh type of access is open to stallo. Therefore to upload or
 download data only scp and sftp can be used.
 
@@ -48,7 +38,7 @@ eg.::
     sshfs steinar@stallo.uit.no:  /home/steinar/stallo-fs/
 
 Windows users may buy and install
-`expandrive <http://www.expandrive.com/windows>`_.
+`expandrive <https://www.expandrive.com/windows>`_.
 
 
 High-performance tools

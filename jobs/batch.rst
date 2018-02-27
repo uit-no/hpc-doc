@@ -7,7 +7,7 @@ The Stallo system is a resource that is shared between many of users and to
 ensure fair use everyone must do their computations by submitting jobs through
 a batch system that will execute the applications on the available resources.
 
-The batch system on Stallo is `SLURM <http://slurm.schedmd.com/>`_ (Simple
+The batch system on Stallo is `SLURM <https://slurm.schedmd.com/>`_ (Simple
 Linux Utility for Resource Management.)
 
 If you are already used to Torque/Maui (the previous queue system used on

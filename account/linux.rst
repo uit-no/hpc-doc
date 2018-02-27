@@ -20,7 +20,7 @@ documentation.
 
 To find out more about the storage and file systems on the machines, your disk
 quota, how to manage data, and how to transfer file to/from Stallo, please read
-the :ref:`storage` section.
+the :ref:`file_transfer` section.
 
 
 ssh
@@ -42,7 +42,7 @@ Running jobs on the machine
 ---------------------------
 
 You must execute your jobs by submitting them to the batch system. There is a
-dedicated section :ref:`jobs` in our user guide that explain how to use the
+dedicated section :doc:`/jobs/batch` in our user guide that explain how to use the
 batch system. The pages explains how to write job scripts, and how to submit,
 manage, and monitor jobs. It is not allowed to run long or large memory jobs
 interactively (i.e., directly from the command line).

@@ -17,7 +17,7 @@ COMSOL Multiphysics® is a general-purpose software platform, based on advanced 
 Online info from vendor:
 ------------------------
 
-* Homepage: http://www.comsol.com
+* Homepage: https://www.comsol.com
 * Documentation/support: https://www.comsol.com/support
 
 

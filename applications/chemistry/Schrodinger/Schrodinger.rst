@@ -14,13 +14,13 @@ NOTUR is, together with the user community, funding a national license of Schrö
 Online info from vendor:
 ------------------------
 
-* Homepage: http://www.schrodinger.com/
+* Homepage: https://www.schrodinger.com/
 
 
 About the suites:
 
-* Small Molecule Drug Discovery Suite: http://www.schrodinger.com/smdd/
-* PyMol: http://www.schrodinger.com/pymol/
+* Small Molecule Drug Discovery Suite: https://www.schrodinger.com/suites/small-molecule-drug-discovery-suite
+* PyMol: https://www.schrodinger.com/pymol
 
 For documentation, you need to create an account (free) and log in. Documentation is also available in the software home folder:
 

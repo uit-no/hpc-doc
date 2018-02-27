@@ -77,7 +77,7 @@ You can also start Totalview with::
 
 The users guide and the quick start quide for Totalview can be found
 on the `RogueWave documentation page
-<http://www.roguewave.com/help-support/documentation/totalview>`_.
+<https://support.roguewave.com/documentation/tvdocs/en/current>`_.
 
 
 Debugging with Valgrind

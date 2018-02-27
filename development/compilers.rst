@@ -31,7 +31,7 @@ Commonly used options may be placed in the ifort.cfg file.
 
 The form above also applies for Fortran codes parallelized with OpenMP
 (`www.openmp.org <http://www.openmp.org/>`_,
-`Wikipedia <http://en.wikipedia.org/wiki/Openmp>`_); you only have to
+`Wikipedia <https://en.wikipedia.org/wiki/OpenMP>`_); you only have to
 select the necessary compiler options for OpenMP.
 
 For Fortran codes parallelized with MPI the general form is quite
@@ -68,7 +68,7 @@ may be placed in the icc.cfg file (C) or the icpc.cfg (C++).
 
 The form above also applies for C/C++ codes parallelized with OpenMP
 (`www.openmp.org <http://www.openmp.org/>`_,
-`Wikipedia <http://en.wikipedia.org/wiki/Openmp>`_); you only have to
+`Wikipedia <https://en.wikipedia.org/wiki/OpenMP>`_); you only have to
 select the necessary compiler options for OpenMP.
 
 For C/C++ codes parallelized with MPI the general form is quite

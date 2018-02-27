@@ -30,7 +30,7 @@ Online info from vendor:
 ------------------------
 
 * Homepage: http://www.gaussian.com
-* Documentation: http://www.gaussian.com/g_tech/g_ur/g09help.htm
+* Documentation: http://gaussian.com/man
 
 
 License information:

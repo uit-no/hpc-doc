@@ -1,6 +1,4 @@
 
-
-
 ==========================
 Frequently asked questions
 ==========================
@@ -26,20 +24,20 @@ The Stallo system is using a centralised database for user management.
 This will override the password changes done locally on Stallo.
 
 The password can be changed on the
-`password metacenter page <https://www.metacenter.no/public/password/>`_, log in using your
+`password metacenter page <https://www.metacenter.no/user/password/>`_, log in using your
 username on Stallo and the NOTUR domain.
 
 
 Installing software
 ===================
 
-I need a Python package X but the one on Stallo is too old or I can not find it
--------------------------------------------------------------------------------
+I need Python package X but the one on Stallo is too old or I cannot find it
+----------------------------------------------------------------------------
 
 I need a newer version of Scipy, Numpy, etc. Can you install it?
 
 We often have newer versions of software packages installed which may not be visible
-with the default user settings. Find out more about it here: http://hpc.uit.no/en/latest/news/new_sw.html
+with the default user settings. Find out more about it here: :doc:`/software/modules`
 
 In cases where this still doesn't solve your problem and you would like to install it yourself, please read the next section below about installing without sudo rights.
 
@@ -49,8 +47,7 @@ If we don't have it installed, and installing it yourself is not a good solution
 Can I install Python software as a normal user without sudo rights?
 -------------------------------------------------------------------
 
-Yes. The recommended way to achieve this is using
-virtual environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+Yes. The recommended way to achieve this is using `virtual environments <https://docs.python.org/3/tutorial/venv.html>`_
 
 Example (as an example we install the Biopython package)::
 
@@ -191,11 +188,11 @@ to add the following to your **local** ``~/.ssh/config`` file:
 (**local** means that you need to make these changes to your computer,
 not on stallo)
 
-The above config is for `OpenSSH <http://www.openssh.org>`_, if you're
+The above config is for `OpenSSH <https://www.openssh.org>`_, if you're
 using
-`PUTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html>`_
+`PUTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html>`_
 you can take a look at this page explaining
-`keepalives <http://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter4.html#config-keepalive>`_
+`keepalives <https://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter4.html#config-keepalive>`_
 for a similar solution.
 
 
@@ -361,7 +358,7 @@ shorter jobs. One can consider a collection of independent tasks as one
 large parallel job and the aforementioned overhead becomes the serial or
 unparallelizable part of the job. This is because the queuing system can
 only start and account one job at a time. This scaling problem is
-described by `Amdahls <http://en.wikipedia.org/wiki/Amdahl's_law>`_ Law.
+described by `Amdahls Law <https://en.wikipedia.org/wiki/Amdahl's_law>`_.
 
 Without going into any more details, let's look at the solution.
 

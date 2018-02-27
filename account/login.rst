@@ -53,7 +53,7 @@ On Windows, you can use PuTTYgen that comes with PuTTY. More information on `ssh
 SSH clients for Windows and Mac
 -------------------------------
 
-At the `OpenSSH page <http://www.openssh.com>`_ you will find several *SSH* alternatives for both Windows and Mac.
+At the `OpenSSH page <https://www.openssh.com>`_ you will find several *SSH* alternatives for both Windows and Mac.
 
 Please note that Mac OS X comes with its own implementation of *OpenSSH*, so you don't need to install any third-party software to take advantage of the extra security *SSH* offers. Just open a terminal window and jump in.
 
@@ -61,7 +61,7 @@ Please note that Mac OS X comes with its own implementation of *OpenSSH*, so you
 Learning more about SSH
 -----------------------
 
-To learn more about using SSH, please also consult the `OpenSSH page <http://www.openssh.com>`_ page and take a look at the manual page on your system (*man ssh*).
+To learn more about using SSH, please also consult the `OpenSSH page <https://www.openssh.com>`_ page and take a look at the manual page on your system (*man ssh*).
 
 
 

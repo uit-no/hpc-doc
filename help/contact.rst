@@ -8,9 +8,9 @@ our local team of experts will try to assist you as soon as possible.
 
 .. image:: rtfm.png
 
-Credit: http://xkcd.com/293/
+Credit: https://xkcd.com/293/
 
-Alternatively you can use http://support.notur.no
+Alternatively you can use https://support.notur.no
 to submit and track your requests.
 The necessary user name and password are generated the first time you
 send an email to support-uit@notur.no.

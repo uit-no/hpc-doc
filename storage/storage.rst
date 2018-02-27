@@ -76,7 +76,7 @@ Archiving data
 --------------
 
 Archiving is not provided. However you may apply for archive space on
-`Norstore <http://www.norstore.no/>`_.
+`Norstore <https://archive.norstore.no/>`_.
 
 
 Closing of user account
@@ -109,7 +109,7 @@ system. That is both /home/ and /global/work/
 
 This can easily be change by the user using the command chmod The chmod
 have a lot "cryptic" combinations of options (`click here for a more in
-depth explanation <http://en.wikipedia.org/wiki/Chmod>`_ ). the most
+depth explanation <https://en.wikipedia.org/wiki/Chmod>`_ ). the most
 commonly used is:
 
 *  only user can read their home directory::
@@ -214,8 +214,8 @@ so Fortran sequential unformatted files create on Njord cannot be read
 on Stallo.
 
 The best work around for this is to save your file in a portable file
-format like `netCDF <http://www.unidata.ucar.edu/software/netcdf/>`_ or
-`HDF5 <http://www.hdfgroup.org/>`_.
+format like `netCDF <https://www.unidata.ucar.edu/software/netcdf/>`_ or
+`HDF5 <https://www.hdfgroup.org/>`_.
 
 Both formats are supported on stallo, but you have to load its modules
 to use them::
