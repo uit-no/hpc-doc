@@ -97,6 +97,6 @@ In addition:
 -    Open files read-only whenever is possible.
 -    Keep small files on the same OST.
 
-It is highly recommended to read I/O Best Practices from NICS (http://www.nics.tennessee.edu/I-O-Best-Practices).
+It is highly recommended to read I/O Lustre tips from NICS (http://www.nics.tennessee.edu/computing-resources/file-systems/io-lustre-tips).
 
 
