@@ -1,5 +1,4 @@
 
-
 Storage and backup
 ==================
 
@@ -19,10 +18,9 @@ Home area
 
 The file system for user home directories on Stallo. It is a 64 TB global file
 system, which is accessible from both the login nodes and all the compute
-nodes. The default size of the home directory's for each user is 300 GB. If
-more space is needed for permanent storage users have to apply for it. Please
-contact the system administrators, support-uit@notur.no, for more information
-about this.
+nodes. The size of the home directory's for each user is 300 GB. It is not
+possible to extend the size. If you need more space, consider using
+/global/work (see below).
 
 The home area is for "permanent" storage only, so please do not use it for
 temporary storage during production runs. Jobs using the home area for scratch
