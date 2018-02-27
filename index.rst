@@ -23,93 +23,84 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
 
    stallo/getting_started
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: News and Events
-
-   news/news.rst
-   news/new_sw.rst
+   news/news
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Getting help
 
-   help/contact.rst
-   help/writing-support-requests.rst
-   help/faq.rst
-   help/AboutLicenses.rst
-   help/staff.rst
-   help/visit.rst
+   help/contact
+   help/writing-support-requests
+   help/faq
+   help/staff
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Stallo
 
-   stallo/stallo.rst
+   stallo/stallo
+   stallo/uit-guidelines
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Account
 
-   account/account.rst
-   account/login.rst
-   account/accounting.rst
+   account/account
+   account/login
+   account/accounting
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Jobs
 
-   jobs/dos_and_donts.rst
-   jobs/running_mpi_jobs.rst
-   jobs/examples.rst
-   jobs/account.rst
-   jobs/batch.rst
-   jobs/environment-variables.rst
-   jobs/torque_slurm_table.rst
-   jobs/management.rst
-   jobs/walltime.rst
-   jobs/process-count.rst
-   jobs/partitions.rst
-   jobs/interactive.rst
-   jobs/monitoring.rst
+   jobs/batch
+   jobs/examples
+   jobs/dos_and_donts
+   jobs/process-count
+   jobs/partitions
+   jobs/interactive
+   jobs/monitoring
+   jobs/running_mpi_jobs
+   jobs/environment-variables
+   jobs/torque_slurm_table
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Software
 
-   software/applications.rst
-   software/modules.rst
+   software/applications
+   software/modules
+   account/linux
+   help/AboutLicenses
+   news/new_sw
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Applications
 
-   applications/sw_guides.rst
+   applications/sw_guides
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Storage
 
-   storage/storage.rst
-   storage/file_transfer.rst
-   storage/lustre-performance.rst
+   storage/storage
+   storage/file_transfer
+   storage/lustre-performance
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Code development
 
-   development/compilers.rst
-   development/environment.rst
-   development/optimization.rst
-   development/debugging.rst
+   development/compilers
+   development/environment
+   development/optimization
+   development/debugging
 

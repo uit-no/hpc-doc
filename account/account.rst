@@ -8,8 +8,7 @@ Getting started on the machine (account, quota, password)
 
 Before you start using Stallo, please read the UiT The Arctic University of Norway's :ref:`guidelines`.
 
-A general introduction to Notur can be found at
-`https://www.notur.no/use-notur-resources <https://www.notur.no/use-notur-resources>`_
+A general introduction to Sigma2 be found at `www.sigma2.no <https://www.sigma2.no>`_
 
 How to get an account and a CPU quota on Stallo
 ===============================================
@@ -22,8 +21,8 @@ Research Council Quota
 
 National users (including users from UiT) may apply for an account and
 a CPU quota from the Research Councils share of Stallo. If you want to
-apply for such a quota please use this `National quota form.
-<https://www.metacenter.no/mas/application/project/>`_
+apply for such a quota please use this `National quota form
+<https://www.metacenter.no/mas/application/project/>`_.
 
 UiT Quota
 ---------

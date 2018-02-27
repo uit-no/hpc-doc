@@ -1,8 +1,8 @@
 .. _first_time_vasp:
 
-===================================
+==============================
 First time you run a VASP job?
-===================================
+==============================
 
 This page contains info aimed at first time
 users of VASP on Stallo, but may also be usefull to
@@ -15,8 +15,8 @@ commented to provide additional and relevant info.
 If you want to run this testjob, download the copies of the scripts and put them
 into your test job folder (which I assume you have created in advance).
 
-VASP input example:
---------------------
+VASP input example
+------------------
 
 Download the tarred job :download:`CeO2job-files <../files/CeO2.tar.gz>`.
 
@@ -34,8 +34,8 @@ Then; download the job-script as seen here:
 Download it here :download:`job_vasp.sh <../files/job_vasp.sh>`.
 
 
-These files are also available on Stallo:
-------------------------------------------
+These files are also available on Stallo
+----------------------------------------
 
 .. code-block:: bash
 

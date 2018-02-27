@@ -1,18 +1,18 @@
 .. _vasp_on_stallo:
 
-==================================
+================================
 About the VASP install on Stallo
-==================================
+================================
 
 This page contains information related to the installation of VASP on Stallo. Some of this is relevant also for self-compilation of the code, for those who want to give this a try.
 
 
-VASP on Stallo:
-----------------
+VASP on Stallo
+--------------
 
 Note that the VASP installation on Stallo mainly follows the standard syntax introduced by the vASP team with their new installation scheme. Based on their system, we have added two binaries - as commented under.
 
-If you do 
+If you do
 
 .. code-block:: bash
 
@@ -25,7 +25,7 @@ First; All versions of VASP is compiled with the support for maximally-localised
 
 Second; Each  release of VASP is compiled in two different versions; "tooled" and "plain".
 
-* VASP/x.y.z.tooled is a version where all necessary support for Texas transition state tools (vTST) and the explicit solvation model (VSPsol) and BEEF is added. 
+* VASP/x.y.z.tooled is a version where all necessary support for Texas transition state tools (vTST) and the explicit solvation model (VSPsol) and BEEF is added.
 * VASP/x.y.z.plain is the version without this support/ additions. (Relatively unmodified source).
 
 The reason for this is that we are uncertain of effects on the tooles on calculated numbers, due to reproducibility, we have chosen to hold the different versions separate.
@@ -51,8 +51,8 @@ These are familiar from the standard build system that is provided with the code
 * vasp_tbdyn
 * vasp_gam_tbdyn
 
-FPP settings for each binary:
-------------------------------
+FPP settings for each binary
+----------------------------
 
 #. vasp_std is compiled with the following additional FPP flag(s): -DNGZhalf
 #. vasp_gam is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf
@@ -60,10 +60,10 @@ FPP settings for each binary:
 #. vasp_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -Dtbdyn
 #. vasp_gam_tbdyn is compiled with the following additional FPP flag(s): -DNGZhalf -DwNGZhalf -Dtbdyn
 
-We would be happy to provide a copy of our build scripts (patches) upon request. 
+We would be happy to provide a copy of our build scripts (patches) upon request.
 
-About memory allocation for VASP:
-----------------------------------
+About memory allocation for VASP
+--------------------------------
 
 VASP is known to be potentially memory demanding. Quite often, you might experience to use less than the full number of cores on the node, but still all of the memory.
 
@@ -72,7 +72,7 @@ For core-count, node-count and amounts of memory on Stallo, see :ref:`about_stal
 There are two important considerations to make:
 
 First: Make sure that you are using the SBATCH --exclusive flag in your run script.
-Second: How to allocate all the memory:  
+Second: How to allocate all the memory:
 
 .. literalinclude:: ../../../jobs/files/slurm-big-memory.sh
    :language: bash

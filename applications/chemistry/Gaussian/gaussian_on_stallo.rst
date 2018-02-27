@@ -1,15 +1,15 @@
 .. _gaussian_on_stallo:
 
-=====================================
+====================================
 About the Gaussian install on Stallo
-=====================================
+====================================
 
 This page contains info about special features related to
 the Gaussian install made on Stallo, but also generall issues
 vaguely documented elsewhere.
 
-Gaussian on Stallo:
--------------------
+Gaussian on Stallo
+------------------
 
 First note is that the Gaussian install on Stallo is the Linda parallel version, so it
 scales somewhat initially. On top of this, Gaussian on Stallo is installed with a little trick, where the executables are intercepted before launced, and an
@@ -26,8 +26,8 @@ Please do use this script or similar when submitting jobs; it will benefit all o
 
 We have also taken care of the rsh/ssh setup in our installation procedure, to avoid .tsnet.config dependency for users.
 
-About memory allocation for Gaussian:
---------------------------------------
+About memory allocation for Gaussian
+------------------------------------
 
 * In general, Gaussian takes care of memory allocation internally.
 
@@ -41,11 +41,11 @@ The %mem allocation of memory in the Gaussian input file means two things:
   size – thus you should never ask for more than half of the physical memory on the nodes, unless they have swap space available - which you never should assume.
   Basically, the general %mem limit will allways be half of the physical memory pool given in MB instead of GB - 16000MB instead of 16GB since this leaves a small part for the system.
 
-For core-count, node-count and amounts of memory on Stallo, see :ref:`about_stallo`
+For core-count, node-count and amounts of memory on Stallo, see :doc:`/stallo/stallo`
 
 
-Scalability and parallel performance of Gaussian on Stallo:
-------------------------------------------------------------
+Scalability and parallel performance of Gaussian on Stallo
+----------------------------------------------------------
 
 Due to the nifty trick mentioned above, we have a somewhat more generous policy when it comes to
 allocating cores/nodes to Gaussian jobs:

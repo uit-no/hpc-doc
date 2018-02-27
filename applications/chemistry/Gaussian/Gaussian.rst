@@ -6,35 +6,35 @@ The GAUSSIAN program system
 
 Information regarding the quantum chemistry program system Gaussian
 
-Related information:
-====================
+Related information
+===================
 
 .. toctree::
  :maxdepth: 1
 
- GaussView.rst
  firsttime_gaussian.rst
+ GaussView.rst
  gaussian_on_stallo.rst
  advanced.rst
 
 
-General Information:
-====================
+General Information
+===================
 
-Description:
-------------
+Description
+-----------
 
 Gaussian is a computational chemistry software program system initially released in 1970. Gaussian has a rather low user threshold and a tidy user setup, which, together with a broad range of possibilities and a graphical user interface (gaussview), might explain its popularity in academic institutions.
 
-Online info from vendor:
-------------------------
+Online info from vendor
+-----------------------
 
 * Homepage: http://www.gaussian.com
-* Documentation: http://www.gaussian.com/g_tech/g_ur/g09help.htm
+* Documentation: http://gaussian.com/man
 
 
-License information:
---------------------
+License information
+-------------------
 
 The license of GAUSSIAN is commercial/proprietary.
 
@@ -51,8 +51,8 @@ When publishing results obtained with the referred software referred, please do 
 ion(s).
 
 
-Additional online info about Gaussian on Stallo:
-================================================
+Additional online info about Gaussian on Stallo
+===============================================
 
 Usage
 -----
@@ -76,28 +76,12 @@ to see which versions of Gaussian are available. Use
 to get access to any given version of Gaussian.
 
 
-The first time you run a Gaussian job?
---------------------------------------
-
-Get the information you need here:
-
-.. toctree::
-   :maxdepth: 1
-
-   firsttime_gaussian.rst
-
-
 About the Gaussian version(s) installed on Stallo
 -------------------------------------------------
 
 Since the installs we have made on Stallo are somewhat different from
 installs of Gaussian elsewhere, we have gathered some information about
-this here:
-
-.. toctree::
-   :maxdepth: 1
-
-   gaussian_on_stallo.rst
+this here :doc:`gaussian_on_stallo`.
 
 Here we also address issues related to running Gaussian in parallel, number of cores to use,
 memory allocation and special issues taken care of at install.

@@ -57,10 +57,11 @@ Our team
 ========
 
 * `Radovan Bast <http://bast.fr>`_
+* `Mathias Bockwoldt <https://uit.no/om/enhet/ansatte/person?p_document_id=344408&p_dimension_id=88165>`_
 * `Roy Dragseth <https://uit.no/om/enhet/ansatte/person?p_document_id=42529&p_dimension_id=88223>`_
 * `Steinar Henden <https://uit.no/om/enhet/ansatte/person?p_document_id=43772&p_dimension_id=88223>`_
+* `Stig Rune Jensen <https://uit.no/om/enhet/ansatte/person?p_document_id=168046&p_dimension_id=88139>`_
 * `Dan Jonsson <https://uit.no/om/enhet/ansatte/person?p_document_id=44087&p_dimension_id=88223>`_
-* `Ilia Zhakun <https://uit.no/om/enhet/ansatte/person?p_document_id=522532&p_dimension_id=88223>`_
 * `Espen Tangen <https://uit.no/om/enhet/ansatte/person?p_document_id=43808&p_dimension_id=88223>`_
 * `Giacomo Tartari <https://uit.no/om/enhet/ansatte/person?p_document_id=197816&p_dimension_id=88139>`_
-* `Stig Rune Jensen <https://uit.no/om/enhet/ansatte/person?p_document_id=168046&p_dimension_id=88139>`_
+* `Ilia Zhakun <https://uit.no/om/enhet/ansatte/person?p_document_id=522532&p_dimension_id=88223>`_

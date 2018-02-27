@@ -1,20 +1,20 @@
 .. _first_time_band:
 
-===================================
+==============================
 First time you run a Band job?
-===================================
+==============================
 
-This page contains info aimed at first time 
-users of Band on Stallo, but may also be usefull to 
-more experienced users. Please look carefully through the 
-provided examples. Also note that the job-script example is rather richly 
+This page contains info aimed at first time
+users of Band on Stallo, but may also be usefull to
+more experienced users. Please look carefully through the
+provided examples. Also note that the job-script example is rather richly
 commented to provide additional and relevant info.
 
-If you want to run this testjob, download the copies of the scripts and put them 
+If you want to run this testjob, download the copies of the scripts and put them
 into your test job folder (which I assume you have created in advance).
 
-Band input example:
---------------------
+Band input example
+------------------
 
 .. include:: ../files/silicone.adf
    :literal:
@@ -39,8 +39,8 @@ Place this script in the same folder and type:
 You may now have submitted your first adf job.
 
 
-These files are also available on Stallo:
-------------------------------------------
+These files are also available on Stallo
+----------------------------------------
 
 .. code-block:: bash
 
@@ -48,9 +48,9 @@ These files are also available on Stallo:
    cd <to whatever you call your test folder> # for instance BANDFIRSTJOB
    cp -R $RUNEX/* .
 
-To verify that the jobs has worked fine, check the outputfile. If it says EXIT and print Energy of Formation at the end of the file, you are likely on the safe side. 
+To verify that the jobs has worked fine, check the outputfile. If it says EXIT and print Energy of Formation at the end of the file, you are likely on the safe side.
 
-#Check the ENERGY OF FORMATION in band_silicone.out. The value should ideally be close to -4.2467 eV. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs. 
+#Check the ENERGY OF FORMATION in band_silicone.out. The value should ideally be close to -4.2467 eV. When this is the case, you may alter variables in the shell script as much as you like to adapt to your own jobs.
 
 **NB: The ADF modeling suite is installed as precompiled binaries, they come with their own mpi (intel MPI). So if you are not using the provided runscript example and/or loading the newer modules - please make sure that you load an intelmpi module and also preferably a rather recent intel compiler.**
 

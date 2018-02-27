@@ -11,7 +11,7 @@
 #SBATCH --partition=highmem     # For regular nodes, change to "normal"
 #SBATCH --mail-type=ALL         # Notify me at start and finish
 #SBATCH --exclusive             # Not necessary, implied by the specs above
-#SBATCH --account=nnXXXXk       # Change to your account
+##SBATCH --account=nnXXXXk      # Change to your account and uncomment
 #####################################
 
 # define input
@@ -53,4 +53,3 @@ cd $submitdir
 rm -r ${workdir}
 
 exit 0
-

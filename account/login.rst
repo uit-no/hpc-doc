@@ -13,7 +13,7 @@ If you already have *ssh* installed on your UNIX-like system, have a user accoun
 
 ::
 
- ssh <machine name>         (for instance: ssh njord.hpc.ntnu.no)
+ ssh <machine name>         (for instance: ssh stallo.uit.no)
 
 into a terminal window.
 
@@ -21,7 +21,7 @@ If your user name on the machine differs from your user name on the local machin
 
 ::
 
- ssh <machine name> -l [user name]
+ ssh <machine name> -l [username]
 
 And if you need X-forwarding (for instance, if you like to run Emacs in it's own window) you must log in like this:
 
@@ -29,15 +29,31 @@ And if you need X-forwarding (for instance, if you like to run Emacs in it's own
 
  ssh -X -Y <machine name>
 
-Log in with an ssh-key
+
+Log in with an ssh key
 ----------------------
 
-.. FIXME: short explanation about using ssh keys
+To avoid entering your password every time you login and to increase security, you can log in with an ssh keypair. This keypair consists of a private key that you have to store on your computer and a public key that you can store on Stallo. On Linux or OSX simply type:
+
+::
+
+ ssh-keygen
+
+and follow the instructions on the screen. Please use a good passphrase. You will have to enter this passphrase the first time you log in after a reboot of the computer, but not anymore afterwards. To copy the public key to Stallo, type:
+
+::
+
+ ssh-copy-id <username>@stallo.uit.no
+
+To learn more about ssh keys, have a look at `this <https://wiki.archlinux.org/index.php/SSH_keys>`_ page.
+
+On Windows, you can use PuTTYgen that comes with PuTTY. More information on `ssh.com <https://www.ssh.com/ssh/putty/windows/puttygen>`_.
+
 
 SSH clients for Windows and Mac
 -------------------------------
 
-At the `OpenSSH page <http://www.openssh.com>`_ you will find several *SSH* alternatives for both Windows and Mac.
+At the `OpenSSH page <https://www.openssh.com>`_ you will find several *SSH* alternatives for both Windows and Mac.
 
 Please note that Mac OS X comes with its own implementation of *OpenSSH*, so you don't need to install any third-party software to take advantage of the extra security *SSH* offers. Just open a terminal window and jump in.
 
@@ -45,7 +61,7 @@ Please note that Mac OS X comes with its own implementation of *OpenSSH*, so you
 Learning more about SSH
 -----------------------
 
-To learn more about using SSH, please also consult the `OpenSSH page <http://www.openssh.com>`_ page and take a look at the manual page on your system (*man ssh*).
+To learn more about using SSH, please also consult the `OpenSSH page <https://www.openssh.com>`_ page and take a look at the manual page on your system (*man ssh*).
 
 
 

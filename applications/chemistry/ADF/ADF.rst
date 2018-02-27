@@ -1,24 +1,28 @@
 .. _ADF:
 
-=================================================
+===============================================
 The Amsterdam Density Functional modeling suite
-=================================================
+===============================================
 
 This page contains general information about the ADF modeling suite installed on Stallo:
 
-Related information:
----------------------
+Related information
+-------------------
+
 .. toctree:: :maxdepth: 1
- :titlesonly:
+   :titlesonly:
 
- ADFprog
- Band
+   firsttime_adf
+   ADFprog
+   Band
+   firsttime_band
+   advanced
 
-General Information:
-====================
+General Information
+===================
 
-Description:
--------------
+Description
+-----------
 
 The DFT code ADF is used in many areas of chemistry and materials science, and consists of the following parts:
 
@@ -29,19 +33,19 @@ The DFT code ADF is used in many areas of chemistry and materials science, and c
 * COSMO-RS uses quantum mechanical data from ADF to predict thermodynamic properties of solutions and mixtures (LogP, VLE, pKa, …)
 
 
-Online info from vendor:
-------------------------
+Online info from vendor
+-----------------------
 
-* Homepage: http://www.scm.com
-* Documentation: https://www.scm.com/doc/
+* Homepage: https://www.scm.com
+* Documentation: https://www.scm.com/doc
 
 The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
 a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
-nding emails to support(either notur or scm) or trying the ADF mailing list (see http://www.scm.com/Support for more info).
+nding emails to support(either notur or scm) or trying the ADF mailing list (see https://www.scm.com/Support for more info).
 
 
-License and access policy:
----------------------------
+License and access policy
+-------------------------
 
 The license of ADF/Band is commercial.
 
@@ -67,16 +71,3 @@ Citation
 --------
 When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citat\
 ion(s).
-
-
-Here are links to more information about ADF and Band on Stallo:
------------------------------------------------------------------
-
-.. toctree:: :maxdepth: 1
-   :titlesonly:
-
-   ADFprog
-   firsttime_adf
-   Band
-   firsttime_band
-   advanced

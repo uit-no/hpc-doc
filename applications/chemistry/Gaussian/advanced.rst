@@ -26,7 +26,7 @@ For information on Gaussview for Gaussian: :ref:`gaussview`
 
 
 Gaussian 09 on Stallo
-======================
+=====================
 
 To run Gaussian 09 on Stallo, the module containing all relevant environment settings for Gaussian has to be loaded::
 
@@ -40,7 +40,7 @@ If you download a run script (see below), this will be taken care of by the scri
 
 
 Job submission guidelines
---------------------------
+-------------------------
 
 The following guidelines are for submitting jobs using one of the available wrappers-scripts. If doing elsewise, please extract the relevant information (choice of scratch dir, output printing scheme, resource allocation for jobs) and apply to your job submission setup.
 
@@ -73,7 +73,7 @@ containing only the line::
 **NOTE:** If you run >1 node (using %NProcLinda), you have to use >1 processor per node.
 
 Best practice for running Gaussian 09 jobs
--------------------------------------------
+------------------------------------------
 
 - For geometry optimizations using DFT methods, we recommends using hybrid functionals. For pure functionals (no HF exchange) - unless you have tested it and know it works - we recommend to run Gaussian 09 only on not more than 3 nodes, using 14-16 cores/node. For hybrid functionals we have seen decent scaling up to 8 nodes using 16 cores/node for minor revision c.01. On old Stallo - we saw time gain up to 12 nodes, using 7 cores/node with c.01 and up to 8 nodes with b.01.
 - If your molecule is >60 atoms, Gaussian uses FMM by default (which is not parallelized), so do not run parallel in this case, unless you turn off FMM (NoFMM keyword). FMM is enabled for non-symmetric molecules with 60 atoms or more. For molecules with high symmetry this limit is 240 atoms for hybrid DFT and 360 atoms for pure DFT. (The text below is copied from http://www.gaussian.com/g_tech/g_ur/m_linda.htm):

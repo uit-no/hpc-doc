@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
-#####################################################
-# example for a job where we consume lots of memory #
-#####################################################
+###################################################
+# Example for a job that consumes a lot of memory #
+###################################################
 
 #SBATCH --job-name=example
 
@@ -17,7 +17,7 @@
 #SBATCH --partition short
 
 # total memory for this job
-# this is a hard limit 
+# this is a hard limit
 # note that if you ask for more than one CPU has, your account gets
 # charged for the other (idle) CPUs as well
 #SBATCH --mem=31000MB

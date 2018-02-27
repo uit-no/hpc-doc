@@ -59,10 +59,10 @@ Limit                      Value
 Max number of running jobs 1024
 Maximum cpus per job       2048
 Maximum walltime           28 days
-Maximum memory per job     No limit:sup:`1`
+Maximum memory per job     No limit [1]
 ========================== ================
 
-:sup:`1` There is a practical limit of 128GB per compute node used.
+[1] There is a practical limit of 128GB per compute node used.
 
 **Remark:** Even if we impose a 28 day run time limit on Stallo we only give
 a weeks warning on system maintenance. Jobs with more than 7 days walltime,

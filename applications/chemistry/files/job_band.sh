@@ -1,16 +1,17 @@
 #!/bin/bash -l
+
 ################### ADF Job Batch Script Example ###################
 # Section for defining queue-system variables:
 #-------------------------------------
 # This script asks for a given set of cores nodes and cores. Stallo has got 16 or 20 cores/node,
 # asking for something that adds up to both is our general recommodation (80, 160 etc), you would
 # then need to use --ntasks instead of -N and --ntasks-per-node. (replace both).
-# Runtime for this job is 59 minutes; syntax is hh:mm:ss. 
+# Runtime for this job is 59 minutes; syntax is hh:mm:ss.
 # Memory is set to the maximum advised for a full node,
-# of 30000MB/node and leaving some for the system to use. Memory  
-# can be specified pr core, virtual or total pr job (be carefull).   
+# of 30000MB/node and leaving some for the system to use. Memory
+# can be specified pr core, virtual or total pr job (be carefull).
 #-------------------------------------
-# SLURM-section 
+# SLURM-section
 #SBATCH --job-name=band_runex
 #SBATCH -N 2
 #SBATCH --ntasks-per-node=20
@@ -20,23 +21,19 @@
 #SBATCH --mail-type=ALL
 #SBATCH --exclusive
 #SBATCH --partition=multinode
+
 ######################################
 # Section for defining job variables and settings:
-#-------------------------------------
-# Area for defining variables:
 
-input=silicone # Name of input without extention 
+
+input=silicone # Name of input without extention
 ext=adf # We use the same naming scheme as the software default, also for extention
 cores=40  # Number of cores potentially used by mpi engine in submit procedure
-
-#-------------------------------
 
 # We load all the default program system settings with module load:
 
 module purge
 module load ADF/adf2017.108
-
-#-------------------------------
 
 # Now we create working directory and temporary scratch for the job(s):
 # Necessary variables are defined in the notur and the software modules.
@@ -58,15 +55,13 @@ cd $tempdir
 
 ######################################
 # Section for running the program and cleaning up:
-#-------------------------------------
 
 # Running the program:
 
 time band  -n $cores < ${input}.${ext} > band_$input.out
 
 # Cleaning up and moving files back to home/submitdir:
-# Make sure to move all essential files 
-# specific for the given job/software.
+# Make sure to move all essential files specific for the given job/software.
 
 cp band_$input.out $submitdir/band_$input.out
 cp TAPE21 $submitdir/$input.t21
@@ -76,17 +71,15 @@ cp TAPE21 $submitdir/$input.t21
 #mv $input.t21.gz $submitdir/
 
 # Investigate potentially other files to keep:
-echo `pwd`
-echo `ls -ltr`
+echo $(pwd)
+echo $(ls -ltr)
 
-# ALLWAYS clean up after yourself. Please do uncomment the following line
+# ALWAYS clean up after yourself. Please do uncomment the following line
 #cd $submitdir
 #rm  $tempdir/*
 #rmdir $tempdir
-
 
 echo "Job finished at"
 date
 ################### Job Ended ###################
 exit 0
-

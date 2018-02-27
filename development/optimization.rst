@@ -9,10 +9,10 @@ peak, it is necessary to write your algorithms in a form that allows the
 use of scientific library routines, such as BLACS/LAPACK.
 
 
-Allinea Performance Reports
-===========================
+Arm Performance Reports
+=======================
 
-`Allinea Performance Reports <http://www.allinea.com/products/allinea-performance-reports>`__
+`Arm Performance Reports <https://www.arm.com/products/development-tools/hpc-tools/cross-platform/performance-reports>`_
 offers a nice and convenient way to get an overview profile for your run very quickly.
 It will introduce a typically negligible runtime overhead
 and all you need to do is to load the ``perf-reports`` module
@@ -83,5 +83,4 @@ event sampling.
 Totalview
 =========
 
-`Totalview <http://www.roguewave.com/help-support/documentation/totalview#totalview>`__
-TotalView is a source- and machine-level debugger for multi-process, multi-threaded programs.
+`Totalview <https://support.roguewave.com/documentation/tvdocs/en/current>`_ is a source- and machine-level debugger for multi-process, multi-threaded programs.
