@@ -21,7 +21,8 @@ Postal address
 
 ::
 
-  HPC group
-  IT-avdelingen Teo2 4. etg.
+  Seksjon for digital forskningstjeneste/HPC
+  Nofima
+  Muninbakken 9-13
   UiT Norges Arktiske Universitet
   9037 Tromsø
