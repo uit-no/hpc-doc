@@ -6,23 +6,34 @@ The COMSOL Multiphysics software suite
 
 Information regarding the computational physics program system COMSOL
 
-General Information:
-====================
 
-Description:
-------------
+Related information
+-------------------
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   firsttime_comsol.rst
+
+
+General Information
+===================
+
+Description
+-----------
 
 COMSOL Multiphysics® is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is highly visual, based on graphical interfaces - so users are adviced to use either the client installation on their client machine or the remote graphics solution on Stallo.
 
-Online info from vendor:
-------------------------
+Online info from vendor
+-----------------------
 
 * Homepage: https://www.comsol.com
 * Documentation/support: https://www.comsol.com/support
 
 
-License information:
---------------------
+License information
+-------------------
 
 The license of COMSOL is commercial/proprietary.
 
@@ -66,22 +77,4 @@ If you want to know whether there are available license tokens or not, load the 
 
     $ lmstat -c $LMCOMSOL_LICENSE_FILE -a
 
-The first time you run an COMSOL job on Stallo?
------------------------------------------------
-
-Get the information you need here:
-
-
-.. toctree::
- :maxdepth: 1
-
- firsttime_comsol.rst
-
-
-Here we hold information for how to run on Stallo for the first time, and for using SLURM for the first time.
-
-
 Happy calculations!
-
-
-

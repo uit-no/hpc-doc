@@ -15,8 +15,9 @@ The GaussView version for Gaussian 09 is release 5.0.8 To load and run GaussView
    $ module load Gaussian/09.d01
    $ gview
 
-More information about GaussView:
----------------------------------
+More information about GaussView
+--------------------------------
+
 * General info about the program: http://www.gaussian.com/g_prod/gv5.htm
 * Online reference: http://www.gaussian.com/g_tech/gv5ref/gv5ref_toc.htm
 

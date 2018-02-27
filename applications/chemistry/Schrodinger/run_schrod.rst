@@ -1,9 +1,7 @@
-:orphan:
-
 .. _run_schrodinger:
 
 Running Schrodinger jobs on Stallo
-====================================
+==================================
 
 This page contains info about how to submit Schrodinger jobs on Stallo, based
 on two sets of examples - one for docking and one for molecular dynamics -
@@ -13,8 +11,8 @@ Pay enhanced attention to the `ssh -Y c1-3` in examples below; this represents t
 
 A more thorough explanation to this, is that maestro starts a distribution and surveilance process that creates the jobs that enters the shared resources allocation (aka batch) system. If this process dies, the underlying jobs dies disregarding their computational status. This could have been solved by just running this on the login node, but imagine how it would have been with 1000 simultanious users sharing two login nodes and 50 of those ran 20-40 simultaneous perl and python processes each on the login nodes. So, please do as told.
 
-Submitting jobs through the maestro interface:
------------------------------------------------
+Submitting jobs through the maestro interface
+---------------------------------------------
 
 Log in to Stallo with either x11-tunnelling enabled or through stallo-gui.uit.no.
 
@@ -79,8 +77,8 @@ Use ligands from file; if you want to run a very short test - choose abl1-kinase
 
 
 
-If you want to run vsw routines from the command line:
--------------------------------------------------------
+If you want to run vsw routines from the command line
+-----------------------------------------------------
 
 The Schrodinger suite is shipped with scripts that connects the software installation with the system batch resource allocation setup, making it possible to submit glide jobs from the linux command line.
 

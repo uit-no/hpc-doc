@@ -13,8 +13,8 @@ commented to provide additional and relevant info.
 If you want to run this testjob, download the copies of the scripts and put them
 into your test job folder (which I assume you have created in advance).
 
-COMSOL input example:
----------------------
+COMSOL input example
+--------------------
 
 The file used in this example can also downloaded here: :download:`Small test for COMSOL <../files/comsol_smalltest.mph>`.
 

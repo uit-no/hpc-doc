@@ -1,18 +1,27 @@
 .. _Schrodinger:
 
-===========================================
+==========================
 Schrödinger Product Suites
-===========================================
+==========================
 
 A description of the Schrödinger product suites that are available for norwegian academic users
 
-General Information:
-====================
+Related information
+-------------------
+
+.. toctree:: :maxdepth: 1
+   :titlesonly:
+
+   run_schrod
+   install_schrod
+
+General Information
+===================
 
 NOTUR is, together with the user community, funding a national license of Schrödinger´s Small Molecule Drug Discovery Suite and PyMol. This implies that users are allowed to download and install their own copies of the software, and using the license server for providing license tokens. More about that in another document: :ref:`install_schrodinger`.
 
-Online info from vendor:
-------------------------
+Online info from vendor
+-----------------------
 
 * Homepage: https://www.schrodinger.com/
 
@@ -36,10 +45,12 @@ on a system level. Problems related to running schrodinger on a NOTUR facility s
 
 Citation
 --------
+
 When publishing results obtained with the referred software, please do check the developers web page in order to find the correct citation(s).
 
-License and access policy:
----------------------------
+License and access policy
+-------------------------
+
 The licenses of Schrödinger Product Suites are commercial.
 
 NOTUR is, together with the user community, funding a national license of Schrödinger´s Small Molecule Drug Discovery Suite and PyMol. The licenses are administered by a license server based on flexlm. The adress for this license setup is available upon request to support-uit(at)notur.no.
@@ -51,7 +62,7 @@ All members of the co-funding research groups have unlimited access to the Schr�
 `Please note that this is an academic type license; meaning that research institutes not being part of Norwegian Universities must provide their own license to be able to use and publish results obtained with this code on NOTUR installlations.`
 
 Usage
-======
+=====
 
 The most commot usage of schrodinger on Stallo is through the Maestro gui. Log in with x11-tunneling enabled, or through the web-interface http://stallo-gui.uit.no/.
 Load the module of choice:
@@ -79,7 +90,7 @@ For examples on how to submit Schrodinger jobs on Stallo, look here :ref:`run_sc
 
 
 Finding available licenses
-===========================
+==========================
 
 This should in principle be obsolete for users, since we are promised unlimited licenses in the national system. But still, for the curious souls:
 
@@ -93,8 +104,8 @@ If you want to know about avaible licenses; do the following
 
 This command will give you information about license status for the national Schrodinger suite licenses.
 
-Access to PyMOL:
-=================
+Access to PyMOL
+===============
 
 For users that wants/needs access to PyMOL, please fill out the following form: https://skjema.uio.no/pymol-access.
 

@@ -6,8 +6,8 @@ VASP (Vienna Ab initio Simulation Package)
 
 Information regarding the Vienna Ab initio Simulation Package (VASP) installed on Stallo.
 
-Related information:
-=====================
+Related information
+===================
 
 .. toctree::
    :maxdepth: 1
@@ -16,11 +16,12 @@ Related information:
    vasp_on_stallo.rst
 
 
-General information:
-=====================
+General information
+===================
 
 Description
-------------
+-----------
+
 VASP is a complex package for performing ab-initio quantum-mechanical molecular dynamics (MD) simulations using pseudopotentials or the projector-augmented wave method and a plane wave basis set. The approach implemented in VASP is based on the (finite-temperature) local-density approximation with the free energy as variational quantity and an exact evaluation of the instantaneous electronic ground state at each MD time step.
 
 VASP uses efficient matrix diagonalisation schemes and an efficient Pulay/Broyden charge density mixing. These techniques avoid all problems possibly occurring in the original Car-Parrinello method, which is based on the simultaneous integration of electronic and ionic equations of motion.
@@ -29,14 +30,15 @@ The interaction between ions and electrons is described by ultra-soft Vanderbilt
 
 There are various type plug ins and added functionality to VASP. On Stallo, we have added support for the Texas transition state tools (`vTST <http://theory.cm.utexas.edu/vtsttools/>`_), the `VASPsol <http://vaspsol.mse.ufl.edu>`_ implicit solvation model made by Hennig and Mathew from University of Florida and the `Bayesian Error Estimation Functionals <https://suncat.stanford.edu/about/facilities/software>`_ from the SUNCAT center, Standford.
 
-Online information from vendor:
--------------------------------
+Online information from vendor
+------------------------------
+
 * Homepage: https://www.vasp.at
 * Documentation: https://cms.mpi.univie.ac.at/wiki/index.php/The_VASP_Manual
 
 
-License and access policy:
-----------------------------
+License and access policy
+-------------------------
 
 The VASP license is proprietary and commercial. It is based on group license policy, and for NOTUR systems VASP packages falls in the "bring your own license" category. See :ref:`About_licenses`.
 
@@ -50,6 +52,7 @@ The support people in NOTUR, do not provide trouble shooting guides anymore, due
 
 Citation
 ---------
+
 When publishing results obtained with the referred software referred, please do check the developers web page in order to find the correct citation(s).
 
 Usage
@@ -72,25 +75,9 @@ For more information on available versions, type:
 Experiencewise, VASP is a rather memory intensive code. Users are advised to read up on the general job script example(s) for SLURM and Stallo, and also how to specify memory in `SLURM <https://slurm.schedmd.com>`_.
 
 
-First time you run a VASP job on Stallo?
-----------------------------------------
+About the VASP version(s) installed on Stallo
+---------------------------------------------
 
-Get the information you need here:
-
-.. toctree::
-   :maxdepth: 1
-
-   firsttime_vasp.rst
-
-
-About the VASP version(s) installed on Stallo:
---------------------------------------------------
-
-Since the installation we made on Stallo is rather taylor made, we have gathered information about this here:
-
-.. toctree::
-   :maxdepth: 1
-
-   vasp_on_stallo.rst
+Since the installation we made on Stallo is rather taylor made, we have gathered information about this here: :doc:`vasp_on_stallo`.
 
 Here we also adress compilation relevant information for those who would like to do it themselves.
