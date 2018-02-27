@@ -57,19 +57,16 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
    :caption: Jobs
 
-   jobs/dos_and_donts
-   jobs/running_mpi_jobs
-   jobs/examples
-   jobs/account
    jobs/batch
-   jobs/environment-variables
-   jobs/torque_slurm_table
-   jobs/management
-   jobs/walltime
+   jobs/examples
+   jobs/dos_and_donts
    jobs/process-count
    jobs/partitions
    jobs/interactive
    jobs/monitoring
+   jobs/running_mpi_jobs
+   jobs/environment-variables
+   jobs/torque_slurm_table
 
 
 .. toctree::

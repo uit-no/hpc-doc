@@ -1,7 +1,7 @@
 
 
-Interactive job submission
-==========================
+Interactive jobs
+================
 
 You can run an interactive job like this::
 

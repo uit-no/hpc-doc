@@ -1,7 +1,7 @@
 .. _torque_slurm_table:
 
 
-Quick Guide to translate PBS/Torque to SLURM
+Translate PBS/Torque to SLURM
 ============================================
 
 ======================== =================== ==========================
