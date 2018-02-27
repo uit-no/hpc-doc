@@ -32,7 +32,7 @@ Run a program
 
 There are many programs pre-installed. You may get a list of all programs by typing ``module avail``. You can also search within that list. ``module avail blast`` will search for Blast (case-insensitive). When you found your program of choice, you may load it using ``module load BLAST+/2.7.1-intel-2017b-Python-2.7.14``. All program files will now be available, i.e. you can now simply call ``blastp -version`` to run Blast and check the loaded version. You can also compile your own software, if necessary. :doc:`/software/modules`
 
-To eventually run the program, you have to write a job script. In this script, you can define how long the job (i.e. the program) will run and how much memory and compute cores it needs. For the actual computation, you need to learn at least the basics of Linux shell scripting. Example job scripts can be found here: :doc:`/jobs/examples`.
+To eventually run the program, you have to write a job script. In this script, you can define how long the job (i.e. the program) will run and how much memory and compute cores it needs. For the actual computation, you need to learn at least the basics of Linux shell scripting. You can learn some basics here: :doc:`/account/linux`. Example job scripts can be found here: :doc:`/jobs/examples`.
 
 When you wrote the job script, you can start it with ``sbatch jobscript.sh``. This will put the script in the queue, where it will wait until an appropriate compute node is available. You can see the status of your job with ``squeue -u username``. :doc:`/jobs/batch`.
 
