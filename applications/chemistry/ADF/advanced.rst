@@ -1,8 +1,8 @@
 .. _adf_advanced:
 
-===============================
-Information for advanced users:
-===============================
+==============================
+Information for advanced users
+==============================
 
 Scaling behaviour:
 ------------------
