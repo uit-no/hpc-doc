@@ -23,14 +23,7 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
 
    stallo/getting_started
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: News and Events
-
    news/news
-   news/new_sw
 
 
 .. toctree::
@@ -40,7 +33,6 @@ HPC-UiT Services User Documentation
    help/contact
    help/writing-support-requests
    help/faq
-   help/AboutLicenses
    help/staff
 
 
@@ -87,11 +79,12 @@ HPC-UiT Services User Documentation
    software/applications
    software/modules
    account/linux
+   help/AboutLicenses
+   news/new_sw
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Applications
 
    applications/sw_guides
 
