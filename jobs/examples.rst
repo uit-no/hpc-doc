@@ -96,6 +96,7 @@ each:
 The ``wait`` commands are important here - the run script will only continue
 once all commands started with ``&`` have completed.
 
+.. _allocated_entire_memory:
 
 Example on how to allocate entire memory on one node
 ----------------------------------------------------

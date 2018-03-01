@@ -261,7 +261,7 @@ To find out how to monitor your jobs and check their status see :ref:`monitoring
 Below are a few cases of why jobs don't start or error messages you might get:
 
 
-**Memory** **per** **core**
+**Memory per core**
 
    "When I try to start a job with 2GB of memory pr. core, I get the following error:
    ``sbatch: error: Batch job submission failed: Requested node configuration is not available``
@@ -285,6 +285,10 @@ info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much 
 mem-per-cpu 2000MB.
 
 You can find an example here: :ref:`first_time_gaussian`
+
+Please also note that if you want to use the whole memory on a node, do not ask
+for 32GB, but for 31GB or 31000MB as the node needs some memory for the system itself.
+For an example, see here: :ref:`allocated_entire_memory`
 
 
 
