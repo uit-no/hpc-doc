@@ -24,6 +24,8 @@ by typing::
    :language: bash
 
 
+.. _job_arrays:
+
 Running many sequential jobs in parallel using job arrays
 ---------------------------------------------------------
 

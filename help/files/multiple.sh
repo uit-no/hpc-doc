@@ -10,7 +10,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=20
 
-# We assume we will be done in 10 minutes:
+# We assume we will (in total) be done in 10 minutes:
 #SBATCH --time=0-00:10:00
 
 # Let us use all CPUs:
@@ -32,7 +32,7 @@ for t in $tasks; do
   ./dowork.sh $t &
 
   # You should leave the rest alone...
-  #
+
   # count the number of background tasks we have spawned
   # the jobs command print one line per task running so we only need
   # to count the number of lines.

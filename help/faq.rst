@@ -17,15 +17,13 @@ You can reset it here: https://www.metacenter.no/user/
 How do I change my password on Stallo?
 --------------------------------------
 
-The passwd command does not seem to work. My password is reset back to
-the old one after a while. Why is this happening?
-
-The Stallo system is using a centralised database for user management.
-This will override the password changes done locally on Stallo.
-
 The password can be changed on the
 `password metacenter page <https://www.metacenter.no/user/password/>`_, log in using your
 username on Stallo and the NOTUR domain.
+
+The ``passwd`` command known from other Linuxes does not work.
+The Stallo system is using a centralised database for user management.
+This will override the password changes done locally on Stallo.
 
 
 Installing software
@@ -34,12 +32,9 @@ Installing software
 I need Python package X but the one on Stallo is too old or I cannot find it
 ----------------------------------------------------------------------------
 
-I need a newer version of Scipy, Numpy, etc. Can you install it?
+You can choose different Python versions with the module system. See here: :doc:`/software/modules`
 
-We often have newer versions of software packages installed which may not be visible
-with the default user settings. Find out more about it here: :doc:`/software/modules`
-
-In cases where this still doesn't solve your problem and you would like to install it yourself, please read the next section below about installing without sudo rights.
+In cases where this still doesn't solve your problem or you would like to install a package yourself, please read the next section below about installing without sudo rights.
 
 If we don't have it installed, and installing it yourself is not a good solution for you, please contact us and we will do our best to help you.
 
@@ -49,9 +44,10 @@ Can I install Python software as a normal user without sudo rights?
 
 Yes. The recommended way to achieve this is using `virtual environments <https://docs.python.org/3/tutorial/venv.html>`_
 
-Example (as an example we install the Biopython package)::
+As an example we install the Biopython package::
 
-  $ module load GCC/4.9.1
+  $ module load GCC/6.4.0-2.28 # You should load a modern compiler with Python2.
+                               # This is not necessary with Python3.
   $ virtualenv venv
   $ source venv/bin/activate
   $ pip install biopython
@@ -61,8 +57,14 @@ the virtual environment::
 
   $ source venv/bin/activate
 
+If you want to leave the virtual environment again, type::
+
+  $ deactivate
+
 And you do not have to call it "venv". It is no problem to have many
-virtual environments in your home directory.
+virtual environments in your home directory. Each will start as a clean
+Python setup which you then can modify. This is also a great system to have
+different versions of the same module installed side by side.
 
 If you want to inherit system site packages into your virtual
 environment, do this instead::
@@ -142,8 +144,7 @@ Connecting via ssh
 How can I export the display from a compute node to my desktop?
 ---------------------------------------------------------------
 
-If you needs to export the display from a compute node to your desktop
-you should
+If you need to export the display from a compute node to your desktop you should
 
 #. First login to Stallo with display forwarding.
 #. Then you should reserve a node, with display forwarding, trough the
@@ -178,14 +179,14 @@ My ssh connections are dying / freezing
 How to prevent your ssh connections from dying / freezing.
 
 If your ssh connections more or less randomly are dying / freezing, try
-to add the following to your **local** ``~/.ssh/config`` file:
+to add the following to your *local* ``~/.ssh/config`` file:
 
 ::
 
     ServerAliveCountMax 3
     ServerAliveInterval 10
 
-(**local** means that you need to make these changes to your computer,
+(*local* means that you need to make these changes to your computer,
 not on stallo)
 
 The above config is for `OpenSSH <https://www.openssh.org>`_, if you're
@@ -262,70 +263,57 @@ Below are a few cases of why jobs don't start or error messages you might get:
 
 **Memory** **per** **core**
 
-"When I try to start a job with 2GB of memory pr. core, I get the following error:
-
-sbatch: error: Batch job submission failed: Requested node configuration is not available
-
-With 1GB/core it works fine. What might be the cause to this?"
+   "When I try to start a job with 2GB of memory pr. core, I get the following error:
+   ``sbatch: error: Batch job submission failed: Requested node configuration is not available``
+   With 1GB/core it works fine. What might be the cause to this?"
 
 On Stallo we have two different configurations available; 16 core and 20 core nodes - with both a
-total of 32 GB of memory/node. Currently only the 20 core nodes have been enabled for the SLURM
-batch system, these have no local disk and thus no swap space. If you ask for full nodes by
+total of 32 GB of memory/node. If you ask for full nodes by
 specifying both number of nodes and cores/node together with 2 GB of memory/core, you will ask
 for 20 cores/node and 40 GB of memory. This configuration does not exist on Stallo. If you ask
-for 16 cores, still with 2GB/core, it seems to be a sort of buffer within SLURM no allowing you
-to consume absolutely all memory available (system needs some to work). 2000MB seems to work
+for 16 cores, still with 2GB/core, there is a sort of buffer within SLURM no allowing you
+to consume absolutely all memory available (system needs some to work). 2000MB/core works
 fine, but not 2 GB for 16 cores/node.
 
-The solution we want to push in general, see :ref:`first_time_gaussian`, is this:
+The solution we want to push in general is this::
 
-Specify number of tasks::
-
-#SBATCH -ntasks=80 # (number of nodes * number of cores, i.e. 5*16 or 4*20 = 80)
+   #SBATCH -ntasks=80 # (number of nodes * number of cores, i.e. 5*16 or 4*20 = 80)
 
 If you then ask for 2000MB of memory/core, you will be given 16 cores/node and a total
 of 16 nodes. 4000MB will give you 8 cores/node - everyone being happy. Just note the
 info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much as
 mem-per-cpu 2000MB.
 
+You can find an example here: :ref:`first_time_gaussian`
+
 
 
 **Step memory limit**
 
-"Why do I get ``slurmstepd: Exceeded step memory limit`` in my log/output?"
+   "Why do I get ``slurmstepd: Exceeded step memory limit`` in my log/output?"
 
-For slurm, the memory flag seems to be a hard limit, meaning that when each core
+For slurm, the memory flag is a hard limit, meaning that when each core
 tries to utilize more than the given amount of memory, it is killed by the slurm-deamon.
-For example ``$SBATCH --mem-per-cpu=2GB`` means that you maximum can use 2 GB of memory pr
-core. With memory intensive applications like comsol or VASP, your job will likely be
-terminated. The solution to this problem is to, like we have said elsewhere, specify the
+For example ``$SBATCH --mem-per-cpu=2GB`` means that you maximum can use 2 GB of memory per
+core. With memory intensive applications like Comsol or VASP, your job will likely be
+terminated. The solution to this problem is to specify the
 number of tasks irrespectively of cores/node and ask for as much memory you will need.
 
 For instance::
 
- #SBATCH --ntasks=20
- #SBATCH --time=0-24:05:00
- #SBATCH --mem-per-cpu=6000MB
-
+   #SBATCH --ntasks=20
+   #SBATCH --time=0-24:05:00
+   #SBATCH --mem-per-cpu=6000MB
 
 
 **QOSMaxWallDurationPerJobLimit**
 
-QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exceeded. Basically, the user has asked for more time than is allowed for the QOS associated with the job.
-
+QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exceeded. Basically, you have asked for more time than allowed for the given QOS/Partition. Please have a look at :doc:`/jobs/partitions`.
 
 
 **Priority vs. Resources**
 
 Priority means that resources are in principle available, but someone else has higher priority in the queue. Resources means the at the moment the requested resources are not available.
-
-
-CPU v.s. core
--------------
-
-In this documentation we are frequently using the term *CPU*, which in
-most cases are equivalent to the more precise term *processor core* /
-*core*\. The \ *multi core age*\  is here now \ *:-)*
 
 
 How can I customize emails that I get after a job has completed?
@@ -336,19 +324,14 @@ that you send the email via the login node.
 
 As an example, add and adapt the following line at the end of your script::
 
-  echo "email content" | ssh stallo-1.local 'mail -s "job finished in /global/work/${USER}/${SLURM_JOBID}" firstname.lastname@uit.no'
+  echo "email content" | ssh stallo-1.local 'mail -s "Job finished: ${SLURM_JOBID}" firstname.lastname@uit.no'
 
 
-Running many short tasks
-========================
+How can I run many short tasks?
+-------------------------------
 
-Recommendations on how to run a lot of short tasks on the system. The
-overhead in the job start and cleanup makes it unpractical to run
+The overhead in the job start and cleanup makes it unpractical to run
 thousands of short tasks as individual jobs on Stallo.
-
-
-Background
-----------
 
 The queueing setup on stallo, or rather, the accounting system generates
 overhead in the start and finish of a job of about 1 second at each end
@@ -360,11 +343,9 @@ unparallelizable part of the job. This is because the queuing system can
 only start and account one job at a time. This scaling problem is
 described by `Amdahls Law <https://en.wikipedia.org/wiki/Amdahl's_law>`_.
 
-Without going into any more details, let's look at the solution.
-
-
-Running tasks in parallel within one job
-----------------------------------------
+If the tasks are extremly short, you can use the example below. If you want to
+spawn many jobs without polluting the queueing system, please have a look at
+:ref:`job_arrays`.
 
 By using some shell trickery one can spawn and load-balance multiple
 independent task running in parallel within one node, just background
@@ -373,10 +354,8 @@ next:
 
 .. literalinclude:: files/multiple.sh
    :language: bash
-   :linenos:
 
 And here is the ``dowork.sh`` script:
 
 .. literalinclude:: files/dowork.sh
    :language: bash
-   :linenos:
