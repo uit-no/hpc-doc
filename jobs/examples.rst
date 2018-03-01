@@ -19,6 +19,10 @@ by typing::
 
    $ sbatch run.sh
 
+Please note that all values that you define with SBATCH directives are hard
+values. When you, for example, ask for 6000 MB of memory (``--mem=6000MB``) and
+your job uses more than that, the job will be automatically killed by the manager.
+
 
 .. literalinclude:: files/slurm-blueprint.sh
    :language: bash
