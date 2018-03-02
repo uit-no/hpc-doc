@@ -23,6 +23,10 @@ memory, etc., that will be interpreted by the batch system upon submission.
 
 You can find job script examples in :ref:`job_script_examples`.
 
+After you wrote your job script as shown in the examples, you can start it with::
+
+   sbatch jobscript.sh
+
 
 How to pass command-line parameters to the job script
 -----------------------------------------------------

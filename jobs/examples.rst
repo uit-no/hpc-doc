@@ -19,10 +19,16 @@ by typing::
 
    $ sbatch run.sh
 
+Please note that all values that you define with SBATCH directives are hard
+values. When you, for example, ask for 6000 MB of memory (``--mem=6000MB``) and
+your job uses more than that, the job will be automatically killed by the manager.
+
 
 .. literalinclude:: files/slurm-blueprint.sh
    :language: bash
 
+
+.. _job_arrays:
 
 Running many sequential jobs in parallel using job arrays
 ---------------------------------------------------------
@@ -90,6 +96,7 @@ each:
 The ``wait`` commands are important here - the run script will only continue
 once all commands started with ``&`` have completed.
 
+.. _allocated_entire_memory:
 
 Example on how to allocate entire memory on one node
 ----------------------------------------------------
