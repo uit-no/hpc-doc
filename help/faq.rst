@@ -74,37 +74,6 @@ environment, do this instead::
   $ pip install biopython
 
 
-Running software
-================
-
-Why is a specific node so incredibly slow compared to others?
--------------------------------------------------------------
-
-The node is probably swapping.
-
-
-What does swapping mean and why should I care?
-----------------------------------------------
-
-If the jobs consume more memory than the node physically has, the node starts
-to swap out memory to the disk.  This typically means a significant slowdown of
-the calculation.  And this is why you need to care about swapping: your
-calculation will slow down to a grinding halt.  You can also crash the node
-which is bad for us.
-
-
-How can I check whether my calculation is swapping?
----------------------------------------------------
-
-Option 1 (inside the university network) is to check
-http://stallo-login2.uit.no/slurmbrowser/html/squeue.html. Click on "nodes" and
-then the node in question.  On the right hand panel you see "Memory last hour".
-If memory is above the red mark, the node will swap.
-
-Option 2 is to log into the node and run "top". On the top you see how much
-memory is consumed and whether the node is swapping.
-
-
 Compute and storage quota
 =========================
 
