@@ -91,3 +91,11 @@ We generally have these rules for prioritizing jobs:
 #. Short jobs take precedence over long jobs.
 #. Use fairshare. This means that users with many jobs running will get a
    decreased priority compared to other users.
+
+To find out whether all users within one project share the same priority, run::
+
+  $ sshare -a -A nnNNNNk
+
+For a given account (project) consider the column "RawShares". If the RawShares
+for the users is "parent", they all share the same fairshare priority. If it is
+a number, they have individual priorities.
