@@ -5,7 +5,7 @@
 #-------------------------------------
 # This script asks for a given set of cores nodes and cores. Stallo has got 16 or 20 cores/node,
 # asking for something that adds up to both is our general recommodation (80, 160 etc), you would
-# then need to use --ntasks instead of -N and --ntasks-per-node. (replace both).
+# then need to use --ntasks instead of --nodes and --ntasks-per-node. (replace both).
 # Runtime for this job is 59 minutes; syntax is hh:mm:ss.
 # Memory is set to the maximum advised for a full node, 1500MB/core - giving a total
 # of 30000MB/node and leaving some for the system to use. Memory
@@ -13,7 +13,7 @@
 #-------------------------------------
 # SLURM-section
 #SBATCH --job-name=adf_runex
-#SBATCH -N 2
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=20
 #SBATCH --time=00:59:00
 #SBATCH --mem-per-cpu=1500MB # Be ware of memory needs, might be a lot higher if you are running Zora basis, for example.

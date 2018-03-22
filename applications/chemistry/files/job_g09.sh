@@ -12,7 +12,7 @@
 #-------------------------------------
 # SLURM-section
 #SBATCH --job-name=g09_runex
-#SBATCH -N 2
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=20
 #SBATCH --time=00:59:00
 #SBATCH --mem-per-cpu=1500MB
