@@ -43,11 +43,9 @@ mkdir -p $SCM_TMPDIR
 # Preparing and moving inputfiles to tmp:
 
 submitdir=$SLURM_SUBMIT_DIR
-tempdir=$SCM_TMPDIR
 
-cd $submitdir
-cp ${input}.${ext} $tempdir
-cd $tempdir
+cp ${input}.${ext} $SCM_TMPDIR
+cd $SCM_TMPDIR
 
 # In case necessary, set SCM_IOBUFFERSIZE
 #export SCM_IOBUFFERSIZE=1024 # Or higher if necessary.
@@ -57,7 +55,7 @@ cd $tempdir
 
 # Running the program:
 
-time adf  -n $cores < ${input}.${ext} > adf_$input.out
+time adf -n $cores < ${input}.${ext} > adf_$input.out
 
 # Cleaning up and moving files back to home/submitdir:
 # Make sure to move all essential files specific for the given job/software.
@@ -75,8 +73,7 @@ echo $(ls -ltr)
 
 # ALWAYS clean up after yourself. Please do uncomment the following line
 #cd $submitdir
-#rm  $tempdir/*
-#rmdir $tempdir
+#rm -r $tempdir/*
 
 echo "Job finished at"
 date

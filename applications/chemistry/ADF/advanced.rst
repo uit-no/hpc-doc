@@ -36,7 +36,7 @@ This is a brief introduction to how to create fragments necessary for among othe
 **Running with fragments:**
 
 * Download and modify script for fragment create run, e.g. this template: Create.TZP.sh  (modify ACCOUNT, add desired atoms and change to desired basis and desired functional)
-* Run the create job in the same folder as the one where you want to run your main job(s) (qsub Create.TZP.sh).
+* Run the create job in the same folder as the one where you want to run your main job(s) (sbatch Create.TZP.sh).
 * Put the line cp $init/t21.* .  in your ADF run script (in your $HOME/bin directory)
 * In job.inp, specify correct file name in FRAGMENT section, e.g. “H   t21.H_tzp”. * Submit job.inp as usual.
 
