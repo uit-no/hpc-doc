@@ -24,9 +24,12 @@ multinode:
     Request this partition if you ask for more resources than you will find on
     one node and request walltime longer than 48 hrs.
 
+highmem:
+    Use this partition to use the high memory nodes with 128 GB. You will have to apply for access to this partition by sending us an email explaining why you need these high memory nodes.
+
 To figure out the walltime limits for the various partitions, type::
 
-  $ sinfo --format="%P %l"
+  $ sinfo --format="%P %l"  # small L
 
 As a service to users that needs to submit short jobs for testing and debugging, we have a service called devel.
 These jobs have higher priority, with a maximum of 4 hrs of walltime and no option for prolonging runtime.
