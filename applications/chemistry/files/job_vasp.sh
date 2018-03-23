@@ -12,7 +12,7 @@
 #-------------------------------------
 # SLURM-section
 #SBATCH --job-name=vasp_runex
-#SBATCH -N 2
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=20
 #SBATCH --time=02:00:00
 ##SBATCH --mem-per-cpu=1500MB
@@ -25,12 +25,12 @@
 # Section for defining job variables and settings:
 
 proj=CeO2job # Name of job folder
-input=${proj}/{INCAR,KPOINTS,POTCAR,POSCAR} # Input files from job folder
+input=$(ls ${proj}/{INCAR,KPOINTS,POTCAR,POSCAR}) # Input files from job folder
 
 # We load all the default program system settings with module load:
 
 module purge
-module load VASP/5.4.1.plain
+module load VASP/5.4.1.plain-intel-2016a
 # You may check other available versions with "module avail VASP"
 
 # Now we create working directory and temporary scratch for the job(s):
@@ -38,16 +38,14 @@ module load VASP/5.4.1.plain
 
 export VASP_WORKDIR=/global/work/$USER/$SLURM_JOB_ID
 
-mkdir -p /global/work/$USER/$SLURM_JOB_ID
+mkdir -p $VASP_WORKDIR
 
 # Preparing and moving inputfiles to tmp:
 
 submitdir=$SLURM_SUBMIT_DIR
-tempdir=$VASP_WORKDIR
 
-cd $submitdir
-cp $input $tempdir
-cd $tempdir
+cp $input $VASP_WORKDIR
+cd $VASP_WORKDIR
 
 ######################################
 # Section for running the program and cleaning up:
@@ -59,11 +57,11 @@ time mpirun vasp_std
 # Cleaning up and moving files back to home/submitdir:
 # Make sure to move all essential files specific for the given job/software.
 
-cp OUTCAR $submitdir/${input}.OUTCAR
+cp OUTCAR $submitdir/${proj}.OUTCAR
 
 # To zip some of the output might be a good idea!
-#gzip $resultszip
-#mv $resultzip.gz $submitdir/
+#gzip results.gz OUTCAR
+#mv $results.gz $submitdir/
 
 # Investigate potentially other files to keep:
 echo $(pwd)
@@ -72,8 +70,7 @@ echo $(ls -ltr)
 # ALWAYS clean up after yourself. Please do uncomment the following line
 # If we have to, we get really grumpy!
 #cd $submitdir
-#rm  $tempdir/*
-#rmdir $tempdir
+#rm -r $VASP_WORKDIR/*
 
 echo "Job finished at"
 date
