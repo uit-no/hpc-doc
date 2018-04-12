@@ -44,28 +44,6 @@ Windows users may buy and install
 High-performance tools
 ======================
 
-OpenSSH with HPN
-----------------
-The default *ssh* client and server on stallo login nodes is the *openssh* package
-with applied HPN patches. By using a hpnssh client on the other end of
-the data transfer throughput will be increased.
-
-To use this feature you must have a HPN patched openssh version. You can
-check if your ssh client has HPN patches by issuing:
-
-::
-
-    ssh -V
-
-if the output contains the word "hpn" followed by version and release
-then you can make use of the high performance features.
-
-Transfer can then be speed up either by disabling data encryption, AFTER
-you have been authenticated or logged into the remote host (NONE
-cipher), or by spreading the encryption load over multiple threads
-(using MT-AES-CTR cipher).
-
-
 NONE cipher
 -----------
 This cipher has the highest transfer rate. Keep in mind that data after
