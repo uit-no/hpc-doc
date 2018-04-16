@@ -7,7 +7,7 @@
 #SBATCH --account=...
 
 # one core only
-#SBATCH --tasks=1
+#SBATCH --ntasks=1
 
 # we give this job 4 minutes
 #SBATCH --time=0-00:04:00
