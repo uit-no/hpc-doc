@@ -39,9 +39,7 @@ Online info from vendor
 * Homepage: https://www.scm.com
 * Documentation: https://www.scm.com/doc
 
-The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as \
-a whole to add to the community info/knowledge pool  where such is made available. For ADF/BAND we advise to search in general documentation, se\
-nding emails to support(either notur or scm) or trying the ADF mailing list (see https://www.scm.com/Support for more info).
+The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as a whole to add to the community info/knowledge pool where such is made available. For ADF/BAND we advise to search in general documentation, sending emails to support (either metacenter or scm) or trying the ADF mailing list (see https://www.scm.com/Support for more info).
 
 
 License and access policy

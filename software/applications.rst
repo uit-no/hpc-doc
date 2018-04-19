@@ -11,9 +11,9 @@ To find out what software packages are available, type::
 Missing or new software
 -----------------------
 
-If there is any SW missing on this list that you would like to have
-installed on Stallo, or you need help to install your own SW, please
-feel free to contact the support personal about this: support-uit@notur.no.
+If there is any software missing on this list that you would like to have
+installed on Stallo, or you need help to install your own software, please
+feel free to contact the support personal about this: support-stallo@metacenter.no.
 
 
 Changes in application software

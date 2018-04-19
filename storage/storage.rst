@@ -47,7 +47,7 @@ These work areas should be used for all jobs running on Stallo.
 
 There is no backup of files stored on the work areas.
 If you need permanent storage of large amounts of data, please
-contact the system administrators: support-uit@notur.no
+contact the system administrators: support-stallo@metacenter.no
 
 Disk quota is not enforced on work/scratch areas. Please use common courtesy
 and keep your work/scratch partitions clean. Move all files you do not need on
@@ -69,7 +69,7 @@ kept at /global/hds/.snapshot/
 There is no backup of files stored on the /global/work and /local/work areas.
 If you need permanent storage of large amounts of data, or if you need to
 restore some lost data, please contact the system administrators:
-support-uit@notur.no
+support-stallo@metacenter.no
 
 
 Archiving data
