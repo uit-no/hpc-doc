@@ -3,12 +3,8 @@
 Contact
 =======
 
-If you need help, please file a support request via support-uit@notur.no, and
+If you need help, please file a support request via support-stallo@metacenter.no, and
 our local team of experts will try to assist you as soon as possible.
-
-Alternatively you can use https://support.notur.no to submit and track your requests.
-The necessary user name and password are generated the first time you
-send an email to support-uit@notur.no.
 
 .. image:: rtfm.png
 

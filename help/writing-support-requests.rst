@@ -11,10 +11,10 @@ to resolve it faster. Below is a list of good practices.
 Never send support requests to staff members directly
 -----------------------------------------------------
 
-Always send them to support-uit@notur.no and staff members will pick them
-up there. On support-uit@notur.no they get tracked and have higher visibility.
+Always send them to support-stallo@metacenter.no and staff members will pick them
+up there. On support-stallo@metacenter.no they get tracked and have higher visibility.
 Some staff members work on the support line only part time.
-Sending the request to support-uit@notur.no makes sure that somebody will pick
+Sending the request to support-stallo@metacenter.no makes sure that somebody will pick
 it up.
 
 
