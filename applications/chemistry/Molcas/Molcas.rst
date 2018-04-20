@@ -41,7 +41,7 @@ License and access policy
 Molcas comes with a non-free computer center license, though it is free for academic employees from the Nordic region.
 The HPC group @ UiT have an agreement with Molcas as a part of the old application management project, that we do make a central
 install of the code - but users who wants access needs to document that they have made an agreement with Molcas. This proof of agreement should
-then be mailed (e or non-e) to support-stallo@metacenter.no to be granted membership of the molcas group on Stallo.
+then be mailed (e or non-e) to support@metacenter.no to be granted membership of the molcas group on Stallo.
 
 For the future, we are considering establishing the same policy as for :ref:`ORCA`, especially since the vendor has done a substantial job at decomplicating
 the install procedure using CMake.

@@ -124,7 +124,7 @@ Resources
 QOS*Limit
   This should only happen if you run your job with ``--qos=devel``. In developer mode you may only have one single job in the queue.
 launch failed requeued held
-  Job launch failed for some reason. This is normally due to a faulty node. Please contact us via support-stallo@metacenter.no stating the problem, your user name, and the jobid(s).
+  Job launch failed for some reason. This is normally due to a faulty node. Please contact us via support@metacenter.no stating the problem, your user name, and the jobid(s).
 Dependency
   Job cannot start before some other job is finished. This should only happen if you started the job with ``--dependency=...``
 DependencyNeverSatisfied

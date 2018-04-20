@@ -3,8 +3,9 @@
 Contact
 =======
 
-If you need help, please file a support request via support-stallo@metacenter.no, and
-our local team of experts will try to assist you as soon as possible.
+If you need help, please file a support request via support@metacenter.no, and
+our local team of experts will try to assist you as soon as possible. Please
+state in the email that the request is about Stallo.
 
 .. image:: rtfm.png
 

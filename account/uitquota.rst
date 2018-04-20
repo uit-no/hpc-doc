@@ -23,4 +23,4 @@ To get a local account on Stallo, you need to provide us with:
 
 **If you are a student, PhD or post-doc,** you need to also provide us with the name of your advisor and name of the project you are to be a member of.
 
-Compile this list in a proper manner and send to support-stallo@metacenter.no.
+Compile this list in a proper manner and send to support@metacenter.no with a comment that the application is for a local account on Stallo.

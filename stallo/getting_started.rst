@@ -41,6 +41,6 @@ Every job that gets started will be charged to your quota. Your quota is calcula
 Get help
 --------
 
-Do you need help with Stallo? Write us an email to support-stallo@metacenter.no. You can also request new software (either an update or entirely new software), suggest changes to this documentation, or send us any other suggestions or issues concerning Stallo to that email address. Please also read the rest of this documentation.
+Do you need help with Stallo? Write us an email to support@metacenter.no. You can also request new software (either an update or entirely new software), suggest changes to this documentation, or send us any other suggestions or issues concerning Stallo to that email address. Please also read the rest of this documentation.
 
 Happy researching!
