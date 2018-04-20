@@ -53,7 +53,7 @@ General job limitations
 -----------------------
 
 The following limits are the default per user in the batch system. Users
-can ask for increased limits by sending a request to support-stallo@metacenter.no.
+can ask for increased limits by sending a request to support@metacenter.no.
 
 ========================== ================
 Limit                      Value
