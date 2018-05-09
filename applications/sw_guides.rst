@@ -18,6 +18,7 @@ the module system, and information about changes in application software see :re
    chemistry/Schrodinger/Schrodinger
    chemistry/ORCA/ORCA
    chemistry/Molcas/Molcas
+   chemistry/TURBOMOLE/TURBOMOLE
 
    physics/COMSOL/COMSOL
 
