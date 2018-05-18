@@ -88,7 +88,7 @@ set in the run script
 .. code-block:: bash
 
     export TURBOTMPDIR=/global/work/${USER}/${SLURM_JOBID}
-    export PARNODES=${SLURM_NNODES}
+    export PARNODES=${SLURM_NTASKS}
     export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 See the TURBOMOLE example for more details.
