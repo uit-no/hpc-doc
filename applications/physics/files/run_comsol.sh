@@ -30,7 +30,7 @@ mkdir -p ${workdir}
 cp ${inp}.${ext} ${workdir}
 
 # load necessary modules
-module purge
+module purge --quite
 module load COMSOL/5.3-intel-2016a
 
 # run calculation in workdir

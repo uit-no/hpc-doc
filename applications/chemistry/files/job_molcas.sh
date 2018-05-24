@@ -31,7 +31,7 @@ input=C2H6 # Name of job input
 
 # We load all the default program system settings with module load:
 
-module purge
+module purge --quite
 module load Molcas/molcas82-intel-2015a
 # You may check other available versions with "module avail Molcas"
 

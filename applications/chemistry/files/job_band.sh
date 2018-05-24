@@ -32,7 +32,7 @@ cores=40  # Number of cores potentially used by mpi engine in submit procedure
 
 # We load all the default program system settings with module load:
 
-module purge
+module purge --quite
 module load ADF/adf2017.108
 
 # Now we create working directory and temporary scratch for the job(s):
