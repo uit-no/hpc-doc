@@ -29,7 +29,7 @@ cd $workdir
 cp $submitdir/* $workdir
 
 # set parallel environment
-export PARNODES=${SLURM_NNODES}
+export PARNODES=${SLURM_NTASKS}
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 # run jobex calculation
