@@ -19,15 +19,15 @@ Resource charging
 
 We charge for used resources, both cpu and memory.
 The accounting system charges for used processor equivalents (PE)
-times used walltime, so if you ask for more than (total memory pr. node)/(total cores pr. node)  
-- in the example below 32GB/20cores = 1.6 GB. 
+times used walltime, so if you ask for more than (total memory pr. node)/(total cores pr. node)
+- in the example below 32GB/20cores = 1.6 GB.
 
 The concept of PE defines a processor equivalent as the resource unit 1 core and 1 unit of memory.
-For a node with 2 GB og memory pr core, i.e. 32 GB of memory and 16 cores - 1 PE equals to 1 core and 
-2GB of memory. Currently there is no common definition on the memory unit, other than the one specified 
+For a node with 2 GB og memory pr core, i.e. 32 GB of memory and 16 cores - 1 PE equals to 1 core and
+2GB of memory. Currently there is no common definition on the memory unit, other than the one specified
 above.
 
-The best way to explain the concept of PE is by example: 
+The best way to explain the concept of PE is by example:
 Assume that you have a node with 20 cpu-cores and 32 GB memory::
 
     if you ask for less than 1.6GB memory per core then PE will equal the cpu count.
@@ -75,4 +75,5 @@ You can view the accounting history of your projects using::
     gstatement --hours --summarize -s YYYY-MM-DD -e YYYY-MM-DD -p nnXXXXk
 
 for more detail see::
+
     gstatement --man

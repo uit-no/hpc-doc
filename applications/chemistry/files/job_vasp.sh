@@ -24,6 +24,13 @@
 ######################################
 # Section for defining job variables and settings:
 
+# When you use this test script, make sure, your folder structure is as follows:
+# ./job_vasp.sh
+# ./CeO2job/INCAR
+# ./CeO2job/KPOINTS
+# ./CeO2job/POTCAR
+# ./CeO2job/POSCAR
+
 proj=CeO2job # Name of job folder
 input=$(ls ${proj}/{INCAR,KPOINTS,POTCAR,POSCAR}) # Input files from job folder
 
