@@ -31,7 +31,7 @@ cores=$SLURM_NTASKS  # Number of cores potentially used by mpi engine in submit 
 
 # We load all the default program system settings with module load:
 
-module purge
+module purge --quiet
 module load ADF/adf2017.108
 
 # Now we create working directory and temporary scratch for the job(s):
