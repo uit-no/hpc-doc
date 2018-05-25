@@ -15,7 +15,7 @@
 # --cpus-per-task   : always full nodes
 
 # load modules
-module purge
+module purge --quiet
 module load TURBOMOLE/7.2
 
 # TURBOMOLE needs this variable

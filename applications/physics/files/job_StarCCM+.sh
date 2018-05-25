@@ -22,7 +22,7 @@
 ##############
 # Setting software environment for STAR CCM+
 
-module purge
+module purge --quiet
 module load STAR-CCM+/STAR-CCM+12.02.010
 
 ##############

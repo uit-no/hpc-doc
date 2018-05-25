@@ -29,7 +29,7 @@ ext=com # We use the same naming scheme as the software default extention
 
 # We load all the default program system settings with module load:
 
-module purge
+module purge --quiet
 module load Gaussian/09.d01
 
 # Now we create working directory and temporary scratch for the job(s):
