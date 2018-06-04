@@ -46,7 +46,7 @@ These files are also available on Stallo
 
    module load ADF/adf2017.108
    cd <to whatever you call your test folder> # for instance ADFFIRSTJOB
-   cp -R $RUNEX/* .
+   cp -R /global/hds/software/notur/apprunex/ADF/* .
 
 To verify that the jobs has worked fine, check the outputfile. If it says EXIT and print Bond Energies at the end of the file, you are likely on the safe side.
 

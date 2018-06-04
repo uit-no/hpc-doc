@@ -1,13 +1,13 @@
 .. _install_schrodinger:
 
 Installing Schrodinger on your local client machine
-====================================================
+===================================================
 
 This page contains info about how to download and install the Schrodinger suite on your local client machine.
 
 
 Getting an account on www.schrodinger.com
-------------------------------------------
+-----------------------------------------
 
 You need to create an account (free) and log in with the password you create. Then you download the relevant software for your machine and follow install procedures that comes with the software.
 

@@ -21,12 +21,10 @@ To get download the jobscript example(s), type the following:Direct log in via s
 .. code-block:: bash
 
  	$ module load Schrodinger/2017-2-intel-2016a
- 	$ cp -R $runex/Schrodinger/* ~
+ 	$ cp -r /global/hds/software/notur/apprunex/Schrodinger/* ~
 	# Be sure this do not overwrite any folder or info you may want to keep in your home.
 
-Note: This suite is quite extensive in features, and we generally advice you to either join tutorial courses, talk \
-to experts in your proximity or read the vendor-provided documentation if you have absolutely no knowledge about how to \
-use this suite of software. Here we only provide a couple of rough startup examples to get you up running.
+Note: This suite is quite extensive in features, and we generally advice you to either join tutorial courses, talk to experts in your proximity or read the vendor-provided documentation if you have absolutely no knowledge about how to use this suite of software. Here we only provide a couple of rough startup examples to get you up running.
 
 Then;
 

@@ -41,7 +41,7 @@ These files are also available on Stallo
 
    module load VASP/5.4.1.plain-intel-2016a
    cd <to whatever you call your test folder> # for instance testvasp
-   cp -R $RUNEX/* .
+   cp -R /global/hds/software/notur/apprunex/VASP/* .
    sbatch job_vasp.sh
 
 and you are up running. Happy hunting.
