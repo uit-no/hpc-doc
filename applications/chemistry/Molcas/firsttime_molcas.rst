@@ -38,7 +38,7 @@ Type:
 
 	module load Molcas/molcas82-intel-2015a
 	cd <whereevertestfolderyouhave> # For instance testmolcas
-	cp -R $RUNEX/* .
+	cp -R /global/hds/software/notur/apprunex/Molcas/* .
 
 
 When you have all the necessary files in the correct folders, submit the job by typing:

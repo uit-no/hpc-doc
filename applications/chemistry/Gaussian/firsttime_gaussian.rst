@@ -47,7 +47,7 @@ Type:
 
 	module load Gaussian/9.d01
 	cd <whereevertestfolderyouhave> # For instance testgau
-	cp -R $RUNEX/* .
+	cp -R /global/hds/software/notur/apprunex/Gaussian/* .
 
 
 When you have all the necessary files in the correct folders, submit the job by typing:

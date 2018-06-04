@@ -12,13 +12,14 @@ the module system, and information about changes in application software see :re
    :maxdepth: 2
    :titlesonly:
 
-   chemistry/Gaussian/Gaussian
-   chemistry/VASP/VASP
    chemistry/ADF/ADF
-   chemistry/Schrodinger/Schrodinger
-   chemistry/ORCA/ORCA
+   chemistry/Dalton/Dalton
+   chemistry/Gaussian/Gaussian
    chemistry/Molcas/Molcas
+   chemistry/ORCA/ORCA
+   chemistry/Schrodinger/Schrodinger
    chemistry/TURBOMOLE/TURBOMOLE
+   chemistry/VASP/VASP
 
    physics/COMSOL/COMSOL
 
