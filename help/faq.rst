@@ -45,10 +45,10 @@ Can I install Python software as a normal user without sudo rights?
 Yes. The recommended way to achieve this is using
 `virtual environments <https://docs.python.org/3/tutorial/venv.html>`_
 
-As an example we install the Biopython package::
+As an example we install the Biopython package (and here we use
+the `Python/3.6.4-intel-2018a` module as an example)::
 
-  $ module load GCC/6.4.0-2.28 # You should load a modern compiler with Python2.
-                               # This is not necessary with Python3.
+  $ module load Python/3.6.4-intel-2018a
   $ virtualenv venv
   $ source venv/bin/activate
   $ pip install biopython
