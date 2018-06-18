@@ -36,7 +36,7 @@ input=$(ls ${proj}/{INCAR,KPOINTS,POTCAR,POSCAR}) # Input files from job folder
 
 # We load all the default program system settings with module load:
 
-module purge --quiet
+module --quiet purge
 module load VASP/5.4.1.plain-intel-2016a
 # You may check other available versions with "module avail VASP"
 
