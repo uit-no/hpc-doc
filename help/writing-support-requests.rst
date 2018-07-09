@@ -4,8 +4,9 @@ How to write good support requests
 ==================================
 
 Writing good support requests is not only good for the support team, it is also
-better for you because we will understand your request sooner and will be able
-to resolve it faster. Below is a list of good practices.
+better for you because we have many help requests, so the easier it is
+to understand yours, the faster we will get to it. Below is a list of
+good practices.
 
 
 Never send support requests to staff members directly
@@ -28,6 +29,12 @@ The support staff is a team. The subjects are the first thing that we see. We
 would like to be able to classify emails according to subjects before even
 opening the email.
 
+Include actual commands and error messages
+------------------------------------------
+We cover this below, but it's so important it needs to be mentioned at
+the top, too: include the actual command you run and actual error
+messages.  Copy and paste.  If you don't include this, we will be
+slightly annoyed and immediately ask this.
 
 New problem new email
 ---------------------
@@ -79,15 +86,32 @@ isolate the problem.  This requires some effort from you but this is what we
 expect from you.
 
 
-Be specific
------------
+Specify your environment
+------------------------
+
+Have you or your colleague compiled the code? Which modules were loaded?
+If you use non-default modules and you do not tell us about it, we will
+waste time when debugging with in a different environment.
+
+
+Simple cases: Be specific, include commands and errors
+------------------------------------------------------
+
+Whatever you do, don't say that "X didn't work".  Exactly give the
+commands you ran, environment (see above), and output error messages.
+The actual error messages mean a lot - include all the output, it is
+easy to copy and paste it.
 
 The better you describe the problem the less we have to guess and ask.
-Make the problem reproducible. See also next point.
+
+Sometimes, just seeing the actual error message is enough to give an
+useful answer.  For all but the simplest cases, you will need to make
+the problem reproducible, which you should *always* try anyway.  See
+the following points.
 
 
-Create an example which reproduces the problem
-----------------------------------------------
+Complex cases: Create an example which reproduces the problem
+-------------------------------------------------------------
 
 Create an example that we can ideally just copy paste and run and which
 demonstrates the problem. It is otherwise very time consuming if the support
@@ -109,11 +133,3 @@ crashes after hours.  Of course this requires some effort from you but this is
 what we expect from you in order to create a useful support request.
 Often when isolating the problem, the problem and solution crystallize before
 even writing the support request.
-
-
-Specify your environment
-------------------------
-
-Have you or your colleague compiled the code? Which modules were loaded?
-If you use non-default modules and you do not tell us about it, we will
-waste time when debugging with in a different environment.
