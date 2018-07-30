@@ -44,7 +44,11 @@ The VASP license is proprietary and commercial. It is based on group license pol
 
 The Vasp program is not distributed via site licences. However, HPC-staff in NOTUR have access to the VASP code to be able to support any research groups that have a valid VASP license.
 
-VASP is a commercial software package that requires a license for all who wants to run on Stallo. To get access you would need to prove that the group you are a member of holds a valid licence; a representative for the research group needs to contact Dr. Doris Vogtenhuber (doris.vogtenhuber@univie.ac.at) from the VASP team and ask for an aknowledgement of you connection to the license. A VASP representative will send this acknowledgement to us. Then your name is put into the VASP group, granting you access to the VASP 5 release of VASP on Stallo.
+VASP is a commercial software package that requires a license for all who wants use it. To run VASP:
+
+#. Your group must have a valid licence. To acquire a licence, please consult this link: https://www.vasp.at/index.php/faqs/71-how-can-i-purchase-a-vasp-license.
+
+#. We need to get a confirmation from a VASP representative to confirm that you have access to the license. Your group representative needs to contact Dr. Doris Vogtenhuber (doris.vogtenhuber@univie.ac.at) from the VASP team and ask her to send a confirmation email to us (support@metacenter.no) to confirm that you have a valid licence. Once we get a confirmation email we will grant you access to run VASP.
 
 The support people in NOTUR, do not provide trouble shooting guides anymore, due to a national agreement that it is better for the community as a whole to add to the community info/knowledge pool where such is made available. Also, HPC staff from UiT does not provide any support to VASP 4 anymore, basically due to age of the code.
 
