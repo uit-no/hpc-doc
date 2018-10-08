@@ -75,11 +75,11 @@ On SMP systems most of the resources (CPU, memory, home disks, work disks, etc) 
 On a Linux Cluster the picture is quite different. The system consists of several independent compute nodes (servers) connected with each other through some (high speed) network and maybe hooked up on some storage system. So the HW resources (like CPU, memory, disk, etc) in a cluster are in general distributed and only locally accessible at each server.
 
 
-Linux operation system (Rocks): `<http://www.rocksclusters.org/>`_
+Linux operating system (Rocks): `<http://www.rocksclusters.org/>`_
 ==================================================================
 
 Since 2003, the HPC-group at has been one of five international
-development sites for the Linux operation system Rocks. Together with
+development sites for the Linux operating system Rocks. Together with
 people in Singapore, Thailand, Korea and USA, we have developed a tool
 that has won international recognition, such as the price for "Most
 important software innovation  " both in 2004 and 2005 in HPCWire. Now
