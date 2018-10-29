@@ -9,9 +9,6 @@ be covered by both ``--partition=...`` and ``--qos=...``.
 
 We have the following partitions:
 
-short:
-    For testing and debugging. Up to 1 hour of walltime.
-
 normal:
     The default partition. Up to 48 hours of walltime.
 

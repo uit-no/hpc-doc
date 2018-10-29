@@ -46,7 +46,6 @@ Set all settings to your satisfaction.
 Open the job settings; you should only be presented the following options
 
 #. localhost (only for job-setups)
-#. batch-short (2 hrs walltime/200 cpus)
 #. batch-normal (2 days (=48hrs) of walltime/1000 cpus)
 #. batch-long (21 days (504 hrs) of walltime/1000cpus)
 

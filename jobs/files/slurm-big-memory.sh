@@ -13,9 +13,6 @@
 #              d-hh:mm:ss
 #SBATCH --time=0-00:05:00
 
-# short partition should do it
-#SBATCH --partition short
-
 # total memory for this job
 # this is a hard limit
 # note that if you ask for more than one CPU has, your account gets

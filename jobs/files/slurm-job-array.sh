@@ -13,11 +13,8 @@
 #              d-hh:mm:ss
 #SBATCH --time=0-00:05:00
 
-# short partition should do it
-#SBATCH --partition short
-
 # 500MB memory per core
-# this is a hard limit 
+# this is a hard limit
 #SBATCH --mem-per-cpu=500MB
 
 # you may not place bash commands before the last SBATCH directive
