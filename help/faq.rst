@@ -25,6 +25,30 @@ The ``passwd`` command known from other Linuxes does not work.
 The Stallo system is using a centralised database for user management.
 This will override the password changes done locally on Stallo.
 
+What is the ssh key fingerprint for stallo.uit.no?
+-----------------------------------------------------
+
+The SHA256 key fingerprint is: ``SHA256:YJpwZ91X5FNXTc/5SE1j9UR1UAAI4FFWVwNSoWoq6Hc``
+
+The MD5 key fingerprint is: ``MD5:36:a8:c5:f3:21:24:bb:bc:07:6f:af:4a:fe:3e:cb:9a``
+
+If you are more of a visual person, use ``ssh -o VisualHostKey=yes stallo.uit.no`` and compare it to this visual key::
+
+  +---[RSA 1024]----+
+  |      oo+ooo**BO^|
+  |     . + ..+ o.BO|
+  |  . . * . o . +.=|
+  |   o * . . . . o.|
+  |    o   S     . .|
+  |   .   o         |
+  |  . . .          |
+  | .  ..E          |
+  |  .. .           |
+  +----[SHA256]-----+
+
+
+.. COMMENT: use ``ssh -o VisualHostKey=yes stallo.uit.no`` to get both, the SHA256 string and visual key.
+
 
 Installing software
 ===================

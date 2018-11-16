@@ -7,6 +7,7 @@ Logging in for the first time
 
 Log in with SSH
 ===============
+
 An *SSH* client (Secure SHell) is the required tool to connect to Stallo. An *SSH* client provides secure encrypted communications between two hosts over an insecure network.
 
 If you already have *ssh* installed on your UNIX-like system, have a user account and password on a Notur system, login may be as easy as typing
@@ -28,6 +29,22 @@ And if you need X-forwarding (for instance, if you like to run Emacs in it's own
 ::
 
  ssh -X -Y <machine name>
+
+No matter how you login, you will need to confirm that the connection shall be trusted. The SHA256 key fingerprint of ``stallo.uit.no`` is:
+
+::
+
+ SHA256:YJpwZ91X5FNXTc/5SE1j9UR1UAAI4FFWVwNSoWoq6Hc
+
+So you should get precisely this message the first time you login via ssh:
+
+::
+
+ The authenticity of host 'stallo.uit.no (129.242.2.68)' can't be established.
+ RSA key fingerprint is SHA256:YJpwZ91X5FNXTc/5SE1j9UR1UAAI4FFWVwNSoWoq6Hc.
+ Are you sure you want to continue connecting (yes/no)?
+
+If you see this message with precisely this code, you can continue by typing ``yes`` and pressing *Enter*. If you connect to Stallo for the first time and ssh does *not* show you this key, please contact support@metacenter.no immediately.
 
 
 Log in with an ssh key
