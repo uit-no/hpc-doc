@@ -29,6 +29,40 @@ which have finished less than 48 hours ago, please use the `job browser
 network).
 
 
+Summary of used resources
+-------------------------
+
+Slurm will append a summary of used resources to the ``slurm-xxx.out`` file. The fields are:
+
+- Task and CPU usage stats
+
+  + ``AllocCPUS``: Number of allocated CPUs
+  + ``NTasks``: Total number of tasks in a job or step.
+  + ``MinCPU``: Minimum CPU time of all tasks in job (system + user).
+  + ``MinCPUTask``: The task ID where the mincpu occurred.
+  + ``AveCPU``: Average CPU time of all tasks in job (system + user)
+  + ``Elapsed``: The jobs elapsed time in format [DD-[HH:]]MM:SS.
+  + ``ExitCode``: The exit code returned by the job script. Following the colon is the signal that caused the process to terminate if it was terminated by a signal.
+
+- Memory usage stats
+
+  + ``MaxRSS``: Maximum resident set size of all tasks in job.
+  + ``MaxRSSTask``: The task ID where the maxrss occurred.
+  + ``AveRSS``: Average resident set size of all tasks in job.
+  + ``MaxPages``: Maximum number of page faults of all tasks in job.
+  + ``MaxPagesTask``: The task ID where the maxpages occurred.
+  + ``AvePages``: Average number of page faults of all tasks in job.
+
+- Disk usage stats
+
+  + ``MaxDiskRead``: Maximum number of bytes read by all tasks in job.
+  + ``MaxDiskReadTask``: The task ID where the maxdiskread occurred.
+  + ``AveDiskRead``: Average number of bytes read by all tasks in job.
+  + ``MaxDiskWrite``: Maximum number of bytes written by all tasks in job.
+  + ``MaxDiskWriteTask``: The task ID where the maxdiskwrite occurred.
+  + ``AveDiskWrite``: Average number of bytes written by all tasks in job.
+
+
 .. _job_status:
 
 Understanding your job status
