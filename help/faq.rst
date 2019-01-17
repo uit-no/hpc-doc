@@ -314,6 +314,12 @@ QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exc
 Priority means that resources are in principle available, but someone else has higher priority in the queue. Resources means the at the moment the requested resources are not available.
 
 
+Why is my job not starting on highmem nodes although the highmem queue is empty?
+--------------------------------------------------------------------------------
+
+To prevent the highmem nodes from standing around idle, normal jobs may use them as well, using only 32 GB of the available memory. Hence, it is possible that the highmem nodes are busy, although you do not see any jobs queuing or running on `squeue -p highmem`.
+
+
 How can I customize emails that I get after a job has completed?
 ----------------------------------------------------------------
 
