@@ -75,6 +75,7 @@ HPC-UiT Services User Documentation
 
    software/applications
    software/modules
+   software/local_script_modules
    account/linux
    help/AboutLicenses
    news/new_sw
