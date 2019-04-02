@@ -22,3 +22,9 @@ limits the job will also abort.
 Interactive jobs have the same policies as normal batch jobs, there
 are no extra restrictions. You should be aware that you might be
 sharing the node with other users, so play nice.
+
+Some users have experienced problems with the command, then it has helped to specify the cpu account::
+
+  $ srun --account=<NAME_OF_MY_ACCOUNT> --nodes=1 --ntasks-per-node=1 --time=01:00:00 --pty bash -i 
+  
+  
