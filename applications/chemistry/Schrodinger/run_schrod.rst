@@ -59,7 +59,7 @@ Do the following:
 
 .. code-block:: bash
 
-   $ ssh -Y c1-1
+   $ ssh -Y c1-2
    $ module load Schrodinger/2017-2-intel-2016a
    $ cd example_docking
    $ maestro -SGL
