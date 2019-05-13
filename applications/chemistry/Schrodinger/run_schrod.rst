@@ -7,7 +7,7 @@ This page contains info about how to submit Schrodinger jobs on Stallo, based
 on two sets of examples - one for docking and one for molecular dynamics -
 provided to us by users.
 
-Pay enhanced attention to the `ssh -Y c1-1` in examples below; this represents the adviced behaviour on how to run jobs on Stallo for your benefit solely!
+Pay enhanced attention to the `ssh -Y c1-2` in examples below; this represents the adviced behaviour on how to run jobs on Stallo for your benefit solely!
 
 A more thorough explanation to this, is that maestro starts a distribution and surveilance process that creates the jobs that enters the shared resources allocation (aka batch) system. If this process dies, the underlying jobs dies disregarding their computational status. This could have been solved by just running this on the login node, but imagine how it would have been with 1000 simultanious users sharing two login nodes and 50 of those ran 20-40 simultaneous perl and python processes each on the login nodes. So, please do as told.
 
