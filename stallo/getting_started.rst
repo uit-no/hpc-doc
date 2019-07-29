@@ -13,6 +13,12 @@ If you are associated with UiT The Arctic University of Norway, you may apply lo
 
 You can also apply for an account for Stallo or any of the other Norwegian computer clusters at the `Metacenter account application <https:/www.metacenter.no/user/application/form/notur/>`_. This is also possible if you already have a local account. :doc:`/account/account`
 
+Change temporary password
+-------------------------
+
+The password you got by SMS  has to be changed on `MAS <https://www.metacenter.no/user/login/?next=/user/password/>`_ within  one week, or else the loginaccount will be closed again - and you need to contact us for reopening.
+You can't use the temporary password for logging in to Stallo.
+
 Connect to Stallo
 -----------------
 
