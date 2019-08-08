@@ -1,49 +1,132 @@
 .. _local_script_modules:
 
-Local script modules
-====================
-
+*******************
+Python, R and Perl
+*******************
 Scripting languages often support modules or libraries for additional functionality or convenience functions. We encourage users to install modules locally for only the current user.
 
-
 Python
+=======
+You can install many python and non-python packages yourself using 
+`conda <https://docs.conda.io/en/latest/>`_ or especially for bioinformatics
+software `bioconda <https://bioconda.github.io/>`_.
+
+Conda enables you to easily install complex packages and software.
+Creating multiple enviroments enables you to have installations of the 
+same software in different versions or incompatible software collections
+at once.
+You can easily share a list of the installed packages with 
+collaborators or colleagues, so they can setup the same
+eniviroment in a matter of minutes.
+
+Setup
 ------
+First you load the miniconda module which is like a python and r package
+manager.
+Conda makes it easy to have multiple environments for example one python2 and
+one python3 based parallel to each other without interfering.
 
-For Python, the recommended way to install modules locally is using
-`virtual environments <https://docs.python.org/3/tutorial/venv.html>`_
+Start by removing all preloaded modules which can complicate things. We then
+display all installed version and load the newest one (4.6.14)::
 
-As an example we install the Biopython package (and here we use
-the ``Python/3.6.4-intel-2018a`` module as an example)::
+  ml purge
+  ml avail Miniconda
+  ml Miniconda3/4.6.14
 
-  $ module load Python/3.6.4-intel-2018a
-  $ virtualenv venv
-  $ source venv/bin/activate
-  $ pip install biopython
+To install packages we first have to add the package repository to conda
+(we only have to do this once) and set up a new conda environment which we
+will call e.g. "python3" where we also specify which python version we want
+and which packages should be installed (matplotlib numpy)::
 
-Next time you log into the machine you have to activate
-the virtual environment::
+  conda config --add channels defaults
+  conda config --add channels conda-forge
 
-  $ source venv/bin/activate
+  conda create --name python3 python=3 matplotlib numpy
 
-If you want to leave the virtual environment again, type::
+If you want install bioinformatics packages you should also add
+the bioconda channel::
 
-  $ deactivate
+  conda config --add channels bioconda
 
-And you do not have to call it "venv". It is no problem to have many
-virtual environments in your home directory. Each will start as a clean
-Python setup which you then can modify. This is also a great system to have
-different versions of the same module installed side by side.
+Daily usage
+-------------
+To load this environment you have to use the following commands either on the
+command line or in your job script::
 
-If you want to inherit system site packages into your virtual
-environment, do this instead::
+  ml purge
+  ml Miniconda3/4.6.14
+  conda activate python3
 
-  $ virtualenv --system-site-packages venv
-  $ source venv/bin/activate
-  $ pip install biopython
+Then you can use all software as usual.
+
+To deactivate the current environment::
+
+  conda deactivate
+
+If you need to install additional software or packages,
+we can search for it with::
+
+  conda search SOMESOFTWARE
+
+and install it with::
+
+  conda install -n python3 SOMESOFTWARE
+  
+If the python package you are looking for is not available in conda
+you can use `**pip** <https://pip.pypa.io/en/stable/>`_ like usually
+from within a conda environment to install additional python packages::
+
+  pip install SOMEPACKAGE
+
+To update the a single package with conda::
+
+  conda update -n python3 SOMESOFTWARE
+
+or to update all packages::
+
+  conda update -n python3 --all
+  
+Share your environment
+-------------------------
+To export a list of all packages/programs installed with conda 
+in a certain environment (in this case "python3")::
+
+  conda list --explicit --name python3 > package-list.txt
+  
+To setup a new environment (let's call it "newpython")
+from ab exported package list::
+
+  conda create --name newpython --file package-list.txt
+
+
+Additional Conda information
+-------------------------------
+Cheatsheet and built-in help
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+See this `cheatsheet 
+<https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf>`_
+for an overview over the most important conda commands.
+
+In case you get confused by the conda commands and command line options
+you can get help by adding `--help` to any conda command or have a look
+at the `conda documentation <https://conda.io/projects/conda/en/latest/user-guide/getting-started.html>`_.
+
+Miniconda vs. Anaconda
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Both Miniconda and Anaconda are distributions of the conda repository
+managment system.
+But while Miniconda brings just the managment system (the conda command),
+Anaconda comes with a lot of built-in packages.
+
+Both are installed on Stallo but we advise the use of Miniconda.
+By explicitly installing packages into your own enviroment the chance
+for unwanted effects and errors due to wrong or incomaptible versions is
+reduced. Also you can be sure that everything that happens with your setup is
+controlled by yourself.
 
 
 Perl
-----
+======
 
 We will use Perl 5.28 and use the standard paths.
 This follows the general instruction given here: https://metacpan.org/pod/local::lib.
