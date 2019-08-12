@@ -15,7 +15,6 @@ Related information
  firsttime_gaussian.rst
  GaussView.rst
  gaussian_on_stallo.rst
- advanced.rst
 
 
 General Information
@@ -38,11 +37,11 @@ License information
 
 The license of GAUSSIAN is commercial/proprietary.
 
-The license of Gaussian constitutes of 4 site licenses for the 4 current host institutions of NOTUR installations; NTNU, UiB, UiO, UiT. In principle, only person from one of these institutions have access to the Gaussian Software system installed on Stallo.
+The license of Gaussian constitutes of 4 site licenses for the 4 current host institutions of NOTUR installations; NTNU, UiB, UiO, UiT. In principle, only person from one of these institutions have access to the Gaussian Software system installed on Stallo. Note that users that do not come from one of the abovementioned institutions still may be granted access, but they need to document access to a valid license for the verion in question first.
 
 * To get access to the code, you need to be in the gaussian group of users.
-* To be in the gaussian group of users, you need either to be a member of the abovementioned
-  institutions or provide proof of holding a license on your own.
+* To be in the gaussian group of users, you need be qualified for it - see above.
+
 
 Citation
 --------
@@ -65,15 +64,15 @@ Use
 
 .. code-block:: bash
 
-    $ module avail Gaussian
+    $ module avail Gaussian/
 
 to see which versions of Gaussian are available. Use
 
 .. code-block:: bash
 
- $ module load Gaussian/<version> # i.e 09.d01
+ $ module load Gaussian/<version> # i.e g16_B.01
 
-to get access to any given version of Gaussian.
+to load the version of Gaussian of your desire.
 
 
 About the Gaussian version(s) installed on Stallo

@@ -28,14 +28,13 @@ You can also download the input file here: :download:`Caffeine-input<../files/ca
 Gaussian runscrip example
 -------------------------
 
-.. include:: ../files/job_g09.sh
+.. include:: ../files/job_gaussian.sh
    :literal:
 
 
-**NB: Note that we for Gaussian advice to specify both nodes and core/node. This is due to the special way Gaussian sets up parallel jobs!**
+**NB: Note that there has been a change in how the local IB adaption wrapper has been set up. Read the comments in the run script example!**
 
-You can also download the runscript here: :download:`Gaussian run script<../files/job_g09.sh>`
-
+You can also download the runscript here: :download:`Gaussian run script<../files/job_gaussian.sh>`
 
 
 The runscript example and the input file are also on Stallo
@@ -45,7 +44,7 @@ Type:
 
 .. code-block:: bash
 
-	module load Gaussian/9.d01
+	module load Gaussian/g16_B.01
 	cd <whereevertestfolderyouhave> # For instance testgau
 	cp -R /global/hds/software/notur/apprunex/Gaussian/* .
 
@@ -54,9 +53,7 @@ When you have all the necessary files in the correct folders, submit the job by 
 
 .. code-block:: bash
 
-	sbatch job_g09.sh
+	sbatch job_gaussian.sh
 
-To verify that nothing has gone wrong, compare the energy of g09_caffeine.out with the correct energy of HF=-680.4153661 for this calculation.
-The energy should ideally be identical or close to identical. After that, you may alter the varia\
-bles in the shell script as much as you like to adapt to your own jobs. Good luck.
+To verify that nothing has gone wrong, check the output of the calculations. In Gaussian output, you allways get an entertaining quote at the end. Good luck. 
 
