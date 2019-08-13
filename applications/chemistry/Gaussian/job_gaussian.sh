@@ -3,9 +3,9 @@
 ################### Gaussian Job Batch Script Example ###################
 # SLURM-section
 #SBATCH --job-name=gaussian_runex
-#SBATCH --ntasks=80 
-## Stallo has got 16 or 20 cores/node, thus the optimal distribution of cores will be a number that is a full number sum of both subsets. 
-#SBATCH --time=00:59:00 # Syntax is DD-HH:MM:SS. 
+#SBATCH --ntasks=80
+## Stallo has got 16 or 20 cores/node, thus the optimal distribution of cores will be a number that is a full number sum of both subsets.
+#SBATCH --time=00:59:00 # Syntax is DD-HH:MM:SS.
 #SBATCH --mem-per-cpu=1500MB # Giving a total of 30 000MB/node and leaving a bit over 2GB for the system to survive.
 #SBATCH --output=gaussina_runex.log
 #SBATCH --mail-type=ALL
@@ -23,7 +23,7 @@ ext=com # We use the same naming scheme as the software default extention
 module --quiet purge
 module load Gaussian/g16_B.01
 
-# This one is important; setting the heap-size for the job to 20GB:                                                                         
+# This one is important; setting the heap-size for the job to 20GB:
 export GAUSS_LFLAGS2="--LindaOptions -s 20000000"
 
 # Now we create working directory and temporary scratch for the job(s):

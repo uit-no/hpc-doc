@@ -16,7 +16,7 @@ into your test job folder (which I assume you have created in advance).
 Gaussian input example
 ----------------------
 
-.. include:: ../files/caffeine.com
+.. include:: caffeine.com
    :literal:
 
 
@@ -24,19 +24,19 @@ Gaussian input example
 Also note that there are no mentioning of Linda and shared memory cores. This
 is addressed here:** :ref:`gaussian_on_stallo`
 
-You can also download the input file here: :download:`Caffeine-input<../files/caffeine.com>`
+You can also download the input file here: :download:`Caffeine-input<caffeine.com>`
 
 
 Gaussian runscript example
 --------------------------
 
-.. include:: ../files/job_gaussian.sh
+.. include:: job_gaussian.sh
    :literal:
 
 
 **NB: Note that there has been a change in how the local IB adaption wrapper has been set up. Read the comments in the run script example!**
 
-You can also download the runscript here: :download:`Gaussian run script<../files/job_gaussian.sh>`
+You can also download the runscript here: :download:`Gaussian run script<job_gaussian.sh>`
 
 
 The runscript example and the input file are also on Stallo
