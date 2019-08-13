@@ -1,8 +1,8 @@
 .. _gaussian_on_stallo:
 
-====================================
-About the Gaussian install on Stallo
-====================================
+===============================
+Gaussian installation on Stallo
+===============================
 
 This page contains info about special features related to
 the Gaussian install made on Stallo, but also general issues
@@ -46,33 +46,6 @@ We have also taken care of the rsh/ssh setup in our installation procedure, to
 avoid .tsnet.config dependency for users.
 
 
-Memory allocation
------------------
-
-Gaussian takes care of memory allocation internally.
-
-That means that if the submitted job needs more memory per core than what is in
-average available on the node, it will automatically scale down the number of
-cores to mirror the need. This also means that you always should ask for full
-nodes when submitting Gaussian jobs on Stallo! This is taken care of by the
-``--exclusive`` flag and commented in the job script example.
-
-The ``%mem`` allocation of memory in the Gaussian input file means two things:
-
-* In general it means memory/node – for share between ``nprocshared``, and
-  additional to the memory allocated per process. This is also documented by
-  Gaussian.
-* For the main process/node it also represents the network
-  buffer allocated by Linda since the main Gaussian process takes a part
-  and Linda communication process takes a part equally sized – thus you should
-  never ask for more than half of the physical memory on the nodes, unless they
-  have swap space available - which you never should assume.
-  The general ``%mem`` limit will always be half of the physical memory
-  pool given in MB instead of GB - 16000MB instead of 16GB since this leaves a
-  small part for the system. That is why we would actually advise to use 15GB as
-  maximum ``%mem`` size.
-
-
 Parallel scaling
 ----------------
 
@@ -98,6 +71,33 @@ cores, causing us to be somewhat reluctant to advice going beyond 256 cores.
 Since we have two different architectures with two different core counts on
 Stallo, the ``--exclusive`` flag is important to ensure that the distribution
 of jobs across the whole system are done in a rather flexible and painless way.
+
+
+Memory allocation
+-----------------
+
+Gaussian takes care of memory allocation internally.
+
+That means that if the submitted job needs more memory per core than what is in
+average available on the node, it will automatically scale down the number of
+cores to mirror the need. This also means that you always should ask for full
+nodes when submitting Gaussian jobs on Stallo! This is taken care of by the
+``--exclusive`` flag and commented in the job script example.
+
+The ``%mem`` allocation of memory in the Gaussian input file means two things:
+
+* In general it means memory/node – for share between ``nprocshared``, and
+  additional to the memory allocated per process. This is also documented by
+  Gaussian.
+* For the main process/node it also represents the network
+  buffer allocated by Linda since the main Gaussian process takes a part
+  and Linda communication process takes a part equally sized – thus you should
+  never ask for more than half of the physical memory on the nodes, unless they
+  have swap space available - which you never should assume.
+  The general ``%mem`` limit will always be half of the physical memory
+  pool given in MB instead of GB - 16000MB instead of 16GB since this leaves a
+  small part for the system. That is why we would actually advise to use 15GB as
+  maximum ``%mem`` size.
 
 
 Large temporary outputs on Stallo
