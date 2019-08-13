@@ -5,11 +5,11 @@ Gaussian and GaussView
 
 
 .. toctree::
- :maxdepth: 1
+   :maxdepth: 1
 
- job-example.rst
- GaussView.rst
- gaussian_on_stallo.rst
+   job-example.rst
+   gaussian_on_stallo.rst
+   GaussView.rst
 
 
 `Gaussian <http://gaussian.com>`_ is a popular computational chemistry program.

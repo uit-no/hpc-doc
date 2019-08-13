@@ -1,80 +1,61 @@
 #!/bin/bash -l
 
-################### Gaussian Job Batch Script Example ###################
-# SLURM-section
-#SBATCH --job-name=gaussian_runex
+#SBATCH --account=nn....k
+
+#SBATCH --job-name=example
+#SBATCH --output=example.log
+
+# Stallo nodes have either 16 or 20 cores: 80 is a multiple of both
 #SBATCH --ntasks=80
-## Stallo has got 16 or 20 cores/node, thus the optimal distribution of cores will be a number that is a full number sum of both subsets.
-#SBATCH --time=00:59:00 # Syntax is DD-HH:MM:SS.
-#SBATCH --mem-per-cpu=1500MB # Giving a total of 30 000MB/node and leaving a bit over 2GB for the system to survive.
-#SBATCH --output=gaussina_runex.log
-#SBATCH --mail-type=ALL
+
+# make sure no other job runs on the same node
 #SBATCH --exclusive
-######################################
 
-# Defining job other job variable and settings:
+# syntax is    DD-HH:MM:SS
+#SBATCH --time=00-00:30:00
 
-input=example # Name of input without extention
-ext=com # We use the same naming scheme as the software default extention
+# allocating 30 GB on a node and leaving a bit over 2 GB for the system
+#SBATCH --mem-per-cpu=1500MB
 
-# We load all the default program system settings with module load:
-# But first we flush the environment for unwanted settings
+################################################################################
+# no bash commands above this line
+# all sbatch directives need to be placed before the first bash command
 
+# name of the input file without the .com extention
+input=example
+
+# flush the environment for unwanted settings
 module --quiet purge
+# load default program system settings
 module load Gaussian/g16_B.01
 
-# This one is important; setting the heap-size for the job to 20GB:
+# set the heap size for the job to 20 GB
 export GAUSS_LFLAGS2="--LindaOptions -s 20000000"
 
-# Now we create working directory and temporary scratch for the job(s):
-# We assume no predefined variables except defaults from used software.
-
-export GAUSS_SCRDIR=/global/work/$USER/$SLURM_JOB_ID
-mkdir -p $GAUSS_SCRDIR
-
-# Preparing and moving inputfiles to tmp:
-
-submitdir=$SLURM_SUBMIT_DIR # Assuming slurm batch resource allocation system
-tempdir=$GAUSS_SCRDIR
-
-cp $submitdir/${input}.${ext} $tempdir
-cd $tempdir
-
-# Typically Gaussian creates rather large temp-files, and they will clog physical drives easilly of not split into smaller parts:
-
+# split large temporary files into smaller parts
 lfs setstripe –c 8 .
 
-# NOTE: Preparation of inputfile is done by the wrapper. For convenience we have moved the wrapper to work as an intermediate step around the binary, the old setup
-# does exist but requires that you uncomment the lines below and comment the lines in the  "Running the program"-paragraph.
+# create scratch space for the job
+export GAUSS_SCRDIR=/global/work/${USER}/${SLURM_JOB_ID}
+tempdir=${GAUSS_SCRDIR}
+mkdir -p ${tempdir}
 
-#Gaussian.prep $input
-#time g16 < ${input}.${ext} > gaussian_$input.out # This is for Gaussian 16, for Gaussian 09 you need g09.
+# copy input and checkpoint file to scratch directory
+cp ${SLURM_SUBMIT_DIR}/${input}.com ${tempdir}
+if [ -f "${SLURM_SUBMIT_DIR}/${input}.chk" ]; then
+    cp ${SLURM_SUBMIT_DIR}/${input}.chk ${tempdir}
+fi
 
-# Running the program and cleaning up:
+# run the code
+cd ${tempdir}
+time g16.ib ${input}.com > ${input}.out
 
-# NOTE: We have now placed a wrapper around the binary so that the startup command for Gaussian has changed.
+# copy output and checkpoint file back
+cp ${input}.out ${SLURM_SUBMIT_DIR}
+cp ${input}.chk ${SLURM_SUBMIT_DIR}
 
-time g16.ib ${input}.${ext} > gaussian_$input.out
+# remove the scratch directory after the job is done
+# cd ${SLURM_SUBMIT_DIR}
+# rm -rf /global/work/${USER}/${SLURM_JOB_ID}
 
-cp gaussian_$input.out $submitdir
-cp $input.chk $submitdir
-
-# Make sure to move all essential files specific for the given job/software.
-# To zip some of the output might be a good idea if the resultsfiles are large.
-
-# ALWAYS clean up after yourself. Please do uncomment the following line
-#cd $submitdir
-#if [ -z $tempdir ]
-#then
-#    echo "tempdir not set, please clean up manually!"
-#else
-#    cd $tempdir
-#    rm *
-#    cd $submitdir
-#    rmdir $temdir
-#fi
-#
-echo "Job finished at"
-date
-#
 exit 0
