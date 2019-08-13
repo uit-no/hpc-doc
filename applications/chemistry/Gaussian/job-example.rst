@@ -37,25 +37,3 @@ Gaussian runscript example
 **NB: Note that there has been a change in how the local IB adaption wrapper has been set up. Read the comments in the run script example!**
 
 You can also download the runscript here: :download:`Gaussian run script<gaussian-runscript.sh>`
-
-
-The runscript example and the input file are also on Stallo
------------------------------------------------------------
-
-Type:
-
-.. code-block:: bash
-
-	module load Gaussian/g16_B.01
-	cd <whereevertestfolderyouhave> # For instance testgau
-	cp -R /global/hds/software/notur/apprunex/Gaussian/* .
-
-
-When you have all the necessary files in the correct folders, submit the job by typing:
-
-.. code-block:: bash
-
-	sbatch gaussian-runscript.sh
-
-To verify that nothing has gone wrong, check the output of the calculations. In
-Gaussian output, you always get an entertaining quote at the end. Good luck.
