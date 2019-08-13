@@ -37,17 +37,6 @@ performance and scaling of your job. If you need assistance with this, please
 contact the user support.
 
 
-About the Gaussian version(s) installed on Stallo
--------------------------------------------------
-
-Since the installs we have made on Stallo are somewhat different from
-installs of Gaussian elsewhere, we have gathered some information about
-this here :doc:`gaussian_on_stallo`.
-
-Here we also address issues related to running Gaussian in parallel, number of cores to use,
-memory allocation and special issues taken care of at install.
-
-
 Gaussian on Stallo
 ------------------
 
