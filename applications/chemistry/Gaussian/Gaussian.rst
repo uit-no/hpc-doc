@@ -1,7 +1,7 @@
 
-===========================
-The GAUSSIAN program system
-===========================
+======================
+Gaussian and GaussView
+======================
 
 Information regarding the quantum chemistry program system Gaussian
 
