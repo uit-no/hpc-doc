@@ -1,8 +1,8 @@
 .. _gaussian_on_stallo:
 
-===============================
-Gaussian installation on Stallo
-===============================
+==========================
+Memory and number of cores
+==========================
 
 This page contains info about special features related to
 the Gaussian install made on Stallo, but also general issues
