@@ -13,25 +13,20 @@ commented to provide additional and relevant info.
 If you want to run this testjob, copy the input example and the job script example shown below
 into your test job folder (which I assume you have created in advance).
 
-Gaussian input example
-----------------------
+
+Input example
+-------------
+
+Direct download link: :download:`input example <caffeine.com>`
 
 .. literalinclude:: caffeine.com
    :language: none
 
-**NB: Pay special attention to the %mem defined in the beginning of the file.
-Also note that there are no mentioning of Linda and shared memory cores. This
-is addressed here:** :ref:`gaussian_on_stallo`
 
-You can also download the input file here: :download:`Caffeine-input<caffeine.com>`
+Runscript example
+-----------------
 
-
-Gaussian runscript example
---------------------------
+Direct download link: :download:`runscript example <gaussian-runscript.sh>`
 
 .. literalinclude:: gaussian-runscript.sh
    :language: bash
-
-**NB: Note that there has been a change in how the local IB adaption wrapper has been set up. Read the comments in the run script example!**
-
-You can also download the runscript here: :download:`Gaussian run script<gaussian-runscript.sh>`

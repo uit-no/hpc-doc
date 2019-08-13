@@ -2,7 +2,7 @@
 %mem=500MB
 #p b3lyp/cc-pVDZ opt
 
-No comment specified. Default Comment: From NewCaffeine.xyz
+comment line
 
 0 1
  N     3.831536     0.000000     0.062646
@@ -29,3 +29,5 @@ No comment specified. Default Comment: From NewCaffeine.xyz
  H     5.393373     0.889165    -0.974180
  H     5.393373    -0.889165    -0.974180
  H     5.288201     0.000000     1.353412
+
+
