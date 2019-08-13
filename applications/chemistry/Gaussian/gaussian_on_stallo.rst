@@ -9,6 +9,18 @@ the Gaussian install made on Stallo, but also general issues
 related to Gaussian only vaguely documented elsewhere.
 
 
+Choosing the right version
+--------------------------
+
+To see which versions of Gaussien are available, use::
+
+  $ module avail Gaussian/
+
+To load a specific version of Gaussian, use for instance::
+
+  $ module load Gaussian/g16_B.01
+
+
 Usage
 -----
 
@@ -24,20 +36,6 @@ the executable(s) you will be using. If yes, your job will generally work ok in
 parallel up to approx 300 cores (this is for the more advanced users).
 
 We generally wants users to run as many nodes as possible to limit the walltime length of running jobs.
-
-Use
-
-.. code-block:: bash
-
-    $ module avail Gaussian/
-
-to see which versions of Gaussian are available. Use
-
-.. code-block:: bash
-
- $ module load Gaussian/<version> # i.e g16_B.01
-
-to load the version of Gaussian of your desire.
 
 
 About the Gaussian version(s) installed on Stallo
