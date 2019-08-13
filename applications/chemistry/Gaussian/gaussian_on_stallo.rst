@@ -8,6 +8,49 @@ This page contains info about special features related to
 the Gaussian install made on Stallo, but also general issues
 related to Gaussian only vaguely documented elsewhere.
 
+
+Usage
+-----
+
+Since Gaussian is a rather large and versatile program system with a range of
+different binaries, we would in general advice users to check whether their
+jobs are parallelized or not before submitting jobs. It would in general,
+unless every step is entirely well parallelized, always be more efficient to
+split a complex many-step job into smaller parallel and serial parts/jobs so
+that also the overall utilization of hardware is improved. I you are in doubt
+whether or not your job will scale outside one node (=shared memory), go to the
+Gaussian application home folder and check if there is an \*.exel version of
+the executable(s) you will be using. If yes, your job will generally work ok in
+parallel up to approx 300 cores (this is for the more advanced users).
+
+We generally wants users to run as many nodes as possible to limit the walltime length of running jobs.
+
+Use
+
+.. code-block:: bash
+
+    $ module avail Gaussian/
+
+to see which versions of Gaussian are available. Use
+
+.. code-block:: bash
+
+ $ module load Gaussian/<version> # i.e g16_B.01
+
+to load the version of Gaussian of your desire.
+
+
+About the Gaussian version(s) installed on Stallo
+-------------------------------------------------
+
+Since the installs we have made on Stallo are somewhat different from
+installs of Gaussian elsewhere, we have gathered some information about
+this here :doc:`gaussian_on_stallo`.
+
+Here we also address issues related to running Gaussian in parallel, number of cores to use,
+memory allocation and special issues taken care of at install.
+
+
 Gaussian on Stallo
 ------------------
 
