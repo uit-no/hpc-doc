@@ -89,28 +89,24 @@ The ``%mem`` allocation of memory in the Gaussian input file means two things:
   maximum ``%mem`` size.
 
 
-Scalability and parallel performance of Gaussian on Stallo
-----------------------------------------------------------
+Scalability and parallel performance
+------------------------------------
 
-Due to the nifty trick mentioned above, we have a somewhat more generous policy when it comes to
+Due to the preload Infiniband trick, we have a somewhat more generous policy when it comes to
 allocating cores/nodes to Gaussian jobs:
 
-#. We do advice people to use up to 256 cores (slurm syntax tasks). We have proved acceptable scaling of the current
-   Gaussian install beyond 16 nodes for the jobs that do scale outside of one node (i.e. the binaries in the $gXXroot/linda-exe folder). So in essence; enjoy!
+#. We do advice people to use up to 256 cores (``--tasks``). We have observed acceptable scaling of the current
+   Gaussian install beyond 16 nodes for the jobs that do scale outside of one node (i.e. the binaries in the $gXXroot/linda-exe folder).
 #. Linda networking overhead seems to hit hard around this amount of cores;
-   causing us to be somewhat reluctant to advice going to more than this. Meddling
-   with this requires a bit more insight, which we are happy to help out with but
-   reluctant to advise beginners do at an early stage. Though; this will give a
-   potential of up to 320 cores in parallel on Stallo, which is more than most
-   other places anyway.
+   causing us to be somewhat reluctant to advice going beyond 256 cores.
 #. Since we have two different architectures with two different core counts on
-   Stallo, the ----exclusive flag mentioned	above is also important to
+   Stallo, the ``--exclusive`` flag is important to
    ensure that the distribution of jobs across the whole system are done in a
-   rather flexible (and painless) way.
+   rather flexible and painless way.
 
 
 Large temporary outputs on Stallo
-----------------------------------
+---------------------------------
 
 As commented here :doc:`/storage/storage` there is an issue related to very
 large temporary files on Stallo. Please read up on it at act accordingly. This
