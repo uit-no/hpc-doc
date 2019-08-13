@@ -21,22 +21,6 @@ To load a specific version of Gaussian, use for instance::
   $ module load Gaussian/g16_B.01
 
 
-Choosing the number of cores
-----------------------------
-
-Gaussian is a rather large program system with a range of different binaries,
-and users need to verify whether the functionality they use is parallelized and
-how it scales.
-
-Before computing a table of different functionals and molecules, we strongly
-advice users to first study the scaling of the code for a representative
-system.
-
-Please do not reuse scripts inherited from others without studying the
-performance and scaling of your job. If you need assistance with this, please
-contact the user support.
-
-
 Gaussian over Infiniband
 ------------------------
 
@@ -89,20 +73,31 @@ The ``%mem`` allocation of memory in the Gaussian input file means two things:
   maximum ``%mem`` size.
 
 
-Scalability and parallel performance
-------------------------------------
+Parallel scaling
+----------------
 
-Due to the preload Infiniband trick, we have a somewhat more generous policy when it comes to
-allocating cores/nodes to Gaussian jobs:
+Gaussian is a rather large program system with a range of different binaries,
+and users need to verify whether the functionality they use is parallelized and
+how it scales.
 
-#. We do advice people to use up to 256 cores (``--tasks``). We have observed acceptable scaling of the current
-   Gaussian install beyond 16 nodes for the jobs that do scale outside of one node (i.e. the binaries in the $gXXroot/linda-exe folder).
-#. Linda networking overhead seems to hit hard around this amount of cores;
-   causing us to be somewhat reluctant to advice going beyond 256 cores.
-#. Since we have two different architectures with two different core counts on
-   Stallo, the ``--exclusive`` flag is important to
-   ensure that the distribution of jobs across the whole system are done in a
-   rather flexible and painless way.
+Due to the preload Infiniband trick, we have a somewhat more generous policy
+when it comes to allocating cores/nodes to Gaussian jobs but before computing a
+table of different functionals and molecules, we strongly advice users to first
+study the scaling of the code for a representative system.
+
+Please do not reuse scripts inherited from others without studying the
+performance and scaling of your job. If you need assistance with this, please
+contact the user support.
+
+We do advice people to use up to 256 cores (``--tasks``). We have observed
+acceptable scaling of the current Gaussian install beyond 16 nodes for the jobs
+that do scale outside of one node (i.e. the binaries in the $gXXroot/linda-exe
+folder).  Linda networking overhead seems to hit hard around this amount of
+cores, causing us to be somewhat reluctant to advice going beyond 256 cores.
+
+Since we have two different architectures with two different core counts on
+Stallo, the ``--exclusive`` flag is important to ensure that the distribution
+of jobs across the whole system are done in a rather flexible and painless way.
 
 
 Large temporary outputs on Stallo
