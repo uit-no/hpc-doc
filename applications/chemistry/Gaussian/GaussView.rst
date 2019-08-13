@@ -1,4 +1,3 @@
-.. _gaussview:
 
 ======================
 GaussView for Gaussian

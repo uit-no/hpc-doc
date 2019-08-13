@@ -1,4 +1,3 @@
-.. _Gaussian:
 
 ===========================
 The GAUSSIAN program system
