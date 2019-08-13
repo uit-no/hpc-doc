@@ -7,7 +7,7 @@ Gaussian and GaussView
 .. toctree::
  :maxdepth: 1
 
- firsttime_gaussian.rst
+ job-example.rst
  GaussView.rst
  gaussian_on_stallo.rst
 

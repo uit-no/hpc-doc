@@ -1,8 +1,8 @@
-.. _first_time_gaussian:
 
-==================================
-First time you run a Gaussian job?
-==================================
+
+====================
+Gaussian job example
+====================
 
 This page contains info aimed at first time
 users of Gaussian on Stallo, but may also be useful to
@@ -30,13 +30,13 @@ You can also download the input file here: :download:`Caffeine-input<caffeine.co
 Gaussian runscript example
 --------------------------
 
-.. include:: job_gaussian.sh
+.. include:: gaussian-runscript.sh
    :literal:
 
 
 **NB: Note that there has been a change in how the local IB adaption wrapper has been set up. Read the comments in the run script example!**
 
-You can also download the runscript here: :download:`Gaussian run script<job_gaussian.sh>`
+You can also download the runscript here: :download:`Gaussian run script<gaussian-runscript.sh>`
 
 
 The runscript example and the input file are also on Stallo
@@ -55,7 +55,7 @@ When you have all the necessary files in the correct folders, submit the job by 
 
 .. code-block:: bash
 
-	sbatch job_gaussian.sh
+	sbatch gaussian-runscript.sh
 
 To verify that nothing has gone wrong, check the output of the calculations. In
 Gaussian output, you always get an entertaining quote at the end. Good luck.
