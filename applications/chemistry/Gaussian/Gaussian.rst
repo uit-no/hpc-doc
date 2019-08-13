@@ -43,8 +43,8 @@ The license of Gaussian constitutes of 4 site licenses for the 4 current host
 institutions of NOTUR installations; NTNU, UiB, UiO, UiT. In principle, only
 person from one of these institutions have access to the Gaussian Software
 system installed on Stallo. Note that users that do not come from one of the
-abovementioned institutions still may be granted access, but they need to
-document access to a valid license for the verion in question first.
+above mentioned institutions still may be granted access, but they need to
+document access to a valid license for the version in question first.
 
 * To get access to the code, you need to be in the gaussian group of users.
 * To be in the gaussian group of users, you need be qualified for it - see above.
@@ -54,7 +54,7 @@ Citation
 --------
 
 When publishing results obtained with the referred software referred, please do
-check the developers web page in order to find the correct citat\ ion(s).
+check the developers web page in order to find the correct citation(s).
 
 
 Additional online info about Gaussian on Stallo
