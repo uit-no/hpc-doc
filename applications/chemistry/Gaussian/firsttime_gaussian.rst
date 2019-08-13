@@ -55,5 +55,5 @@ When you have all the necessary files in the correct folders, submit the job by 
 
 	sbatch job_gaussian.sh
 
-To verify that nothing has gone wrong, check the output of the calculations. In Gaussian output, you allways get an entertaining quote at the end. Good luck. 
+To verify that nothing has gone wrong, check the output of the calculations. In Gaussian output, you allways get an entertaining quote at the end. Good luck.
 

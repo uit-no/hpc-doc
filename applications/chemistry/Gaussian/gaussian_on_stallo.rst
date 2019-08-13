@@ -21,7 +21,7 @@ network giving us two advantages:
 
 But since we do this trick, we are greatly depending on altering the specific nodal adress into the
 input file: To run gaussian in parallel requires the additional keywords %LindaWorkers and %NProcshared
-in the Link 0 part of the input file. This is taken care of by a wrapper we have chosen to put around the original g<VER> binary (g09, g16 etc) in each individual version folder. This is also commented in the job script example for first-time runs. 
+in the Link 0 part of the input file. This is taken care of by a wrapper we have chosen to put around the original g<VER> binary (g09, g16 etc) in each individual version folder. This is also commented in the job script example for first-time runs.
 Please do use this script or similar when submitting jobs; it will benefit all of us.
 
 We have also taken care of the rsh/ssh setup in our installation procedure, to avoid .tsnet.config dependency for users.
@@ -50,11 +50,11 @@ allocating cores/nodes to Gaussian jobs:
 
 #. We do advice people to use up to 256 cores (slurm syntax tasks). We have proved acceptale scaling of the current
    Gaussian install beyond 16 nodes for the jobs that do scale outside of one node (i.e. the binaries in the $gXXroot/linda-exe folder). So in essence; enjoy!
-#. Linda networking overhead seems to hit hard around this amount of cores; causing us to be somewhat reluctant to advice going to more than this. Meddling with this requires a bit more insight, which we are happy to help out with but reluctant to advise beginners do at an early stage. Though; this will give a potential of up to 320 cores in parallell on Stallo, which is more than most other places anyway. 
-#. Since we have two different architectures with two different core counts on Stallo, the ----exclusive flag mentioned	above is also important to ensure that the distribution of jobs accross the whole system are done in a rather flexible (and painless) way. 
+#. Linda networking overhead seems to hit hard around this amount of cores; causing us to be somewhat reluctant to advice going to more than this. Meddling with this requires a bit more insight, which we are happy to help out with but reluctant to advise beginners do at an early stage. Though; this will give a potential of up to 320 cores in parallell on Stallo, which is more than most other places anyway.
+#. Since we have two different architectures with two different core counts on Stallo, the ----exclusive flag mentioned	above is also important to ensure that the distribution of jobs accross the whole system are done in a rather flexible (and painless) way.
 Large temporary outputs on Stallo
 ----------------------------------
 
-As commented here :doc:`/storage/storage` there is an issue related to very large temporary files on Stallo. Please read up on it at act accordingly. This issue is also commented in the job script example. 
+As commented here :doc:`/storage/storage` there is an issue related to very large temporary files on Stallo. Please read up on it at act accordingly. This issue is also commented in the job script example.
 
- 
+
