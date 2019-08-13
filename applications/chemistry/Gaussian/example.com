@@ -1,4 +1,4 @@
-%chk=caffeine
+%chk=example
 %mem=500MB
 #p b3lyp/cc-pVDZ opt
 

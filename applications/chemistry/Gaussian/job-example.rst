@@ -17,9 +17,9 @@ into your test job folder (which I assume you have created in advance).
 Input example
 -------------
 
-Direct download link: :download:`input example <caffeine.com>`
+Direct download link: :download:`input example <example.com>`
 
-.. literalinclude:: caffeine.com
+.. literalinclude:: example.com
    :language: none
 
 

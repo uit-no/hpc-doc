@@ -14,7 +14,7 @@
 
 # Defining job other job variable and settings:
 
-input=caffeine # Name of input without extention
+input=example # Name of input without extention
 ext=com # We use the same naming scheme as the software default extention
 
 # We load all the default program system settings with module load:
