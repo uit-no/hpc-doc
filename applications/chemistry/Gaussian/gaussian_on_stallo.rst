@@ -37,26 +37,30 @@ performance and scaling of your job. If you need assistance with this, please
 contact the user support.
 
 
-Gaussian on Stallo
-------------------
+Gaussian over Infiniband
+------------------------
 
-First note that the Gaussian install on Stallo is the Linda parallel version, so it
-scales somewhat initially. On top of this, Gaussian on Stallo is installed with a little trick, where the executables are intercepted before launched, and an
-alternative socket library is loaded. This enables the possibility of running Gaussian natively on the infiniband
-network giving us two advantages:
+First note that the Gaussian installation on Stallo is the Linda parallel
+version, so it scales somewhat initially. On top of this, Gaussian is installed
+with a little trick, where the loading of the executable is intercepted before
+launched, and an alternative socket library is loaded. This enables the
+running Gaussian natively on the Infiniband network giving us
+two advantages:
 
-* The parallel faction of gaussian executables scales a lot "longer" (to more cores).
+* The parallel fraction of the code scales to more cores.
 * The shared memory performance is significantly enhanced (small scale performance).
 
 But since we do this trick, we are greatly depending on altering the specific
 node address into the input file: To run gaussian in parallel requires the
-additional keywords %LindaWorkers and %NProcshared in the Link 0 part of the
-input file. This is taken care of by a wrapper we have chosen to put around the
-original g<VER> binary (g09, g16 etc) in each individual version folder. This
-is also commented in the job script example for first-time runs.  Please do use
-this script or similar when submitting jobs; it will benefit all of us.
+additional keywords ``%LindaWorkers`` and ``%NProcshared`` in the ``Link 0`` part of the
+input file. This is taken care of by a wrapper script around the
+original binary in each individual version folder. This
+is also commented in the job script example. Please use
+our example when when submitting jobs.
 
-We have also taken care of the rsh/ssh setup in our installation procedure, to avoid .tsnet.config dependency for users.
+We have also taken care of the rsh/ssh setup in our installation procedure, to
+avoid .tsnet.config dependency for users.
+
 
 About memory allocation for Gaussian
 ------------------------------------
