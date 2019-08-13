@@ -21,21 +21,20 @@ To load a specific version of Gaussian, use for instance::
   $ module load Gaussian/g16_B.01
 
 
-Usage
------
+Choosing the number of cores
+----------------------------
 
-Since Gaussian is a rather large and versatile program system with a range of
-different binaries, we would in general advice users to check whether their
-jobs are parallelized or not before submitting jobs. It would in general,
-unless every step is entirely well parallelized, always be more efficient to
-split a complex many-step job into smaller parallel and serial parts/jobs so
-that also the overall utilization of hardware is improved. I you are in doubt
-whether or not your job will scale outside one node (=shared memory), go to the
-Gaussian application home folder and check if there is an \*.exel version of
-the executable(s) you will be using. If yes, your job will generally work ok in
-parallel up to approx 300 cores (this is for the more advanced users).
+Gaussian is a rather large program system with a range of different binaries,
+and users need to verify whether the functionality they use is parallelized and
+how it scales.
 
-We generally wants users to run as many nodes as possible to limit the walltime length of running jobs.
+Before computing a table of different functionals and molecules, we strongly
+advice users to first study the scaling of the code for a representative
+system.
+
+Please do not reuse scripts inherited from others without studying the
+performance and scaling of your job. If you need assistance with this, please
+contact the user support.
 
 
 About the Gaussian version(s) installed on Stallo
