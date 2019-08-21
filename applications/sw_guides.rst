@@ -14,7 +14,7 @@ the module system, and information about changes in application software see :re
 
    chemistry/ADF/ADF
    chemistry/Dalton/Dalton
-   chemistry/Gaussian/Gaussian
+   chemistry/Gaussian/overview
    chemistry/Molcas/Molcas
    chemistry/ORCA/ORCA
    chemistry/Schrodinger/Schrodinger
