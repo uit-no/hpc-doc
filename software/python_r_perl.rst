@@ -124,8 +124,8 @@ for unwanted effects and errors due to wrong or incomaptible versions is
 reduced. Also you can be sure that everything that happens with your setup is
 controlled by yourself.
 
-Virtual Enviroments (deprecated)
----------------------
+Virtual Environments (deprecated)
+-------------------------------------
 We recommend using Conda , but there is another way to install modules locally is using
 `virtual environments <https://docs.python.org/3/tutorial/venv.html>`_
 
