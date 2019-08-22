@@ -248,8 +248,6 @@ of 16 nodes. 4000MB will give you 8 cores/node - everyone being happy. Just note
 info about PE :ref:`accounting`; mem-per-cpu 4000MB will cost you twice as much as
 mem-per-cpu 2000MB.
 
-You can find an example here: :ref:`first_time_gaussian`
-
 Please also note that if you want to use the whole memory on a node, do not ask
 for 32GB, but for 31GB or 31000MB as the node needs some memory for the system itself.
 For an example, see here: :ref:`allocated_entire_memory`
