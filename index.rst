@@ -76,7 +76,7 @@ HPC-UiT Services User Documentation
 
    software/applications
    software/modules
-   software/local_script_modules
+   software/python_r_perl
    account/linux
    help/AboutLicenses
    news/new_sw
