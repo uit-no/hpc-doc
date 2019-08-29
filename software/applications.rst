@@ -77,8 +77,10 @@ run the installation::
 
   eb Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb --robot
 
-To load your newly installed module, type::
-  
+Before we can load your newly installed module, we have to add the path to the Lmod search path.
+You might have to do this from time to time, or even every time you use your software, as your local cache is regularly updated. ::
+ 
+  ml use ~/.local/easybuild/modules/all
   ml Kraken2/2.0.7
 
 
