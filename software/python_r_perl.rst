@@ -167,16 +167,13 @@ Load R
 Using R on Stallo is quite straightforward.
 First check which versions are available::
 
-  ml avail R/
+  ml avail -r '^R/'
 
 To load a version::
 
   ml R/3.5.0-iomkl-2018a-X11-20180131
 
 Now you can use R from the command line just as you would on your local computer.
-
-On Stallo you can also always load the newest R version by simply using ``ml R``
-but be aware that this might break your scripts in case a new R version is installed.
 
 
 Install Packages
