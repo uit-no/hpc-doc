@@ -179,7 +179,7 @@ Now you can use R from the command line just as you would on your local computer
 Install Packages
 -----------------
 To install R packages use  ``install.packages()``.
-First open the R command line and then install apackage e.g. "tidyverse"::
+First open the R command line and then install a package e.g. "tidyverse"::
   
   R
   install.packages("tidyverse")
@@ -187,6 +187,46 @@ First open the R command line and then install apackage e.g. "tidyverse"::
 Note: The first time you install new packages, R will ask you
 whether it should install these packages into your home folder.
 Confirm both questions with ``y`` and then choose a close download mirror
+
+
+
+MATLAB
+========
+Load MATLAB
+------------
+To use MATLAB simply load the module at the start of your jobscript or type them on
+the command line::
+
+  ml purge
+  ml avail matlab # To display all installed versions
+  ml MATLAB/R2018a-foss-2017a # or any other version you want
+
+Interactice Shell
+------------------
+On the login nodes you can start a normal MATLAB session with an graphical user interface (GUI). You can use this to visualize and look at data. Just type `matlab`.
+
+But remember NOT to run calculations on the login nodes as this might slow down the system for all stallo users. If this happens we will kill the process without prior warning.
+
+You can also start an interactive matlab shell on the command line without graphical user interface (headless) with::
+
+  matlab -nodesktop -nodisplay -nosplash
+
+See `matlab -h` for all command line options.
+If you are on a compute node `matlab` always starts a headless matlab shell.
+
+Running MATLAB Scripts
+-----------------------
+You can run a matlab script by::
+
+  matlab -r -nodisplay -nosplash -r 'run("SCRIPT.m")'
+
+ In some instances it might be necessary to use an absolute file path to the script.
+
+Tips
+-----
+* You can reduce the memory usage by starting matlab without java support, just add `-nojvm`.
+* To get a graphical interface when starting `matlab` on a login node, you need to activate X11 forwarding for your ssh connection to stallo.
+  If you connect to stallo from a linux machine use `ssh -X` to tunnel graphical output to your computer.
 
 
 
