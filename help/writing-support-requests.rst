@@ -4,9 +4,10 @@ How to write good support requests
 ==================================
 
 Writing good support requests is not only good for the support team, it is also
-better for you because we have many help requests, so the easier it is
-to understand yours, the faster we will get to it. Below is a list of
-good practices.
+better for you! Due to us having lots of help requests, the time to understand 
+each problem is at a premium. The easier it is to understand yours, the faster 
+we will get to it.
+Below is a list of good practices.
 
 
 Never send support requests to staff members directly
@@ -18,6 +19,13 @@ Some staff members work on the support line only part time.
 Sending the request to support@metacenter.no makes sure that somebody will pick
 it up. Please note in the request that it is about Stallo, as there are more
 clusters that are handled with this email address.
+
+Do not manhandle us as simple "Let me Google that for you" assistants
+---------------------------------------------------------------------
+Seriously: have you searched the internet with the exact error message and the
+name of your application...? Other scientists may have had the very same problem
+and might have been successful in solving it.
+By the way: that's almost always how we start to research, too...
 
 
 Give descriptive subject
@@ -36,8 +44,15 @@ the top, too: include the actual command you run and actual error
 messages.  Copy and paste.  If you don't include this, we will be
 slightly annoyed and immediately ask this.
 
-New problem new email
----------------------
+Please, do not screen shoot your ssh terminal and send us pictures (jpg, png, tiff...)
+of what you saw on your monitor! From these, we would be unable to cut & paste commands
+or error messages, unnecessarily slowing down our research on your problem.
+Your sample output does not need at all to "look good", and we don't need to know
+what fancy ssh- or terminal software you have: a simple text-based cut & paste directly
+into the mail or ticket is the best we can work on with.
+
+New problem--new email
+----------------------
 
 Do not send support requests by replying to unrelated issues. Every issue gets a
 number and this is the number that you see in the subject line. Replying to
