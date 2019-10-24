@@ -66,6 +66,7 @@ HPC-UiT Services User Documentation
    jobs/interactive
    jobs/monitoring
    jobs/running_mpi_jobs
+   jobs/slurm_parameter
    jobs/environment-variables
    jobs/torque_slurm_table
 
