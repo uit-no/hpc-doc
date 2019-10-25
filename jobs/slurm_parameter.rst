@@ -79,3 +79,57 @@ Parameter                    Function
 --array=<indexes>            Submit a collection of similar jobs, e.g. ``--array=1-10``. (sbatch command only). See official `SLURM documentation <https://slurm.schedmd.com/job_array.html>`_
 --dependency=<state:jobid>   Wait with the start of the job until specified dependencies have been satified. E.g. --dependency=afterok:123456
 ==========================   ==================================================================================================================================================================
+
+
+Differences between CPUs and tasks
+-------------------------------------
+
+As a new users writing your first SLURM job script the difference between
+``--ntasks`` and ``--cpus-per-taks`` is typically quite confusing.
+Assuming you want to run your program on a single node with  16 cores which 
+SLURM parameters should you specify?
+
+The answer is it depends whether the your application supports MPI.
+MPI (message passing protocol) is a communication interface used for developing 
+parallel computing programs on distributed memory systems.
+This is necessary for applications running on multiple computers (nodes) to be able to
+share (intermediate) results.
+
+To decide which set of parameters you should use, check if your application utilizes
+MPI and therefore would benefit from running on multiple nodes simultaneously.
+On the other hand you have an non-MPI enables application or made a mistake in 
+your setup, it doesn't make sense to request more than one node.
+
+Single node jobs (OpenMP)
++++++++++++++++++++++++++++
+
+For applications that are not optimized for HPC (high performance computing) systems
+ like simple python or R scripts and a lot of software which is optimized for desktop PCs.
+OpenMP (Open Multi-Processing) is a multiprocessing library is often used for programs on
+shared memory systems. Shared memory describes systems which share the memory between all 
+processing units (CPU cores), so that each process can access all data on that system.
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--nodes=1                       Start a parallel job for a shared memory system on only one node
+--ntasks-per-node=1             For OpenMP, only one task is necessary
+--cpus-per-task=<num_threads>   Number of threads (CPU cores) to use
+--mem=<MB>                      Memory (RAM) for the job. Number followed by unit prefix, e.g. 16G
+=============================   ============================================================================================================================
+
+
+Multiple node jobs (MPI)
++++++++++++++++++++++++++
+
+For MPI application 
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--nodes=<num_nodes>             Start a parallel job for a distributed memory system on several nodes
+--ntasks-per-node=<num_procs>   Number of (MPI) processes per node. Maximum number depends nodes (16 or 20 on Stallo)
+--cpus-per-task=1               Use one CPU core per task. 
+--mem-per-cpu=<MB>              Memory (RAM) per requested CPU core. Use either --mem-per-cpu or --mem
+--mem=<MB>                      Memory (RAM) per node. Number followed by unit prefix, e.g. 16G
+=============================   ============================================================================================================================
