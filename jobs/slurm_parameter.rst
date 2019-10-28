@@ -104,7 +104,7 @@ Single node jobs (OpenMP)
 +++++++++++++++++++++++++++
 
 For applications that are not optimized for HPC (high performance computing) systems
- like simple python or R scripts and a lot of software which is optimized for desktop PCs.
+like simple python or R scripts and a lot of software which is optimized for desktop PCs.
 OpenMP (Open Multi-Processing) is a multiprocessing library is often used for programs on
 shared memory systems. Shared memory describes systems which share the memory between all 
 processing units (CPU cores), so that each process can access all data on that system.
@@ -122,14 +122,30 @@ Parameter                       Function
 Multiple node jobs (MPI)
 +++++++++++++++++++++++++
 
-For MPI application 
+For MPI applications.
+
+Depending on the frequency and bandwidth demand of your setup, you can either just start a number of MPI tasks request whole nodes.
+While using whole nodes guarantees that a low latency and high bandwidth it usually results in a longer queuing time compared to cluster wide job.
+With the latter the SLURM manager can distribute your task across all nodes of stallo and utilize otherwise unused cores on nodes which for example run a 16 core job on a 20 core node. This usually results in shorter queuing times but slower inter-process connection speeds.
+
+To use whole nodes:
+
+=============================   =============================================================================================================================
+Parameter                       Function
+=============================   =============================================================================================================================
+--nodes=<num_nodes>             Start a parallel job for a distributed memory system on several nodes
+--ntasks-per-node=<num_procs>   Number of (MPI) processes per node. Maximum number depends nodes (16 or 20 on Stallo)
+--cpus-per-task=1               Use one CPU core per task. 
+--exclusive                     Job will not share nodes with other running jobs. You don't need to specify memory as you will get all available on the node.
+=============================   =============================================================================================================================
+
+
+To distribute your job:
 
 =============================   ============================================================================================================================
 Parameter                       Function
 =============================   ============================================================================================================================
---nodes=<num_nodes>             Start a parallel job for a distributed memory system on several nodes
---ntasks-per-node=<num_procs>   Number of (MPI) processes per node. Maximum number depends nodes (16 or 20 on Stallo)
+--ntasks=<num_procs>            Number of (MPI) processes in total.
 --cpus-per-task=1               Use one CPU core per task. 
---mem-per-cpu=<MB>              Memory (RAM) per requested CPU core. Use either --mem-per-cpu or --mem
---mem=<MB>                      Memory (RAM) per node. Number followed by unit prefix, e.g. 16G
+--mem-per-cpu=<MB>              Memory (RAM) per requested CPU core. Number followed by unit prefix, e.g. 2G
 =============================   ============================================================================================================================
