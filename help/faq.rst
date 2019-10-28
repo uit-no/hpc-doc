@@ -56,7 +56,7 @@ Installing software
 I need Python package X but the one on Stallo is too old or I cannot find it
 ----------------------------------------------------------------------------
 
-You can choose different Python versions with the module system. See here: :doc:`/software/modules`
+You can choose different Python versions with either the module system or using Anaconda/Miniconda. See here: :doc:`/software/modules` and :doc:`/software/python_r_perl`.
 
 In cases where this still doesn't solve your problem or you would like to install a package yourself, please read the next section below about installing without sudo rights.
 
@@ -66,7 +66,7 @@ If we don't have it installed, and installing it yourself is not a good solution
 Can I install Python software as a normal user without sudo rights?
 -------------------------------------------------------------------
 
-Yes. Please see :doc:`/software/local_script_modules`.
+Yes. Please see :doc:`/software/python_r_perl`.
 
 
 Compute and storage quota
