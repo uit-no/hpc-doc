@@ -100,6 +100,10 @@ MPI and therefore would benefit from running on multiple nodes simultaneously.
 On the other hand you have an non-MPI enables application or made a mistake in 
 your setup, it doesn't make sense to request more than one node.
 
+
+Settings for OpenMP and MPI jobs
+--------------------------------
+
 Single node jobs (OpenMP)
 +++++++++++++++++++++++++++
 
