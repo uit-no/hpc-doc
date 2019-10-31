@@ -104,11 +104,32 @@ your setup, it doesn't make sense to request more than one node.
 Settings for OpenMP and MPI jobs
 --------------------------------
 
-Single node jobs (OpenMP)
-+++++++++++++++++++++++++++
+Single node jobs
+++++++++++++++++
 
 For applications that are not optimized for HPC (high performance computing) systems
 like simple python or R scripts and a lot of software which is optimized for desktop PCs.
+
+Simple applications and scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Many simple tools and scripts are not parallized at all and therefore won't profit from
+more than one CPU core.
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--nodes=1                       Start a unparallized job on only one node
+--ntasks-per-node=1             For OpenMP, only one task is necessary
+--cpus-per-task=1               Just one CPU core will be used.
+--mem=<MB>                      Memory (RAM) for the job. Number followed by unit prefix, e.g. 16G
+=============================   ============================================================================================================================
+
+If you are unsure if your application can benefit from more cores try a higher number and
+observe the load of your job. If it stays at approximately one there is no need to ask for more than one.
+
+
+OpenMP applications
+^^^^^^^^^^^^^^^^^^^
 OpenMP (Open Multi-Processing) is a multiprocessing library is often used for programs on
 shared memory systems. Shared memory describes systems which share the memory between all 
 processing units (CPU cores), so that each process can access all data on that system.
@@ -132,7 +153,8 @@ Depending on the frequency and bandwidth demand of your setup, you can either ju
 While using whole nodes guarantees that a low latency and high bandwidth it usually results in a longer queuing time compared to cluster wide job.
 With the latter the SLURM manager can distribute your task across all nodes of stallo and utilize otherwise unused cores on nodes which for example run a 16 core job on a 20 core node. This usually results in shorter queuing times but slower inter-process connection speeds.
 
-To use whole nodes:
+To use whole nodes
+^^^^^^^^^^^^^^^^^^
 
 =============================   =============================================================================================================================
 Parameter                       Function
@@ -144,7 +166,8 @@ Parameter                       Function
 =============================   =============================================================================================================================
 
 
-To distribute your job:
+To distribute your job
+^^^^^^^^^^^^^^^^^^^^^^
 
 =============================   ============================================================================================================================
 Parameter                       Function
