@@ -19,6 +19,12 @@ Steinar Traedal-Henden,
 UiT The Arctic University of Norway.
 
 
+## License
+
+Text is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+code examples are provided under the [MIT](https://opensource.org/licenses/MIT) license.
+
+
 ## Locally building the HTML for testing
 
 ```
