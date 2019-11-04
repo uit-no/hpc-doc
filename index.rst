@@ -61,9 +61,9 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
    :caption: Jobs
 
+   jobs/dos_and_donts
    jobs/batch
    jobs/examples
-   jobs/dos_and_donts
 
 .. toctree::
    :maxdepth: 2
