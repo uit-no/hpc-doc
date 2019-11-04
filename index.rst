@@ -78,7 +78,6 @@ HPC-UiT Services User Documentation
    jobs/job_management
    jobs/monitoring
    jobs/running_mpi_jobs
-   jobs/torque_slurm_table
 
 
 .. Software section
