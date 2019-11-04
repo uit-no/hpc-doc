@@ -26,6 +26,7 @@ HPC-UiT Services User Documentation
    news/news
 
 
+.. Getting help section
 .. toctree::
    :maxdepth: 1
    :caption: Getting help
@@ -37,6 +38,7 @@ HPC-UiT Services User Documentation
    help/hpc-cafe
 
 
+.. General stallo sections
 .. toctree::
    :maxdepth: 1
    :caption: Stallo
@@ -45,6 +47,7 @@ HPC-UiT Services User Documentation
    stallo/uit-guidelines
 
 
+.. Account section
 .. toctree::
    :maxdepth: 1
    :caption: Account
@@ -53,7 +56,7 @@ HPC-UiT Services User Documentation
    account/login
    account/accounting
 
-
+.. Job section
 .. toctree::
    :maxdepth: 1
    :caption: Jobs
@@ -61,14 +64,24 @@ HPC-UiT Services User Documentation
    jobs/batch
    jobs/examples
    jobs/dos_and_donts
+
+.. toctree::
+   :maxdepth: 2
+
    jobs/slurm_parameter
-   jobs/process-count
+
+.. toctree::
+   :maxdepth: 1
+
    jobs/interactive
+   jobs/process-count
+   jobs/job_management
    jobs/monitoring
    jobs/running_mpi_jobs
    jobs/torque_slurm_table
 
 
+.. Software section
 .. toctree::
    :maxdepth: 1
    :caption: Software
@@ -87,6 +100,7 @@ HPC-UiT Services User Documentation
    applications/sw_guides
 
 
+.. Storage section
 .. toctree::
    :maxdepth: 1
    :caption: Storage
@@ -96,6 +110,7 @@ HPC-UiT Services User Documentation
    storage/lustre-performance
 
 
+.. Code development section
 .. toctree::
    :maxdepth: 1
    :caption: Code development

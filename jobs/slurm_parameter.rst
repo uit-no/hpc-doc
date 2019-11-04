@@ -1,4 +1,4 @@
-.. _slurm_parameter:
+.. _slurm:
 
 SLURM Workload Manager
 =======================
@@ -12,6 +12,9 @@ Interactive jobs are a good way to test your setup before you put it into a scri
 or to work with interactive applications like MATLAB or python.
 You immediately see the results and can check if all parts behave as you expected.
 See :ref:`interactive` for more details.
+
+
+.. _slurm_parameter:
 
 SLURM Parameter
 -----------------
@@ -100,6 +103,8 @@ MPI and therefore would benefit from running on multiple nodes simultaneously.
 On the other hand you have an non-MPI enables application or made a mistake in 
 your setup, it doesn't make sense to request more than one node.
 
+
+.. _slurm_recommendations:
 
 Settings for OpenMP and MPI jobs
 --------------------------------
