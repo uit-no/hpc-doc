@@ -74,7 +74,6 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
 
    jobs/interactive
-   jobs/process-count
    jobs/job_management
    jobs/monitoring
    jobs/running_mpi_jobs
