@@ -61,12 +61,12 @@ HPC-UiT Services User Documentation
    jobs/batch
    jobs/examples
    jobs/dos_and_donts
+   jobs/slurm_parameter
    jobs/process-count
    jobs/partitions
    jobs/interactive
    jobs/monitoring
    jobs/running_mpi_jobs
-   jobs/slurm_parameter
    jobs/environment-variables
    jobs/torque_slurm_table
 

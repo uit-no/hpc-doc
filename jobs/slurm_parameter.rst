@@ -79,3 +79,100 @@ Parameter                    Function
 --array=<indexes>            Submit a collection of similar jobs, e.g. ``--array=1-10``. (sbatch command only). See official `SLURM documentation <https://slurm.schedmd.com/job_array.html>`_
 --dependency=<state:jobid>   Wait with the start of the job until specified dependencies have been satified. E.g. --dependency=afterok:123456
 ==========================   ==================================================================================================================================================================
+
+
+Differences between CPUs and tasks
+-------------------------------------
+
+As a new users writing your first SLURM job script the difference between
+``--ntasks`` and ``--cpus-per-taks`` is typically quite confusing.
+Assuming you want to run your program on a single node with  16 cores which 
+SLURM parameters should you specify?
+
+The answer is it depends whether the your application supports MPI.
+MPI (message passing protocol) is a communication interface used for developing 
+parallel computing programs on distributed memory systems.
+This is necessary for applications running on multiple computers (nodes) to be able to
+share (intermediate) results.
+
+To decide which set of parameters you should use, check if your application utilizes
+MPI and therefore would benefit from running on multiple nodes simultaneously.
+On the other hand you have an non-MPI enables application or made a mistake in 
+your setup, it doesn't make sense to request more than one node.
+
+
+Settings for OpenMP and MPI jobs
+--------------------------------
+
+Single node jobs
+++++++++++++++++
+
+For applications that are not optimized for HPC (high performance computing) systems
+like simple python or R scripts and a lot of software which is optimized for desktop PCs.
+
+Simple applications and scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Many simple tools and scripts are not parallized at all and therefore won't profit from
+more than one CPU core.
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--nodes=1                       Start a unparallized job on only one node
+--ntasks-per-node=1             For OpenMP, only one task is necessary
+--cpus-per-task=1               Just one CPU core will be used.
+--mem=<MB>                      Memory (RAM) for the job. Number followed by unit prefix, e.g. 16G
+=============================   ============================================================================================================================
+
+If you are unsure if your application can benefit from more cores try a higher number and
+observe the load of your job. If it stays at approximately one there is no need to ask for more than one.
+
+
+OpenMP applications
+^^^^^^^^^^^^^^^^^^^
+OpenMP (Open Multi-Processing) is a multiprocessing library is often used for programs on
+shared memory systems. Shared memory describes systems which share the memory between all 
+processing units (CPU cores), so that each process can access all data on that system.
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--nodes=1                       Start a parallel job for a shared memory system on only one node
+--ntasks-per-node=1             For OpenMP, only one task is necessary
+--cpus-per-task=<num_threads>   Number of threads (CPU cores) to use
+--mem=<MB>                      Memory (RAM) for the job. Number followed by unit prefix, e.g. 16G
+=============================   ============================================================================================================================
+
+
+Multiple node jobs (MPI)
++++++++++++++++++++++++++
+
+For MPI applications.
+
+Depending on the frequency and bandwidth demand of your setup, you can either just start a number of MPI tasks request whole nodes.
+While using whole nodes guarantees that a low latency and high bandwidth it usually results in a longer queuing time compared to cluster wide job.
+With the latter the SLURM manager can distribute your task across all nodes of stallo and utilize otherwise unused cores on nodes which for example run a 16 core job on a 20 core node. This usually results in shorter queuing times but slower inter-process connection speeds.
+
+To use whole nodes
+^^^^^^^^^^^^^^^^^^
+
+=============================   =============================================================================================================================
+Parameter                       Function
+=============================   =============================================================================================================================
+--nodes=<num_nodes>             Start a parallel job for a distributed memory system on several nodes
+--ntasks-per-node=<num_procs>   Number of (MPI) processes per node. Maximum number depends nodes (16 or 20 on Stallo)
+--cpus-per-task=1               Use one CPU core per task. 
+--exclusive                     Job will not share nodes with other running jobs. You don't need to specify memory as you will get all available on the node.
+=============================   =============================================================================================================================
+
+
+To distribute your job
+^^^^^^^^^^^^^^^^^^^^^^
+
+=============================   ============================================================================================================================
+Parameter                       Function
+=============================   ============================================================================================================================
+--ntasks=<num_procs>            Number of (MPI) processes in total.
+--cpus-per-task=1               Use one CPU core per task. 
+--mem-per-cpu=<MB>              Memory (RAM) per requested CPU core. Number followed by unit prefix, e.g. 2G
+=============================   ============================================================================================================================
