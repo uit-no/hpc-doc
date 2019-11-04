@@ -5,6 +5,9 @@ Python, R, Matlab and Perl
 ***************************
 Scripting languages often support modules or libraries for additional functionality or convenience functions. We encourage users to install modules locally for only the current user.
 
+
+.. _python:
+
 Python
 =======
 You can install many python and non-python packages yourself using 
