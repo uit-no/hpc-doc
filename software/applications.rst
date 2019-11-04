@@ -59,7 +59,7 @@ To see if your software is available via the EasyBuild system have a look into t
 if you can find a version of your software there.
 
 Let's assume you want to install the genome aligner Kraken2.
-We find a easyconfig file with the name `Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb <https://github.com/easybuilders/easybuild-easyconfigs/blob/master/easybuild/easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb`_ 
+We find a easyconfig file with the name `Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb <https://github.com/easybuilders/easybuild-easyconfigs/blob/master/easybuild/easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb>`_ 
 in the easyconfig repository.
 
 Before we start the installation process we first have to load the necessary modules::
@@ -91,4 +91,4 @@ Many software packages, especially if they are python based, can be easily insta
 the Conda package manager.
 For many bioinformatics software, Bioconda has become a nice solution.
 
-A small tutorial can be found in the `Python`_ section of this documentation.
+A small tutorial can be found in the :ref:`python` section of this documentation.
