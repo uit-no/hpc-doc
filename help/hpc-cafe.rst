@@ -25,10 +25,10 @@ We can talk about:
 - Learn about cool services that you may not know yet
 
 
-Schedule
---------
+Next dates
+----------
 
-- Sep 11, 10:00 - 12:30, MH bygget atrium
+- **Nov 12**, 14:00 - 16:00, `main kantina <http://bit.ly/36Fhd9y>`_
 
 
 Similar events which serve as inspiration
