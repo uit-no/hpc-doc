@@ -11,13 +11,12 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 
+# exclusive makes all memory available
+#SBATCH --exclusive
+
 # run for five minutes
 #              d-hh:mm:ss
 #SBATCH --time=0-00:05:00
-
-# 500MB memory per core
-# this is a hard limit
-#SBATCH --mem-per-cpu=500MB
 
 # turn on all mail notification
 #SBATCH --mail-type=ALL

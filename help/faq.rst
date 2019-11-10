@@ -274,7 +274,7 @@ For instance::
 
 **QOSMaxWallDurationPerJobLimit**
 
-QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exceeded. Basically, you have asked for more time than allowed for the given QOS/Partition. Please have a look at :doc:`/jobs/partitions`.
+QOSMaxWallDurationPerJobLimit means that MaxWallDurationPerJobLimit has been exceeded. Basically, you have asked for more time than allowed for the given QOS/Partition. Please have a look at :ref:`label_partitions`
 
 
 **Priority vs. Resources**
