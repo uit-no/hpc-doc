@@ -54,8 +54,6 @@ Parameter                       Function
 --mem-per-cpu=<MB>              Memory (RAM) per requested CPU core
 --ntasks-per-node=<num_procs>   Number of (MPI) processes per node. More than one useful only for MPI jobs. Maximum number depends nodes (number of cores)
 --cpus-per-task=<num_threads>   CPU cores per task. For MPI use one. For parallelized applications benchmark this is the number of threads.
---ntasks-per-core=1             Disables hyperthreading.
---ntasks-per-core=2             Enables hyperthreading. Only useful in special circumstances.
 --exclusive                     Job will not share nodes with other running jobs. You will be charged for the complete nodes even if you asked for less.
 =============================   ============================================================================================================================
 
@@ -81,6 +79,7 @@ Parameter                    Function
 ==========================   ==================================================================================================================================================================
 --array=<indexes>            Submit a collection of similar jobs, e.g. ``--array=1-10``. (sbatch command only). See official `SLURM documentation <https://slurm.schedmd.com/job_array.html>`_
 --dependency=<state:jobid>   Wait with the start of the job until specified dependencies have been satified. E.g. --dependency=afterok:123456
+--ntasks-per-core=2             Enables hyperthreading. Only useful in special circumstances.
 ==========================   ==================================================================================================================================================================
 
 
@@ -190,8 +189,7 @@ To distribute your job
 =============================   ============================================================================================================================
 Parameter                       Function
 =============================   ============================================================================================================================
---ntasks=<num_procs>            Number of (MPI) processes in total.
---cpus-per-task=1               Use one CPU core per task. 
+--ntasks=<num_procs>            Number of (MPI) processes in total. Equals to the number of cores
 --mem-per-cpu=<MB>              Memory (RAM) per requested CPU core. Number followed by unit prefix, e.g. 2G
 =============================   ============================================================================================================================
 
