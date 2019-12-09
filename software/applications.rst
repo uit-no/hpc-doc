@@ -57,6 +57,9 @@ not used by other users of Stallo, so a systemwide installation doesn't make muc
 To see if your software is available via the EasyBuild system have a look into the
 `easyconfig github repository <https://github.com/easybuilders/easybuild-easyconfigs>`_.
 if you can find a version of your software there.
+Alternatively use the search function of EasyBuild::
+
+    eb -S REGEX
 
 Let's assume you want to install the genome aligner Kraken2.
 We find a easyconfig file with the name `Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb <https://github.com/easybuilders/easybuild-easyconfigs/blob/master/easybuild/easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2018b-Perl-5.28.0.eb>`_ 

@@ -4,9 +4,10 @@
 
 Served via http://hpc-uit.readthedocs.org.
 
-Copyright (c) 2018
+Copyright (c) 2019
 Radovan Bast,
 Mathias Bockwoldt,
+Jørn Dietze,
 Roy Dragseth,
 Stig Rune Jensen,
 Dan Jonsson,
