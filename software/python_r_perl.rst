@@ -51,6 +51,16 @@ the bioconda channel::
 
   conda config --add channels bioconda
 
+In case you want to install the conda environment in another directory than the
+home, you can add `--prefix PATH`. This enables multiple users of a project to
+share the conda environment by installing it into their project folder instead
+of the users home.
+
+To suppress the warning that a newer version of conda exists which is usually
+not important for most users and will be fixed by us by installing a new module::
+  
+  conda config --set notify_outdated_conda false
+
 Daily usage
 -------------
 To load this environment you have to use the following commands either on the
