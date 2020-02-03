@@ -153,7 +153,7 @@ Multiple node jobs (MPI)
 
 For MPI applications.
 
-Depending on the frequency and bandwidth demand of your setup, you can either just start a number of MPI tasks request whole nodes.
+Depending on the frequency and bandwidth demand of your setup, you can either just start a number of MPI tasks or request whole nodes.
 While using whole nodes guarantees that a low latency and high bandwidth it usually results in a longer queuing time compared to cluster wide job.
 With the latter the SLURM manager can distribute your task across all nodes of stallo and utilize otherwise unused cores on nodes which for example run a 16 core job on a 20 core node. This usually results in shorter queuing times but slower inter-process connection speeds.
 
