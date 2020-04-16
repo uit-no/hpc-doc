@@ -28,7 +28,8 @@ We can talk about:
 Events
 ------
 
-- **2020-03-25**, 14:00 - 16:00, `MH bygget atrium <https://use.mazemap.com/#v=1&zlevel=1&center=18.977958,69.682997&zoom=18.2&sharepoitype=poi&sharepoi=732817&campusid=5&utm_medium=longurl>`_
+- **2020-04-23, 13:00 - 15:00**, `online Zoom meeting <https://uit.zoom.us/j/66172256379>`_
+  You can join with your UiT login or as a guest.
 - 2020-02-19, 10:00 - 12:00, `main kantina <http://bit.ly/36Fhd9y>`_
 - 2019-11-12, 14:00 - 16:00, `main kantina <http://bit.ly/36Fhd9y>`_
 - 2019-09-11, 10:00 - 12:30, MH bygget atrium
