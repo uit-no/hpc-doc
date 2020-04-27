@@ -194,14 +194,29 @@ files you need to use 'tar' to create on archive file of the directory.
 Compression of data
 -------------------
 
-Infrequently accessed files must be compressed to reduce file system
-usage.
+Data which is not accessed frequently like results of finished projects
+should be compressed in order to reduce storage space.
 
-Tools like gzip, bzip2 and zip are in the PATH and are available on all
-nodes. The manual page for these tools are very detailed, use them for
-further help::
+We recommend ``xz`` and ``tar`` to compress single files or whole folder
+structures. To compress a single file::
 
-  $ man gzip
+  $ xz file
+
+To decompress::
+
+  $ xz --decompress file
+
+To create a archive multiple files or folder::
+
+  $ tar cfJv archive.tar.xz files
+
+It is recommended to use the file suffix ``.tar.xz`` to make it clear
+that archive was compressed with ``xz``.
+
+To extract a archive (use ``-C folder`` to extract the files in
+folder)::
+
+  $ tar xvf archive.tar.xz
 
 
 Binary data and endianness
