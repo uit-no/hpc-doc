@@ -30,6 +30,20 @@ files while running may be killed without any warning.
 Work/scratch areas
 ------------------
 
+.. warning::
+   Due to stallo coming close to its storage limits, starting from May 2020
+   /global/work will be subject to a auto cleanup affecting all files
+   older than 21 days.
+
+   Starting from 20th of May we will move all files which haven’t been
+   accessed for more than 21 days to a trash folder from where they will
+   be deleted in due time.
+
+   We ask you to classify your data in /global/work and move all files you
+   need to keep to your home folder. In order to save storage space consider
+   archiving your data in compressed form, see :ref:`file_compression`.
+
+
 There are two different work/scratch areas available on Stallo:
 
 * 1000 TB global accessible work area on the cluster,
@@ -190,6 +204,8 @@ directories containing many files may cause the backup of the data to
 fail. It is therefore highly recommended that if you want backup of the
 files you need to use 'tar' to create on archive file of the directory.
 
+
+.. _file_compression:
 
 Compression of data
 -------------------
