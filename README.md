@@ -4,7 +4,7 @@
 
 Served via http://hpc-uit.readthedocs.org.
 
-Copyright (c) 2019
+Copyright (c) 2020
 Radovan Bast,
 Mathias Bockwoldt,
 Jørn Dietze,
