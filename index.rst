@@ -16,6 +16,22 @@ HPC-UiT Services User Documentation
     <br /><br />
 
 
+.. attention::
+   Stallo is getting old and will be shutdown this year.
+   Hardware failures cause more and more nodes to fail due to high age.
+   The system will stay in production and continue **service until
+   at least 1. Oct 2020**, the end of the current billing period (2020.1).
+
+   We will help you with finding alternatives to your computational and
+   storage needs and with moving your workflows and data to one of our
+   other machines like Betzy, Saga and Fram.
+   News, updated information and howtos will be published :ref:`here
+   <stallo_shutdown>` as we move closer to the shutdown.
+
+   If you have questions, special needs or problems, please contact us at
+   migration@metacenter.no
+
+
 :ref:`Stallo <about_stallo>` is the local computer cluster of UiT The Arctic University of Norway. If you are new here, you might want to learn the basics first here:
 
 
@@ -43,6 +59,7 @@ HPC-UiT Services User Documentation
    :maxdepth: 1
    :caption: Stallo
 
+   stallo/shutdown
    stallo/stallo
    stallo/uit-guidelines
 
