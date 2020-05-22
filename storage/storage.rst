@@ -35,13 +35,15 @@ Work/scratch areas
    /global/work will be subject to a auto cleanup affecting all files
    older than 21 days.
 
-   Starting from 20th of May we will move all files which haven’t been
-   accessed for more than 21 days to a trash folder from where they will
+   Starting from 25th of May we will set all files which haven’t been
+   accessed for more than 21 days to read-only with *root* as owner.
+   Later these files will be moved to a trash folder from where they will
    be deleted in due time.
 
    We ask you to classify your data in /global/work and move all files you
-   need to keep to your home folder. In order to save storage space consider
-   archiving your data in compressed form, see :ref:`file_compression`.
+   need to keep to your home folder or other storage options like NIRD.
+   In order to save storage space consider archiving your data in
+   compressed form, see :ref:`file_compression`.
 
 
 There are two different work/scratch areas available on Stallo:
