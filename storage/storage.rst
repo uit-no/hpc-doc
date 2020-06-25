@@ -31,19 +31,22 @@ Work/scratch areas
 ------------------
 
 .. warning::
-   Due to stallo coming close to its storage limits, starting from May 2020
+   Due to stallo coming close to its storage limits, starting from July 2020
    /global/work will be subject to a auto cleanup affecting all files
    older than 21 days.
 
-   Starting from 25th of May we will set all files which haven’t been
-   accessed for more than 21 days to read-only with *root* as owner.
-   Later these files will be moved to a trash folder from where they will
+   Starting from first of July we will move all files which haven’t been
+   accessed for more than 21 days to  a trash folder from where they will
    be deleted in due time.
 
    We ask you to classify your data in /global/work and move all files you
    need to keep to your home folder or other storage options like NIRD.
    In order to save storage space consider archiving your data in
    compressed form, see :ref:`file_compression`.
+
+   In case you miss important files that have been moved, please write an
+   email to migration@metacenter.no as we keep the files for some time and
+   can restore them if needed.
 
 
 There are two different work/scratch areas available on Stallo:
