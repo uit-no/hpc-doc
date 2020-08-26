@@ -19,14 +19,18 @@ HPC-UiT Services User Documentation
 .. attention::
    Stallo is getting old and will be shutdown this year.
    Hardware failures cause more and more nodes to fail due to high age.
+   The **shutdown date has been postponed by one month** to help us prepare
+   the infrastructure for the switch.
    The system will stay in production and continue **service until
-   at least 1. Oct 2020**, the end of the current billing period (2020.1).
+   at least 1. November 2020**.
 
    We will help you with finding alternatives to your computational and
    storage needs and with moving your workflows and data to one of our
    other machines like Betzy, Saga and Fram.
-   News, updated information and howtos will be published :ref:`here
-   <stallo_shutdown>` as we move closer to the shutdown.
+   As we move closer to the shutdown, news, updated information and howtos
+   will be published `on the official Sigma2 migration page
+   <https://www.sigma2.no/migrating-stallo-and-vilje>`_
+   and :ref:`here <stallo_shutdown>`.
 
    If you have questions, special needs or problems, please contact us at
    migration@metacenter.no
