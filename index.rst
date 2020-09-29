@@ -55,7 +55,7 @@ HPC-UiT Services User Documentation
    help/writing-support-requests
    help/faq
    help/staff
-   help/hpc-cafe
+   help/hpc-qa-sessions
 
 
 .. General stallo sections
