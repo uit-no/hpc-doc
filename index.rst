@@ -19,10 +19,10 @@ HPC-UiT Services User Documentation
 .. attention::
    Stallo is getting old and will be shutdown this year.
    Hardware failures cause more and more nodes to fail due to high age.
-   The **shutdown date has been postponed by one month** to help us prepare
+   The **shutdown date has been postponed** to help us prepare
    the infrastructure for the switch.
    The system will stay in production and continue **service until
-   at least 1. November 2020**.
+   at least 1. December 2020**.
 
    We will help you with finding alternatives to your computational and
    storage needs and with moving your workflows and data to one of our
