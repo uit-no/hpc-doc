@@ -7,7 +7,7 @@ Stallo Shutdown
 Stallo is getting old and will be shutdown this year.
 Hardware failures cause more and more nodes to fail due to high age.
 The system will stay in production and continue **service until
-at least 1. Oct 2020**, the end of the current billing period (2020.1).
+at least 1. December 2020**.
 
 We will help you with finding alternatives to your computational and
 storage needs and with moving your workflows and data to one of our
