@@ -22,7 +22,7 @@ HPC-UiT Services User Documentation
    The **shutdown date has been postponed** to help us prepare
    the infrastructure for the switch.
    The system will stay in production and continue **service until
-   at least 1. December 2020**.
+   at least 31. December 2020**.
 
    We will help you with finding alternatives to your computational and
    storage needs and with moving your workflows and data to one of our
