@@ -45,7 +45,7 @@ to the login node and attach to the tmux session again by typing::
 
   tmux attach
 
-or in case you have multiple session running::
+or in case you have multiple sessions running::
 
   tmux list-session
   tmux attach -t SESSION_NUMBER
@@ -60,7 +60,7 @@ to stallo-1 again by::
 
 To log out a tmux session without closing it you have to press CTRL-B (that the Ctrl key 
 and simultaneously "b", which is the standard tmux prefix) and then "d" (without the
-quotation marks). To close a session just close the bash session with either CRTL-D or
+quotation marks). To close a session just close the bash session with either CTRL-D or
 type exit. You can get a list of all tmux commands by CTRL-B and the ? (question mark).
 See also `this page <https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/>`_
 for a short tutorial of tmux.
