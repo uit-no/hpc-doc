@@ -28,7 +28,7 @@ UiT Quota
 ---------
 
 “Local users” (i.e. users from UiT and users affiliated with UiT in some way) can apply for an account and
-a quota from UiT’s share of Stallo. If you wan to apply for such a quota follow the instructions here:
+a quota from UiT’s share of Stallo. If you want to apply for such a quota follow the instructions here:
 
 .. toctree::
    :maxdepth: 1
